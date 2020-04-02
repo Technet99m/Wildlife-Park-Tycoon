@@ -38,6 +38,30 @@ TextureImporter:
   - first:
       213: -6265650106565637682
     second: lion_female_side_sheet_11
+  - first:
+      213: 4579096464544220084
+    second: lion_female_side_sheet_0
+  - first:
+      213: -3628688945751641845
+    second: lion_female_side_sheet_1
+  - first:
+      213: -1579745095518675999
+    second: lion_female_side_sheet_3
+  - first:
+      213: 7641996462621648339
+    second: lion_female_side_sheet_5
+  - first:
+      213: -1725939382361769903
+    second: lion_female_side_sheet_8
+  - first:
+      213: 4057981559836684401
+    second: lion_female_side_sheet_9
+  - first:
+      213: -2279565131387748828
+    second: lion_female_side_sheet_10
+  - first:
+      213: 7827999116855427986
+    second: lion_female_side_sheet_11
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -136,8 +160,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 64926a3dbd05b8b80800000000000000
-      internalID: -8391524575595845306
+      spriteID: 4b3c76139f73c8f30800000000000000
+      internalID: 4579096464544220084
       vertices: []
       indices: 
       edges: []
@@ -151,35 +175,14 @@ TextureImporter:
         width: 10
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a39bf69febbc6a590800000000000000
-      internalID: -7663213694835246790
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lion_female_side_sheet_2
-      rect:
-        serializedVersion: 2
-        x: 133
-        y: 134
-        width: 7
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ae0e7ef82a6e32460800000000000000
-      internalID: 7215864613851095274
+      spriteID: b01361421ae44adc0800000000000000
+      internalID: -3628688945751641845
       vertices: []
       indices: 
       edges: []
@@ -190,17 +193,17 @@ TextureImporter:
         serializedVersion: 2
         x: 228
         y: 0
-        width: 118
+        width: 128
         height: 159
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a8fe2d406b224f460800000000000000
-      internalID: 7274477463270518666
+      spriteID: 1eb91f9943e931ae0800000000000000
+      internalID: -1579745095518675999
       vertices: []
       indices: 
       edges: []
@@ -209,19 +212,19 @@ TextureImporter:
       name: lion_female_side_sheet_5
       rect:
         serializedVersion: 2
-        x: 116
-        y: 92
-        width: 44
-        height: 50
+        x: 117
+        y: 94
+        width: 43
+        height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aec35f61301d45260800000000000000
-      internalID: 7085517924960910570
+      spriteID: 3d5ea513b43dd0a60800000000000000
+      internalID: 7641996462621648339
       vertices: []
       indices: 
       edges: []
@@ -241,8 +244,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7c288abe542417670800000000000000
-      internalID: 8534675636917666503
+      spriteID: 1583872b64b3c08e0800000000000000
+      internalID: -1725939382361769903
       vertices: []
       indices: 
       edges: []
@@ -262,8 +265,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 03b1b7fbee6b68740800000000000000
-      internalID: 5154007960103099184
+      spriteID: 170b6238ab8d05830800000000000000
+      internalID: 4057981559836684401
       vertices: []
       indices: 
       edges: []
@@ -283,8 +286,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7a424dc1e47e9a370800000000000000
-      internalID: 8334446908102943911
+      spriteID: 42e3445379b5d50e0800000000000000
+      internalID: -2279565131387748828
       vertices: []
       indices: 
       edges: []
@@ -304,8 +307,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ec94447cc60fb09a0800000000000000
-      internalID: -6265650106565637682
+      spriteID: 2934d36e8b3a2ac60800000000000000
+      internalID: 7827999116855427986
       vertices: []
       indices: 
       edges: []
