@@ -23,6 +23,8 @@ public class AnimalAnimationControllerEditor : Editor
             EditorGUILayout.PropertyField(serializedObject.FindProperty("left_hand"));
             EditorGUILayout.PropertyField(serializedObject.FindProperty("tail"));
         }
+        if (GUILayout.Button("Apply"))
+            (target as AnimalAnimationController).SetUp();
         serializedObject.ApplyModifiedProperties();
     }
 }

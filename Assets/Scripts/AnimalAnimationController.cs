@@ -11,6 +11,11 @@ public class AnimalAnimationController : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
+        SetUp();
+    }
+
+    public void SetUp()
+    {
         AnimalPack tmp;
         switch (gender)
         {
@@ -24,7 +29,7 @@ public class AnimalAnimationController : MonoBehaviour
                 tmp = sprites.child;
                 break;
         }
-        switch(dir)
+        switch (dir)
         {
             case Direction.up:
                 SetUpSprites(tmp.up);
@@ -36,10 +41,7 @@ public class AnimalAnimationController : MonoBehaviour
                 SetUpSprites(tmp.side);
                 break;
         }
-
-        
     }
-
 
     #region Sprites SetUp
     [SerializeField] SpriteRenderer body;
