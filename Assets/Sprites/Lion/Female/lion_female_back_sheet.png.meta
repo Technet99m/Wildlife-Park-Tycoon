@@ -14,6 +14,18 @@ TextureImporter:
   - first:
       213: 4567453693258100516
     second: lion_female_back_sheet_3
+  - first:
+      213: 7459928324632723839
+    second: lion_female_back_sheet_0
+  - first:
+      213: 7330049425671808120
+    second: lion_female_back_sheet_1
+  - first:
+      213: -2053343383978386289
+    second: lion_female_back_sheet_2
+  - first:
+      213: 8424718131369864639
+    second: lion_female_back_sheet_3
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -101,19 +113,19 @@ TextureImporter:
       name: lion_female_back_sheet_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 5
-        width: 154
-        height: 165
+        x: 17
+        y: 4
+        width: 166
+        height: 174
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f78b20d01568a1670800000000000000
-      internalID: 8510262128538728575
+      spriteID: f71cb9f694df68760800000000000000
+      internalID: 7459928324632723839
       vertices: []
       indices: 
       edges: []
@@ -122,7 +134,7 @@ TextureImporter:
       name: lion_female_back_sheet_1
       rect:
         serializedVersion: 2
-        x: 168
+        x: 199
         y: 38
         width: 89
         height: 128
@@ -133,8 +145,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c827ed78608689e0800000000000000
-      internalID: -1619465829715859259
+      spriteID: 874693bcd1199b560800000000000000
+      internalID: 7330049425671808120
       vertices: []
       indices: 
       edges: []
@@ -143,19 +155,19 @@ TextureImporter:
       name: lion_female_back_sheet_2
       rect:
         serializedVersion: 2
-        x: 161
+        x: 192
         y: 0
         width: 45
         height: 31
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f5b2683145e46cf10800000000000000
-      internalID: 2289603583576255327
+      spriteID: f8cd114421f0183e0800000000000000
+      internalID: -2053343383978386289
       vertices: []
       indices: 
       edges: []
@@ -164,19 +176,19 @@ TextureImporter:
       name: lion_female_back_sheet_3
       rect:
         serializedVersion: 2
-        x: 214
+        x: 245
         y: 2
         width: 45
         height: 30
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 42fe1b24fead26f30800000000000000
-      internalID: 4567453693258100516
+      spriteID: fbde711218c9ae470800000000000000
+      internalID: 8424718131369864639
       vertices: []
       indices: 
       edges: []

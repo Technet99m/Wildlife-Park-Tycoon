@@ -77,7 +77,7 @@ MonoBehaviour:
       tail: {fileID: 8982794331645636649, guid: 6819131e6643261458593c8ef2291425,
         type: 3}
     up:
-      body: {fileID: 1742493283818770416, guid: 6819131e6643261458593c8ef2291425,
+      body: {fileID: 8510262128538728575, guid: d402824d8fc008b4bb04f5a908f2dfd5,
         type: 3}
       face: {fileID: 0}
       eyes: {fileID: 0}
