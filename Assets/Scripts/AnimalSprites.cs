@@ -7,7 +7,6 @@ public class AnimalSprites : ScriptableObject
 {
     public AnimalPack male;
     public AnimalPack female;
-    public AnimalPack child;
 }
 [System.Serializable]
 public class AnimalPack

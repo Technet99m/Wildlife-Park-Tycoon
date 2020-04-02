@@ -5,43 +5,50 @@ using UnityEngine;
 public class AnimalAnimationController : MonoBehaviour
 {
     public AnimalSprites sprites;
-    [SerializeField] Gender gender;
-    [SerializeField] Direction dir;
+    [SerializeField, Range(0,1)] float verticalThreshhold;
     Animator anim;
+    AnimalData data;
+    AnimalPack GenderPack
+    {
+        get
+        {
+            if (data == null) data = GetComponent<AnimalData>();
+            return data.male ? sprites.male : sprites.female;
+        }
+    }
     void Start()
     {
-        anim = GetComponent<Animator>();
-        SetUp();
+        anim = GetComponentInChildren<Animator>();
+        data = GetComponent<AnimalData>();
+        Apply();
     }
-
-    public void SetUp()
+    public void Apply()
     {
-        AnimalPack tmp;
-        switch (gender)
-        {
-            case Gender.male:
-                tmp = sprites.male;
-                break;
-            case Gender.female:
-                tmp = sprites.female;
-                break;
-            default:
-                tmp = sprites.child;
-                break;
-        }
-        switch (dir)
-        {
-            case Direction.up:
-                SetUpSprites(tmp.up);
-                break;
-            case Direction.down:
-                SetUpSprites(tmp.down);
-                break;
-            case Direction.side:
-                SetUpSprites(tmp.side);
-                break;
-        }
+        SetUp(GenderPack.down);
     }
+    public void Walk(Vector2 dir)
+    {
+        dir = dir.normalized;
+        string animation;
+        if (Mathf.Abs(dir.y) > verticalThreshhold)
+        {
+            animation = dir.y > 0 ? "Walk_up" : "Walk_down";
+            SetUp(dir.y > 0 ? GenderPack.up : GenderPack.down);
+        }
+        else
+        {
+            animation = dir.x > 0 ? "Walk_right" : "Walk_left";
+            SetUp(GenderPack.side);
+        }
+        anim.Play(animation);
+
+    }
+    public void Idle()
+    {
+        SetUp(GenderPack.down);
+        anim.Play("idle");
+    }
+    
 
     #region Sprites SetUp
     [SerializeField] SpriteRenderer body;
@@ -52,7 +59,7 @@ public class AnimalAnimationController : MonoBehaviour
     [SerializeField] SpriteRenderer right_hand;
     [SerializeField] SpriteRenderer left_hand;
     [SerializeField] SpriteRenderer tail;
-    void SetUpSprites(DirectionPack pack)
+    void SetUp(DirectionPack pack)
     {
         body.sprite = pack.body;
         face.sprite = pack.face;
@@ -65,15 +72,11 @@ public class AnimalAnimationController : MonoBehaviour
     }
     #endregion
 }
-public enum Gender
-{
-    male,
-    female,
-    child
-}
 public enum Direction
 {
     up,
     down,
-    side
+    left,
+    right
+
 }
