@@ -9,8 +9,7 @@ public class AnimalAnimationControllerEditor : Editor
     public override void OnInspectorGUI()
     {
         EditorGUILayout.PropertyField(serializedObject.FindProperty("sprites"));
-        EditorGUILayout.PropertyField(serializedObject.FindProperty("gender"));
-        EditorGUILayout.PropertyField(serializedObject.FindProperty("dir"));
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("verticalThreshhold"));
         fold = EditorGUILayout.BeginFoldoutHeaderGroup(fold,"spriteRenderers");
         if(fold)
         {
@@ -24,7 +23,7 @@ public class AnimalAnimationControllerEditor : Editor
             EditorGUILayout.PropertyField(serializedObject.FindProperty("tail"));
         }
         if (GUILayout.Button("Apply"))
-            (target as AnimalAnimationController).SetUp();
+            (target as AnimalAnimationController).Apply();
         serializedObject.ApplyModifiedProperties();
     }
 }
