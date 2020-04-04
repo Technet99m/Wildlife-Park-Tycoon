@@ -5,4 +5,5 @@ using UnityEngine;
 public class AnimalData : MonoBehaviour
 {
     public bool male;
+    public float sexualActivity;
 }
