@@ -12,14 +12,14 @@ public class AnimalAnimationController : MonoBehaviour
     {
         get
         {
-            if (data == null) data = GetComponent<AnimalData>();
+            if (data == null) data = GetComponent<AnimalDataHolder>().data;
             return data.male ? sprites.male : sprites.female;
         }
     }
     void Start()
     {
         anim = GetComponentInChildren<Animator>();
-        data = GetComponent<AnimalData>();
+        data = GetComponent<AnimalDataHolder>().data;
         Apply();
     }
     public void Apply()

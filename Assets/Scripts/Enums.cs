@@ -4,8 +4,8 @@ using UnityEngine;
 
 public enum Food
 {
-    water = -1,
-    meat = 0,
+    water = 0,
+    meat,
     fish,
     grass,
     veggie,

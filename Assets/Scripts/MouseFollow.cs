@@ -12,7 +12,9 @@ public class MouseFollow : MonoBehaviour
         {
             if (mc == null)
                 mc = GetComponent<MovementController>();
-            mc.SetNewTarget((Vector2)Technet99m.Utils.ScreenToWorldPoint(Input.mousePosition) + offset);
+            var go = new GameObject().transform;
+            go.position = (Vector2)Technet99m.Utils.ScreenToWorldPoint(Input.mousePosition) + offset;
+            mc.SetNewTarget(go);
         }
     }
 }

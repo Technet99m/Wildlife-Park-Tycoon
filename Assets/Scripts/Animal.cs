@@ -4,12 +4,19 @@ using UnityEngine;
 
 public class Animal : MonoBehaviour
 {
-    [HideInInspector] public Cage cage;
     MovementController movement;
+
     [SerializeField] AnimalAnimationController anim;
-    public List<Need> needs;
+    [SerializeField] Need selected;
+    [SerializeField] Transform matingPos;
+    [HideInInspector] public Cage cage;
+
     public AnimalData data;
-    Need selected;
+    public List<Need> needs;
+    public bool isBusy;
+    public event System.Action<Animal> Free;
+    public int Followers { get { return Free==null? 0 : Free.GetInvocationList().Length; } }
+    
     void Start()
     {
         cage = transform.parent.GetComponent<Cage>();
@@ -17,11 +24,13 @@ public class Animal : MonoBehaviour
         Technet99m.TickingMachine.EveryTick += OnTick;
         movement = GetComponent<MovementController>();
         movement.TargetReached += OnTargetReached;
+        data = GetComponent<AnimalDataHolder>().data;
         selected = null;
     }
+    
     public void OnTick()
     {
-        if(needs.Count>0 && selected == null)
+        if(needs.Count>0 && !isBusy)
         {
             for (int i = 0; i < needs.Count; i++)
             {
@@ -32,18 +41,28 @@ public class Animal : MonoBehaviour
                         var feeder = cage.GetProperFeeder(needs[i].food);
                         if (feeder != null)
                         {
-                            selected = needs[i];
-                            movement.SetNewTarget(feeder.GetFree().position);
-                            dealed = true;
+                            var tmp = feeder.GetFree();
+                            if (tmp!=null)
+                            {
+                                selected = needs[i];
+                                isBusy = true;
+                                movement.SetNewTarget(tmp);
+                                dealed = true;
+                            }
                         }
                         break;
                     case NeedType.Special:
                         var special = cage.GetProperSpecial(needs[i].special);
                         if (special != null)
                         {
-                            selected = needs[i];
-                            movement.SetNewTarget(special.GetFree().position);
-                            dealed = true;
+                            var tmp = special.GetFree();
+                            if (tmp != null)
+                            {
+                                selected = needs[i];
+                                isBusy = true;
+                                movement.SetNewTarget(tmp);
+                                dealed = true;
+                            }
                         }
                         break;
                     case NeedType.Sex:
@@ -53,6 +72,10 @@ public class Animal : MonoBehaviour
                             if (mate != null)
                             {
                                 selected = needs[i];
+                                if (!mate.isBusy)
+                                    OnMateFree(mate);
+                                mate.Free += OnMateFree;
+                                isBusy = true;
                                 dealed = true;
                             }
                         }
@@ -66,6 +89,18 @@ public class Animal : MonoBehaviour
     }
     public void OnTargetReached()
     {
-        anim.Idle();
+        if (isBusy)
+        {
+            Free?.Invoke(this);
+            isBusy = false;
+            anim.Idle();
+            GetComponent<AnimalState>().Done(selected);
+        }
+    }
+    public void OnMateFree(Animal sender)
+    {
+        sender.isBusy = true;
+        sender.Free -= OnMateFree;
+        movement.SetNewTarget(sender.matingPos);
     }
 }

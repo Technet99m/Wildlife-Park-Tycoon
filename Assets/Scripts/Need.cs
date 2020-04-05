@@ -7,6 +7,5 @@ public class Need
 {
     public NeedType type;
     public Food food;
-    public bool targetIsMale;
     public Special special;
 }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Animal", menuName = "Animal", order = 51)]
+[CreateAssetMenu(fileName = "New Animal", menuName = "Animal Sprites Pack", order = 51)]
 public class AnimalSprites : ScriptableObject
 {
     public AnimalPack male;

@@ -642,6 +642,7 @@ GameObject:
   - component: {fileID: 4162523600852682271}
   - component: {fileID: 4162523600852682274}
   - component: {fileID: 6921321988990399577}
+  - component: {fileID: 6969706064375971004}
   - component: {fileID: 4162523600852682273}
   - component: {fileID: 4162523600852682272}
   m_Layer: 0
@@ -663,6 +664,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4162523600729254369}
+  - {fileID: 2901326196466386586}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -700,10 +702,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3139ea15dd5562f488c7c04ce15864a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cage: {fileID: 0}
   anim: {fileID: 4162523600852682274}
+  selected:
+    type: 0
+    food: 0
+    special: 0
+  matingPos: {fileID: 2901326196466386586}
+  cage: {fileID: 0}
+  data:
+    male: 0
+    sexualActivity: 0
+    happiness: 0
+    foods: []
+    specials: []
   needs: []
-  data: {fileID: 4162523600852682273}
+  isBusy: 0
+--- !u!114 &6969706064375971004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4162523600852682270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b53d99b0f3fbeb428c7ea2b7105ecf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &4162523600852682273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -713,11 +738,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 4162523600852682270}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0252eedb3f7b8041bcba61af8f0dc7a, type: 3}
+  m_Script: {fileID: 11500000, guid: 0b034eff718617f4d8b92a3c0202f375, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  male: 1
-  sexualActivity: 0
+  data:
+    male: 1
+    sexualActivity: 0
+    happiness: 0
+    foods:
+    - 0.5
+    - 0.5
+    - 0.5
+    - 0.5
+    - 0.5
+    specials:
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+  stats: {fileID: 11400000, guid: 4e6b316cd50a6cd4185a7355fe1cebe9, type: 2}
 --- !u!114 &4162523600852682272
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -812,3 +852,33 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &7395245765386730154
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2901326196466386586}
+  m_Layer: 0
+  m_Name: matingPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2901326196466386586
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7395245765386730154}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.003, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4162523600852682271}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

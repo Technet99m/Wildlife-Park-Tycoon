@@ -16,7 +16,7 @@ public class Cage : MonoBehaviour
     }
     public Animal GetProperMate()
     {
-        return animals.Find((x) => !x.data.male && x.data.sexualActivity > 0.5f);
+        return animals.Find((x) => !x.data.male && x.data.sexualActivity > 0.5f && x.Followers == 0);
     }
 
 }
