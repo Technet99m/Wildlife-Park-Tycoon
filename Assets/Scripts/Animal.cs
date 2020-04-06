@@ -46,7 +46,7 @@ public class Animal : MonoBehaviour
                             {
                                 selected = needs[i];
                                 isBusy = true;
-                                movement.SetNewTarget(tmp);
+                                movement.SetNewTarget(tmp.position);
                                 dealed = true;
                             }
                         }
@@ -60,7 +60,7 @@ public class Animal : MonoBehaviour
                             {
                                 selected = needs[i];
                                 isBusy = true;
-                                movement.SetNewTarget(tmp);
+                                movement.SetNewTarget(tmp.position);
                                 dealed = true;
                             }
                         }
@@ -101,6 +101,6 @@ public class Animal : MonoBehaviour
     {
         sender.isBusy = true;
         sender.Free -= OnMateFree;
-        movement.SetNewTarget(sender.matingPos);
+        movement.SetNewTarget(sender.matingPos.position);
     }
 }
