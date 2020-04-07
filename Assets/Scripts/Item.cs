@@ -6,8 +6,11 @@ using UnityEngine;
 public class Item : MonoBehaviour
 {
     [SerializeField] Transform[] actionPoints;
-    [SerializeField] bool[] areBusy;
-
+    bool[] areBusy;
+    void Awake()
+    {
+        areBusy = new bool[actionPoints.Length];
+    }
     public Transform GetFree()
     {
         for (int i = 0; i < actionPoints.Length; i++)

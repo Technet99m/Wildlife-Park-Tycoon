@@ -11,6 +11,8 @@ public class Animal : MonoBehaviour
     [SerializeField] Transform matingPos;
     [HideInInspector] public Cage cage;
 
+    bool right;
+
     public AnimalData data;
     public List<Need> needs;
     public bool isBusy;
@@ -42,6 +44,7 @@ public class Animal : MonoBehaviour
                         if (feeder != null)
                         {
                             var tmp = feeder.GetFree();
+                            right = tmp.CompareTag("right");
                             if (tmp!=null)
                             {
                                 selected = needs[i];
@@ -93,7 +96,7 @@ public class Animal : MonoBehaviour
         {
             if (selected.type == NeedType.Food)
             {
-                anim.Eat(selected.food, true);
+                anim.Eat(selected.food, right);
                 Technet99m.Utils.InvokeAfterDelay(() => FinishNeed(), 4.5f);
             }
         }
