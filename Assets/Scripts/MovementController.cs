@@ -31,8 +31,8 @@ public class MovementController : MonoBehaviour
                 path.RemoveAt(0);
                 if (path.Count == 0)
                 {
-                    TargetReached?.Invoke();
                     anim.Idle();
+                    TargetReached?.Invoke();
                 }
                 else
                 {

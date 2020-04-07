@@ -6,8 +6,8 @@ public enum Food
 {
     water = 0,
     meat,
-    fish,
     grass,
+    fish,
     veggie,
     fruit
 }

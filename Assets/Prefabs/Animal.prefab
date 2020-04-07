@@ -682,6 +682,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sprites: {fileID: 11400000, guid: 5b55cae7f32274d4889d1681c0f36b54, type: 2}
   verticalThreshhold: 0.75
+  foods:
+  - {fileID: -314262122811554439, guid: 549a5618f92a5c749b0bd089e5a9ce45, type: 3}
+  - {fileID: -1045181238759104467, guid: 549a5618f92a5c749b0bd089e5a9ce45, type: 3}
+  - {fileID: 3046544090647025007, guid: 549a5618f92a5c749b0bd089e5a9ce45, type: 3}
+  foodSprite: {fileID: 2244213911343195385}
   body: {fileID: 4162523600250642597}
   face: {fileID: 4162523600549867860}
   eyes: {fileID: 4162523600104486622}

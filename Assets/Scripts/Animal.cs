@@ -91,11 +91,19 @@ public class Animal : MonoBehaviour
     {
         if (isBusy)
         {
-            Free?.Invoke(this);
-            isBusy = false;
-            anim.Idle();
-            GetComponent<AnimalState>().Done(selected);
+            if (selected.type == NeedType.Food)
+            {
+                anim.Eat(selected.food, true);
+                Technet99m.Utils.InvokeAfterDelay(() => FinishNeed(), 4.5f);
+            }
         }
+    }
+    public void FinishNeed()
+    {
+        Free?.Invoke(this);
+        isBusy = false;
+        anim.Idle();
+        GetComponent<AnimalState>().Done(selected);
     }
     public void OnMateFree(Animal sender)
     {

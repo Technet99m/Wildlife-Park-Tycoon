@@ -10,6 +10,8 @@ public class AnimalAnimationControllerEditor : Editor
     {
         EditorGUILayout.PropertyField(serializedObject.FindProperty("sprites"));
         EditorGUILayout.PropertyField(serializedObject.FindProperty("verticalThreshhold"));
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("foods"));
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("foodSprite"));
         fold = EditorGUILayout.BeginFoldoutHeaderGroup(fold,"spriteRenderers");
         if(fold)
         {

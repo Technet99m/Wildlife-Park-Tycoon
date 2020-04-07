@@ -6,6 +6,8 @@ public class AnimalAnimationController : MonoBehaviour
 {
     public AnimalSprites sprites;
     [SerializeField, Range(0,1)] float verticalThreshhold;
+    [SerializeField] Sprite[] foods;
+    [SerializeField] SpriteRenderer foodSprite;
     Animator anim;
     AnimalData data;
     AnimalPack GenderPack
@@ -48,7 +50,12 @@ public class AnimalAnimationController : MonoBehaviour
         SetUp(GenderPack.down);
         anim.Play("idle");
     }
-    
+    public void Eat(Food type, bool right)
+    {
+        SetUp(GenderPack.side);
+        foodSprite.sprite = foods[(int)type];
+        anim.Play(right ? "Eat_right" : "Eat_left");
+    }
 
     #region Sprites SetUp
     [SerializeField] SpriteRenderer body;
