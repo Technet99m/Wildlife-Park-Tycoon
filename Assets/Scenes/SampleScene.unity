@@ -828,7 +828,7 @@ MonoBehaviour:
   - {fileID: 556125447}
   - {fileID: 1202297076}
   - {fileID: 607302375}
-  type: 0
+  type: 2
 --- !u!1 &1393246688 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4162523600852682270, guid: 9d348ab3fa1039042ae42b9ccfe1eefc,
