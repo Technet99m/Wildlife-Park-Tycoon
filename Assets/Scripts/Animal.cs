@@ -11,8 +11,8 @@ public class Animal : MonoBehaviour
     [SerializeField] Transform matingPos;
     [HideInInspector] public Cage cage;
 
-    bool right;
-
+    Item target;
+    Animal mate;
     public AnimalData data;
     public List<Need> needs;
     public bool isBusy;
@@ -40,11 +40,10 @@ public class Animal : MonoBehaviour
                 switch(needs[i].type)
                 {
                     case NeedType.Food:
-                        var feeder = cage.GetProperFeeder(needs[i].food);
-                        if (feeder != null)
+                        target= cage.GetProperFeeder(needs[i].food);
+                        if (target != null)
                         {
-                            var tmp = feeder.GetFree();
-                            right = tmp.CompareTag("right");
+                            var tmp = target.GetFree();
                             if (tmp!=null)
                             {
                                 selected = needs[i];
@@ -55,10 +54,10 @@ public class Animal : MonoBehaviour
                         }
                         break;
                     case NeedType.Special:
-                        var special = cage.GetProperSpecial(needs[i].special);
-                        if (special != null)
+                        target = cage.GetProperSpecial(needs[i].special);
+                        if (target != null)
                         {
-                            var tmp = special.GetFree();
+                            var tmp = target.GetFree();
                             if (tmp != null)
                             {
                                 selected = needs[i];
@@ -96,13 +95,28 @@ public class Animal : MonoBehaviour
         {
             if (selected.type == NeedType.Food)
             {
-                anim.Eat(selected.food, right);
-                Technet99m.Utils.InvokeAfterDelay(() => FinishNeed(), 4.5f);
+                anim.Eat(selected.food, target.transform.position.x > transform.position.x);
+                Technet99m.Utils.InvokeAfterDelay(() => { FinishNeed(); target.Empty(transform.position); }, 4.5f);
+            }
+            if(selected.type == NeedType.Sex)
+            {
+                mate.Mate();
+                Mate();
             }
         }
     }
+    public void Mate()
+    {
+        if (!data.male)
+            selected = needs.Find((x) => x.type == NeedType.Sex);
+        else
+            mate.Free -= this.OnMateFree;
+        anim.Mate();
+        Technet99m.Utils.InvokeAfterDelay(() => FinishNeed(), 3f);
+    }
     public void FinishNeed()
     {
+
         Free?.Invoke(this);
         isBusy = false;
         anim.Idle();
@@ -111,7 +125,7 @@ public class Animal : MonoBehaviour
     public void OnMateFree(Animal sender)
     {
         sender.isBusy = true;
-        sender.Free -= OnMateFree;
+        mate = sender;
         movement.SetNewTarget(sender.matingPos.position);
     }
 }

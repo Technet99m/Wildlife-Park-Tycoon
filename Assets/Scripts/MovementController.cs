@@ -36,7 +36,7 @@ public class MovementController : MonoBehaviour
                 }
                 else
                 {
-                    target = pathfinding.Grid.GetWorldPos(path[0].x, path[0].y, cage.transform.position);
+                    target = pathfinding.Grid.GetWorldPos(path[0].x, path[0].y, cage.transform.position)+Vector2.up* (Random.value>0.5? Random.Range(0.02f,0.06f): -Random.Range(0.02f, 0.06f));
                     anim.Walk(target - (Vector2)transform.position);
                 }
             }
@@ -55,7 +55,8 @@ public class MovementController : MonoBehaviour
         pathfinding.Grid.GetXY(transform.position, cage.transform.position, out int sX, out int sY);
         pathfinding.Grid.GetXY(target, cage.transform.position, out int eX, out int eY);
         path = pathfinding.FindPath(sX, sY, eX, eY);
-        path.RemoveAt(0);
+        if (path.Count > 1)
+            path.RemoveAt(0);
         this.target = pathfinding.Grid.GetWorldPos(path[0].x, path[0].y, cage.transform.position);
         anim.Walk(target - (Vector2)transform.position);
     }

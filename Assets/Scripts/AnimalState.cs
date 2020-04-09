@@ -42,7 +42,8 @@ public class AnimalState : MonoBehaviour
                     data.happiness -= 0.1f;
                     break;
             }
-        data.sexualActivity += (data.happiness - 0.5f) * 2f / stats.TicksToFullMate;
+        if (data.happiness >= 0.5)
+            data.sexualActivity += (data.happiness - 0.5f) * 2f / stats.TicksToFullMate;
         if (data.sexualActivity > 0.5 && needs.Find((x) => x.type == NeedType.Sex) == null)
             needs.Add(new Need() { type = NeedType.Sex });
     }

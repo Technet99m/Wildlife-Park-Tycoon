@@ -47,7 +47,7 @@ namespace Technet99m
         {
             if (globalGO == null)
             {
-                globalGO = new GameObject("GloabalTimer", typeof(GlobalTimer));
+                globalGO = new GameObject("GlobalTimer", typeof(GlobalTimer));
                 actionsWithDelay = new List<DelayAction>();
                 updateActions = new List<UpdateAction>();
             }

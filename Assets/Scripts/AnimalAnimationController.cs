@@ -56,7 +56,14 @@ public class AnimalAnimationController : MonoBehaviour
         foodSprite.sprite = foods[(int)type];
         anim.Play(right ? "Eat_right" : "Eat_left");
     }
-
+    public void Mate()
+    {
+        SetUp(GenderPack.side);
+        if (data.male)
+            anim.Play("Sex");
+        else
+            anim.Play("Sex_female");
+    }
     #region Sprites SetUp
     [SerializeField] SpriteRenderer body;
     [SerializeField] SpriteRenderer face;

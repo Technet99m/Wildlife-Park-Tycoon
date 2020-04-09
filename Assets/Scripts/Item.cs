@@ -6,7 +6,7 @@ using UnityEngine;
 public class Item : MonoBehaviour
 {
     [SerializeField] Transform[] actionPoints;
-    bool[] areBusy;
+    [SerializeField] bool[] areBusy;
     void Awake()
     {
         areBusy = new bool[actionPoints.Length];
@@ -22,5 +22,16 @@ public class Item : MonoBehaviour
             }
         }
         return null;
+    }
+    public void Empty(Vector2 pos)
+    {
+        for(int i = 0;i<actionPoints.Length;i++)
+        {
+            if(Vector2.Distance(actionPoints[i].position, pos)<0.25f)
+            {
+                areBusy[i] = false;
+                break;
+            }
+        }
     }
 }

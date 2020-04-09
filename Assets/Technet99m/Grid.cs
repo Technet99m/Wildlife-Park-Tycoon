@@ -42,6 +42,14 @@ namespace Technet99m
                 return;
             units[x, y] = val;
         }
+
+        /// <summary>
+        /// Get X and Y of cell of world position
+        /// </summary>
+        /// <param name="pos"></param>
+        /// <param name="startPos"></param>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
         public void GetXY(Vector2 pos, Vector2 startPos,out int x, out int y)
         {
             x = Mathf.FloorToInt((pos - startPos).x / cellSize);
@@ -54,11 +62,43 @@ namespace Technet99m
             for (int i = 0; i <= height; i++)
                 Debug.DrawLine(new Vector3(startPos.x, i * cellSize + startPos.y), new Vector3(startPos.x + width * cellSize, i * cellSize + startPos.y));
         }
+
+        /// <summary>
+        /// Get World Position of cell with X and Y
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <param name="startPos"></param>
+        /// <returns></returns>
         public Vector2 GetWorldPos(int x,int y, Vector2 startPos)
         {
             if (x < 0 || x >= width || y < 0 || y >= height)
                 return default;
             return new Vector2(startPos.x + x * cellSize + cellSize / 2, startPos.y + y * cellSize + cellSize / 2);
+        }
+
+        public static string Grid2String(Technet99m.Grid<GridUnit> g)
+        {
+            string s = "";
+            GridUnit[] arr = new GridUnit[g.Width * g.Height];
+            for (int x = 0; x < g.Width; x++)
+                for (int y = 0; y < g.Height; y++)
+                    arr[x + y * g.Width] = g.GetUnitAt(x, y);
+            return JsonUtility.ToJson(new GridSave<GridUnit>() { array = arr, gridWidth = g.Width , cellSize = g.cellSize});
+        }
+        public static Grid<GridUnit> String2Grid(string s)
+        {
+            var tmp = JsonUtility.FromJson<GridSave<GridUnit>>(s);
+            Grid<GridUnit> grid = new Grid<GridUnit>(tmp.gridWidth, tmp.array.Length / tmp.gridWidth, tmp.cellSize);
+            for (int i = 0; i < tmp.array.Length; i++)
+                grid.SetValue(i % tmp.gridWidth, i / tmp.gridWidth, tmp.array[i]);
+            return grid;
+        }
+        class GridSave<GridUnit>
+        {
+            public GridUnit[] array;
+            public int gridWidth;
+            public float cellSize;
         }
     }
 }
