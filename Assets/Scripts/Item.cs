@@ -25,13 +25,14 @@ public class Item : MonoBehaviour
     }
     public void Empty(Vector2 pos)
     {
-        for(int i = 0;i<actionPoints.Length;i++)
+        int closest = 0;
+        for(int i = 1;i<actionPoints.Length;i++)
         {
-            if(Vector2.Distance(actionPoints[i].position, pos)<0.25f)
+            if(Vector2.Distance(actionPoints[i].position, pos)< Vector2.Distance(actionPoints[closest].position, pos))
             {
-                areBusy[i] = false;
-                break;
+                closest = i;
             }
         }
+        areBusy[closest] = false;
     }
 }

@@ -120,7 +120,7 @@ public class Animal : MonoBehaviour
         Free?.Invoke(this);
         isBusy = false;
         anim.Idle();
-        GetComponent<AnimalState>().Done(selected);
+        GetComponent<AnimalStatus>().Done(selected);
     }
     public void OnMateFree(Animal sender)
     {

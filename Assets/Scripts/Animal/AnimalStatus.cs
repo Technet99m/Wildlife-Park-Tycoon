@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AnimalState : MonoBehaviour
+public class AnimalStatus : MonoBehaviour
 {
     AnimalData data;
     AnimalStats stats;
     List<Need> needs;
+    public bool pregnant;
     void Start()
     {
         Technet99m.TickingMachine.EveryTick += OnTick;
@@ -16,7 +17,7 @@ public class AnimalState : MonoBehaviour
     }
     void OnTick()
     {
-        foreach(var food in stats.foods)
+        foreach (var food in stats.foods)
         {
             data.foods[(int)food] -= 0.02f;
             if (data.foods[(int)food] < 0.5f && needs.Find((x) => x.type == NeedType.Food && x.food == food) == null)
@@ -29,11 +30,11 @@ public class AnimalState : MonoBehaviour
                 needs.Add(new Need() { type = NeedType.Special, special = spec });
         }
         data.happiness = 1;
-        foreach(var need in needs)
-            switch(need.type)
+        foreach (var need in needs)
+            switch (need.type)
             {
                 case NeedType.Food:
-                    data.happiness -= 0.5f/stats.foods.Length;
+                    data.happiness -= 0.5f / stats.foods.Length;
                     break;
                 case NeedType.Special:
                     data.happiness -= 0.4f / stats.specials.Length;
@@ -42,7 +43,7 @@ public class AnimalState : MonoBehaviour
                     data.happiness -= 0.1f;
                     break;
             }
-        if (data.happiness >= 0.5)
+        if (data.happiness >= 0.5 && !pregnant)
             data.sexualActivity += (data.happiness - 0.5f) * 2f / stats.TicksToFullMate;
         if (data.sexualActivity > 0.5 && needs.Find((x) => x.type == NeedType.Sex) == null)
             needs.Add(new Need() { type = NeedType.Sex });
@@ -50,7 +51,7 @@ public class AnimalState : MonoBehaviour
     public void Done(Need need)
     {
         needs.Remove(need);
-        switch(need.type)
+        switch (need.type)
         {
             case NeedType.Food:
                 data.foods[(int)need.food] = 1;
@@ -60,7 +61,13 @@ public class AnimalState : MonoBehaviour
                 break;
             case NeedType.Sex:
                 data.sexualActivity = 0;
+                if(!data.male) Pregnant();
                 break;
         }
+    }
+    void Pregnant()
+    {
+        pregnant = true;
+        GetComponent<PregnancyController>().ticksToBorn = stats.TicksToBorn;
     }
 }
