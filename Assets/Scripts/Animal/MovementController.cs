@@ -21,7 +21,6 @@ public class MovementController : MonoBehaviour
     void Update()
     {
         DrawPath();
-        cage.walkingMap.ShowGrid(cage.transform.position);
         if (path.Count>0)
         {
             transform.position = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime);
@@ -36,7 +35,7 @@ public class MovementController : MonoBehaviour
                 }
                 else
                 {
-                    target = pathfinding.Grid.GetWorldPos(path[0].x, path[0].y, cage.transform.position)+Vector2.up* (Random.value>0.5? Random.Range(0.02f,0.06f): -Random.Range(0.02f, 0.06f));
+                    target = pathfinding.Grid.GetWorldPos(path[0].x, path[0].y, cage.transform.position)+Vector2.up* (Random.value>0.5? Random.Range(0.02f,0.04f): -Random.Range(0.02f, 0.04f));
                     anim.Walk(target - (Vector2)transform.position);
                 }
             }
@@ -58,6 +57,6 @@ public class MovementController : MonoBehaviour
         if (path.Count > 1)
             path.RemoveAt(0);
         this.target = pathfinding.Grid.GetWorldPos(path[0].x, path[0].y, cage.transform.position);
-        anim.Walk(target - (Vector2)transform.position);
+        anim.Walk(this.target - (Vector2)transform.position);
     }
 }

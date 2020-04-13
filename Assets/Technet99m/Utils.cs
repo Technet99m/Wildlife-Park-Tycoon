@@ -26,6 +26,10 @@ namespace Technet99m
             var tmp = Cam.ScreenToWorldPoint(point);
             return new Vector3(tmp.x, tmp.y, 0);
         }
+        public static Vector3 WorldToScreenPoint(Vector3 point)
+        {
+            return Cam.WorldToScreenPoint(point);
+        }
         public static Vector2 GetCameraSizeInWorldSpace()
         {
             if (!Cam.orthographic)

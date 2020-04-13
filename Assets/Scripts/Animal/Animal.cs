@@ -98,7 +98,12 @@ public class Animal : MonoBehaviour
                 anim.Eat(selected.food, target.transform.position.x > transform.position.x);
                 Technet99m.Utils.InvokeAfterDelay(() => { FinishNeed(); target.Empty(transform.position); }, 4.5f);
             }
-            if(selected.type == NeedType.Sex)
+            if (selected.type == NeedType.Special)
+            {
+                anim.DoSpecial(selected.special);
+                Technet99m.Utils.InvokeAfterDelay(() => { FinishNeed(); target.Empty(transform.position); }, 3f);
+            }
+            if (selected.type == NeedType.Sex)
             {
                 mate.Mate();
                 Mate();

@@ -56,6 +56,18 @@ public class AnimalAnimationController : MonoBehaviour
         foodSprite.sprite = foods[(int)type];
         anim.Play(right ? "Eat_right" : "Eat_left");
     }
+    public void DoSpecial(Special spec)
+    {
+        switch(spec)
+        {
+            case Special.jump:
+                SetUp(GenderPack.side);
+                anim.Play("Jump");
+                break;
+            default:
+                break;
+        }
+    }
     public void Mate()
     {
         SetUp(GenderPack.side);

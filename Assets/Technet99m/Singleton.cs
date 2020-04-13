@@ -6,13 +6,13 @@ namespace Technet99m
 {
     public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
     {
-        static Singleton<T> instance;
-        public static Singleton<T> Ins { get { return instance; } }
+        static T instance;
+        public static T Ins { get { return instance; } }
 
         private void Awake()
         {
             if (Ins == null)
-                instance = this;
+                instance = (T)FindObjectOfType(typeof(T));
             else
             {
                 Debug.LogError($"Instance of {nameof(instance)} already exists. Destroying");
