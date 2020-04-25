@@ -14,7 +14,6 @@ public class Cage : MonoBehaviour
     void Start()
     {
         GridInit();
-        ShowGrid();
     }
     public Feeder GetProperFeeder(Food type)
     {

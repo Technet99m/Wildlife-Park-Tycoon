@@ -80,7 +80,6 @@ public class Item : MonoBehaviour,IBeginDragHandler,IDragHandler,IEndDragHandler
         GameManager.Ins.activeCage.Place(placedSize, walkingSize, transform.position);
         UIManager.Ins.setPanel.okPressed -= Place;
         GameManager.Ins.activeCage.feeders.Add(this);
-        GameManager.Ins.activeCage.ShowGrid();
     }
     #endregion
 }
