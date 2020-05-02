@@ -92,4 +92,16 @@ public class Cage : MonoBehaviour
             for (int y = 0; y < walkingSize.y; y++)
                 walkingMap.SetValue(XS + x, YS + y, false);
     }
+    public Vector2 GetFreeTileInGrid()
+    {
+        int x, y;
+        do
+        {
+            x = Random.Range(0, walkingMap.Width);
+            y = Random.Range(0, walkingMap.Height);
+        }
+        while (!walkingMap.GetUnitAt(x,y));
+        return walkingMap.GetWorldPos(x, y, transform.position);
+        
+    }
 }

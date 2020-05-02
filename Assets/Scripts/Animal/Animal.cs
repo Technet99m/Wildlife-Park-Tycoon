@@ -32,19 +32,19 @@ public class Animal : MonoBehaviour
     
     public void OnTick()
     {
-        if(needs.Count>0 && !isBusy)
+        if (needs.Count > 0 && !isBusy)
         {
             for (int i = 0; i < needs.Count; i++)
             {
                 bool dealed = false;
-                switch(needs[i].type)
+                switch (needs[i].type)
                 {
                     case NeedType.Food:
-                        target= cage.GetProperFeeder(needs[i].food);
+                        target = cage.GetProperFeeder(needs[i].food);
                         if (target != null)
                         {
                             var tmp = target.GetFree();
-                            if (tmp!=null)
+                            if (tmp != null)
                             {
                                 selected = needs[i];
                                 isBusy = true;
@@ -84,10 +84,17 @@ public class Animal : MonoBehaviour
                         break;
                 }
                 if (dealed)
-                    break;
-                
+                    return;
+
             }
         }
+        if (!movement.isWalking)
+            Technet99m.Utils.InvokeAfterDelay(()=>
+            {
+                if (!movement.isWalking)
+                    movement.SetNewTarget(cage.GetFreeTileInGrid());
+            },3f);
+
     }
     public void OnTargetReached()
     {
@@ -98,16 +105,17 @@ public class Animal : MonoBehaviour
                 anim.Eat(selected.food, target.transform.position.x > transform.position.x);
                 Technet99m.Utils.InvokeAfterDelay(() => { FinishNeed(); target.Empty(transform.position); }, 4.5f);
             }
-            if (selected.type == NeedType.Special)
+            else if (selected.type == NeedType.Special)
             {
                 anim.DoSpecial(selected.special);
                 Technet99m.Utils.InvokeAfterDelay(() => { FinishNeed(); target.Empty(transform.position); }, 3f);
             }
-            if (selected.type == NeedType.Sex)
+            else if (selected.type == NeedType.Sex)
             {
                 mate.Mate();
                 Mate();
             }
+            return;
         }
     }
     public void Mate()

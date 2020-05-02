@@ -12,6 +12,7 @@ public class MovementController : MonoBehaviour
     Cage cage;
     Vector2 target;
     public event System.Action TargetReached;
+    public bool isWalking;
     void Start()
     {
         path = new List<PathNode>();
@@ -30,6 +31,7 @@ public class MovementController : MonoBehaviour
                 path.RemoveAt(0);
                 if (path.Count == 0)
                 {
+                    isWalking = false;
                     anim.Idle();
                     TargetReached?.Invoke();
                 }
@@ -50,6 +52,7 @@ public class MovementController : MonoBehaviour
     }
     public void SetNewTarget(Vector2 target)
     {
+        isWalking = true;
         pathfinding = new Pathfinding(cage.walkingMap);
         pathfinding.Grid.GetXY(transform.position, cage.transform.position, out int sX, out int sY);
         pathfinding.Grid.GetXY(target, cage.transform.position, out int eX, out int eY);
