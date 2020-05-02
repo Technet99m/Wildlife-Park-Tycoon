@@ -1,0 +1,731 @@
+fileFormatVersion: 2
+guid: c511757e4346f81459d62e7aa9ba931f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5283973771207418349
+    second: scrollview_background
+  - first:
+      213: -371124750439243189
+    second: cagelevel_1
+  - first:
+      213: 2644874050987448335
+    second: animal_background
+  - first:
+      213: -2826089976063180989
+    second: upgrade_btn
+  - first:
+      213: -3399030176576996354
+    second: animal_cost
+  - first:
+      213: 5216189181101325373
+    second: cage_atlas_5
+  - first:
+      213: -6482280678015183910
+    second: cage_name
+  - first:
+      213: 1483967842991443198
+    second: sell_btn
+  - first:
+      213: 8851246650175367210
+    second: cage_atlas_8
+  - first:
+      213: 415946045805191176
+    second: cage_atlas_9
+  - first:
+      213: -4144788645355664353
+    second: male
+  - first:
+      213: 3428201736903676218
+    second: cage_checkbox_normal
+  - first:
+      213: -3714966810359951414
+    second: under_sell_btn
+  - first:
+      213: -8995409311957571064
+    second: close_btn
+  - first:
+      213: -4312155926840691243
+    second: coin_normal
+  - first:
+      213: -7669262730048934540
+    second: coin_small
+  - first:
+      213: 5220396020062870798
+    second: cage_icon
+  - first:
+      213: -8354927621380857801
+    second: emogi_bad
+  - first:
+      213: -3424494754479337710
+    second: cage_atlas_18
+  - first:
+      213: -756550299330616618
+    second: emoji_good
+  - first:
+      213: -910397222395511843
+    second: cage_atlas_20
+  - first:
+      213: -1242029561299324491
+    second: emoji_so_so
+  - first:
+      213: 5553070814361109581
+    second: cage_atlas_22
+  - first:
+      213: 8345988050164781996
+    second: choose_btn
+  - first:
+      213: 3223319189396569595
+    second: cage_icon_numberofanimals
+  - first:
+      213: -6429281868863008352
+    second: progressbar_mating
+  - first:
+      213: -7598782934141590191
+    second: cage_checkbox_pressed
+  - first:
+      213: 2436175132249539252
+    second: progressbar_fill
+  - first:
+      213: 8167950535869902573
+    second: heart_progressbar
+  - first:
+      213: 411520623046328217
+    second: heart_progressbar_complete
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: scrollview_background
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 495
+        width: 1640
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de1ac433622745940800000000000000
+      internalID: 5283973771207418349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cage_name
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 373
+        width: 462
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad3d68461105a06a0800000000000000
+      internalID: -6482280678015183910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sell_btn
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 351
+        width: 217
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efc8b9b04ec189410800000000000000
+      internalID: 1483967842991443198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cage_atlas_9
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 381
+        width: 70
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80062f199bcb5c500800000000000000
+      internalID: 415946045805191176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: male
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 326
+        width: 34
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1cc084efa0ca76c0800000000000000
+      internalID: -4144788645355664353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cage_checkbox_normal
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 286
+        width: 87
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a31558af05b639f20800000000000000
+      internalID: 3428201736903676218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: under_sell_btn
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 296
+        width: 211
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acf01246e59c17cc0800000000000000
+      internalID: -3714966810359951414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: close_btn
+      rect:
+        serializedVersion: 2
+        x: 1058
+        y: 235
+        width: 84
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80a2787f3e2e92380800000000000000
+      internalID: -8995409311957571064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin_normal
+      rect:
+        serializedVersion: 2
+        x: 956
+        y: 272
+        width: 44
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d5b09408052824c0800000000000000
+      internalID: -4312155926840691243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin_small
+      rect:
+        serializedVersion: 2
+        x: 1011
+        y: 277
+        width: 40
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47d6a463e2e419590800000000000000
+      internalID: -7669262730048934540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cage_icon
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 133
+        width: 557
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0dd5ba7582927840800000000000000
+      internalID: 5220396020062870798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: emogi_bad
+      rect:
+        serializedVersion: 2
+        x: 969
+        y: 180
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 730ae7b38955d0c80800000000000000
+      internalID: -8354927621380857801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: emoji_good
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 181
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d2eea9d2813085f0800000000000000
+      internalID: -756550299330616618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: emoji_so_so
+      rect:
+        serializedVersion: 2
+        x: 1082
+        y: 181
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b1383ec1bc63cee0800000000000000
+      internalID: -1242029561299324491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: choose_btn
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 29
+        width: 294
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca31ab5a9e7e2d370800000000000000
+      internalID: 8345988050164781996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cage_icon_numberofanimals
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 36
+        width: 147
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfdbea199b78bbc20800000000000000
+      internalID: 3223319189396569595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: progressbar_mating
+      rect:
+        serializedVersion: 2
+        x: 889
+        y: 87
+        width: 293
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a19f8d343a96c6a0800000000000000
+      internalID: -6429281868863008352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cage_checkbox_pressed
+      rect:
+        serializedVersion: 2
+        x: 1203
+        y: 8
+        width: 87
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 155a0357e23bb8690800000000000000
+      internalID: -7598782934141590191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: progressbar_fill
+      rect:
+        serializedVersion: 2
+        x: 897
+        y: 39
+        width: 39
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b2cf5810680fc120800000000000000
+      internalID: 2436175132249539252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heart_progressbar
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 8
+        width: 65
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: deeac799cb36a5170800000000000000
+      internalID: 8167950535869902573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heart_progressbar_complete
+      rect:
+        serializedVersion: 2
+        x: 1116
+        y: 7
+        width: 65
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99f7c6a83d306b500800000000000000
+      internalID: 411520623046328217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cagelevel_1
+      rect:
+        serializedVersion: 2
+        x: 1160
+        y: 186
+        width: 134
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b42a6ba710089daf0800000000000000
+      internalID: -371124750439243189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animal_background
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 30
+        width: 353
+        height: 454
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0851ccafea74b420800000000000000
+      internalID: 2644874050987448335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upgrade_btn
+      rect:
+        serializedVersion: 2
+        x: 1221
+        y: 101
+        width: 69
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34f3679d326b7c8d0800000000000000
+      internalID: -2826089976063180989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animal_cost
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 385
+        width: 209
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efb7b40301834d0d0800000000000000
+      internalID: -3399030176576996354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
