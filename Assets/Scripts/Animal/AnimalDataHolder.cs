@@ -11,6 +11,7 @@ public class AnimalDataHolder : MonoBehaviour
 [System.Serializable]
 public class AnimalData
 {
+    public string name;
     public bool male;
     public float sexualActivity;
     public float happiness;

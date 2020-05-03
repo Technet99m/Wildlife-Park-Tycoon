@@ -69,7 +69,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: c511458e7f16088438cb05b8f070d377, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -797,8 +797,8 @@ MonoBehaviour:
     food: 0
     special: 0
   matingPos: {fileID: 2901326196466386586}
-  cage: {fileID: 0}
   data:
+    name: 
     male: 0
     sexualActivity: 0
     happiness: 0
@@ -806,6 +806,7 @@ MonoBehaviour:
     specials: []
   needs: []
   isBusy: 0
+  cage: {fileID: 0}
 --- !u!114 &1295232486920788503
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -818,7 +819,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38fc377504b158d4c8270e8eaffa9d78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  childRef: {fileID: 4162523600852682270}
   data: {fileID: 4162523600852682273}
   ticksToBorn: 0
 --- !u!114 &6969706064375971004
@@ -847,6 +847,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data:
+    name: 
     male: 1
     sexualActivity: 0
     happiness: 0
@@ -876,6 +877,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1.5
+  isWalking: 0
 --- !u!1 &4162523601292422290
 GameObject:
   m_ObjectHideFlags: 0

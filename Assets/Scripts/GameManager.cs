@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GameManager : Technet99m.Singleton<GameManager>
 {
-    public Cage activeCage;
+    public List<Cage> cages;
+    public Cage activeCage { get => cages[currentCageIndex]; }
+    public int currentCageIndex;
     public float cellSize;
 }

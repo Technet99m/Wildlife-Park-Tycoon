@@ -4,19 +4,20 @@ using UnityEngine;
 
 public class Animal : MonoBehaviour
 {
-    MovementController movement;
+    [SerializeField] private AnimalAnimationController anim;
+    [SerializeField] private Need selected;
+    [SerializeField] private Transform matingPos;
 
-    [SerializeField] AnimalAnimationController anim;
-    [SerializeField] Need selected;
-    [SerializeField] Transform matingPos;
-    [HideInInspector] public Cage cage;
+    private MovementController movement;
+    private Item target;
+    private Animal mate;
 
-    Item target;
-    Animal mate;
     public AnimalData data;
     public List<Need> needs;
     public bool isBusy;
+    [HideInInspector] public Cage cage;
     public event System.Action<Animal> Free;
+    public event System.Action ReachedMatePos;
     public int Followers { get { return Free==null? 0 : Free.GetInvocationList().Length; } }
     
     void Start()
@@ -88,10 +89,10 @@ public class Animal : MonoBehaviour
 
             }
         }
-        if (!movement.isWalking)
+        if (!isBusy && !movement.isWalking)
             Technet99m.Utils.InvokeAfterDelay(()=>
             {
-                if (!movement.isWalking)
+                if (!movement.isWalking && !isBusy)
                     movement.SetNewTarget(cage.GetFreeTileInGrid());
             },3f);
 
@@ -112,33 +113,51 @@ public class Animal : MonoBehaviour
             }
             else if (selected.type == NeedType.Sex)
             {
-                mate.Mate();
-                Mate();
+                if (data.male)
+                {
+                    mate.ReachedMatePos -= OnMateReached;
+                    mate.Mate();
+                    Mate();
+                }
+                else
+                {
+                    ReachedMatePos?.Invoke();
+                }
             }
             return;
         }
     }
     public void Mate()
     {
-        if (!data.male)
-            selected = needs.Find((x) => x.type == NeedType.Sex);
-        else
-            mate.Free -= this.OnMateFree;
+        if (data.male)
+            mate.Free -= OnMateFree;
         anim.Mate();
+        data.sexualActivity = 0;
         Technet99m.Utils.InvokeAfterDelay(() => FinishNeed(), 3f);
     }
     public void FinishNeed()
-    {
-
+    { 
         Free?.Invoke(this);
         isBusy = false;
         anim.Idle();
         GetComponent<AnimalStatus>().Done(selected);
     }
+    public void GoMate()
+    {
+        selected = needs.Find((x) => x.type == NeedType.Sex);
+        movement.SetNewTarget(cage.GetPlaceToMate());
+        Debug.Log("Going Mate");
+        isBusy = true;
+    }
     public void OnMateFree(Animal sender)
     {
-        sender.isBusy = true;
         mate = sender;
-        movement.SetNewTarget(sender.matingPos.position);
+        mate.GoMate();
+        mate.ReachedMatePos += OnMateReached;
+    }
+    public void OnMateReached()
+    {
+        Debug.Log("Going Mate too");
+        movement.SetNewTarget(mate.matingPos.position);
     }
 }

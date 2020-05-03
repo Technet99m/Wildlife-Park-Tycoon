@@ -4,16 +4,39 @@ using UnityEngine;
 
 public class Cage : MonoBehaviour
 {
-    [SerializeField] Sprite EmptyTile, FilledTile;
-    SpriteRenderer[] gridTiles;
+    [SerializeField] private Sprite EmptyTile, FilledTile;
+    private SpriteRenderer[] gridTiles;
     public List<Item> feeders;
     public List<Animal> animals;
 
     public Technet99m.Grid<bool> walkingMap;
     public Technet99m.Grid<bool> placingMap;
-    void Start()
+    private void Start()
     {
         GridInit();
+    }
+    private void GridInit()
+    {
+        walkingMap = new Technet99m.Grid<bool>(20, 9, GameManager.Ins.cellSize);
+        placingMap = new Technet99m.Grid<bool>(20, 9, GameManager.Ins.cellSize);
+        InitGridTiles();
+    }
+    private void InitGridTiles()
+    {
+        gridTiles = new SpriteRenderer[walkingMap.Height * walkingMap.Width];
+        for (int x = 0, i = 0; x < walkingMap.Width; x++)
+            for (int y = 0; y < walkingMap.Height; y++, i++)
+            {
+                placingMap.SetValue(x, y, true);
+                walkingMap.SetValue(x, y, true);
+                /*var go = new GameObject("gridTile", typeof(SpriteRenderer));
+                gridTiles[i] = go.GetComponent<SpriteRenderer>();
+                gridTiles[i].sortingOrder = -2;
+                go.transform.parent = transform;
+                go.SetActive(false);
+                go.transform.position = placingMap.GetWorldPos(x, y, transform.position);
+                go.transform.localScale = Vector3.one * placingMap.CellSize;*/
+            }
     }
     public Feeder GetProperFeeder(Food type)
     {
@@ -26,25 +49,6 @@ public class Cage : MonoBehaviour
     public Animal GetProperMate()
     {
         return animals.Find((x) => !x.data.male && x.data.sexualActivity > 0.5f && x.Followers == 0);
-    }
-    void GridInit()
-    {
-        walkingMap = new Technet99m.Grid<bool>(20, 9, GameManager.Ins.cellSize);
-        placingMap = new Technet99m.Grid<bool>(20, 9, GameManager.Ins.cellSize);
-        gridTiles = new SpriteRenderer[walkingMap.Height * walkingMap.Width];
-        for (int x = 0, i = 0; x < walkingMap.Width; x++)
-            for (int y = 0; y < walkingMap.Height; y++,i++)
-            {
-                placingMap.SetValue(x, y, true);
-                walkingMap.SetValue(x, y, true);
-                var go = new GameObject("gridTile", typeof(SpriteRenderer));
-                gridTiles[i] = go.GetComponent<SpriteRenderer>();
-                gridTiles[i].sortingOrder = -2;
-                go.transform.parent = transform;
-                go.SetActive(false);
-                go.transform.position = placingMap.GetWorldPos(x, y, transform.position);
-                go.transform.localScale = Vector3.one * placingMap.CellSize;
-            }
     }
     public void ShowGrid()
     {
@@ -103,5 +107,16 @@ public class Cage : MonoBehaviour
         while (!walkingMap.GetUnitAt(x,y));
         return walkingMap.GetWorldPos(x, y, transform.position);
         
+    }
+    public Vector2 GetPlaceToMate()
+    {
+        int x, y;
+        do
+        {
+            x = Random.Range(0, walkingMap.Width);
+            y = Random.Range(0, walkingMap.Height);
+        }
+        while (!walkingMap.GetUnitAt(x, y) || !walkingMap.GetUnitAt(x-1, y));
+        return walkingMap.GetWorldPos(x, y, transform.position);
     }
 }

@@ -76,10 +76,12 @@ public class Item : MonoBehaviour,IBeginDragHandler,IDragHandler,IEndDragHandler
     {
         placed = true;
         GetComponent<SpriteRenderer>().color = Color.white;
-        transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.y * 10);
+        float posZ = (transform.position.y + (placedSize.y - 1) * GameManager.Ins.cellSize * 0.5f);
+        transform.position = new Vector3(transform.position.x, transform.position.y, posZ * 10);
         GameManager.Ins.activeCage.Place(placedSize, walkingSize, transform.position);
         UIManager.Ins.setPanel.okPressed -= Place;
         GameManager.Ins.activeCage.feeders.Add(this);
+        transform.parent = GameManager.Ins.activeCage.transform;
     }
     #endregion
 }

@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class AnimalStatus : MonoBehaviour
 {
-    AnimalData data;
-    AnimalStats stats;
-    List<Need> needs;
+    private AnimalData data;
+    private AnimalStats stats;
+    private List<Need> needs;
     public bool pregnant;
     void Start()
     {
@@ -60,7 +60,6 @@ public class AnimalStatus : MonoBehaviour
                 data.specials[(int)need.special] = 1;
                 break;
             case NeedType.Sex:
-                data.sexualActivity = 0;
                 if(!data.male) Pregnant();
                 break;
         }

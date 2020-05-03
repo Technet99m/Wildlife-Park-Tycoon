@@ -5,21 +5,22 @@ using UnityEngine;
 
 public class MovementController : MonoBehaviour
 {
-    [SerializeField, Range(1f,5f)] float speed;
-    AnimalAnimationController anim;
-    Pathfinding pathfinding;
-    List<PathNode> path;
-    Cage cage;
-    Vector2 target;
+    [SerializeField, Range(1f,5f)] private float speed;
+    private AnimalAnimationController anim;
+    private Pathfinding pathfinding;
+    private List<PathNode> path;
+    private Cage cage;
+    private Vector2 target;
+
     public event System.Action TargetReached;
     public bool isWalking;
-    void Start()
+    private void Start()
     {
         path = new List<PathNode>();
         cage = GetComponent<Animal>().cage;
         anim = GetComponent<AnimalAnimationController>();
     }
-    void Update()
+    private void Update()
     {
         DrawPath();
         if (path.Count>0)
@@ -43,7 +44,7 @@ public class MovementController : MonoBehaviour
             }
         }
     }
-    void DrawPath()
+    private void DrawPath()
     {
         for (int i = 1; i < path.Count; i++)
         {
