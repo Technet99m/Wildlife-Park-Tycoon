@@ -19,7 +19,7 @@ TextureImporter:
     second: animal_cost
   - first:
       213: 5216189181101325373
-    second: cage_atlas_5
+    second: female
   - first:
       213: -6482280678015183910
     second: cage_name
@@ -486,10 +486,10 @@ TextureImporter:
       name: choose_btn
       rect:
         serializedVersion: 2
-        x: 340
-        y: 30
-        width: 294
-        height: 101
+        x: 339
+        y: 26
+        width: 296
+        height: 108
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -525,27 +525,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: progressbar_mating
-      rect:
-        serializedVersion: 2
-        x: 889
-        y: 87
-        width: 293
-        height: 71
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0a19f8d343a96c6a0800000000000000
-      internalID: -6429281868863008352
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: cage_checkbox_pressed
       rect:
         serializedVersion: 2
@@ -562,69 +541,6 @@ TextureImporter:
       bones: []
       spriteID: 155a0357e23bb8690800000000000000
       internalID: -7598782934141590191
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: progressbar_fill
-      rect:
-        serializedVersion: 2
-        x: 897
-        y: 39
-        width: 39
-        height: 39
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 19, y: 0, z: 19, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4b2cf5810680fc120800000000000000
-      internalID: 2436175132249539252
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: heart_progressbar
-      rect:
-        serializedVersion: 2
-        x: 1041
-        y: 8
-        width: 66
-        height: 66
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: deeac799cb36a5170800000000000000
-      internalID: 8167950535869902573
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: heart_progressbar_complete
-      rect:
-        serializedVersion: 2
-        x: 1116
-        y: 7
-        width: 66
-        height: 66
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 99f7c6a83d306b500800000000000000
-      internalID: 411520623046328217
       vertices: []
       indices: 
       edges: []
@@ -709,6 +625,27 @@ TextureImporter:
       bones: []
       spriteID: efb7b40301834d0d0800000000000000
       internalID: -3399030176576996354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 326
+        width: 34
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3cb7c47c60a36840800000000000000
+      internalID: 5216189181101325373
       vertices: []
       indices: 
       edges: []

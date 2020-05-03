@@ -1,0 +1,446 @@
+fileFormatVersion: 2
+guid: 61e2cfc51ec3ffa479c6161a96337f47
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3759501336919469852
+    second: normal_frame
+  - first:
+      213: -4342011826244573594
+    second: small_frame
+  - first:
+      213: 2205223226242075400
+    second: normal_background
+  - first:
+      213: 7378370119808485997
+    second: small_background
+  - first:
+      213: -1309470856491468517
+    second: normal_fill_sex
+  - first:
+      213: -2188640152843078433
+    second: normal_fill_pregnant
+  - first:
+      213: 4095949502393124508
+    second: normal_fill_growing
+  - first:
+      213: -6409225136308881846
+    second: normal_heart_active
+  - first:
+      213: 6398889777793678806
+    second: normal_heart_passive
+  - first:
+      213: 153407964676205731
+    second: small_fill_sex
+  - first:
+      213: -203243873879478681
+    second: small_fill_pregnant
+  - first:
+      213: -4679511131322303988
+    second: small_fill_growing
+  - first:
+      213: 3366581955982808923
+    second: small_heart_passive
+  - first:
+      213: 7145921590725005128
+    second: small_heart_active
+  - first:
+      213: 2676533516294919750
+    second: normal_baby_active
+  - first:
+      213: 1607332276736133884
+    second: normal_baby_passive
+  - first:
+      213: -6062540341166098869
+    second: small_baby_passive
+  - first:
+      213: -3989051469369158059
+    second: small_baby_active
+  - first:
+      213: -1708893109391413764
+    second: normal_size_active
+  - first:
+      213: -1462915745766378836
+    second: small_size_passive
+  - first:
+      213: 5624492968846361981
+    second: small_size_active
+  - first:
+      213: 3918053093158272899
+    second: normal_size_passive
+  - first:
+      213: -3759501336919469852
+    second: progressbars_sheet_0
+  - first:
+      213: -4342011826244573594
+    second: progressbars_sheet_1
+  - first:
+      213: -5440870852119263487
+    second: progressbars_sheet_2
+  - first:
+      213: 7378370119808485997
+    second: progressbars_sheet_3
+  - first:
+      213: -3382214955489734899
+    second: progressbars_sheet_4
+  - first:
+      213: 4587012298810348826
+    second: progressbars_sheet_5
+  - first:
+      213: 2562611582867298230
+    second: progressbars_sheet_6
+  - first:
+      213: 6160933525712057647
+    second: progressbars_sheet_7
+  - first:
+      213: -4485664566793927460
+    second: progressbars_sheet_8
+  - first:
+      213: 153407964676205731
+    second: progressbars_sheet_9
+  - first:
+      213: -203243873879478681
+    second: progressbars_sheet_10
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: progressbars_sheet_0
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 377
+        width: 380
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e01f48e37193dbc0800000000000000
+      internalID: -3759501336919469852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: progressbars_sheet_1
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 312
+        width: 376
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 666a52ebf331eb3c0800000000000000
+      internalID: -4342011826244573594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: progressbars_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 251
+        width: 51
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 25, y: 0, z: 25, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6a8a8c188c356660800000000000000
+      internalID: 7378370119808485997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: progressbars_sheet_9
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 15
+        width: 88
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3acad382bb3012200800000000000000
+      internalID: 153407964676205731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: progressbars_sheet_10
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 12
+        width: 88
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76ea3a606ceed2df0800000000000000
+      internalID: -203243873879478681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: progressbars_sheet_2
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 253
+        width: 51
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 25, y: 0, z: 25, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10787a679c42e74b0800000000000000
+      internalID: -5440870852119263487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: progressbars_sheet_4
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 252
+        width: 51
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 25, y: 0, z: 25, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0f4500fa65ff01d0800000000000000
+      internalID: -3382214955489734899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: progressbars_sheet_5
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 208
+        width: 88
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1550faf16758af30800000000000000
+      internalID: 4587012298810348826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: progressbars_sheet_6
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 210
+        width: 88
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b75b1648a9309320800000000000000
+      internalID: 2562611582867298230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: progressbars_sheet_7
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 114
+        width: 90
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f25bcdc4668008550800000000000000
+      internalID: 6160933525712057647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: progressbars_sheet_8
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 113
+        width: 88
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd401b2b7d7bfb1c0800000000000000
+      internalID: -4485664566793927460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

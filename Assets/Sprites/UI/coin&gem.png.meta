@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: be8f7cfa72965c54a98c5a123aaef40d
+guid: f1785e79d1c9e4f44824155477c5a200
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -580455842000863270
-    second: lion_picture1_0
+      213: -5238165693142049437
+    second: background
+  - first:
+      213: 5818853991936780548
+    second: coin
+  - first:
+      213: 6242198393224473808
+    second: plus_btn
+  - first:
+      213: 5366350797502152692
+    second: gem
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -102,22 +111,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: lion_picture1_0
+      name: background
       rect:
         serializedVersion: 2
-        x: 2
-        y: 3
-        width: 123
-        height: 121
+        x: 44
+        y: 98
+        width: 200
+        height: 59
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 100, y: 0, z: 100, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36d51a91e0c4e47b0800000000000000
+      internalID: -5238165693142049437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 11
+        width: 74
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: adffcb1bc7ec1f7f0800000000000000
-      internalID: -580455842000863270
+      spriteID: 409614540e8b0c050800000000000000
+      internalID: 5818853991936780548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plus_btn
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 1
+        width: 80
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dca8a5bd5eb0a650800000000000000
+      internalID: 6242198393224473808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gem
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 1
+        width: 80
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ffff314e9b197a40800000000000000
+      internalID: 5366350797502152692
       vertices: []
       indices: 
       edges: []
