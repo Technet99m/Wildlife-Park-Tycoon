@@ -17,12 +17,14 @@ namespace Technet99m
             {
                 myScript.left = EditorGUILayout.FloatField("Left Border", myScript.left);
                 myScript.right = EditorGUILayout.FloatField("Right Border", myScript.right);
+                myScript.minWidth = EditorGUILayout.FloatField("Min Width", myScript.minWidth);
             }
             EditorGUILayout.PropertyField(serializedObject.FindProperty("Vertical"));
             if (myScript.Vertical == FitMode.WithOffsets)
             {
                 myScript.top = EditorGUILayout.FloatField("Top Border", myScript.top);
                 myScript.bottom = EditorGUILayout.FloatField("Bottom Border", myScript.bottom);
+                myScript.minHeight = EditorGUILayout.FloatField("Min Height", myScript.minHeight);
             }
             myScript.Fit();
             serializedObject.ApplyModifiedProperties();

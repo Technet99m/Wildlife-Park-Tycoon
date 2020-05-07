@@ -10,7 +10,14 @@ public class CageMenuController : MonoBehaviour
     [SerializeField] private CageMenuItemController[] items;
     [SerializeField] private GameObject itemRef;
     private Cage activeCage;
-    
+    private void OnEnable()
+    {
+        Technet99m.TickingMachine.EveryTick += Refresh;
+    }
+    private void OnDisable()
+    {
+        Technet99m.TickingMachine.EveryTick -= Refresh;
+    }
     private void HideAll()
     {
         foreach (var item in items)
