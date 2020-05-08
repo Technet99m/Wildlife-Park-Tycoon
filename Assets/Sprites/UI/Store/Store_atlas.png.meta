@@ -1,7 +1,76 @@
 fileFormatVersion: 2
 guid: b3cd8d64486a2a5468af45ffc7918849
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 3170842773424530311
+    second: Store_atlas_0
+  - first:
+      213: -5658097133974937704
+    second: Store_atlas_1
+  - first:
+      213: -1619144394790681725
+    second: Store_atlas_2
+  - first:
+      213: -3673997461439476436
+    second: Store_atlas_3
+  - first:
+      213: -2192126814279640465
+    second: Store_atlas_4
+  - first:
+      213: -6364354857379884978
+    second: Store_atlas_5
+  - first:
+      213: -5921459140349070862
+    second: Store_atlas_6
+  - first:
+      213: 6961306634530880847
+    second: Store_atlas_7
+  - first:
+      213: 6335123159358179769
+    second: Store_atlas_8
+  - first:
+      213: -4030978151786893531
+    second: Store_atlas_9
+  - first:
+      213: 2805677951589587231
+    second: Store_atlas_10
+  - first:
+      213: 7836722140656301987
+    second: Store_atlas_11
+  - first:
+      213: 6570377772035642957
+    second: Store_atlas_12
+  - first:
+      213: -9003052954107791825
+    second: Store_atlas_0
+  - first:
+      213: -3228871361461092444
+    second: Store_atlas_1
+  - first:
+      213: 4646894719449464507
+    second: Store_atlas_2
+  - first:
+      213: -7110121077263345267
+    second: Store_atlas_3
+  - first:
+      213: -3563779671521196941
+    second: Store_atlas_4
+  - first:
+      213: -7959020154582688672
+    second: Store_atlas_5
+  - first:
+      213: 4927504471625694896
+    second: Store_atlas_8
+  - first:
+      213: -259301452954545182
+    second: Store_atlas_9
+  - first:
+      213: -5130758913708261289
+    second: Store_atlas_10
+  - first:
+      213: 2820958504430172913
+    second: Store_atlas_11
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -40,7 +109,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -71,9 +140,285 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Store_atlas_0
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 616
+        width: 1732
+        height: 854
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 866, y: 0, z: 866, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f26bf58d90bbe0380800000000000000
+      internalID: -9003052954107791825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Store_atlas_1
+      rect:
+        serializedVersion: 2
+        x: 1766
+        y: 1372
+        width: 90
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4affda2aa9eb033d0800000000000000
+      internalID: -3228871361461092444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Store_atlas_2
+      rect:
+        serializedVersion: 2
+        x: 1873
+        y: 1371
+        width: 313
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbe7c6580261d7040800000000000000
+      internalID: 4646894719449464507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Store_atlas_3
+      rect:
+        serializedVersion: 2
+        x: 1781
+        y: 1249
+        width: 112
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8953bf1d86c35d90800000000000000
+      internalID: -7110121077263345267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Store_atlas_4
+      rect:
+        serializedVersion: 2
+        x: 1900
+        y: 1249
+        width: 112
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 374883d3549ea8ec0800000000000000
+      internalID: -3563779671521196941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Store_atlas_5
+      rect:
+        serializedVersion: 2
+        x: 2024
+        y: 1249
+        width: 112
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06c9ced8651eb8190800000000000000
+      internalID: -7959020154582688672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Store_atlas_6
+      rect:
+        serializedVersion: 2
+        x: 1783
+        y: 1126
+        width: 112
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f1f08bf840c2dda0800000000000000
+      internalID: -5921459140349070862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Store_atlas_7
+      rect:
+        serializedVersion: 2
+        x: 1906
+        y: 1126
+        width: 112
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4d78c360878b9060800000000000000
+      internalID: 6961306634530880847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Store_atlas_8
+      rect:
+        serializedVersion: 2
+        x: 2023
+        y: 1126
+        width: 112
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bef56cb533026440800000000000000
+      internalID: 4927504471625694896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Store_atlas_9
+      rect:
+        serializedVersion: 2
+        x: 1782
+        y: 1040
+        width: 55
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e3d6eec3b6c66cf0800000000000000
+      internalID: -259301452954545182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Store_atlas_10
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 17
+        width: 1643
+        height: 561
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 821, y: 0, z: 821, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7500040b3f1ebc8b0800000000000000
+      internalID: -5130758913708261289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Store_atlas_11
+      rect:
+        serializedVersion: 2
+        x: 1774
+        y: 440
+        width: 354
+        height: 537
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fa7dae40de062720800000000000000
+      internalID: 2820958504430172913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
