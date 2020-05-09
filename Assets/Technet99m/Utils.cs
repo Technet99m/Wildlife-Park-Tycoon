@@ -6,7 +6,7 @@ namespace Technet99m
 {
     public class Utils
     {
-        static Camera cam;
+        private static Camera cam;
         public static Camera Cam
         {
             get
@@ -25,6 +25,10 @@ namespace Technet99m
         {
             var tmp = Cam.ScreenToWorldPoint(point);
             return new Vector3(tmp.x, tmp.y, 0);
+        }
+        public static Ray ScreenPointToRay(Vector3 point)
+        {
+            return Cam.ScreenPointToRay(point);
         }
         public static Vector3 WorldToScreenPoint(Vector3 point)
         {

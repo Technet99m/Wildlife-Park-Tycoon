@@ -1,67 +1,40 @@
 fileFormatVersion: 2
-guid: ff6c640aaf5f30d4aaa9c3df4f5ce0df
+guid: f386412bc0d7a41428e75a1c016e064b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3232124859224418470
-    second: main_screen_btns_0
+      213: -5989014032717426383
+    second: zebra_front_0
   - first:
-      213: 4419181571386793453
-    second: main_screen_btns_1
+      213: 6492851778046326072
+    second: zebra_front_1
   - first:
-      213: 4852217849942138769
-    second: main_screen_btns_2
+      213: -7496397157517939327
+    second: zebra_front_2
   - first:
-      213: 450534895616192810
-    second: main_screen_btns_3
+      213: 1884410320882118912
+    second: zebra_front_3
   - first:
-      213: -3158333572240660673
-    second: main_screen_btns_4
+      213: 2414692887286892335
+    second: zebra_front_4
   - first:
-      213: -2900678266541716242
-    second: main_screen_btns_5
+      213: 4391451132503562486
+    second: zebra_front_5
   - first:
-      213: -285295674798340679
-    second: main_screen_btns_6
+      213: -4017888529111155300
+    second: zebra_front_6
   - first:
-      213: -5955211622448156477
-    second: main_screen_btns_7
+      213: 76919220120847703
+    second: zebra_front_7
   - first:
-      213: 3827176170245565632
-    second: main_screen_btns_8
+      213: -4064883825124331417
+    second: zebra_front_8
   - first:
-      213: -8575781138456093692
-    second: main_screen_btns_9
+      213: -8084207708182282474
+    second: zebra_front_9
   - first:
-      213: 546807718010670201
-    second: main_screen_btns_0
-  - first:
-      213: -4000826335524466856
-    second: main_screen_btns_1
-  - first:
-      213: -1712667472209853243
-    second: main_screen_btns_2
-  - first:
-      213: -6620379848048902135
-    second: main_screen_btns_3
-  - first:
-      213: 2581638940911972751
-    second: main_screen_btns_4
-  - first:
-      213: -2814113032709495371
-    second: main_screen_btns_5
-  - first:
-      213: 6903961862033262895
-    second: main_screen_btns_6
-  - first:
-      213: 5532346216448250314
-    second: main_screen_btns_7
-  - first:
-      213: 5235950713443814438
-    second: main_screen_btns_8
-  - first:
-      213: 6118686790584875977
-    second: main_screen_btns_9
+      213: -1986627220956831690
+    second: zebra_front_10
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -117,7 +90,7 @@ TextureImporter:
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
-  applyGammaDecoding: 0
+  applyGammaDecoding: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -143,218 +116,17 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: main_screen_btns_0
-      rect:
-        serializedVersion: 2
-        x: 17
-        y: 337
-        width: 237
-        height: 137
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 114, y: 0, z: 113, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 97cc770f8b6a69700800000000000000
-      internalID: 546807718010670201
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: main_screen_btns_4
-      rect:
-        serializedVersion: 2
-        x: 302
-        y: 65
-        width: 157
-        height: 192
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f81bf5b40f2d3d320800000000000000
-      internalID: 2581638940911972751
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: main_screen_btns_1
-      rect:
-        serializedVersion: 2
-        x: 262
-        y: 324
-        width: 149
-        height: 167
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 85f490725a53a78c0800000000000000
-      internalID: -4000826335524466856
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: main_screen_btns_2
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 268
-        width: 38
-        height: 41
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5c4c09412026b38e0800000000000000
-      internalID: -1712667472209853243
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: main_screen_btns_3
-      rect:
-        serializedVersion: 2
-        x: 348
-        y: 265
-        width: 47
-        height: 50
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 90004eeba9faf14a0800000000000000
-      internalID: -6620379848048902135
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: main_screen_btns_5
-      rect:
-        serializedVersion: 2
-        x: 413
-        y: 382
-        width: 83
-        height: 89
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5b5ad874b1342f8d0800000000000000
-      internalID: -2814113032709495371
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: main_screen_btns_6
-      rect:
-        serializedVersion: 2
-        x: 415
-        y: 294
-        width: 80
-        height: 87
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f2946591cbccfcf50800000000000000
-      internalID: 6903961862033262895
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: main_screen_btns_7
-      rect:
-        serializedVersion: 2
-        x: 131
-        y: 163
-        width: 145
-        height: 159
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ac1dfdd7297d6cc40800000000000000
-      internalID: 5532346216448250314
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: main_screen_btns_8
-      rect:
-        serializedVersion: 2
-        x: 13
-        y: 197
-        width: 113
-        height: 124
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 62c8540ce65d9a840800000000000000
-      internalID: 5235950713443814438
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: main_screen_btns_9
+      name: zebra_front_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 144
-        height: 165
+        y: 23
+        width: 157
+        height: 183
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -362,8 +134,155 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9cbbfa4c731f9e450800000000000000
-      internalID: 6118686790584875977
+      spriteID: 1315c09e77fb2eca0800000000000000
+      internalID: -5989014032717426383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zebra_front_3
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 104
+        width: 86
+        height: 123
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 001324be335c62a10800000000000000
+      internalID: 1884410320882118912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zebra_front_4
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 125
+        width: 42
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f27c56c2366b28120800000000000000
+      internalID: 2414692887286892335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zebra_front_6
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 96
+        width: 43
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9d7633aba79d38c0800000000000000
+      internalID: -4017888529111155300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zebra_front_7
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 46
+        width: 42
+        height: 39
+      alignment: 3
+      pivot: {x: 1, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75504b78f95411100800000000000000
+      internalID: 76919220120847703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zebra_front_8
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 54
+        width: 45
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 760bb3e92b1a697c0800000000000000
+      internalID: -4064883825124331417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zebra_front_9
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 0
+        width: 43
+        height: 39
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61ff15fdbef1fcf80800000000000000
+      internalID: -8084207708182282474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zebra_front_10
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 8
+        width: 45
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6302fb171151e64e0800000000000000
+      internalID: -1986627220956831690
       vertices: []
       indices: 
       edges: []

@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 5b69389a4bca12348b6faa989e41053b
+guid: 42be2c3f4cc0409488a72a03fadf8e96
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3346505878203331360
-    second: information_window_sheet_0
+      213: -8213658281751316263
+    second: zebra_back_0
   - first:
-      213: -7400945354083226277
-    second: information_window_sheet_1
+      213: -1580259314954446266
+    second: zebra_back_1
   - first:
-      213: 8563089057289465768
-    second: information_window_sheet_2
+      213: 322514897929824995
+    second: zebra_back_2
   - first:
-      213: -277673838301493704
-    second: information_window_sheet_3
+      213: -8437890344000816367
+    second: zebra_back_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -69,7 +69,7 @@ TextureImporter:
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
-  applyGammaDecoding: 0
+  applyGammaDecoding: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -95,101 +95,89 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: information_window_sheet_0
+      name: zebra_back_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 497
-        height: 394
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 100, z: 0, w: 116}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0ec0fe262a2de81d0800000000000000
-      internalID: -3346505878203331360
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: information_window_sheet_1
-      rect:
-        serializedVersion: 2
-        x: 507
-        y: 307
-        width: 74
-        height: 81
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 12
+        y: 50
+        width: 67
+        height: 123
+      alignment: 8
+      pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b5daacf896f8a4990800000000000000
-      internalID: -7400945354083226277
+      spriteID: 9d874c18f49330e80800000000000000
+      internalID: -8213658281751316263
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: information_window_sheet_2
+      name: zebra_back_1
       rect:
         serializedVersion: 2
-        x: 521
-        y: 260
-        width: 38
-        height: 40
+        x: 88
+        y: 28
+        width: 157
+        height: 182
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8afe5cfd02436d670800000000000000
-      internalID: 8563089057289465768
+      spriteID: 64a532f868ac11ae0800000000000000
+      internalID: -1580259314954446266
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: information_window_sheet_3
+      name: zebra_back_2
       rect:
         serializedVersion: 2
-        x: 525
-        y: 206
-        width: 27
-        height: 41
+        x: 252
+        y: 58
+        width: 46
+        height: 31
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 836ce908d11852cf0800000000000000
-      internalID: -277673838301493704
+      spriteID: 3eae0e5479dc97400800000000000000
+      internalID: 322514897929824995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zebra_back_3
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 21
+        width: 46
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11bf120207796ea80800000000000000
+      internalID: -8437890344000816367
       vertices: []
       indices: 
       edges: []

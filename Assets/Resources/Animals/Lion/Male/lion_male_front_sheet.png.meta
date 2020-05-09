@@ -1,67 +1,115 @@
 fileFormatVersion: 2
-guid: ff6c640aaf5f30d4aaa9c3df4f5ce0df
+guid: 0dbb9817a8b2a454c800e1451aae6fce
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3232124859224418470
-    second: main_screen_btns_0
+      213: -2220904869304087880
+    second: lion_male_front_sheet_0
   - first:
-      213: 4419181571386793453
-    second: main_screen_btns_1
+      213: -892853666048823077
+    second: lion_male_front_sheet_1
   - first:
-      213: 4852217849942138769
-    second: main_screen_btns_2
+      213: -8570675734086734170
+    second: lion_male_front_sheet_2
   - first:
-      213: 450534895616192810
-    second: main_screen_btns_3
+      213: -8393021559584852638
+    second: lion_male_front_sheet_3
   - first:
-      213: -3158333572240660673
-    second: main_screen_btns_4
+      213: -2826027754090492891
+    second: lion_male_front_sheet_4
   - first:
-      213: -2900678266541716242
-    second: main_screen_btns_5
+      213: -1772345481971302963
+    second: lion_male_front_sheet_5
   - first:
-      213: -285295674798340679
-    second: main_screen_btns_6
+      213: -5176508773476923123
+    second: lion_male_front_sheet_6
   - first:
-      213: -5955211622448156477
-    second: main_screen_btns_7
+      213: -6260286475720890900
+    second: lion_male_front_sheet_7
   - first:
-      213: 3827176170245565632
-    second: main_screen_btns_8
+      213: 2124195682172021320
+    second: lion_male_front_sheet_0
   - first:
-      213: -8575781138456093692
-    second: main_screen_btns_9
+      213: 7930298716323101758
+    second: lion_male_front_sheet_1
   - first:
-      213: 546807718010670201
-    second: main_screen_btns_0
+      213: 6083274448398821086
+    second: lion_male_front_sheet_2
   - first:
-      213: -4000826335524466856
-    second: main_screen_btns_1
+      213: 7234447842414712443
+    second: lion_male_front_sheet_3
   - first:
-      213: -1712667472209853243
-    second: main_screen_btns_2
+      213: -8357379996150199802
+    second: lion_male_front_sheet_4
   - first:
-      213: -6620379848048902135
-    second: main_screen_btns_3
+      213: 3722583684885174433
+    second: lion_male_front_sheet_5
   - first:
-      213: 2581638940911972751
-    second: main_screen_btns_4
+      213: 8744821752308246073
+    second: lion_male_front_sheet_6
   - first:
-      213: -2814113032709495371
-    second: main_screen_btns_5
+      213: 5614054234227472424
+    second: lion_male_front_sheet_7
   - first:
-      213: 6903961862033262895
-    second: main_screen_btns_6
+      213: 2863897685858924552
+    second: lion_male_front_sheet_8
   - first:
-      213: 5532346216448250314
-    second: main_screen_btns_7
+      213: -7770058740901684996
+    second: lion_male_front_sheet_9
   - first:
-      213: 5235950713443814438
-    second: main_screen_btns_8
+      213: -3790505505030410660
+    second: lion_male_front_sheet_10
   - first:
-      213: 6118686790584875977
-    second: main_screen_btns_9
+      213: -9080563830614191642
+    second: lion_male_front_sheet_11
+  - first:
+      213: 3927498523660607289
+    second: lion_male_front_sheet_12
+  - first:
+      213: 50576086837681527
+    second: lion_male_front_sheet_13
+  - first:
+      213: 774946447753451069
+    second: lion_male_front_sheet_14
+  - first:
+      213: -2465116291810580246
+    second: lion_male_front_sheet_15
+  - first:
+      213: 7057592498207196242
+    second: lion_male_front_sheet_16
+  - first:
+      213: -6176275607489771071
+    second: lion_male_front_sheet_17
+  - first:
+      213: -3041828766715315430
+    second: lion_male_front_sheet_18
+  - first:
+      213: -3987382975452814767
+    second: lion_male_front_sheet_10
+  - first:
+      213: -7770486520811893774
+    second: lion_male_front_sheet_11
+  - first:
+      213: 5652349053692234435
+    second: lion_male_front_sheet_13
+  - first:
+      213: -7113760566810127596
+    second: lion_male_front_sheet_15
+  - first:
+      213: -367562681792100686
+    second: lion_male_front_sheet_16
+  - first:
+      213: 5287834615232893128
+    second: lion_male_front_sheet_8
+  - first:
+      213: 3648418552304973138
+    second: lion_male_front_sheet_9
+  - first:
+      213: -3421734719787966124
+    second: lion_male_front_sheet_12
+  - first:
+      213: 4693643460743026913
+    second: lion_male_front_sheet_14
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -117,7 +165,7 @@ TextureImporter:
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
-  applyGammaDecoding: 0
+  applyGammaDecoding: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -143,50 +191,17 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: main_screen_btns_0
+      name: lion_male_front_sheet_13
       rect:
         serializedVersion: 2
-        x: 17
-        y: 337
-        width: 237
-        height: 137
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 114, y: 0, z: 113, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 97cc770f8b6a69700800000000000000
-      internalID: 546807718010670201
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: main_screen_btns_4
-      rect:
-        serializedVersion: 2
-        x: 302
-        y: 65
-        width: 157
-        height: 192
+        x: 28
+        y: 2
+        width: 45
+        height: 30
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,167 +209,62 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f81bf5b40f2d3d320800000000000000
-      internalID: 2581638940911972751
+      spriteID: 3ca47d3548d217e40800000000000000
+      internalID: 5652349053692234435
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: main_screen_btns_1
+      name: lion_male_front_sheet_15
       rect:
         serializedVersion: 2
-        x: 262
-        y: 324
-        width: 149
-        height: 167
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 182
+        y: 0
+        width: 42
+        height: 39
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 85f490725a53a78c0800000000000000
-      internalID: -4000826335524466856
+      spriteID: 413d91e6478d64d90800000000000000
+      internalID: -7113760566810127596
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: main_screen_btns_2
+      name: lion_male_front_sheet_16
       rect:
         serializedVersion: 2
-        x: 288
-        y: 268
-        width: 38
-        height: 41
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 247
+        y: 0
+        width: 42
+        height: 38
+      alignment: 3
+      pivot: {x: 1, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c4c09412026b38e0800000000000000
-      internalID: -1712667472209853243
+      spriteID: 2b6871730b726eaf0800000000000000
+      internalID: -367562681792100686
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: main_screen_btns_3
-      rect:
-        serializedVersion: 2
-        x: 348
-        y: 265
-        width: 47
-        height: 50
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 90004eeba9faf14a0800000000000000
-      internalID: -6620379848048902135
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: main_screen_btns_5
-      rect:
-        serializedVersion: 2
-        x: 413
-        y: 382
-        width: 83
-        height: 89
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5b5ad874b1342f8d0800000000000000
-      internalID: -2814113032709495371
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: main_screen_btns_6
-      rect:
-        serializedVersion: 2
-        x: 415
-        y: 294
-        width: 80
-        height: 87
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f2946591cbccfcf50800000000000000
-      internalID: 6903961862033262895
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: main_screen_btns_7
-      rect:
-        serializedVersion: 2
-        x: 131
-        y: 163
-        width: 145
-        height: 159
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ac1dfdd7297d6cc40800000000000000
-      internalID: 5532346216448250314
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: main_screen_btns_8
-      rect:
-        serializedVersion: 2
-        x: 13
-        y: 197
-        width: 113
-        height: 124
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 62c8540ce65d9a840800000000000000
-      internalID: 5235950713443814438
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: main_screen_btns_9
+      name: lion_male_front_sheet_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 144
-        height: 165
+        y: 35
+        width: 183
+        height: 176
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -362,8 +272,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9cbbfa4c731f9e450800000000000000
-      internalID: 6118686790584875977
+      spriteID: 84a284de7b8aa7d10800000000000000
+      internalID: 2124195682172021320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lion_male_front_sheet_1
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 182
+        width: 34
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3cbc2d7aa41e0e60800000000000000
+      internalID: 7930298716323101758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lion_male_front_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 49
+        width: 89
+        height: 128
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b765831abfbe56460800000000000000
+      internalID: 7234447842414712443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lion_male_front_sheet_7
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 46
+        width: 81
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 828f7ecd49029ed40800000000000000
+      internalID: 5614054234227472424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lion_male_front_sheet_14
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 2
+        width: 45
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e85ceb0cdb232140800000000000000
+      internalID: 4693643460743026913
       vertices: []
       indices: 
       edges: []

@@ -729,6 +729,7 @@ GameObject:
   - component: {fileID: 6969706064375971004}
   - component: {fileID: 4162523600852682273}
   - component: {fileID: 4162523600852682272}
+  - component: {fileID: 174864401007728109}
   m_Layer: 0
   m_Name: Animal
   m_TagString: Untagged
@@ -878,6 +879,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1.5
   isWalking: 0
+--- !u!70 &174864401007728109
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4162523600852682270}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.09, y: 0.34}
+  m_Size: {x: 1.24, y: 1.47}
+  m_Direction: 0
 --- !u!1 &4162523601292422290
 GameObject:
   m_ObjectHideFlags: 0

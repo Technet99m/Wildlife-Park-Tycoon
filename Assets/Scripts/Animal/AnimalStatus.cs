@@ -43,9 +43,9 @@ public class AnimalStatus : MonoBehaviour
                     data.happiness -= 0.1f;
                     break;
             }
-        if (data.happiness >= 0.5 && !pregnant)
+        if (data.happiness >= 0.51 && !pregnant)
             data.sexualActivity += (data.happiness - 0.5f) * 2f / stats.TicksToFullMate;
-        if (data.sexualActivity > 0.5 && needs.Find((x) => x.type == NeedType.Sex) == null)
+        if (data.sexualActivity > 1 && needs.Find((x) => x.type == NeedType.Sex) == null)
             needs.Add(new Need() { type = NeedType.Sex });
     }
     public void Done(Need need)
