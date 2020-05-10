@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Stats
   m_EditorClassIdentifier: 
   kind: Hippo
+  price: 100
   TicksToFullMate: 18
   TicksToBorn: 5
   minChildren: 1

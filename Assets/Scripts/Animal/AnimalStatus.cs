@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AnimalStatus : MonoBehaviour
 {
+    [SerializeField] SpriteRenderer mood;
     private AnimalData data;
     private AnimalStats stats;
     private List<Need> needs;
@@ -47,6 +48,7 @@ public class AnimalStatus : MonoBehaviour
             data.sexualActivity += (data.happiness - 0.5f) * 2f / stats.TicksToFullMate;
         if (data.sexualActivity > 1 && needs.Find((x) => x.type == NeedType.Sex) == null)
             needs.Add(new Need() { type = NeedType.Sex });
+        mood.sprite = Translator.Happiness(data.happiness);
     }
     public void Done(Need need)
     {

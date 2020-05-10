@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Stats
   m_EditorClassIdentifier: 
   kind: Zebra
+  price: 100
   TicksToFullMate: 15
   TicksToBorn: 0
   minChildren: 0

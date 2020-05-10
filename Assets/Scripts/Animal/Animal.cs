@@ -13,6 +13,7 @@ public class Animal : MonoBehaviour
     private Animal mate;
 
     public AnimalData data;
+    public AnimalStats stats;
     public List<Need> needs;
     public bool isBusy;
     [HideInInspector] public Cage cage;
@@ -28,6 +29,7 @@ public class Animal : MonoBehaviour
         movement = GetComponent<MovementController>();
         movement.TargetReached += OnTargetReached;
         data = GetComponent<AnimalDataHolder>().data;
+        stats = GetComponent<AnimalDataHolder>().stats;
         selected = null;
     }
     
@@ -104,12 +106,12 @@ public class Animal : MonoBehaviour
             if (selected.type == NeedType.Food)
             {
                 anim.Eat(selected.food, target.transform.position.x > transform.position.x);
-                Technet99m.Utils.InvokeAfterDelay(() => { FinishNeed(); target.Empty(transform.position); }, 4.5f);
+                Technet99m.Utils.InvokeAfterDelay(() => { target.Empty(transform.position); FinishNeed(); }, 4.5f);
             }
             else if (selected.type == NeedType.Special)
             {
                 anim.DoSpecial(selected.special);
-                Technet99m.Utils.InvokeAfterDelay(() => { FinishNeed(); target.Empty(transform.position); }, 3f);
+                Technet99m.Utils.InvokeAfterDelay(() => { target.Empty(transform.position); FinishNeed(); }, 3f);
             }
             else if (selected.type == NeedType.Sex)
             {
@@ -129,14 +131,18 @@ public class Animal : MonoBehaviour
     }
     public void Mate()
     {
-        if (data.male)
-            mate.Free -= OnMateFree;
-        anim.Mate();
-        data.sexualActivity = 0;
-        Technet99m.Utils.InvokeAfterDelay(() => FinishNeed(), 3f);
+        if (mate != null)
+        {
+            if (data.male)
+                mate.Free -= OnMateFree;
+            anim.Mate();
+            data.sexualActivity = 0;
+            Technet99m.Utils.InvokeAfterDelay(() => FinishNeed(), 3f);
+        }
     }
     public void FinishNeed()
-    { 
+    {
+        target = null;
         Free?.Invoke(this);
         isBusy = false;
         anim.Idle();
@@ -159,5 +165,12 @@ public class Animal : MonoBehaviour
     {
         Debug.Log("Going Mate too");
         movement.SetNewTarget(mate.matingPos.position);
+    }
+    public void Sell()
+    {
+        DataManager.AddMoney(Mathf.CeilToInt(stats.price * data.happiness));
+        cage.animals.Remove(this);
+        target?.Empty(transform.position);
+        Destroy(gameObject);
     }
 }

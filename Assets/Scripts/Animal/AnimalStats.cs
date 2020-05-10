@@ -5,6 +5,7 @@ using UnityEngine;
 public class AnimalStats : ScriptableObject
 {
     public string kind;
+    public int price;
     public int TicksToFullMate;
     public int TicksToBorn;
     public int minChildren;

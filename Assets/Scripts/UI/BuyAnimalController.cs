@@ -4,16 +4,6 @@ using UnityEngine;
 
 public class BuyAnimalController : MonoBehaviour
 {
-    [SerializeField] Animator anim;
-
-    public void Show()
-    {
-
-    }
-    public void Hide()
-    {
-
-    }
     public void BuyNew(bool male)
     {
         Animal animal = BuyAnimal();

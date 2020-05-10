@@ -68,9 +68,14 @@ public class Item : MonoBehaviour,IBeginDragHandler,IDragHandler,IEndDragHandler
         if (!placed && GameManager.Ins.activeCage.CanPlace(placedSize, transform.position))
         {
             UIManager.Ins.setPanel.okPressed += Place;
+            UIManager.Ins.setPanel.cancelPressed += Discard;
             UIManager.Ins.setPanel.gameObject.SetActive(true);
             UIManager.Ins.setPanel.transform.position = Utils.WorldToScreenPoint(transform.position);
         }
+    }
+    public void Discard()
+    {
+        Destroy(gameObject);
     }
     public void Place()
     {

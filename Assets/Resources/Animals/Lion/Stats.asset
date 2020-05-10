@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Stats
   m_EditorClassIdentifier: 
   kind: Lion
+  price: 100
   TicksToFullMate: 10
   TicksToBorn: 10
   minChildren: 2
