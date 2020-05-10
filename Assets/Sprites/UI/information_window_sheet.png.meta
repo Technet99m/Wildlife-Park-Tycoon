@@ -4,16 +4,16 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: -3346505878203331360
-    second: information_window_sheet_0
+    second: background
   - first:
       213: -7400945354083226277
-    second: information_window_sheet_1
+    second: close_btn
   - first:
       213: 8563089057289465768
-    second: information_window_sheet_2
+    second: male_icon
   - first:
       213: -277673838301493704
-    second: information_window_sheet_3
+    second: female_icon
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -111,7 +111,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: information_window_sheet_0
+      name: background
       rect:
         serializedVersion: 2
         x: 0
@@ -132,7 +132,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: information_window_sheet_1
+      name: close_btn
       rect:
         serializedVersion: 2
         x: 507
@@ -153,7 +153,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: information_window_sheet_2
+      name: male_icon
       rect:
         serializedVersion: 2
         x: 521
@@ -174,7 +174,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: information_window_sheet_3
+      name: female_icon
       rect:
         serializedVersion: 2
         x: 525

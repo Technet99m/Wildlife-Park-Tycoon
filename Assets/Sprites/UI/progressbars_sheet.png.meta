@@ -70,37 +70,37 @@ TextureImporter:
     second: normal_size_passive
   - first:
       213: -3759501336919469852
-    second: progressbars_sheet_0
+    second: Frame
   - first:
       213: -4342011826244573594
-    second: progressbars_sheet_1
+    second: Background
   - first:
       213: -5440870852119263487
-    second: progressbars_sheet_2
+    second: SexFill
   - first:
       213: 7378370119808485997
-    second: progressbars_sheet_3
+    second: PregnantFill
   - first:
       213: -3382214955489734899
-    second: progressbars_sheet_4
+    second: GrowingFill
   - first:
       213: 4587012298810348826
-    second: progressbars_sheet_5
+    second: SexIconActive
   - first:
       213: 2562611582867298230
-    second: progressbars_sheet_6
+    second: SexIconPassive
   - first:
       213: 6160933525712057647
-    second: progressbars_sheet_7
+    second: PregnantIconActive
   - first:
       213: -4485664566793927460
-    second: progressbars_sheet_8
+    second: PregnantIconPassive
   - first:
       213: 153407964676205731
-    second: progressbars_sheet_9
+    second: GrowingIconActive
   - first:
       213: -203243873879478681
-    second: progressbars_sheet_10
+    second: GrowingIconPassive
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -198,7 +198,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: progressbars_sheet_0
+      name: Frame
       rect:
         serializedVersion: 2
         x: 8
@@ -219,7 +219,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: progressbars_sheet_1
+      name: Background
       rect:
         serializedVersion: 2
         x: 10
@@ -240,7 +240,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: progressbars_sheet_3
+      name: PregnantFill
       rect:
         serializedVersion: 2
         x: 72
@@ -261,7 +261,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: progressbars_sheet_9
+      name: GrowingIconActive
       rect:
         serializedVersion: 2
         x: 210
@@ -282,7 +282,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: progressbars_sheet_10
+      name: GrowingIconPassive
       rect:
         serializedVersion: 2
         x: 305
@@ -303,7 +303,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: progressbars_sheet_2
+      name: SexFill
       rect:
         serializedVersion: 2
         x: 10
@@ -324,7 +324,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: progressbars_sheet_4
+      name: GrowingFill
       rect:
         serializedVersion: 2
         x: 132
@@ -345,7 +345,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: progressbars_sheet_5
+      name: SexIconActive
       rect:
         serializedVersion: 2
         x: 208
@@ -366,7 +366,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: progressbars_sheet_6
+      name: SexIconPassive
       rect:
         serializedVersion: 2
         x: 305
@@ -387,7 +387,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: progressbars_sheet_7
+      name: PregnantIconActive
       rect:
         serializedVersion: 2
         x: 209
@@ -408,7 +408,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: progressbars_sheet_8
+      name: PregnantIconPassive
       rect:
         serializedVersion: 2
         x: 305

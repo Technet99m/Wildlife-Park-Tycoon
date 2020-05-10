@@ -4,64 +4,64 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: -3232124859224418470
-    second: main_screen_btns_0
+    second: BackgroundBuyBtn
   - first:
       213: 4419181571386793453
-    second: main_screen_btns_1
+    second: BuyAnimalBtn
   - first:
       213: 4852217849942138769
-    second: main_screen_btns_2
+    second: coin
   - first:
       213: 450534895616192810
-    second: main_screen_btns_3
+    second: Attention
   - first:
       213: -3158333572240660673
-    second: main_screen_btns_4
+    second: shop_btn
   - first:
       213: -2900678266541716242
-    second: main_screen_btns_5
+    second: Female
   - first:
       213: -285295674798340679
-    second: main_screen_btns_6
+    second: Male
   - first:
       213: -5955211622448156477
-    second: main_screen_btns_7
+    second: TaskBtn
   - first:
       213: 3827176170245565632
-    second: main_screen_btns_8
+    second: SettingsBtn
   - first:
       213: -8575781138456093692
-    second: main_screen_btns_9
+    second: CatalogBtn
   - first:
       213: 546807718010670201
-    second: main_screen_btns_0
+    second: BackgroundBuyBtn
   - first:
       213: -4000826335524466856
-    second: main_screen_btns_1
+    second: BuyAnimalBtn
   - first:
       213: -1712667472209853243
-    second: main_screen_btns_2
+    second: coin
   - first:
       213: -6620379848048902135
-    second: main_screen_btns_3
+    second: Attention
   - first:
       213: 2581638940911972751
-    second: main_screen_btns_4
+    second: shop_btn
   - first:
       213: -2814113032709495371
-    second: main_screen_btns_5
+    second: Female
   - first:
       213: 6903961862033262895
-    second: main_screen_btns_6
+    second: Male
   - first:
       213: 5532346216448250314
-    second: main_screen_btns_7
+    second: TaskBtn
   - first:
       213: 5235950713443814438
-    second: main_screen_btns_8
+    second: SettingsBtn
   - first:
       213: 6118686790584875977
-    second: main_screen_btns_9
+    second: CatalogBtn
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -159,7 +159,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: main_screen_btns_0
+      name: BackgroundBuyBtn
       rect:
         serializedVersion: 2
         x: 17
@@ -180,7 +180,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: main_screen_btns_4
+      name: shop_btn
       rect:
         serializedVersion: 2
         x: 302
@@ -201,7 +201,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: main_screen_btns_1
+      name: BuyAnimalBtn
       rect:
         serializedVersion: 2
         x: 262
@@ -222,7 +222,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: main_screen_btns_2
+      name: coin
       rect:
         serializedVersion: 2
         x: 288
@@ -243,7 +243,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: main_screen_btns_3
+      name: Attention
       rect:
         serializedVersion: 2
         x: 348
@@ -264,7 +264,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: main_screen_btns_5
+      name: Female
       rect:
         serializedVersion: 2
         x: 413
@@ -285,7 +285,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: main_screen_btns_6
+      name: Male
       rect:
         serializedVersion: 2
         x: 415
@@ -306,7 +306,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: main_screen_btns_7
+      name: TaskBtn
       rect:
         serializedVersion: 2
         x: 131
@@ -327,7 +327,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: main_screen_btns_8
+      name: SettingsBtn
       rect:
         serializedVersion: 2
         x: 13
@@ -348,7 +348,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: main_screen_btns_9
+      name: CatalogBtn
       rect:
         serializedVersion: 2
         x: 0
