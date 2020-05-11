@@ -1,34 +1,46 @@
 fileFormatVersion: 2
-guid: b55111d7900860b439f6621873fdcd75
+guid: 44ec472bdd2136e4baa103345cd2125c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -9010681615146027857
-    second: hippo_male_side_sheet_0
+      213: 2967901311853612113
+    second: elephant_male_front_sheet_0
   - first:
-      213: 6273894148676143659
-    second: hippo_male_side_sheet_1
+      213: 6148307991834825013
+    second: elephant_male_front_sheet_1
   - first:
-      213: -1211957717104996156
-    second: hippo_male_side_sheet_2
+      213: 3252939640042256245
+    second: elephant_male_front_sheet_2
   - first:
-      213: 5427888798753627166
-    second: hippo_male_side_sheet_3
+      213: 1115978010623128415
+    second: elephant_male_front_sheet_3
   - first:
-      213: -1280541048304933040
-    second: hippo_male_side_sheet_4
+      213: -8284691329745327379
+    second: elephant_male_front_sheet_4
   - first:
-      213: 1299340602596281799
-    second: hippo_male_side_sheet_5
+      213: -7467355488615854253
+    second: elephant_male_front_sheet_5
   - first:
-      213: 1932024932269415968
-    second: hippo_male_side_sheet_6
+      213: 7852054066199480803
+    second: elephant_male_front_sheet_6
   - first:
-      213: -992591226749227980
-    second: hippo_male_side_sheet_7
+      213: 473280445320348104
+    second: elephant_male_front_sheet_7
   - first:
-      213: 5806062656859814751
-    second: hippo_male_side_sheet_8
+      213: 1619204003713853283
+    second: elephant_male_front_sheet_8
+  - first:
+      213: -3027526384582407956
+    second: elephant_male_front_sheet_9
+  - first:
+      213: -5092684165563444451
+    second: elephant_male_front_sheet_10
+  - first:
+      213: -4535026866610839805
+    second: elephant_male_front_sheet_11
+  - first:
+      213: 3229683923630823282
+    second: elephant_male_front_sheet_12
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -84,7 +96,7 @@ TextureImporter:
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
-  applyGammaDecoding: 1
+  applyGammaDecoding: 0
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -110,38 +122,29 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: hippo_male_side_sheet_0
+      name: elephant_male_front_sheet_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 190
-        width: 67
-        height: 59
-      alignment: 9
-      pivot: {x: 1.3988992, y: -0.16957946}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fa4f319cfc0a3f280800000000000000
-      internalID: -9010681615146027857
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: hippo_male_side_sheet_1
-      rect:
-        serializedVersion: 2
-        x: 117
-        y: 36
-        width: 156
-        height: 168
+        x: 159
+        y: 173
+        width: 14
+        height: 4
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -149,125 +152,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b2a4e3adc79511750800000000000000
-      internalID: 6273894148676143659
+      spriteID: 15c437db48a103920800000000000000
+      internalID: 2967901311853612113
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hippo_male_side_sheet_2
+      name: elephant_male_front_sheet_1
       rect:
         serializedVersion: 2
-        x: 24
-        y: 158
-        width: 13
-        height: 17
-      alignment: 9
-      pivot: {x: 1.8999082, y: 0.5021596}
+        x: 296
+        y: 173
+        width: 12
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4c0d925a0e24e2fe0800000000000000
-      internalID: -1211957717104996156
+      spriteID: 531920f1b8d235550800000000000000
+      internalID: 6148307991834825013
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hippo_male_side_sheet_3
+      name: elephant_male_front_sheet_2
       rect:
         serializedVersion: 2
-        x: 7
-        y: 100
-        width: 42
-        height: 38
-      alignment: 9
-      pivot: {x: 0.1932305, y: 1.3203539}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e1c1802ba1cb35b40800000000000000
-      internalID: 5427888798753627166
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: hippo_male_side_sheet_4
-      rect:
-        serializedVersion: 2
-        x: 8
-        y: 57
-        width: 47
-        height: 34
-      alignment: 9
-      pivot: {x: 0.49207756, y: 0.40143496}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0576a7f73ba9a3ee0800000000000000
-      internalID: -1280541048304933040
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: hippo_male_side_sheet_5
-      rect:
-        serializedVersion: 2
-        x: 7
-        y: 12
-        width: 47
-        height: 34
-      alignment: 9
-      pivot: {x: 0.47623253, y: 0.32477346}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7cd4ef3d46f280210800000000000000
-      internalID: 1299340602596281799
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: hippo_male_side_sheet_6
-      rect:
-        serializedVersion: 2
-        x: 62
-        y: 16
+        x: 9
+        y: 139
         width: 43
-        height: 39
-      alignment: 9
-      pivot: {x: 0.16300006, y: 1.3594339}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 02edd19807eefca10800000000000000
-      internalID: 1932024932269415968
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: hippo_male_side_sheet_7
-      rect:
-        serializedVersion: 2
-        x: 54
-        y: 56
-        width: 5
-        height: 3
+        height: 26
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -275,8 +194,155 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 43c617ac98b9932f0800000000000000
-      internalID: -992591226749227980
+      spriteID: 57771882e53c42d20800000000000000
+      internalID: 3252939640042256245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elephant_male_front_sheet_6
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 8
+        width: 172
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e94bfc329918fc60800000000000000
+      internalID: 7852054066199480803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elephant_male_front_sheet_7
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 85
+        width: 92
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c14576be0e619600800000000000000
+      internalID: 473280445320348104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elephant_male_front_sheet_8
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 38
+        width: 55
+        height: 73
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36721446671987610800000000000000
+      internalID: 1619204003713853283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elephant_male_front_sheet_9
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 46
+        width: 38
+        height: 38
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce8c7d23bc01cf5d0800000000000000
+      internalID: -3027526384582407956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elephant_male_front_sheet_10
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 43
+        width: 38
+        height: 38
+      alignment: 3
+      pivot: {x: 1, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d13955ecbb62359b0800000000000000
+      internalID: -5092684165563444451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elephant_male_front_sheet_11
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 6
+        width: 48
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30fdec8a7195011c0800000000000000
+      internalID: -4535026866610839805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elephant_male_front_sheet_12
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 6
+        width: 47
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2771eccba6422dc20800000000000000
+      internalID: 3229683923630823282
       vertices: []
       indices: 
       edges: []
