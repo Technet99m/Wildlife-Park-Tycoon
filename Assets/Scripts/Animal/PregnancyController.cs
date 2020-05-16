@@ -22,6 +22,7 @@ public class PregnancyController : MonoBehaviour
         for (int i = 0, tmp = Random.Range(data.stats.minChildren, data.stats.maxChildren + 1); i < tmp; i++)
         {
             AnimalDataHolder child = AnimalFactory.NewAnimalOfKind(data.stats.kind, transform.parent).GetComponent<AnimalDataHolder>();
+            child.transform.position = transform.position;
             child.GetComponent<AnimalAnimationController>().sprites = GetComponent<AnimalAnimationController>().sprites;
             child.stats = data.stats;
             child.data.male = Random.value > 0.5f;

@@ -9,6 +9,9 @@ public class CageMenuController : MonoBehaviour
     [SerializeField] private Text cageCapacity;
     [SerializeField] private CageMenuItemController[] items;
     [SerializeField] private GameObject itemRef;
+
+    [SerializeField] private GameObject buySegment;
+    [SerializeField] private GameObject sellSegment;
     private Cage activeCage;
     private void OnEnable()
     {
@@ -27,15 +30,31 @@ public class CageMenuController : MonoBehaviour
     {
         activeCage = GameManager.Ins.activeCage;
         cageCapacity.text = $"{activeCage.animals.Count}/{15}";
+        gameObject.SetActive(true);
         HideAll();
+        if (activeCage.animals.Count == 0)
+        {
+            sellSegment.SetActive(false);
+            buySegment.SetActive(true);
+            return;
+        }
+        sellSegment.SetActive(true);
+        buySegment.SetActive(false);
         for (int i = 0; i < activeCage.animals.Count; i++)
         {
             items[i].SetUp(activeCage.animals[i]);
         }
-        gameObject.SetActive(true);
     }
     public void Refresh()
     {
+        if (activeCage.animals.Count == 0)
+        {
+            sellSegment.SetActive(false);
+            buySegment.SetActive(true);
+            return;
+        }
+        sellSegment.SetActive(true);
+        buySegment.SetActive(false);
         cageCapacity.text = $"{activeCage.animals.Count}/{15}";
         HideAll();
         for(int i = 0;i< activeCage.animals.Count; i++)
@@ -68,5 +87,12 @@ public class CageMenuController : MonoBehaviour
     {
         for (int i = 0; i < activeCage.animals.Count; i++)
             ;
+    }
+    public void BuyNewKind(string kind)
+    {
+        Animal animal = AnimalFactory.NewAnimalOfKind(kind, activeCage.transform);
+        animal.data.male = false;
+        animal.transform.position = activeCage.GetFreeTileInGrid();
+        Refresh();
     }
 }

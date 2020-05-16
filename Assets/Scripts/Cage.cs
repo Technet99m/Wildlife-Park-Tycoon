@@ -9,16 +9,7 @@ public class Cage : MonoBehaviour
     public List<Item> feeders;
     public List<Animal> animals;
     public string KindInCage { get => animals[0].GetComponent<AnimalDataHolder>().stats.kind; }
-    public Vector3 RandomFreePos
-    {
-        get
-        {
-            Vector2 tmp = GetFreeTileInGrid();
-            Vector3 pos = walkingMap.GetWorldPos((int)tmp.x, (int)tmp.y, transform.position);
-            pos.z = pos.y * 10f;
-            return pos;
-        }
-    }
+
     public Technet99m.Grid<bool> walkingMap;
 
     public Technet99m.Grid<bool> placingMap;

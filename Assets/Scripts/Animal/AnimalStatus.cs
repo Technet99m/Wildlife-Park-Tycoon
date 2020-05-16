@@ -9,9 +9,16 @@ public class AnimalStatus : MonoBehaviour
     private AnimalStats stats;
     private List<Need> needs;
     public bool pregnant;
-    void Start()
+    private void OnEnable()
     {
         Technet99m.TickingMachine.EveryTick += OnTick;
+    }
+    private void OnDisable()
+    {
+        Technet99m.TickingMachine.EveryTick -= OnTick;
+    }
+    private void Start()
+    {
         data = GetComponent<AnimalDataHolder>().data;
         stats = GetComponent<AnimalDataHolder>().stats;
         needs = GetComponent<Animal>().needs;
@@ -20,14 +27,14 @@ public class AnimalStatus : MonoBehaviour
     {
         foreach (var food in stats.foods)
         {
-            data.foods[(int)food] -= 0.02f;
-            if (data.foods[(int)food] < 0.5f && needs.Find((x) => x.type == NeedType.Food && x.food == food) == null)
+            data.foods[(int)food] -= 0.01f;
+            if (data.foods[(int)food] < 0.3f && needs.Find((x) => x.type == NeedType.Food && x.food == food) == null)
                 needs.Add(new Need() { type = NeedType.Food, food = food });
         }
         foreach (var spec in stats.specials)
         {
-            data.specials[(int)spec] -= 0.02f;
-            if (data.specials[(int)spec] < 0.5f && needs.Find((x) => x.type == NeedType.Special && x.special == spec) == null)
+            data.specials[(int)spec] -= 0.01f;
+            if (data.specials[(int)spec] < 0.3f && needs.Find((x) => x.type == NeedType.Special && x.special == spec) == null)
                 needs.Add(new Need() { type = NeedType.Special, special = spec });
         }
         data.happiness = 1;
@@ -66,7 +73,7 @@ public class AnimalStatus : MonoBehaviour
                 break;
         }
     }
-    void Pregnant()
+    private void Pregnant()
     {
         pregnant = true;
         GetComponent<PregnancyController>().ticksToBorn = stats.TicksToBorn;

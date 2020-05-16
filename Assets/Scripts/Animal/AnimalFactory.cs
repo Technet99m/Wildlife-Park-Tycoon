@@ -13,6 +13,7 @@ public class AnimalFactory
         AnimalStats tmp = Resources.Load<AnimalStats>($"Animals/{kind}/Stats");
         animal.GetComponent<AnimalDataHolder>().stats = tmp;
         animal.GetComponent<AnimalAnimationController>().sprites = Resources.Load<AnimalSprites>($"Animals/{kind}/Sprites");
+        animal.Initialize();
         return animal;
     }
 }

@@ -21,19 +21,67 @@ public class Animal : MonoBehaviour
     public event System.Action ReachedMatePos;
     public int Followers { get { return Free==null? 0 : Free.GetInvocationList().Length; } }
     
-    void Start()
+    private void OnEnable()
+    {
+        Technet99m.TickingMachine.EveryTick += OnTick;
+    }
+    private void OnDisable()
+    {
+        Technet99m.TickingMachine.EveryTick -= OnTick;
+    }
+    public void Initialize()
     {
         cage = transform.parent.GetComponent<Cage>();
         cage.animals.Add(this);
-        Technet99m.TickingMachine.EveryTick += OnTick;
         movement = GetComponent<MovementController>();
         movement.TargetReached += OnTargetReached;
         data = GetComponent<AnimalDataHolder>().data;
         stats = GetComponent<AnimalDataHolder>().stats;
         selected = null;
     }
-    
-    public void OnTick()
+    public void Mate()
+    {
+        if(mate!=null) mate.Free -= OnMateFree;
+
+        anim.Mate();
+        data.sexualActivity = 0;
+        Technet99m.Utils.InvokeAfterDelay(() => FinishNeed(), 3f);
+    }
+    public void FinishNeed()
+    {
+        target = null;
+        isBusy = false;
+        anim.Idle();
+        GetComponent<AnimalStatus>().Done(selected);
+        Free?.Invoke(this);
+    }
+    public void GoMate()
+    {
+        selected = needs.Find((x) => x.type == NeedType.Sex);
+        movement.SetNewTarget(cage.GetPlaceToMate());
+        Debug.Log("Going Mate");
+        isBusy = true;
+    }
+    public void OnMateFree(Animal sender)
+    {
+        mate = sender;
+        mate.GoMate();
+        mate.ReachedMatePos += OnMateReached;
+    }
+    public void OnMateReached()
+    {
+        Debug.Log("Going Mate too");
+        movement.SetNewTarget(mate.matingPos.position);
+    }
+    public void Sell()
+    {
+        DataManager.AddMoney(Mathf.CeilToInt(stats.price * data.happiness));
+        cage.animals.Remove(this);
+        target?.Empty(transform.position);
+        Destroy(gameObject);
+    }
+
+    private void OnTick()
     {
         if (needs.Count > 0 && !isBusy)
         {
@@ -80,6 +128,7 @@ public class Animal : MonoBehaviour
                                 if (!mate.isBusy)
                                     OnMateFree(mate);
                                 mate.Free += OnMateFree;
+                                movement.Stop();
                                 isBusy = true;
                                 dealed = true;
                             }
@@ -92,14 +141,14 @@ public class Animal : MonoBehaviour
             }
         }
         if (!isBusy && !movement.isWalking)
-            Technet99m.Utils.InvokeAfterDelay(()=>
+            Technet99m.Utils.InvokeAfterDelay(() =>
             {
                 if (!movement.isWalking && !isBusy)
                     movement.SetNewTarget(cage.GetFreeTileInGrid());
-            },3f);
+            }, 3f);
 
     }
-    public void OnTargetReached()
+    private void OnTargetReached()
     {
         if (isBusy)
         {
@@ -128,49 +177,5 @@ public class Animal : MonoBehaviour
             }
             return;
         }
-    }
-    public void Mate()
-    {
-        if (mate != null)
-        {
-            if (data.male)
-                mate.Free -= OnMateFree;
-            anim.Mate();
-            data.sexualActivity = 0;
-            Technet99m.Utils.InvokeAfterDelay(() => FinishNeed(), 3f);
-        }
-    }
-    public void FinishNeed()
-    {
-        target = null;
-        Free?.Invoke(this);
-        isBusy = false;
-        anim.Idle();
-        GetComponent<AnimalStatus>().Done(selected);
-    }
-    public void GoMate()
-    {
-        selected = needs.Find((x) => x.type == NeedType.Sex);
-        movement.SetNewTarget(cage.GetPlaceToMate());
-        Debug.Log("Going Mate");
-        isBusy = true;
-    }
-    public void OnMateFree(Animal sender)
-    {
-        mate = sender;
-        mate.GoMate();
-        mate.ReachedMatePos += OnMateReached;
-    }
-    public void OnMateReached()
-    {
-        Debug.Log("Going Mate too");
-        movement.SetNewTarget(mate.matingPos.position);
-    }
-    public void Sell()
-    {
-        DataManager.AddMoney(Mathf.CeilToInt(stats.price * data.happiness));
-        cage.animals.Remove(this);
-        target?.Empty(transform.position);
-        Destroy(gameObject);
     }
 }

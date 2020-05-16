@@ -32,8 +32,7 @@ public class MovementController : MonoBehaviour
                 path.RemoveAt(0);
                 if (path.Count == 0)
                 {
-                    isWalking = false;
-                    anim.Idle();
+                    Stop();
                     TargetReached?.Invoke();
                 }
                 else
@@ -62,5 +61,11 @@ public class MovementController : MonoBehaviour
             path.RemoveAt(0);
         this.target = pathfinding.Grid.GetWorldPos(path[0].x, path[0].y, cage.transform.position);
         anim.Walk(this.target - (Vector2)transform.position);
+    }
+    public void Stop()
+    {
+        path = new List<PathNode>();
+        isWalking = false;
+        anim.Idle();
     }
 }

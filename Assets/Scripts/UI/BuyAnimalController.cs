@@ -10,7 +10,7 @@ public class BuyAnimalController : MonoBehaviour
         if (animal != null)
         {
             animal.data.male = male;
-            animal.transform.position = GameManager.Ins.activeCage.RandomFreePos;
+            animal.transform.position = GameManager.Ins.activeCage.GetFreeTileInGrid();
         }
     }
     private Animal BuyAnimal()
