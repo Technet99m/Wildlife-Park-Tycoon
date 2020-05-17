@@ -9,6 +9,7 @@ public class CageMenuController : MonoBehaviour
     [SerializeField] private Text cageCapacity;
     [SerializeField] private CageMenuItemController[] items;
     [SerializeField] private GameObject itemRef;
+    [SerializeField] private Transform cageIcons;
 
     [SerializeField] private GameObject buySegment;
     [SerializeField] private GameObject sellSegment;
@@ -93,6 +94,7 @@ public class CageMenuController : MonoBehaviour
         Animal animal = AnimalFactory.NewAnimalOfKind(kind, activeCage.transform);
         animal.data.male = false;
         animal.transform.position = activeCage.GetFreeTileInGrid();
+        cageIcons.GetChild(GameManager.Ins.currentCageIndex).GetComponent<Image>().sprite = Resources.Load<Sprite>($"Animals/{kind}/CageIcon");
         Refresh();
     }
 }

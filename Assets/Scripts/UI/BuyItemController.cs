@@ -8,6 +8,6 @@ public class BuyItemController : MonoBehaviour
 
     public void BuyItem(int index)
     {
-        Instantiate(items[index], Vector3.zero, Quaternion.identity);
+        Instantiate(items[index], (Vector2)GameManager.Ins.cam.position, Quaternion.identity);
     }
 }

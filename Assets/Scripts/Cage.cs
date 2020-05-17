@@ -1,13 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Cage : MonoBehaviour
 {
     [SerializeField] private Sprite EmptyTile, FilledTile;
-    private SpriteRenderer[] gridTiles;
+
     public List<Item> feeders;
     public List<Animal> animals;
+
+    public Image background;
+    public Image fence;
+
+    private SpriteRenderer[] gridTiles;
+
     public string KindInCage { get => animals[0].GetComponent<AnimalDataHolder>().stats.kind; }
 
     public Technet99m.Grid<bool> walkingMap;

@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   kind: Hippo
   price: 100
-  TicksToFullMate: 18
-  TicksToBorn: 5
+  TicksToFullMate: 30
+  TicksToBorn: 30
   minChildren: 1
   maxChildren: 1
   foods: 0000000002000000

@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   kind: Zebra
   price: 100
-  TicksToFullMate: 15
-  TicksToBorn: 0
-  minChildren: 0
-  maxChildren: 0
+  TicksToFullMate: 30
+  TicksToBorn: 30
+  minChildren: 1
+  maxChildren: 2
   foods: 0000000002000000
   specials: 

@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   kind: Lion
   price: 100
-  TicksToFullMate: 10
-  TicksToBorn: 10
+  TicksToFullMate: 30
+  TicksToBorn: 30
   minChildren: 2
   maxChildren: 4
   foods: 0000000001000000

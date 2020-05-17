@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 188b53a32bd9e6045bea9165bc8c25ee, type: 3}
   m_Name: Stats
   m_EditorClassIdentifier: 
-  kind: Cheetah
+  kind: Elephant
   price: 100
-  TicksToFullMate: 30
-  TicksToBorn: 30
+  TicksToFullMate: 45
+  TicksToBorn: 45
   minChildren: 1
-  maxChildren: 2
-  foods: 0000000001000000
-  specials: 0000000001000000
+  maxChildren: 1
+  foods: 0000000002000000
+  specials: 
