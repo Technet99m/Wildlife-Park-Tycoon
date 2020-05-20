@@ -1,16 +1,28 @@
 fileFormatVersion: 2
-guid: 921a90356bdd7e5439253237a758cafa
+guid: 987e3403d06600f4aace9dbae56355c2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4841097758568451404
-    second: MeatFeeder 1_0
+      213: -7279441854841168891
+    second: pig_side_sheet_0
   - first:
-      213: 5579241744281110338
-    second: MeatFeeder 1_1
+      213: -4451063490604657252
+    second: pig_side_sheet_1
   - first:
-      213: -412279195522892683
-    second: MeatFeeder 1_2
+      213: 5479804791404549048
+    second: pig_side_sheet_2
+  - first:
+      213: -3910648340663848823
+    second: pig_side_sheet_3
+  - first:
+      213: -1901494669808417571
+    second: pig_side_sheet_4
+  - first:
+      213: 753407664723788052
+    second: pig_side_sheet_5
+  - first:
+      213: -3446979666078864749
+    second: pig_side_sheet_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -108,13 +120,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MeatFeeder 1_0
+      name: pig_side_sheet_0
       rect:
         serializedVersion: 2
-        x: 11
-        y: 5
-        width: 84
-        height: 241
+        x: 61
+        y: 4
+        width: 137
+        height: 175
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -122,20 +134,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c4d896e13c80f2340800000000000000
-      internalID: 4841097758568451404
+      spriteID: 50cd41f733a3afa90800000000000000
+      internalID: -7279441854841168891
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeatFeeder 1_1
+      name: pig_side_sheet_1
       rect:
         serializedVersion: 2
-        x: 107
-        y: 5
-        width: 84
-        height: 241
+        x: 213
+        y: 106
+        width: 11
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,20 +155,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 24708eb6ec27d6d40800000000000000
-      internalID: 5579241744281110338
+      spriteID: c959cc98655aa32c0800000000000000
+      internalID: -4451063490604657252
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeatFeeder 1_2
+      name: pig_side_sheet_2
       rect:
         serializedVersion: 2
-        x: 203
-        y: 5
-        width: 84
-        height: 241
+        x: 5
+        y: 19
+        width: 43
+        height: 85
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b3d62eac6d2c0c40800000000000000
+      internalID: 5479804791404549048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pig_side_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 39
+        width: 45
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -164,8 +197,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 57cf29a814a474af0800000000000000
-      internalID: -412279195522892683
+      spriteID: 980b24dbd069ab9c0800000000000000
+      internalID: -3910648340663848823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pig_side_sheet_4
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 45
+        width: 42
+        height: 39
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd445cf1ca88c95e0800000000000000
+      internalID: -1901494669808417571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pig_side_sheet_5
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 5
+        width: 45
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4110be28744a47a00800000000000000
+      internalID: 753407664723788052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pig_side_sheet_6
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 4
+        width: 42
+        height: 39
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39aef5fa14ed920d0800000000000000
+      internalID: -3446979666078864749
       vertices: []
       indices: 
       edges: []

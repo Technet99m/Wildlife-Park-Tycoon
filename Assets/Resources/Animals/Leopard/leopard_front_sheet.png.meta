@@ -1,34 +1,82 @@
 fileFormatVersion: 2
-guid: b55111d7900860b439f6621873fdcd75
+guid: 06dbfabc9ca7c0e4dbd7e8ba60ae4ef7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -9010681615146027857
-    second: hippo_male_side_sheet_0
+      213: -2327388081365613585
+    second: leopard_front_sheet_0
   - first:
-      213: 6273894148676143659
-    second: hippo_male_side_sheet_1
+      213: -6612757888496120412
+    second: leopard_front_sheet_1
   - first:
-      213: -1211957717104996156
-    second: hippo_male_side_sheet_2
+      213: 344867246078129641
+    second: leopard_front_sheet_2
   - first:
-      213: 5427888798753627166
-    second: hippo_male_side_sheet_3
+      213: 2798936728907743891
+    second: leopard_front_sheet_3
   - first:
-      213: -1280541048304933040
-    second: hippo_male_side_sheet_4
+      213: 3151244845857365523
+    second: leopard_front_sheet_4
   - first:
-      213: 1299340602596281799
-    second: hippo_male_side_sheet_5
+      213: 2806255707360048661
+    second: leopard_front_sheet_5
   - first:
-      213: 1932024932269415968
-    second: hippo_male_side_sheet_6
+      213: -230201241012577529
+    second: leopard_front_sheet_6
   - first:
-      213: -992591226749227980
-    second: hippo_male_side_sheet_7
+      213: 1029987648835553826
+    second: leopard_front_sheet_7
   - first:
-      213: 5806062656859814751
-    second: hippo_male_side_sheet_8
+      213: -6193139605703996119
+    second: leopard_front_sheet_8
+  - first:
+      213: 5295437559143544895
+    second: leopard_front_sheet_9
+  - first:
+      213: 3527560473265993620
+    second: leopard_front_sheet_10
+  - first:
+      213: 6678357938052666006
+    second: leopard_front_sheet_11
+  - first:
+      213: 5098771078630327700
+    second: leopard_front_sheet_12
+  - first:
+      213: 4819153766564465849
+    second: leopard_front_sheet_13
+  - first:
+      213: -219557083366960562
+    second: leopard_front_sheet_14
+  - first:
+      213: -5504525952338326275
+    second: leopard_front_sheet_15
+  - first:
+      213: 7853100040376294590
+    second: leopard_front_sheet_16
+  - first:
+      213: -2477067023757243456
+    second: leopard_front_sheet_1
+  - first:
+      213: -7618422565957319470
+    second: leopard_front_sheet_2
+  - first:
+      213: 2638251476192814522
+    second: leopard_front_sheet_6
+  - first:
+      213: 4094269406985171850
+    second: leopard_front_sheet_8
+  - first:
+      213: -226170933344727570
+    second: leopard_front_sheet_13
+  - first:
+      213: 702588260107625192
+    second: leopard_front_sheet_14
+  - first:
+      213: 7277128354968791802
+    second: leopard_front_sheet_15
+  - first:
+      213: -7344002179161015653
+    second: leopard_front_sheet_16
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -84,7 +132,7 @@ TextureImporter:
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
-  applyGammaDecoding: 1
+  applyGammaDecoding: 0
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -110,38 +158,29 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: hippo_male_side_sheet_0
+      name: leopard_front_sheet_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 190
-        width: 67
-        height: 59
-      alignment: 9
-      pivot: {x: 1.3988992, y: -0.16957946}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fa4f319cfc0a3f280800000000000000
-      internalID: -9010681615146027857
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: hippo_male_side_sheet_1
-      rect:
-        serializedVersion: 2
-        x: 117
-        y: 36
-        width: 156
-        height: 168
+        x: 19
+        y: 171
+        width: 36
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -149,113 +188,155 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b2a4e3adc79511750800000000000000
-      internalID: 6273894148676143659
+      spriteID: 0cb8d1c7aa0bf9dd0800000000000000
+      internalID: -2477067023757243456
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hippo_male_side_sheet_2
+      name: leopard_front_sheet_2
       rect:
         serializedVersion: 2
-        x: 24
-        y: 158
-        width: 13
-        height: 17
-      alignment: 9
-      pivot: {x: 1.8999082, y: 0.5021596}
+        x: 77
+        y: 20
+        width: 155
+        height: 165
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4c0d925a0e24e2fe0800000000000000
-      internalID: -1211957717104996156
+      spriteID: 2d44b475a0de54690800000000000000
+      internalID: -7618422565957319470
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hippo_male_side_sheet_3
+      name: leopard_front_sheet_6
       rect:
         serializedVersion: 2
-        x: 7
-        y: 100
+        x: 3
+        y: 94
+        width: 66
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab56f925db3fc9420800000000000000
+      internalID: 2638251476192814522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leopard_front_sheet_8
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 34
+        width: 81
+        height: 112
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a83b9125554c1d830800000000000000
+      internalID: 4094269406985171850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leopard_front_sheet_13
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 49
         width: 42
-        height: 38
-      alignment: 9
-      pivot: {x: 0.1932305, y: 1.3203539}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e1c1802ba1cb35b40800000000000000
-      internalID: 5427888798753627166
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: hippo_male_side_sheet_4
-      rect:
-        serializedVersion: 2
-        x: 8
-        y: 57
-        width: 47
-        height: 34
-      alignment: 9
-      pivot: {x: 0.49207756, y: 0.40143496}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0576a7f73ba9a3ee0800000000000000
-      internalID: -1280541048304933040
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: hippo_male_side_sheet_5
-      rect:
-        serializedVersion: 2
-        x: 7
-        y: 12
-        width: 47
-        height: 34
-      alignment: 9
-      pivot: {x: 0.47623253, y: 0.32477346}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7cd4ef3d46f280210800000000000000
-      internalID: 1299340602596281799
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: hippo_male_side_sheet_6
-      rect:
-        serializedVersion: 2
-        x: 62
-        y: 16
-        width: 43
         height: 39
-      alignment: 9
-      pivot: {x: 0.16300006, y: 1.3594339}
+      alignment: 3
+      pivot: {x: 1, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 02edd19807eefca10800000000000000
-      internalID: 1932024932269415968
+      spriteID: eed08730cba7cdcf0800000000000000
+      internalID: -226170933344727570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leopard_front_sheet_14
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 75
+        width: 46
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e22313dc4810c900800000000000000
+      internalID: 702588260107625192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leopard_front_sheet_15
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 4
+        width: 42
+        height: 39
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afa66d6dead8df460800000000000000
+      internalID: 7277128354968791802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leopard_front_sheet_16
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 39
+        width: 46
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9ab961adecd41a90800000000000000
+      internalID: -7344002179161015653
       vertices: []
       indices: 
       edges: []

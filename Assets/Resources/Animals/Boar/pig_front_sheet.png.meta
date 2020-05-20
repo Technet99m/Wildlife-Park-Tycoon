@@ -1,34 +1,43 @@
 fileFormatVersion: 2
-guid: b55111d7900860b439f6621873fdcd75
+guid: 040f48f9a7cfbf646b2aa3a1aaabe75d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -9010681615146027857
-    second: hippo_male_side_sheet_0
+      213: -5665933342169188111
+    second: pig_front_sheet_0
   - first:
-      213: 6273894148676143659
-    second: hippo_male_side_sheet_1
+      213: -810727054986533881
+    second: pig_front_sheet_1
   - first:
-      213: -1211957717104996156
-    second: hippo_male_side_sheet_2
+      213: -9092010804066701397
+    second: pig_front_sheet_2
   - first:
-      213: 5427888798753627166
-    second: hippo_male_side_sheet_3
+      213: -4208343889779204357
+    second: pig_front_sheet_3
   - first:
-      213: -1280541048304933040
-    second: hippo_male_side_sheet_4
+      213: -5798376623584669882
+    second: pig_front_sheet_4
   - first:
-      213: 1299340602596281799
-    second: hippo_male_side_sheet_5
+      213: -4775388223099842648
+    second: pig_front_sheet_5
   - first:
-      213: 1932024932269415968
-    second: hippo_male_side_sheet_6
+      213: -1129776296155254680
+    second: pig_front_sheet_6
   - first:
-      213: -992591226749227980
-    second: hippo_male_side_sheet_7
+      213: -3714490666995288781
+    second: pig_front_sheet_7
   - first:
-      213: 5806062656859814751
-    second: hippo_male_side_sheet_8
+      213: 5206707474835064013
+    second: pig_front_sheet_8
+  - first:
+      213: -6016533193628690213
+    second: pig_front_sheet_9
+  - first:
+      213: 1332788335487636809
+    second: pig_front_sheet_10
+  - first:
+      213: -5600882900324078567
+    second: pig_front_sheet_11
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -84,7 +93,7 @@ TextureImporter:
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
-  applyGammaDecoding: 1
+  applyGammaDecoding: 0
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -110,152 +119,185 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: hippo_male_side_sheet_0
+      name: pig_front_sheet_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 190
-        width: 67
-        height: 59
-      alignment: 9
-      pivot: {x: 1.3988992, y: -0.16957946}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fa4f319cfc0a3f280800000000000000
-      internalID: -9010681615146027857
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: hippo_male_side_sheet_1
-      rect:
-        serializedVersion: 2
-        x: 117
-        y: 36
-        width: 156
-        height: 168
+        x: 97
+        y: 11
+        width: 155
+        height: 179
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b2a4e3adc79511750800000000000000
-      internalID: 6273894148676143659
+      spriteID: baf27916850b2d180800000000000000
+      internalID: -9092010804066701397
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hippo_male_side_sheet_2
+      name: pig_front_sheet_3
       rect:
         serializedVersion: 2
-        x: 24
-        y: 158
-        width: 13
-        height: 17
-      alignment: 9
-      pivot: {x: 1.8999082, y: 0.5021596}
+        x: 265
+        y: 143
+        width: 45
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4c0d925a0e24e2fe0800000000000000
-      internalID: -1211957717104996156
+      spriteID: bfe560d6785f895c0800000000000000
+      internalID: -4208343889779204357
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hippo_male_side_sheet_3
+      name: pig_front_sheet_4
       rect:
         serializedVersion: 2
-        x: 7
-        y: 100
+        x: 9
+        y: 80
+        width: 75
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64f8e459e27088fa0800000000000000
+      internalID: -5798376623584669882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pig_front_sheet_6
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 111
+        width: 45
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8607208c17a3250f0800000000000000
+      internalID: -1129776296155254680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pig_front_sheet_7
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 55
+        width: 42
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 335fd382b6a737cc0800000000000000
+      internalID: -3714490666995288781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pig_front_sheet_9
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 14
+        width: 43
+        height: 86
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd85a66ffeaf08ca0800000000000000
+      internalID: -6016533193628690213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pig_front_sheet_10
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 12
+        width: 41
+        height: 38
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94556810ee30f7210800000000000000
+      internalID: 1332788335487636809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pig_front_sheet_11
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 12
         width: 42
         height: 38
-      alignment: 9
-      pivot: {x: 0.1932305, y: 1.3203539}
+      alignment: 3
+      pivot: {x: 1, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e1c1802ba1cb35b40800000000000000
-      internalID: 5427888798753627166
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: hippo_male_side_sheet_4
-      rect:
-        serializedVersion: 2
-        x: 8
-        y: 57
-        width: 47
-        height: 34
-      alignment: 9
-      pivot: {x: 0.49207756, y: 0.40143496}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0576a7f73ba9a3ee0800000000000000
-      internalID: -1280541048304933040
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: hippo_male_side_sheet_5
-      rect:
-        serializedVersion: 2
-        x: 7
-        y: 12
-        width: 47
-        height: 34
-      alignment: 9
-      pivot: {x: 0.47623253, y: 0.32477346}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7cd4ef3d46f280210800000000000000
-      internalID: 1299340602596281799
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: hippo_male_side_sheet_6
-      rect:
-        serializedVersion: 2
-        x: 62
-        y: 16
-        width: 43
-        height: 39
-      alignment: 9
-      pivot: {x: 0.16300006, y: 1.3594339}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 02edd19807eefca10800000000000000
-      internalID: 1932024932269415968
+      spriteID: 91caf994daaa542b0800000000000000
+      internalID: -5600882900324078567
       vertices: []
       indices: 
       edges: []

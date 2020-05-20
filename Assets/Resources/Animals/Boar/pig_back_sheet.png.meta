@@ -1,16 +1,19 @@
 fileFormatVersion: 2
-guid: 921a90356bdd7e5439253237a758cafa
+guid: 56045399f945cf643974c80ec8448260
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4841097758568451404
-    second: MeatFeeder 1_0
+      213: 94369580955567555
+    second: pig_back_sheet_0
   - first:
-      213: 5579241744281110338
-    second: MeatFeeder 1_1
+      213: 1223871565605021253
+    second: pig_back_sheet_1
   - first:
-      213: -412279195522892683
-    second: MeatFeeder 1_2
+      213: 9058801888060242125
+    second: pig_back_sheet_2
+  - first:
+      213: -2138127671755402518
+    second: pig_back_sheet_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -108,13 +111,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MeatFeeder 1_0
+      name: pig_back_sheet_0
       rect:
         serializedVersion: 2
-        x: 11
-        y: 5
-        width: 84
-        height: 241
+        x: 5
+        y: 6
+        width: 155
+        height: 177
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -122,20 +125,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c4d896e13c80f2340800000000000000
-      internalID: 4841097758568451404
+      spriteID: 3c5857642a44f4100800000000000000
+      internalID: 94369580955567555
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeatFeeder 1_1
+      name: pig_back_sheet_1
       rect:
         serializedVersion: 2
-        x: 107
-        y: 5
-        width: 84
-        height: 241
+        x: 173
+        y: 155
+        width: 45
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,20 +146,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 24708eb6ec27d6d40800000000000000
-      internalID: 5579241744281110338
+      spriteID: 546a69e54b01cf010800000000000000
+      internalID: 1223871565605021253
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeatFeeder 1_2
+      name: pig_back_sheet_2
       rect:
         serializedVersion: 2
-        x: 203
-        y: 5
-        width: 84
-        height: 241
+        x: 176
+        y: 120
+        width: 45
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -164,8 +167,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 57cf29a814a474af0800000000000000
-      internalID: -412279195522892683
+      spriteID: dc8f774525457bd70800000000000000
+      internalID: 9058801888060242125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pig_back_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 29
+        width: 43
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae21698f538d352e0800000000000000
+      internalID: -2138127671755402518
       vertices: []
       indices: 
       edges: []

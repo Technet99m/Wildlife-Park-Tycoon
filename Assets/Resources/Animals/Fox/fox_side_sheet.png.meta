@@ -1,16 +1,28 @@
 fileFormatVersion: 2
-guid: 921a90356bdd7e5439253237a758cafa
+guid: abb4a6aedc5312447a0a00fc25ca1f82
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4841097758568451404
-    second: MeatFeeder 1_0
+      213: 4638665570468237795
+    second: fox_side_sheet_0
   - first:
-      213: 5579241744281110338
-    second: MeatFeeder 1_1
+      213: -2214816197301725245
+    second: fox_side_sheet_1
   - first:
-      213: -412279195522892683
-    second: MeatFeeder 1_2
+      213: -3865818999047937478
+    second: fox_side_sheet_2
+  - first:
+      213: 8459329157801233073
+    second: fox_side_sheet_3
+  - first:
+      213: -2788531498680991725
+    second: fox_side_sheet_4
+  - first:
+      213: -5410148387169249254
+    second: fox_side_sheet_5
+  - first:
+      213: 2953811069883483223
+    second: fox_side_sheet_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -108,64 +120,148 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MeatFeeder 1_0
+      name: fox_side_sheet_0
       rect:
         serializedVersion: 2
-        x: 11
-        y: 5
-        width: 84
-        height: 241
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 7
+        y: 12
+        width: 74
+        height: 144
+      alignment: 8
+      pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c4d896e13c80f2340800000000000000
-      internalID: 4841097758568451404
+      spriteID: 3e1189772c9df5040800000000000000
+      internalID: 4638665570468237795
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeatFeeder 1_1
+      name: fox_side_sheet_1
       rect:
         serializedVersion: 2
-        x: 107
-        y: 5
-        width: 84
-        height: 241
+        x: 90
+        y: 4
+        width: 145
+        height: 172
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 24708eb6ec27d6d40800000000000000
-      internalID: 5579241744281110338
+      spriteID: 3c79c0537646341e0800000000000000
+      internalID: -2214816197301725245
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeatFeeder 1_2
+      name: fox_side_sheet_2
       rect:
         serializedVersion: 2
-        x: 203
-        y: 5
-        width: 84
-        height: 241
+        x: 253
+        y: 105
+        width: 12
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 57cf29a814a474af0800000000000000
-      internalID: -412279195522892683
+      spriteID: a32aac33a1ad95ac0800000000000000
+      internalID: -3865818999047937478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fox_side_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 111
+        width: 42
+        height: 40
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bac8d0bc03956570800000000000000
+      internalID: 8459329157801233073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fox_side_sheet_4
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 45
+        width: 47
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 310c12050652d49d0800000000000000
+      internalID: -2788531498680991725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fox_side_sheet_5
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 64
+        width: 42
+        height: 40
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a18df90c4ba4be4b0800000000000000
+      internalID: -5410148387169249254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fox_side_sheet_6
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 11
+        width: 46
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7548502a48b0ef820800000000000000
+      internalID: 2953811069883483223
       vertices: []
       indices: 
       edges: []

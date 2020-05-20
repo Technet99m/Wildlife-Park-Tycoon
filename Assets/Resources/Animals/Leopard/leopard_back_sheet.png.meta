@@ -1,16 +1,19 @@
 fileFormatVersion: 2
-guid: 921a90356bdd7e5439253237a758cafa
+guid: f848eb1d35f949249b1a6140f458cdd5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4841097758568451404
-    second: MeatFeeder 1_0
+      213: 5725315428880503591
+    second: leopard_back_sheet_0
   - first:
-      213: 5579241744281110338
-    second: MeatFeeder 1_1
+      213: 2931891617628174879
+    second: leopard_back_sheet_1
   - first:
-      213: -412279195522892683
-    second: MeatFeeder 1_2
+      213: -7538488410507014998
+    second: leopard_back_sheet_2
+  - first:
+      213: -7868812113229254688
+    second: leopard_back_sheet_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -108,13 +111,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MeatFeeder 1_0
+      name: leopard_back_sheet_0
       rect:
         serializedVersion: 2
-        x: 11
-        y: 5
-        width: 84
-        height: 241
+        x: 6
+        y: 109
+        width: 46
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -122,20 +125,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c4d896e13c80f2340800000000000000
-      internalID: 4841097758568451404
+      spriteID: 7235c7d6c08647f40800000000000000
+      internalID: 5725315428880503591
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeatFeeder 1_1
+      name: leopard_back_sheet_1
       rect:
         serializedVersion: 2
-        x: 107
-        y: 5
-        width: 84
-        height: 241
+        x: 57
+        y: 6
+        width: 155
+        height: 164
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,20 +146,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 24708eb6ec27d6d40800000000000000
-      internalID: 5579241744281110338
+      spriteID: f1a3ca474eb20b820800000000000000
+      internalID: 2931891617628174879
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeatFeeder 1_2
+      name: leopard_back_sheet_2
       rect:
         serializedVersion: 2
-        x: 203
-        y: 5
-        width: 84
-        height: 241
+        x: 215
+        y: 15
+        width: 82
+        height: 112
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -164,8 +167,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 57cf29a814a474af0800000000000000
-      internalID: -412279195522892683
+      spriteID: aac84543bb8e16790800000000000000
+      internalID: -7538488410507014998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leopard_back_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 73
+        width: 45
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0efeda2e21d5cc290800000000000000
+      internalID: -7868812113229254688
       vertices: []
       indices: 
       edges: []

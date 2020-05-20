@@ -1,16 +1,19 @@
 fileFormatVersion: 2
-guid: 921a90356bdd7e5439253237a758cafa
+guid: 77f3e81eccf26ac4b96dffe496eb60d7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4841097758568451404
-    second: MeatFeeder 1_0
+      213: 5178817021766817285
+    second: rabbit_back_sheet_0
   - first:
-      213: 5579241744281110338
-    second: MeatFeeder 1_1
+      213: -4015746375152601326
+    second: rabbit_back_sheet_1
   - first:
-      213: -412279195522892683
-    second: MeatFeeder 1_2
+      213: 3272115929321138084
+    second: rabbit_back_sheet_2
+  - first:
+      213: -1346016931045873364
+    second: rabbit_back_sheet_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -108,13 +111,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MeatFeeder 1_0
+      name: rabbit_back_sheet_0
       rect:
         serializedVersion: 2
-        x: 11
+        x: 6
         y: 5
-        width: 84
-        height: 241
+        width: 154
+        height: 183
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -122,20 +125,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c4d896e13c80f2340800000000000000
-      internalID: 4841097758568451404
+      spriteID: 506582b84aaded740800000000000000
+      internalID: 5178817021766817285
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeatFeeder 1_1
+      name: rabbit_back_sheet_1
       rect:
         serializedVersion: 2
-        x: 107
-        y: 5
-        width: 84
-        height: 241
+        x: 177
+        y: 106
+        width: 44
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,20 +146,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 24708eb6ec27d6d40800000000000000
-      internalID: 5579241744281110338
+      spriteID: 21777f8b2f33548c0800000000000000
+      internalID: -4015746375152601326
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeatFeeder 1_2
+      name: rabbit_back_sheet_2
       rect:
         serializedVersion: 2
-        x: 203
-        y: 5
-        width: 84
-        height: 241
+        x: 178
+        y: 68
+        width: 45
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -164,8 +167,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 57cf29a814a474af0800000000000000
-      internalID: -412279195522892683
+      spriteID: 4a7651fe914e86d20800000000000000
+      internalID: 3272115929321138084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rabbit_back_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 13
+        width: 41
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2969539bbcf15de0800000000000000
+      internalID: -1346016931045873364
       vertices: []
       indices: 
       edges: []

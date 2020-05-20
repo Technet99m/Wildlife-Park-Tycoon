@@ -1,34 +1,49 @@
 fileFormatVersion: 2
-guid: b55111d7900860b439f6621873fdcd75
+guid: e485e69858fe31d428015f8c8a630607
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -9010681615146027857
-    second: hippo_male_side_sheet_0
+      213: -8393791868754064563
+    second: rabbit_front_sheet_0
   - first:
-      213: 6273894148676143659
-    second: hippo_male_side_sheet_1
+      213: -8072496283948123983
+    second: rabbit_front_sheet_1
   - first:
-      213: -1211957717104996156
-    second: hippo_male_side_sheet_2
+      213: 3147270611259144418
+    second: rabbit_front_sheet_2
   - first:
-      213: 5427888798753627166
-    second: hippo_male_side_sheet_3
+      213: -7946234227998226628
+    second: rabbit_front_sheet_3
   - first:
-      213: -1280541048304933040
-    second: hippo_male_side_sheet_4
+      213: -7958291421189256031
+    second: rabbit_front_sheet_4
   - first:
-      213: 1299340602596281799
-    second: hippo_male_side_sheet_5
+      213: 6863607713771543087
+    second: rabbit_front_sheet_5
   - first:
-      213: 1932024932269415968
-    second: hippo_male_side_sheet_6
+      213: -7893026514218873397
+    second: rabbit_front_sheet_6
   - first:
-      213: -992591226749227980
-    second: hippo_male_side_sheet_7
+      213: 2999042659212596115
+    second: rabbit_front_sheet_7
   - first:
-      213: 5806062656859814751
-    second: hippo_male_side_sheet_8
+      213: 5483412602524467508
+    second: rabbit_front_sheet_8
+  - first:
+      213: -4733214594969725661
+    second: rabbit_front_sheet_9
+  - first:
+      213: -4675999850884688507
+    second: rabbit_front_sheet_10
+  - first:
+      213: -1973498968023319486
+    second: rabbit_front_sheet_11
+  - first:
+      213: 3311031620913014402
+    second: rabbit_front_sheet_12
+  - first:
+      213: 5119908081627177338
+    second: rabbit_front_sheet_13
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -84,7 +99,7 @@ TextureImporter:
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
-  applyGammaDecoding: 1
+  applyGammaDecoding: 0
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -110,38 +125,29 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: hippo_male_side_sheet_0
+      name: rabbit_front_sheet_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 190
-        width: 67
-        height: 59
-      alignment: 9
-      pivot: {x: 1.3988992, y: -0.16957946}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fa4f319cfc0a3f280800000000000000
-      internalID: -9010681615146027857
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: hippo_male_side_sheet_1
-      rect:
-        serializedVersion: 2
-        x: 117
-        y: 36
-        width: 156
-        height: 168
+        x: 7
+        y: 51
+        width: 153
+        height: 186
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -149,113 +155,155 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b2a4e3adc79511750800000000000000
-      internalID: 6273894148676143659
+      spriteID: d4b0a5084c2438b80800000000000000
+      internalID: -8393791868754064563
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hippo_male_side_sheet_2
+      name: rabbit_front_sheet_1
       rect:
         serializedVersion: 2
-        x: 24
-        y: 158
-        width: 13
-        height: 17
-      alignment: 9
-      pivot: {x: 1.8999082, y: 0.5021596}
+        x: 205
+        y: 202
+        width: 41
+        height: 47
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4c0d925a0e24e2fe0800000000000000
-      internalID: -1211957717104996156
+      spriteID: 1b87c90566bb8ff80800000000000000
+      internalID: -8072496283948123983
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hippo_male_side_sheet_3
+      name: rabbit_front_sheet_5
       rect:
         serializedVersion: 2
-        x: 7
-        y: 100
+        x: 185
+        y: 129
+        width: 79
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2adbf8c9de604f50800000000000000
+      internalID: 6863607713771543087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rabbit_front_sheet_9
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 104
+        width: 38
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 325922d476e305eb0800000000000000
+      internalID: -4733214594969725661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rabbit_front_sheet_10
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 56
         width: 42
-        height: 38
-      alignment: 9
-      pivot: {x: 0.1932305, y: 1.3203539}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e1c1802ba1cb35b40800000000000000
-      internalID: 5427888798753627166
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: hippo_male_side_sheet_4
-      rect:
-        serializedVersion: 2
-        x: 8
-        y: 57
-        width: 47
-        height: 34
-      alignment: 9
-      pivot: {x: 0.49207756, y: 0.40143496}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0576a7f73ba9a3ee0800000000000000
-      internalID: -1280541048304933040
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: hippo_male_side_sheet_5
-      rect:
-        serializedVersion: 2
-        x: 7
-        y: 12
-        width: 47
-        height: 34
-      alignment: 9
-      pivot: {x: 0.47623253, y: 0.32477346}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7cd4ef3d46f280210800000000000000
-      internalID: 1299340602596281799
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: hippo_male_side_sheet_6
-      rect:
-        serializedVersion: 2
-        x: 62
-        y: 16
-        width: 43
         height: 39
-      alignment: 9
-      pivot: {x: 0.16300006, y: 1.3594339}
+      alignment: 3
+      pivot: {x: 1, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 02edd19807eefca10800000000000000
-      internalID: 1932024932269415968
+      spriteID: 5851d3ef8e28b1fb0800000000000000
+      internalID: -4675999850884688507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rabbit_front_sheet_11
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 15
+        width: 46
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24cbe560529bc94e0800000000000000
+      internalID: -1973498968023319486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rabbit_front_sheet_12
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 14
+        width: 45
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2862b9477b523fd20800000000000000
+      internalID: 3311031620913014402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rabbit_front_sheet_13
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 13
+        width: 42
+        height: 39
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a712a0816419d0740800000000000000
+      internalID: 5119908081627177338
       vertices: []
       indices: 
       edges: []
