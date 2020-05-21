@@ -160,7 +160,7 @@ public class Animal : MonoBehaviour
             else if (selected.type == NeedType.Special)
             {
                 anim.DoSpecial(selected.special);
-                Technet99m.Utils.InvokeAfterDelay(() => { target.Empty(transform.position); FinishNeed(); }, 3f);
+                Technet99m.Utils.InvokeAfterDelay(() => { target.Empty(transform.position); FinishNeed(); }, 9.5f);
             }
             else if (selected.type == NeedType.Sex)
             {

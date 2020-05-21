@@ -64,6 +64,10 @@ public class AnimalAnimationController : MonoBehaviour
                 SetUp(GenderPack.side);
                 anim.Play("Jump");
                 break;
+			case Special.swim:
+				SetUp(GenderPack.side);
+				anim.Play("Swimming");
+				break;
             default:
                 break;
         }
