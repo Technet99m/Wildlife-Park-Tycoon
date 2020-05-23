@@ -56,20 +56,20 @@ public class AnimalAnimationController : MonoBehaviour
         foodSprite.sprite = foods[(int)type];
         anim.Play(right ? "Eat_right" : "Eat_left");
     }
-    public void DoSpecial(Special spec)
+    public float DoSpecial(Special spec)
     {
         switch(spec)
         {
             case Special.jump:
                 SetUp(GenderPack.side);
                 anim.Play("Jump");
-                break;
+                return 6f;
 			case Special.swim:
 				SetUp(GenderPack.side);
 				anim.Play("Swimming");
-				break;
+                return 9.5f;
             default:
-                break;
+                return 0;
         }
     }
     public void Mate()
