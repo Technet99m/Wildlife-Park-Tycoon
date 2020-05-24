@@ -1,31 +1,28 @@
 fileFormatVersion: 2
-guid: 153299edcaf8f5f47b2a7c0e311e56a0
+guid: f3c0e017b3fd81b439a262aaaa2e05be
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2594797223279092564
-    second: pool_0
+      213: -3671124841004476413
+    second: platypus_side_sheet_0
   - first:
-      213: -4661937652750302714
-    second: pool_1
+      213: -5494561758399622961
+    second: platypus_side_sheet_1
   - first:
-      213: -4790178749378873748
-    second: pool_2
+      213: -6039334125594262944
+    second: platypus_side_sheet_2
   - first:
-      213: 6725131695234404505
-    second: pool_3
+      213: 7269879782525392215
+    second: platypus_side_sheet_3
   - first:
-      213: 4369087333038469435
-    second: pool_4
+      213: -6715462610215648541
+    second: platypus_side_sheet_4
   - first:
-      213: -8418920730739308691
-    second: pool_5
+      213: 1531555680779110676
+    second: platypus_side_sheet_5
   - first:
-      213: 7697715607233965679
-    second: pool_6
-  - first:
-      213: -8568336418417187258
-    second: pool_7
+      213: 1557193798533243497
+    second: platypus_side_sheet_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -69,7 +66,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 60
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -123,160 +120,34 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pool_0
+      name: platypus_side_sheet_0
       rect:
         serializedVersion: 2
-        x: 161
-        y: 277
-        width: 129
-        height: 139
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 5
+        y: 15
+        width: 76
+        height: 130
+      alignment: 8
+      pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 45368b5a352920420800000000000000
-      internalID: 2594797223279092564
+      spriteID: 308d0d5586b8d0dc0800000000000000
+      internalID: -3671124841004476413
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pool_1
+      name: platypus_side_sheet_1
       rect:
         serializedVersion: 2
-        x: 348
-        y: 266
-        width: 192
-        height: 111
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 602ccc2a7687d4fb0800000000000000
-      internalID: -4661937652750302714
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pool_2
-      rect:
-        serializedVersion: 2
-        x: 12
-        y: 140
-        width: 84
-        height: 68
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c66b5a09ecdd58db0800000000000000
-      internalID: -4790178749378873748
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pool_4
-      rect:
-        serializedVersion: 2
-        x: 124
-        y: 179
-        width: 23
-        height: 75
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b31ba6ee7cd12ac30800000000000000
-      internalID: 4369087333038469435
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pool_5
-      rect:
-        serializedVersion: 2
-        x: 149
-        y: 170
-        width: 85
-        height: 53
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d678c14633cf92b80800000000000000
-      internalID: -8418920730739308691
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pool_6
-      rect:
-        serializedVersion: 2
-        x: 285
-        y: 11
-        width: 282
-        height: 240
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f6e292f7f87c3da60800000000000000
-      internalID: 7697715607233965679
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pool_7
-      rect:
-        serializedVersion: 2
-        x: 169
-        y: 152
-        width: 64
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6466338ac67271980800000000000000
-      internalID: -8568336418417187258
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pool_3
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 341
-        width: 20
-        height: 71
+        x: 87
+        y: 7
+        width: 157
+        height: 149
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -284,8 +155,113 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 990da2245a7745d50800000000000000
-      internalID: 6725131695234404505
+      spriteID: fc0152231356fb3b0800000000000000
+      internalID: -5494561758399622961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platypus_side_sheet_2
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 107
+        width: 12
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0624f0c4c99ff2ca0800000000000000
+      internalID: -6039334125594262944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platypus_side_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 63
+        width: 48
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 755583d052dc3e460800000000000000
+      internalID: 7269879782525392215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platypus_side_sheet_4
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 54
+        width: 43
+        height: 44
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e2cda70652edc2a0800000000000000
+      internalID: -6715462610215648541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platypus_side_sheet_5
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 26
+        width: 48
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4190292f6cd214510800000000000000
+      internalID: 1531555680779110676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platypus_side_sheet_6
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 8
+        width: 43
+        height: 44
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 962e30862834c9510800000000000000
+      internalID: 1557193798533243497
       vertices: []
       indices: 
       edges: []

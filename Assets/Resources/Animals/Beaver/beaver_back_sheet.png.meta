@@ -1,31 +1,19 @@
 fileFormatVersion: 2
-guid: 153299edcaf8f5f47b2a7c0e311e56a0
+guid: 0eadf9fdcd9699c4f8c4c676f865477d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2594797223279092564
-    second: pool_0
+      213: 6715185821929245177
+    second: beaver_back_sheet_0
   - first:
-      213: -4661937652750302714
-    second: pool_1
+      213: -3913877227555300956
+    second: beaver_back_sheet_1
   - first:
-      213: -4790178749378873748
-    second: pool_2
+      213: 2088561575853687586
+    second: beaver_back_sheet_2
   - first:
-      213: 6725131695234404505
-    second: pool_3
-  - first:
-      213: 4369087333038469435
-    second: pool_4
-  - first:
-      213: -8418920730739308691
-    second: pool_5
-  - first:
-      213: 7697715607233965679
-    second: pool_6
-  - first:
-      213: -8568336418417187258
-    second: pool_7
+      213: -1180169643500836518
+    second: beaver_back_sheet_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -69,7 +57,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 60
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -123,13 +111,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pool_0
+      name: beaver_back_sheet_0
       rect:
         serializedVersion: 2
-        x: 161
-        y: 277
-        width: 129
-        height: 139
+        x: 6
+        y: 109
+        width: 45
+        height: 30
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +125,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 45368b5a352920420800000000000000
-      internalID: 2594797223279092564
+      spriteID: 9f905dc2de1213d50800000000000000
+      internalID: 6715185821929245177
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pool_1
+      name: beaver_back_sheet_1
       rect:
         serializedVersion: 2
-        x: 348
-        y: 266
-        width: 192
-        height: 111
+        x: 56
+        y: 5
+        width: 154
+        height: 158
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +146,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 602ccc2a7687d4fb0800000000000000
-      internalID: -4661937652750302714
+      spriteID: 4a9531de56d1fa9c0800000000000000
+      internalID: -3913877227555300956
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pool_2
+      name: beaver_back_sheet_2
       rect:
         serializedVersion: 2
-        x: 12
-        y: 140
-        width: 84
-        height: 68
+        x: 220
+        y: 12
+        width: 75
+        height: 129
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2230a4400bf0cfc10800000000000000
+      internalID: 2088561575853687586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beaver_back_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 72
+        width: 45
+        height: 31
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,113 +188,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c66b5a09ecdd58db0800000000000000
-      internalID: -4790178749378873748
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pool_4
-      rect:
-        serializedVersion: 2
-        x: 124
-        y: 179
-        width: 23
-        height: 75
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b31ba6ee7cd12ac30800000000000000
-      internalID: 4369087333038469435
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pool_5
-      rect:
-        serializedVersion: 2
-        x: 149
-        y: 170
-        width: 85
-        height: 53
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d678c14633cf92b80800000000000000
-      internalID: -8418920730739308691
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pool_6
-      rect:
-        serializedVersion: 2
-        x: 285
-        y: 11
-        width: 282
-        height: 240
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f6e292f7f87c3da60800000000000000
-      internalID: 7697715607233965679
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pool_7
-      rect:
-        serializedVersion: 2
-        x: 169
-        y: 152
-        width: 64
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6466338ac67271980800000000000000
-      internalID: -8568336418417187258
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pool_3
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 341
-        width: 20
-        height: 71
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 990da2245a7745d50800000000000000
-      internalID: 6725131695234404505
+      spriteID: a59ee6846f13f9fe0800000000000000
+      internalID: -1180169643500836518
       vertices: []
       indices: 
       edges: []

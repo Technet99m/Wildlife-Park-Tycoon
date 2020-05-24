@@ -1,31 +1,19 @@
 fileFormatVersion: 2
-guid: 153299edcaf8f5f47b2a7c0e311e56a0
+guid: bd4b938544fd59047b3bcad645750ffc
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2594797223279092564
-    second: pool_0
+      213: -1498017575108370862
+    second: seacow_back_sheet_0
   - first:
-      213: -4661937652750302714
-    second: pool_1
+      213: -2569899254014845823
+    second: seacow_back_sheet_1
   - first:
-      213: -4790178749378873748
-    second: pool_2
+      213: -8576007287065537691
+    second: seacow_back_sheet_2
   - first:
-      213: 6725131695234404505
-    second: pool_3
-  - first:
-      213: 4369087333038469435
-    second: pool_4
-  - first:
-      213: -8418920730739308691
-    second: pool_5
-  - first:
-      213: 7697715607233965679
-    second: pool_6
-  - first:
-      213: -8568336418417187258
-    second: pool_7
+      213: -1316367748087872521
+    second: seacow_back_sheet_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -69,7 +57,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 60
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -123,160 +111,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pool_0
+      name: seacow_back_sheet_0
       rect:
         serializedVersion: 2
-        x: 161
-        y: 277
-        width: 129
-        height: 139
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 45368b5a352920420800000000000000
-      internalID: 2594797223279092564
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pool_1
-      rect:
-        serializedVersion: 2
-        x: 348
-        y: 266
-        width: 192
-        height: 111
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 602ccc2a7687d4fb0800000000000000
-      internalID: -4661937652750302714
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pool_2
-      rect:
-        serializedVersion: 2
-        x: 12
-        y: 140
-        width: 84
-        height: 68
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c66b5a09ecdd58db0800000000000000
-      internalID: -4790178749378873748
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pool_4
-      rect:
-        serializedVersion: 2
-        x: 124
-        y: 179
-        width: 23
-        height: 75
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b31ba6ee7cd12ac30800000000000000
-      internalID: 4369087333038469435
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pool_5
-      rect:
-        serializedVersion: 2
-        x: 149
-        y: 170
-        width: 85
-        height: 53
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d678c14633cf92b80800000000000000
-      internalID: -8418920730739308691
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pool_6
-      rect:
-        serializedVersion: 2
-        x: 285
+        x: 5
         y: 11
-        width: 282
-        height: 240
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f6e292f7f87c3da60800000000000000
-      internalID: 7697715607233965679
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pool_7
-      rect:
-        serializedVersion: 2
-        x: 169
-        y: 152
-        width: 64
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6466338ac67271980800000000000000
-      internalID: -8568336418417187258
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pool_3
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 341
-        width: 20
-        height: 71
+        width: 172
+        height: 129
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -284,8 +125,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 990da2245a7745d50800000000000000
-      internalID: 6725131695234404505
+      spriteID: 25e9f58c3f8f53be0800000000000000
+      internalID: -1498017575108370862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seacow_back_sheet_1
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 8
+        width: 153
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18c57ef8e32e55cd0800000000000000
+      internalID: -2569899254014845823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seacow_back_sheet_2
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 85
+        width: 62
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5631c4f5fc6ebf880800000000000000
+      internalID: -8576007287065537691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seacow_back_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 3
+        width: 62
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f3017de1825bbde0800000000000000
+      internalID: -1316367748087872521
       vertices: []
       indices: 
       edges: []
