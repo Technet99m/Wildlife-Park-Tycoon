@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceed841f162deb84599e583826e7337c, type: 3}
+  m_Name: Jungle
+  m_EditorClassIdentifier: 
+  kinds: []
+  background: {fileID: 21300000, guid: 00b604d781975c143a18ff1db1718560, type: 3}
+  fence: {fileID: 21300000, guid: 11aa4c6a1055af846b5fb5acc69dd1a0, type: 3}
+  icon: {fileID: 4724328021079718053, guid: b8a1d87e36ad3d040b7fc7c84235f4e1, type: 3}

@@ -9,7 +9,7 @@ namespace Technet99m
         static T instance;
         public static T Ins { get { return instance; } }
 
-        private void Awake()
+        protected void Awake()
         {
             if (Ins == null)
                 instance = (T)FindObjectOfType(typeof(T));

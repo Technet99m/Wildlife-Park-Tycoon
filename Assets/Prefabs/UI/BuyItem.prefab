@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4037107433331711506}
   - component: {fileID: 1246100056351468031}
+  - component: {fileID: 1547175671923354450}
   - component: {fileID: 2348956780141466224}
   m_Layer: 0
   m_Name: BuyItem
@@ -48,6 +49,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2891666537718030681}
   m_CullTransparentMesh: 0
+--- !u!114 &1547175671923354450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2891666537718030681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: deac0c51eacddc34cbf1fede51a9a408, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  preview: {fileID: 7847202316434660253}
+  kind: {fileID: 5888799115283849634}
+  price: {fileID: 2727115797596131461}
 --- !u!114 &2348956780141466224
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -348,7 +364,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8115494595663097888}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1547175671923354450}
+        m_MethodName: BuyThis
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!95 &3169646938102761294
 Animator:
   serializedVersion: 3

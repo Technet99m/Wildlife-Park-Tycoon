@@ -6,20 +6,30 @@ using UnityEngine.UI;
 public class Cage : MonoBehaviour
 {
     [SerializeField] private Sprite EmptyTile, FilledTile;
+    [SerializeField] private Image background;
+    [SerializeField] private Image fence;
 
     public List<Item> feeders;
     public List<Animal> animals;
-
-    public Image background;
-    public Image fence;
-
-    private SpriteRenderer[] gridTiles;
-
+    
     public string KindInCage { get => animals[0].GetComponent<AnimalDataHolder>().stats.kind; }
+    public Biome Biome { 
+        get => biome; 
+        set 
+        { 
+            biome = value;
+            background.sprite = biome.background;
+            fence.sprite = biome.fence;
+        }
+    } 
 
     public Technet99m.Grid<bool> walkingMap;
 
     public Technet99m.Grid<bool> placingMap;
+
+    private SpriteRenderer[] gridTiles;
+    private Biome biome;
+
     private void Start()
     {
         GridInit();

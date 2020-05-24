@@ -13,6 +13,7 @@ public class CageMenuController : MonoBehaviour
 
     [SerializeField] private GameObject buySegment;
     [SerializeField] private GameObject sellSegment;
+    [SerializeField] private Transform sellContent;
     private Cage activeCage;
     private void OnEnable()
     {
@@ -21,11 +22,6 @@ public class CageMenuController : MonoBehaviour
     private void OnDisable()
     {
         Technet99m.TickingMachine.EveryTick -= Refresh;
-    }
-    private void HideAll()
-    {
-        foreach (var item in items)
-            item.gameObject.SetActive(false);
     }
     public void SetUp()
     {
@@ -37,6 +33,7 @@ public class CageMenuController : MonoBehaviour
         {
             sellSegment.SetActive(false);
             buySegment.SetActive(true);
+            SetUpBuy();
             return;
         }
         sellSegment.SetActive(true);
@@ -52,6 +49,7 @@ public class CageMenuController : MonoBehaviour
         {
             sellSegment.SetActive(false);
             buySegment.SetActive(true);
+            SetUpBuy();
             return;
         }
         sellSegment.SetActive(true);
@@ -96,5 +94,22 @@ public class CageMenuController : MonoBehaviour
         animal.transform.position = activeCage.GetFreeTileInGrid();
         cageIcons.GetChild(GameManager.Ins.currentCageIndex).GetComponent<Image>().sprite = Resources.Load<Sprite>($"Animals/{kind}/CageIcon");
         Refresh();
+    }
+
+    private void HideAll()
+    {
+        foreach (var item in items)
+            item.gameObject.SetActive(false);
+    }
+    private void SetUpBuy()
+    {
+        for(int i = 0;i< sellContent.childCount;i++)
+        {
+            sellContent.GetChild(i).gameObject.SetActive(false);
+        }
+        for(int i = 0;i<GameManager.Ins.activeCage.Biome.kinds.Length;i++)
+        {
+            sellContent.GetChild(i).GetComponent<BuyKindController>().SetUp(GameManager.Ins.activeCage.Biome.kinds[i]);
+        }
     }
 }

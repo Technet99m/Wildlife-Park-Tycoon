@@ -7,11 +7,11 @@ public class GameManager : Technet99m.Singleton<GameManager>
 {
     [SerializeField] private Transform cageIcons;
     [SerializeField] private Vector3 offset;
-    [SerializeField] private GameObject CageRef;
-    [SerializeField] private Sprite[] CageIconsSprites;
-    [SerializeField] private Sprite[] CageFences;
-    [SerializeField] private Sprite[] CageBackgrounds;
     [SerializeField] private float speed;
+
+    [SerializeField] private Text cageName;
+    [SerializeField] private Text cageCapacity;
+
 
     public Transform cam;
     public List<Cage> cages;
@@ -21,15 +21,29 @@ public class GameManager : Technet99m.Singleton<GameManager>
     private Coroutine move;
     public Cage activeCage { get => cages[currentCageIndex]; }
     
-
-    public void BuyNewCage(int biome)
+    protected new void Awake()
     {
-        Cage cage = Instantiate(CageRef, cages[cages.Count - 1].transform.position + Vector3.right * 44f, Quaternion.identity).GetComponent<Cage>();
+        BuyNewCage("Forest");
+        base.Awake();
+    }
+    private void OnEnable()
+    {
+        Technet99m.TickingMachine.EveryTick += RefreshUI;
+    }
+    private void OnDisable()
+    {
+        Technet99m.TickingMachine.EveryTick -= RefreshUI;
+    }
+    public void RefreshUI()
+    {
+        cageCapacity.text = $"{activeCage.animals.Count}/{15}";
+    }
+    public void BuyNewCage(string biome)
+    {
+        Cage cage = CageFactory.GetNewCage(biome, cages.Count);
         cages.Add(cage);
         cageIcons.GetChild(cages.Count - 1).gameObject.SetActive(true);
-        cage.background.sprite = CageBackgrounds[biome];
-        cage.fence.sprite = CageFences[biome];
-        cageIcons.GetChild(cages.Count - 1).GetComponent<Image>().sprite = CageIconsSprites[biome];
+        cageIcons.GetChild(cages.Count - 1).GetComponent<Image>().sprite = cage.Biome.icon;
         ToCage(cages.Count - 1);
     }
     public void ToCage(int index)
