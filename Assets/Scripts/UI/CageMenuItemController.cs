@@ -33,7 +33,7 @@ public class CageMenuItemController : MonoBehaviour
         animalName.text = animal.data.name;
         animalHappiness.text = Mathf.RoundToInt(animal.data.happiness * 100).ToString() + "%";
         animalHappiness.color = Translator.HappinessColor(animal.data.happiness);
-        animalPrice.text = animal.stats.price.ToString();
+        animalPrice.text = Mathf.CeilToInt(animal.stats.price * animal.data.happiness).ToString();
         animalIcon.sprite = Resources.Load<Sprite>($"Animals/{animal.stats.kind}/Icon");
         animalHappinessIcon.sprite = Translator.Happiness(animal.data.happiness);
         animalSex.sprite = Translator.Sex(animal.data.male);

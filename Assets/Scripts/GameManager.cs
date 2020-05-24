@@ -37,6 +37,7 @@ public class GameManager : Technet99m.Singleton<GameManager>
     public void RefreshUI()
     {
         cageCapacity.text = $"{activeCage.animals.Count}/{15}";
+        cageName.text = activeCage.Name;
     }
     public void BuyNewCage(string biome)
     {
@@ -45,6 +46,7 @@ public class GameManager : Technet99m.Singleton<GameManager>
         cageIcons.GetChild(cages.Count - 1).gameObject.SetActive(true);
         cageIcons.GetChild(cages.Count - 1).GetComponent<Image>().sprite = cage.Biome.icon;
         ToCage(cages.Count - 1);
+        RefreshUI();
     }
     public void ToCage(int index)
     {
