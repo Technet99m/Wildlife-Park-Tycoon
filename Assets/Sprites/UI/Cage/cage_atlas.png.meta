@@ -140,7 +140,7 @@ TextureImporter:
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 1
+  spriteGenerateFallbackPhysicsShape: 0
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -426,10 +426,10 @@ TextureImporter:
       name: emogi_bad
       rect:
         serializedVersion: 2
-        x: 969
-        y: 180
-        width: 45
-        height: 45
+        x: 968
+        y: 179
+        width: 46
+        height: 46
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -447,10 +447,10 @@ TextureImporter:
       name: emoji_good
       rect:
         serializedVersion: 2
-        x: 1024
+        x: 1023
         y: 181
-        width: 45
-        height: 45
+        width: 46
+        height: 46
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -469,9 +469,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1082
-        y: 181
-        width: 45
-        height: 45
+        y: 180
+        width: 46
+        height: 46
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

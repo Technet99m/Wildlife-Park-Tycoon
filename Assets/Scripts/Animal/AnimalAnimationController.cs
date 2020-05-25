@@ -71,6 +71,10 @@ public class AnimalAnimationController : MonoBehaviour
 				SetUp(GenderPack.side);
 				anim.Play("Swimming");
                 return 9.5f;
+			case Special.run:
+				SetUp(GenderPack.side);
+				anim.Play("Run");
+                return 9.5f;
             default:
                 return 0;
         }
