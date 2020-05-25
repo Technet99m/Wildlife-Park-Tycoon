@@ -58,9 +58,9 @@ public class AnimalAnimationController : MonoBehaviour
     }
     public float DoSpecial(SpecialItem item)
     {
-        var anim = item.GetComponent<Animator>();
-        if (anim != null)
-            anim.Play("Action");
+        var animator = item.GetComponent<Animator>();
+        if (animator != null)
+            animator.Play("Action");
         switch(item.type)
         {
             case Special.jump:
