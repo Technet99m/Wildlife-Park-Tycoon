@@ -1,0 +1,106 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de49eb3a7f1203b4c8621df1487bb86b, type: 3}
+  m_Name: Sprites
+  m_EditorClassIdentifier: 
+  male:
+    down:
+      body: {fileID: 4664492503214317092, guid: f96d0544498bb4348b5d76424d2e5482,
+        type: 3}
+      face: {fileID: -239205346576340465, guid: f96d0544498bb4348b5d76424d2e5482,
+        type: 3}
+      eyes: {fileID: -7108275265762654723, guid: f96d0544498bb4348b5d76424d2e5482,
+        type: 3}
+      right_leg: {fileID: 8825150116689581830, guid: f96d0544498bb4348b5d76424d2e5482,
+        type: 3}
+      left_leg: {fileID: 68286459740930739, guid: f96d0544498bb4348b5d76424d2e5482,
+        type: 3}
+      right_hand: {fileID: -1991951973409050078, guid: f96d0544498bb4348b5d76424d2e5482,
+        type: 3}
+      left_hand: {fileID: -5045047222479920516, guid: f96d0544498bb4348b5d76424d2e5482,
+        type: 3}
+      tail: {fileID: -7700447883728344407, guid: f96d0544498bb4348b5d76424d2e5482,
+        type: 3}
+    up:
+      body: {fileID: -3913877227555300956, guid: 0eadf9fdcd9699c4f8c4c676f865477d,
+        type: 3}
+      face: {fileID: 0}
+      eyes: {fileID: 0}
+      right_leg: {fileID: -1180169643500836518, guid: 0eadf9fdcd9699c4f8c4c676f865477d,
+        type: 3}
+      left_leg: {fileID: 6715185821929245177, guid: 0eadf9fdcd9699c4f8c4c676f865477d,
+        type: 3}
+      right_hand: {fileID: 0}
+      left_hand: {fileID: 0}
+      tail: {fileID: 2088561575853687586, guid: 0eadf9fdcd9699c4f8c4c676f865477d,
+        type: 3}
+    side:
+      body: {fileID: -3377860870340250362, guid: b80760c8e212f8142b81e3b6fb6fa9a8,
+        type: 3}
+      face: {fileID: 0}
+      eyes: {fileID: 274967414493518181, guid: b80760c8e212f8142b81e3b6fb6fa9a8, type: 3}
+      right_leg: {fileID: -7986996482219767730, guid: b80760c8e212f8142b81e3b6fb6fa9a8,
+        type: 3}
+      left_leg: {fileID: 3545895539660415771, guid: b80760c8e212f8142b81e3b6fb6fa9a8,
+        type: 3}
+      right_hand: {fileID: 230713828000330042, guid: b80760c8e212f8142b81e3b6fb6fa9a8,
+        type: 3}
+      left_hand: {fileID: -3666471779288858811, guid: b80760c8e212f8142b81e3b6fb6fa9a8,
+        type: 3}
+      tail: {fileID: 3981686162993286836, guid: b80760c8e212f8142b81e3b6fb6fa9a8,
+        type: 3}
+  female:
+    down:
+      body: {fileID: 4664492503214317092, guid: f96d0544498bb4348b5d76424d2e5482,
+        type: 3}
+      face: {fileID: -239205346576340465, guid: f96d0544498bb4348b5d76424d2e5482,
+        type: 3}
+      eyes: {fileID: -7108275265762654723, guid: f96d0544498bb4348b5d76424d2e5482,
+        type: 3}
+      right_leg: {fileID: 8825150116689581830, guid: f96d0544498bb4348b5d76424d2e5482,
+        type: 3}
+      left_leg: {fileID: 68286459740930739, guid: f96d0544498bb4348b5d76424d2e5482,
+        type: 3}
+      right_hand: {fileID: -1991951973409050078, guid: f96d0544498bb4348b5d76424d2e5482,
+        type: 3}
+      left_hand: {fileID: -5045047222479920516, guid: f96d0544498bb4348b5d76424d2e5482,
+        type: 3}
+      tail: {fileID: -7700447883728344407, guid: f96d0544498bb4348b5d76424d2e5482,
+        type: 3}
+    up:
+      body: {fileID: -3913877227555300956, guid: 0eadf9fdcd9699c4f8c4c676f865477d,
+        type: 3}
+      face: {fileID: 0}
+      eyes: {fileID: 0}
+      right_leg: {fileID: -1180169643500836518, guid: 0eadf9fdcd9699c4f8c4c676f865477d,
+        type: 3}
+      left_leg: {fileID: 6715185821929245177, guid: 0eadf9fdcd9699c4f8c4c676f865477d,
+        type: 3}
+      right_hand: {fileID: 0}
+      left_hand: {fileID: 0}
+      tail: {fileID: 2088561575853687586, guid: 0eadf9fdcd9699c4f8c4c676f865477d,
+        type: 3}
+    side:
+      body: {fileID: -3377860870340250362, guid: b80760c8e212f8142b81e3b6fb6fa9a8,
+        type: 3}
+      face: {fileID: 0}
+      eyes: {fileID: 274967414493518181, guid: b80760c8e212f8142b81e3b6fb6fa9a8, type: 3}
+      right_leg: {fileID: 3545895539660415771, guid: b80760c8e212f8142b81e3b6fb6fa9a8,
+        type: 3}
+      left_leg: {fileID: -7986996482219767730, guid: b80760c8e212f8142b81e3b6fb6fa9a8,
+        type: 3}
+      right_hand: {fileID: -3666471779288858811, guid: b80760c8e212f8142b81e3b6fb6fa9a8,
+        type: 3}
+      left_hand: {fileID: 230713828000330042, guid: b80760c8e212f8142b81e3b6fb6fa9a8,
+        type: 3}
+      tail: {fileID: 3981686162993286836, guid: b80760c8e212f8142b81e3b6fb6fa9a8,
+        type: 3}
