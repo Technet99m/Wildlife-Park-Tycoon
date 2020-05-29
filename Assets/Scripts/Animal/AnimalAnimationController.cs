@@ -6,6 +6,7 @@ public class AnimalAnimationController : MonoBehaviour
 {
     public AnimalSprites sprites;
     [SerializeField, Range(0,1)] float verticalThreshhold;
+    [SerializeField] Transform bodyTransform;
     [SerializeField] Sprite[] foods;
     [SerializeField] SpriteRenderer foodSprite;
     Animator anim;
@@ -28,6 +29,10 @@ public class AnimalAnimationController : MonoBehaviour
     {
         SetUp(GenderPack.down);
     }
+	public void FlipX()
+	{
+		bodyTransform.localScale = new Vector3(bodyTransform.localScale.x*-1f,bodyTransform.localScale.y,bodyTransform.localScale.z);
+	}
     public void Walk(Vector2 dir)
     {
         dir = dir.normalized;
@@ -74,6 +79,10 @@ public class AnimalAnimationController : MonoBehaviour
 			case Special.run:
 				SetUp(GenderPack.side);
 				anim.Play("Run");
+                return 5f;
+			case Special.sleep:
+				SetUp(GenderPack.down);
+				anim.Play("Sleep");
                 return 5f;
             default:
                 return 0;

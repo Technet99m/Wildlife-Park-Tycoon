@@ -4,15 +4,24 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: -1045181238759104467
-    second: food_0
+    second: grass
   - first:
       213: 3046544090647025007
-    second: food_1
+    second: water
   - first:
       213: -314262122811554439
-    second: food_2
+    second: fruit
+  - first:
+      213: -6704000743581025313
+    second: veggie
+  - first:
+      213: 3783751772801332867
+    second: fish
+  - first:
+      213: 3766231896858906920
+    second: meat
   externalObjects: {}
-  serializedVersion: 10
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -66,6 +75,7 @@ TextureImporter:
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  applyGammaDecoding: 0
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -91,19 +101,31 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: food_0
+      name: grass
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1
-        width: 43
-        height: 60
-      alignment: 9
-      pivot: {x: 0.32058534, y: 0.18838146}
+        x: 24
+        y: 8
+        width: 58
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -116,15 +138,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: food_1
+      name: water
       rect:
         serializedVersion: 2
-        x: 45
-        y: 0
-        width: 36
+        x: 101
+        y: 8
+        width: 58
         height: 62
-      alignment: 9
-      pivot: {x: 0.2932626, y: 0.20868108}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -137,15 +159,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: food_2
+      name: fruit
       rect:
         serializedVersion: 2
-        x: 83
-        y: 0
-        width: 31
+        x: 175
+        y: 9
+        width: 58
         height: 62
-      alignment: 9
-      pivot: {x: 0.5311208, y: 0.18846773}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -153,6 +175,69 @@ TextureImporter:
       bones: []
       spriteID: 975057ba34483abf0800000000000000
       internalID: -314262122811554439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: veggie
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 8
+        width: 58
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdbf5e0d7da96f2a0800000000000000
+      internalID: -6704000743581025313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 8
+        width: 58
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 386f310b036928430800000000000000
+      internalID: 3783751772801332867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: meat
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 8
+        width: 58
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8215502b4f7544430800000000000000
+      internalID: 3766231896858906920
       vertices: []
       indices: 
       edges: []

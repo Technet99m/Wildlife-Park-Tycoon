@@ -354,7 +354,7 @@ Transform:
   m_GameObject: {fileID: 4162523600250642595}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.228, y: -0.09, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_Children:
   - {fileID: 4162523600549867859}
   - {fileID: 4162523600224415942}
@@ -674,6 +674,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4162523600729254369}
   - component: {fileID: 4162523600729254368}
+  - component: {fileID: 5381509585190731770}
   m_Layer: 0
   m_Name: Sprites
   m_TagString: Untagged
@@ -716,6 +717,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5381509585190731770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4162523600729254367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52d6619b40c899a43aad39854fb82119, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 4162523600250642596}
 --- !u!1 &4162523600852682270
 GameObject:
   m_ObjectHideFlags: 0
@@ -769,6 +783,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sprites: {fileID: 11400000, guid: 5b55cae7f32274d4889d1681c0f36b54, type: 2}
   verticalThreshhold: 0.75
+  bodyTransform: {fileID: 4162523600250642596}
   foods:
   - {fileID: -314262122811554439, guid: 549a5618f92a5c749b0bd089e5a9ce45, type: 3}
   - {fileID: -1045181238759104467, guid: 549a5618f92a5c749b0bd089e5a9ce45, type: 3}
@@ -1139,7 +1154,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.43, y: 0.6}
+  m_Size: {x: 0.58, y: 0.62}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

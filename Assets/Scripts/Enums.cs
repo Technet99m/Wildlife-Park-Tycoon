@@ -22,7 +22,8 @@ public enum Special
     jump,
     run,
     hike,
-    swim
+    swim,
+	sleep
 }
 public enum NeedType
 {
