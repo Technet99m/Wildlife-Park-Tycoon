@@ -19,4 +19,4 @@ MonoBehaviour:
   minChildren: 3
   maxChildren: 20
   foods: 0000000002000000
-  specials: 00000000
+  specials: 0000000001000000
