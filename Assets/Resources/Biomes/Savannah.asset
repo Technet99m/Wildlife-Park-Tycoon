@@ -21,4 +21,7 @@ MonoBehaviour:
   background: {fileID: 21300000, guid: 1c90e47bc0614474eabf777445ef04fc, type: 3}
   fence: {fileID: 21300000, guid: 66e09d14780bda9439475eaed6c26e52, type: 3}
   icon: {fileID: -7659738504282419394, guid: b8a1d87e36ad3d040b7fc7c84235f4e1, type: 3}
-  name: Savannah
+  catalogIcon: {fileID: -1684084748149260271, guid: 71edb2c733eba2c4d80f960f6c12f29e,
+    type: 3}
+  catalogSelectedIcon: {fileID: 891607996908589404, guid: 71edb2c733eba2c4d80f960f6c12f29e,
+    type: 3}

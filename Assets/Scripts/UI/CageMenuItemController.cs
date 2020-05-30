@@ -13,6 +13,11 @@ public class CageMenuItemController : MonoBehaviour
     [SerializeField] private Image animalSex;
     [SerializeField] private Slider animalProgress;
     [SerializeField] private Toggle animalSelected;
+    [SerializeField] private Image progressFill;
+    [SerializeField] private Image progressIcon;
+
+    [SerializeField] private Sprite sexFill, ageFill, pregnancyFill;
+    [SerializeField] private Sprite sexIcon, sexIconActive, ageIcon, pregnancyIcon;
     public bool Selected { get => animalSelected.isOn; set { animalSelected.isOn = value; } }
 
     public void SetUp(Animal animal)
@@ -24,7 +29,24 @@ public class CageMenuItemController : MonoBehaviour
         animalIcon.sprite = Resources.Load<Sprite>($"Animals/{animal.stats.kind}/Icon");
         animalHappinessIcon.sprite = Translator.Happiness(animal.data.happiness);
         animalSex.sprite = Translator.Sex(animal.data.male);
-        animalProgress.value = animal.data.sexualActivity;
+        if (animal.data.age > 1 && !animal.GetComponent<AnimalStatus>().pregnant)
+        {
+            animalProgress.value = animal.data.sexualActivity;
+            progressFill.sprite = sexFill;
+            progressIcon.sprite = animal.data.sexualActivity > 1 ? sexIconActive : sexIcon;
+        }
+        else if (animal.data.age < 1)
+        {
+            animalProgress.value = animal.data.age;
+            progressFill.sprite = ageFill;
+            progressIcon.sprite = ageIcon;
+        }
+        else
+        {
+            animalProgress.value = (animal.stats.TicksToBorn - animal.GetComponent<PregnancyController>().ticksToBorn) / (float)animal.stats.TicksToBorn;
+            progressFill.sprite = pregnancyFill;
+            progressIcon.sprite = pregnancyIcon;
+        }
         animalSelected.isOn = false;
         gameObject.SetActive(true);
     }
@@ -37,7 +59,24 @@ public class CageMenuItemController : MonoBehaviour
         animalIcon.sprite = Resources.Load<Sprite>($"Animals/{animal.stats.kind}/Icon");
         animalHappinessIcon.sprite = Translator.Happiness(animal.data.happiness);
         animalSex.sprite = Translator.Sex(animal.data.male);
-        animalProgress.value = animal.data.sexualActivity;
+        if (animal.data.age > 1 && !animal.GetComponent<AnimalStatus>().pregnant)
+        {
+            animalProgress.value = animal.data.sexualActivity;
+            progressFill.sprite = sexFill;
+            progressIcon.sprite = animal.data.sexualActivity > 1 ? sexIconActive : sexIcon;
+        }
+        else if (animal.data.age < 1)
+        {
+            animalProgress.value = animal.data.age;
+            progressFill.sprite = ageFill;
+            progressIcon.sprite = ageIcon;
+        }
+        else
+        {
+            animalProgress.value = (animal.stats.TicksToBorn - animal.GetComponent<PregnancyController>().ticksToBorn) / (float)animal.stats.TicksToBorn;
+            progressFill.sprite = pregnancyFill;
+            progressIcon.sprite = pregnancyIcon;
+        }
         gameObject.SetActive(true);
     }
 }

@@ -17,10 +17,11 @@ public class GameManager : Technet99m.Singleton<GameManager>
     public List<Cage> cages;
     public int currentCageIndex;
     public float cellSize;
+    public CatalogController catalog;
+    public Cage activeCage { get => cages[currentCageIndex]; }
+
 
     private Coroutine move;
-    public Cage activeCage { get => cages[currentCageIndex]; }
-    
     protected new void Awake()
     {
         BuyNewCage("Forest");

@@ -26,6 +26,7 @@ public class PregnancyController : MonoBehaviour
             child.GetComponent<AnimalAnimationController>().sprites = GetComponent<AnimalAnimationController>().sprites;
             child.stats = data.stats;
             child.data.male = Random.value > 0.5f;
+            child.data.age = 0;
             for (int j = 0; j < child.data.foods.Length; j++)
                 child.data.foods[j] = 0.5f;
             for (int j = 0; j < child.data.specials.Length; j++)

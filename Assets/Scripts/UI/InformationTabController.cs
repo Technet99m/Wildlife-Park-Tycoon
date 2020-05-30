@@ -14,6 +14,11 @@ public class InformationTabController : MonoBehaviour
     [SerializeField] Image HappinessIcon;
     [SerializeField] Image SexIcon;
     [SerializeField] Slider progress;
+    [SerializeField] Image progressFill;
+    [SerializeField] Image progressIcon;
+
+    [SerializeField] Sprite sexFill, ageFill, pregnancyFill;
+    [SerializeField] Sprite sexIcon, sexIconActive, ageIcon, pregnancyIcon;
 
     private Animal selected;
     private bool ignoreName;
@@ -69,7 +74,24 @@ public class InformationTabController : MonoBehaviour
         Happiness.color = Translator.HappinessColor(selected.data.happiness);
         HappinessIcon.sprite = Translator.Happiness(selected.data.happiness);
         SexIcon.sprite = Translator.Sex(selected.data.male);
-        progress.value = selected.data.sexualActivity;
+        if (selected.data.age > 1 && !selected.GetComponent<AnimalStatus>().pregnant)
+        {
+            progress.value = selected.data.sexualActivity;
+            progressFill.sprite = sexFill;
+            progressIcon.sprite = selected.data.sexualActivity>1? sexIconActive : sexIcon;
+        }
+        else if(selected.data.age<1)
+        {
+            progress.value = selected.data.age;
+            progressFill.sprite = ageFill;
+            progressIcon.sprite = ageIcon;
+        }
+        else
+        {
+            progress.value = (selected.stats.TicksToBorn - selected.GetComponent<PregnancyController>().ticksToBorn)/(float)selected.stats.TicksToBorn;
+            progressFill.sprite = pregnancyFill;
+            progressIcon.sprite = pregnancyIcon;
+        }
         Needs.text = Translator.Needs2Text(selected.needs);
     }
 }

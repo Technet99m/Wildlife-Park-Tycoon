@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class CageMenuController : MonoBehaviour
 {
-    [SerializeField] private Text cageName;
+    [SerializeField] private InputField cageName;
     [SerializeField] private Text cageCapacity;
     [SerializeField] private CageMenuItemController[] items;
     [SerializeField] private GameObject itemRef;
@@ -26,6 +26,7 @@ public class CageMenuController : MonoBehaviour
     public void SetUp()
     {
         activeCage = GameManager.Ins.activeCage;
+        cageName.text = activeCage.Name;
         cageCapacity.text = $"{activeCage.animals.Count}/{15}";
         gameObject.SetActive(true);
         HideAll();
@@ -95,7 +96,10 @@ public class CageMenuController : MonoBehaviour
         cageIcons.GetChild(GameManager.Ins.currentCageIndex).GetComponent<Image>().sprite = Resources.Load<Sprite>($"Animals/{kind}/CageIcon");
         Refresh();
     }
-
+    public void SetNewName(string newName)
+    {
+        activeCage.Name = newName;
+    }
     private void HideAll()
     {
         foreach (var item in items)

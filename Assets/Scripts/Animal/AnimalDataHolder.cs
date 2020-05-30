@@ -14,6 +14,7 @@ public class AnimalData
     public string name;
     public bool male;
     public float sexualActivity;
+    public float age;
     public float happiness;
     public float[] foods;
     public float[] specials;

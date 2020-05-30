@@ -5,5 +5,5 @@ using UnityEngine;
 public class Biome : ScriptableObject
 {
     public string[] kinds;
-    public Sprite background, fence, icon;
+    public Sprite background, fence, icon, catalogIcon, catalogSelectedIcon;
 }

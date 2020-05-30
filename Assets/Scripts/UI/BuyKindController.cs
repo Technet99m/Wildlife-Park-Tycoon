@@ -13,6 +13,10 @@ public class BuyKindController : MonoBehaviour
     {
         transform.parent.parent.parent.parent.parent.parent.GetComponent<CageMenuController>().BuyNewKind(kind.text);
     }
+    public void ToCatalog()
+    {
+        GameManager.Ins.catalog.ToAnimal(kind.text);
+    }
     public void SetUp(string kind)
     {
         this.kind.text = kind;

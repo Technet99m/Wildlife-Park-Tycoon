@@ -15,7 +15,7 @@ MonoBehaviour:
   kind: Lion
   price: 100
   TicksToFullMate: 30
-  TicksToBorn: 30
+  TicksToBorn: 10000
   minChildren: 2
   maxChildren: 4
   foods: 0000000001000000

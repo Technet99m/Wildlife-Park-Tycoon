@@ -16,3 +16,7 @@ MonoBehaviour:
   background: {fileID: 21300000, guid: cb30444ec57b3784b852b994259b64c6, type: 3}
   fence: {fileID: 21300000, guid: 47453f811355dc143abae86725857395, type: 3}
   icon: {fileID: -501767526563368386, guid: b8a1d87e36ad3d040b7fc7c84235f4e1, type: 3}
+  catalogIcon: {fileID: -2309651663306341101, guid: 71edb2c733eba2c4d80f960f6c12f29e,
+    type: 3}
+  catalogSelectedIcon: {fileID: 7416595680597367302, guid: 71edb2c733eba2c4d80f960f6c12f29e,
+    type: 3}

@@ -125,12 +125,12 @@ public class Animal : MonoBehaviour
                             if (mate != null)
                             {
                                 selected = needs[i];
-                                if (!mate.isBusy)
-                                    OnMateFree(mate);
                                 mate.Free += OnMateFree;
                                 movement.Stop();
                                 isBusy = true;
                                 dealed = true;
+                                if (!mate.isBusy)
+                                    OnMateFree(mate);
                             }
                         }
                         break;

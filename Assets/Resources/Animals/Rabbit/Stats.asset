@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   kind: Rabbit
   price: 13
-  TicksToFullMate: 33
+  TicksToFullMate: 20
   TicksToBorn: 42
-  minChildren: 3
-  maxChildren: 20
-  foods: 0000000002000000
-  specials: 0000000001000000
+  minChildren: 1
+  maxChildren: 2
+  foods: 00000000
+  specials: 

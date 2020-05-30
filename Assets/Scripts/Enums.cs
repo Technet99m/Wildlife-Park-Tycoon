@@ -19,11 +19,12 @@ public enum ItemType
 }
 public enum Special
 {
-    jump,
+    jump = 0,
     run,
-    hike,
     swim,
-	sleep
+	sleep,
+    mud,
+    scratch
 }
 public enum NeedType
 {

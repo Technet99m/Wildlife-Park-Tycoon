@@ -54,7 +54,7 @@ MonoBehaviour:
         type: 3}
       left_leg: {fileID: -847972528656013690, guid: a88f010a374099b4c965c9b8450e37db,
         type: 3}
-      right_hand: {fileID: -1755709557759442331, guid: a88f010a374099b4c965c9b8450e37db,
+      right_hand: {fileID: -3865042842489621540, guid: a88f010a374099b4c965c9b8450e37db,
         type: 3}
       left_hand: {fileID: -1665122268160809685, guid: a88f010a374099b4c965c9b8450e37db,
         type: 3}

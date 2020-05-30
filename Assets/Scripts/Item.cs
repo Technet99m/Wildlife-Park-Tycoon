@@ -75,7 +75,8 @@ public class Item : MonoBehaviour,IBeginDragHandler,IDragHandler,IEndDragHandler
     }
     public void Discard()
     {
-        Destroy(gameObject);
+        if(!placed)
+            Destroy(gameObject);
     }
     public void Place()
     {
@@ -85,8 +86,14 @@ public class Item : MonoBehaviour,IBeginDragHandler,IDragHandler,IEndDragHandler
         transform.position = new Vector3(transform.position.x, transform.position.y, posZ * 10);
         GameManager.Ins.activeCage.Place(placedSize, walkingSize, transform.position);
         UIManager.Ins.setPanel.okPressed -= Place;
+        UIManager.Ins.setPanel.cancelPressed -= Discard;
         GameManager.Ins.activeCage.feeders.Add(this);
         transform.parent = GameManager.Ins.activeCage.transform;
+    }
+    private void OnDestroy()
+    {
+        UIManager.Ins.setPanel.okPressed -= Place;
+        UIManager.Ins.setPanel.cancelPressed -= Discard;
     }
     #endregion
 }

@@ -7,6 +7,23 @@ public class Translator : Technet99m.Singleton<Translator>
     public Sprite male, female;
     public Color badC, normalC, goodC;
     public Sprite bad, normal, good;
+
+    public static string TicksToTime(int ticks)
+    {
+        int days = ticks / 86400;
+        int hours = (ticks % 86400) / 3600;
+        int minutes = (ticks % 86400 % 3600) / 60;
+        int seconds = (ticks % 86400 % 3600 % 60);
+
+        if (days > 0)
+            return $"{days}d {hours}h";
+        else if (hours > 0)
+            return $"{hours}h {minutes}m";
+        else if (minutes > 0)
+            return $"{minutes}m {seconds}s";
+        else
+            return $"{ticks}s";
+    }   
     public static Sprite Sex(bool isMale)
     {
         return isMale ? Ins.male : Ins.female;
@@ -62,8 +79,8 @@ public class Translator : Technet99m.Singleton<Translator>
                         case Special.run:
                             text += "Where I can run?\n";
                             break;
-                        case Special.hike:
-                            text += "Where I can run?\n";
+                        case Special.swim:
+                            text += "It's time to stop\n";
                             break;
                     }
                     break;

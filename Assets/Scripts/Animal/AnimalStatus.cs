@@ -5,25 +5,55 @@ using UnityEngine;
 public class AnimalStatus : MonoBehaviour
 {
     [SerializeField] SpriteRenderer mood;
+    [SerializeField] Transform body;
+
+    public bool pregnant;
+
     private AnimalData data;
     private AnimalStats stats;
     private List<Need> needs;
-    public bool pregnant;
+
     private void OnEnable()
     {
         Technet99m.TickingMachine.EveryTick += OnTick;
-    }
-    private void OnDisable()
-    {
-        Technet99m.TickingMachine.EveryTick -= OnTick;
     }
     private void Start()
     {
         data = GetComponent<AnimalDataHolder>().data;
         stats = GetComponent<AnimalDataHolder>().stats;
         needs = GetComponent<Animal>().needs;
+
+        if (data.age < 1)
+            body.localScale = new Vector3(0.7f, 0.7f, 1);
     }
-    void OnTick()
+    private void OnDisable()
+    {
+        Technet99m.TickingMachine.EveryTick -= OnTick;
+    }
+
+    public void Done(Need need)
+    {
+        needs.Remove(need);
+        switch (need.type)
+        {
+            case NeedType.Food:
+                data.foods[(int)need.food] = 1;
+                break;
+            case NeedType.Special:
+                data.specials[(int)need.special] = 1;
+                break;
+            case NeedType.Sex:
+                if (!data.male) Pregnant();
+                break;
+        }
+    }
+
+    private void Pregnant()
+    {
+        pregnant = true;
+        GetComponent<PregnancyController>().ticksToBorn = stats.TicksToBorn;
+    }
+    private void OnTick()
     {
         foreach (var food in stats.foods)
         {
@@ -52,30 +82,25 @@ public class AnimalStatus : MonoBehaviour
                     break;
             }
         if (data.happiness >= 0.51 && !pregnant)
-            data.sexualActivity += (data.happiness - 0.5f) * 2f / stats.TicksToFullMate;
+        {
+            if (data.age > 1)
+                data.sexualActivity += (data.happiness - 0.5f) * 2f / stats.TicksToFullMate;
+            else
+                data.age += (data.happiness - 0.5f) * 2f / stats.TicksToFullMate;
+        }
+        if (data.age > 1 && body.localScale.x < 1f)
+            StartCoroutine(Adult());
         if (data.sexualActivity > 1 && needs.Find((x) => x.type == NeedType.Sex) == null)
             needs.Add(new Need() { type = NeedType.Sex });
         mood.sprite = Translator.Happiness(data.happiness);
     }
-    public void Done(Need need)
+    private IEnumerator Adult()
     {
-        needs.Remove(need);
-        switch (need.type)
-        {
-            case NeedType.Food:
-                data.foods[(int)need.food] = 1;
-                break;
-            case NeedType.Special:
-                data.specials[(int)need.special] = 1;
-                break;
-            case NeedType.Sex:
-                if(!data.male) Pregnant();
-                break;
-        }
+            while(body.localScale!=Vector3.one)
+            {
+                body.localScale = Vector3.MoveTowards(body.localScale, Vector3.one, Time.deltaTime);
+                yield return null;
+            }
     }
-    private void Pregnant()
-    {
-        pregnant = true;
-        GetComponent<PregnancyController>().ticksToBorn = stats.TicksToBorn;
-    }
+    
 }

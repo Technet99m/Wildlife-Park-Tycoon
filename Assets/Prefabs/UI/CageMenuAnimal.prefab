@@ -112,8 +112,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 66.27, y: 184.01}
-  m_SizeDelta: {x: 172.13342, y: 45.98889}
+  m_AnchoredPosition: {x: 68.3, y: 171.8}
+  m_SizeDelta: {x: 180.98, y: 85}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4792584798646332450
 CanvasRenderer:
@@ -144,7 +144,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 132c277c368226049a420fe45b160b18, type: 3}
-    m_FontSize: 36
+    m_FontSize: 34
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -155,7 +155,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Lion #1
+  m_Text: Elephant #45
 --- !u!1 &1011573639478492842
 GameObject:
   m_ObjectHideFlags: 0
@@ -297,6 +297,20 @@ MonoBehaviour:
   animalSex: {fileID: 8115459452056665388}
   animalProgress: {fileID: 2796978653316247053}
   animalSelected: {fileID: 3763616355445337638}
+  progressFill: {fileID: 9037023726713396018}
+  progressIcon: {fileID: 8356776456859098307}
+  sexFill: {fileID: -5440870852119263487, guid: 61e2cfc51ec3ffa479c6161a96337f47,
+    type: 3}
+  ageFill: {fileID: -3382214955489734899, guid: 61e2cfc51ec3ffa479c6161a96337f47,
+    type: 3}
+  pregnancyFill: {fileID: 7378370119808485997, guid: 61e2cfc51ec3ffa479c6161a96337f47,
+    type: 3}
+  sexIcon: {fileID: 2562611582867298230, guid: 61e2cfc51ec3ffa479c6161a96337f47, type: 3}
+  sexIconActive: {fileID: 4587012298810348826, guid: 61e2cfc51ec3ffa479c6161a96337f47,
+    type: 3}
+  ageIcon: {fileID: -203243873879478681, guid: 61e2cfc51ec3ffa479c6161a96337f47, type: 3}
+  pregnancyIcon: {fileID: -4485664566793927460, guid: 61e2cfc51ec3ffa479c6161a96337f47,
+    type: 3}
 --- !u!1 &1011573641076570252
 GameObject:
   m_ObjectHideFlags: 0
@@ -361,8 +375,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1039774297901630553, guid: 9fa07d7b700d3174da9c97e01e16fab9,
-    type: 3}
+  m_Sprite: {fileID: 21300000, guid: ace3337326336b744bb70110dac568db, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -899,7 +912,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -3, y: 126}
+  m_AnchoredPosition: {x: -3, y: 106}
   m_SizeDelta: {x: 34, y: 35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7758248747932096389
@@ -1279,7 +1292,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -14, y: -25.849}
+  m_AnchoredPosition: {x: -14, y: -34}
   m_SizeDelta: {x: 380, y: 71}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2796978653316247053
