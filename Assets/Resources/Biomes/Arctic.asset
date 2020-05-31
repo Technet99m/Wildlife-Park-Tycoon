@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceed841f162deb84599e583826e7337c, type: 3}
   m_Name: Arctic
   m_EditorClassIdentifier: 
-  kinds: []
+  kinds:
+  - SeaCow
+  - Reindeer
   background: {fileID: 21300000, guid: cb30444ec57b3784b852b994259b64c6, type: 3}
   fence: {fileID: 21300000, guid: 47453f811355dc143abae86725857395, type: 3}
   icon: {fileID: -501767526563368386, guid: b8a1d87e36ad3d040b7fc7c84235f4e1, type: 3}

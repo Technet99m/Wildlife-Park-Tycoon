@@ -21,6 +21,11 @@ public class PregnancyController : MonoBehaviour
     {
         for (int i = 0, tmp = Random.Range(data.stats.minChildren, data.stats.maxChildren + 1); i < tmp; i++)
         {
+            if(transform.parent.GetComponent<Cage>().animals.Count==15)
+            {
+                DataManager.AddMoney(data.stats.price);
+                break;
+            }
             AnimalDataHolder child = AnimalFactory.NewAnimalOfKind(data.stats.kind, transform.parent).GetComponent<AnimalDataHolder>();
             child.transform.position = transform.position;
             child.GetComponent<AnimalAnimationController>().sprites = GetComponent<AnimalAnimationController>().sprites;

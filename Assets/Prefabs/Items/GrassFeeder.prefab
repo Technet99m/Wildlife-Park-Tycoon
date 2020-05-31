@@ -138,7 +138,12 @@ MonoBehaviour:
   placedSize: {x: 3, y: 5}
   walkingSize: {x: 1, y: 3}
   placed: 0
+  full: {fileID: 499497656300917192, guid: d6a7d8c5931bf884c8b3399d19f96e95, type: 3}
+  half: {fileID: -5651228309449397636, guid: d6a7d8c5931bf884c8b3399d19f96e95, type: 3}
+  empty: {fileID: 1699750696656883366, guid: d6a7d8c5931bf884c8b3399d19f96e95, type: 3}
+  sp: {fileID: 279140899271335025}
   type: 2
+  capacity: 0
 --- !u!61 &1844825425034540028
 BoxCollider2D:
   m_ObjectHideFlags: 0

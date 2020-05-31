@@ -8,7 +8,7 @@ using UnityEngine.EventSystems;
 public class Item : MonoBehaviour,IBeginDragHandler,IDragHandler,IEndDragHandler
 {
     [SerializeField] Transform[] actionPoints;
-    [SerializeField] bool[] areBusy;
+    [SerializeField]  protected bool[] areBusy;
     
     void Awake()
     {
@@ -26,7 +26,7 @@ public class Item : MonoBehaviour,IBeginDragHandler,IDragHandler,IEndDragHandler
         }
         return null;
     }
-    public void Empty(Vector2 pos)
+    public virtual void Empty(Vector2 pos)
     {
         int closest = 0;
         for(int i = 1;i<actionPoints.Length;i++)
@@ -78,7 +78,7 @@ public class Item : MonoBehaviour,IBeginDragHandler,IDragHandler,IEndDragHandler
         if(!placed)
             Destroy(gameObject);
     }
-    public void Place()
+    public virtual void Place()
     {
         placed = true;
         GetComponent<SpriteRenderer>().color = Color.white;

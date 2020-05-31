@@ -59,7 +59,10 @@ public class Cage : MonoBehaviour
     }
     public Feeder GetProperFeeder(Food type)
     {
-        return feeders.Find((x) => x is Feeder && (x as Feeder).type == type) as Feeder;
+        var f = feeders.Find((x) => x is Feeder && (x as Feeder).type == type) as Feeder;
+        if (f!=null && f.HasEnough())
+            return f;
+        return null;
     }
     public SpecialItem GetProperSpecial(Special type)
     {
@@ -67,7 +70,7 @@ public class Cage : MonoBehaviour
     }
     public Animal GetProperMate()
     {
-        return animals.Find((x) => !x.data.male && x.needs.Exists((s) => s.type == NeedType.Sex) && x.Followers == 0);
+        return animals.Find((x) => !x.data.male && x.data.sexualActivity > 1 && x.Followers == 0);
     }
     public void ShowGrid()
     {
