@@ -95,6 +95,12 @@ TextureImporter:
   - first:
       213: -6429281868863008352
     second: BuyBtnGrey
+  - first:
+      213: 2436175132249539252
+    second: cage_atlas_27
+  - first:
+      213: 8167950535869902573
+    second: cage_background
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -405,10 +411,10 @@ TextureImporter:
       name: cage_icon
       rect:
         serializedVersion: 2
-        x: 265
-        y: 133
-        width: 557
-        height: 143
+        x: 267
+        y: 140
+        width: 137
+        height: 164
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -549,27 +555,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CageLevel1
-      rect:
-        serializedVersion: 2
-        x: 1160
-        y: 186
-        width: 134
-        height: 134
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b42a6ba710089daf0800000000000000
-      internalID: -371124750439243189
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: animal_background
       rect:
         serializedVersion: 2
@@ -654,48 +639,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CageLevel2
-      rect:
-        serializedVersion: 2
-        x: 1164
-        y: 332
-        width: 134
-        height: 134
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a28a113bee1f5da70800000000000000
-      internalID: 8851246650175367210
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CageLevel3
-      rect:
-        serializedVersion: 2
-        x: 131
-        y: 141
-        width: 134
-        height: 134
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 21f02102a20c970d0800000000000000
-      internalID: -3424494754479337710
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: BuyBtn
       rect:
         serializedVersion: 2
@@ -754,6 +697,48 @@ TextureImporter:
       bones: []
       spriteID: 0a19f8d343a96c6a0800000000000000
       internalID: -6429281868863008352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cage_atlas_27
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 188
+        width: 257
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b2cf5810680fc120800000000000000
+      internalID: 2436175132249539252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cage_background
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 182
+        width: 374
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 187, y: 0, z: 187, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: deeac799cb36a5170800000000000000
+      internalID: 8167950535869902573
       vertices: []
       indices: 
       edges: []

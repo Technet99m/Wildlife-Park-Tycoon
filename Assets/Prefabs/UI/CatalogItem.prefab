@@ -725,7 +725,7 @@ GameObject:
   - component: {fileID: 7563772505523313112}
   - component: {fileID: 5052294457968180809}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Price
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -818,7 +818,7 @@ GameObject:
   - component: {fileID: 7618173549154655605}
   - component: {fileID: 787049439323565623}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1805,7 +1805,7 @@ GameObject:
   - component: {fileID: 7693633308066560987}
   - component: {fileID: 8852377737219523116}
   m_Layer: 5
-  m_Name: CostBackground
+  m_Name: PriceBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
