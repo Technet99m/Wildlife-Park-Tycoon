@@ -14,4 +14,9 @@ public class SetPanelController : MonoBehaviour
         ok.onClick.AddListener(okPressed);
         cancel.onClick.AddListener(cancelPressed);
     }
+    private void OnDisable()
+    {
+        ok.onClick.RemoveListener(okPressed);
+        cancel.onClick.RemoveListener(cancelPressed);
+    }
 }

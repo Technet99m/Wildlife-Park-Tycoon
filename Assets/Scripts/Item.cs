@@ -5,14 +5,26 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 [System.Serializable]
-public class Item : MonoBehaviour,IBeginDragHandler,IDragHandler,IEndDragHandler
+public class Item : MonoBehaviour,IBeginDragHandler,IDragHandler,IEndDragHandler,IPointerEnterHandler,IPointerExitHandler
 {
     [SerializeField] Transform[] actionPoints;
     [SerializeField]  protected bool[] areBusy;
-    
+    [SerializeField] Shader normal, tint;
+
+    private Material mat;
     void Awake()
     {
         areBusy = new bool[actionPoints.Length];
+        mat = new Material(normal);
+        GetComponent<SpriteRenderer>().material = mat;
+        for(int i = 0;i<transform.childCount;i++)
+        {
+            var sp = transform.GetChild(i).GetComponent<SpriteRenderer>();
+            if (sp != null)
+                sp.material = mat;
+        }
+        if (!placed)
+            mat.shader = tint;
     }
     public Transform GetFree()
     {
@@ -41,7 +53,33 @@ public class Item : MonoBehaviour,IBeginDragHandler,IDragHandler,IEndDragHandler
 
     #region Placing
     [SerializeField] Vector2Int placedSize, walkingSize;
+    
     public bool placed;
+    private bool holding;
+    private float holdDelay = 1f;
+    private float delay;
+    private void Update()
+    {
+        if (holding)
+            delay += Time.deltaTime;
+        if (delay > holdDelay)
+        {
+            delay = 0;
+            UIManager.Ins.movePanel.movePressed += EditPosition;
+            UIManager.Ins.movePanel.removePressed += ()=> 
+            { 
+                Destroy(gameObject);
+                UIManager.Ins.movePanel.gameObject.SetActive(false);
+            };
+            if(this is Feeder)
+            {
+                UIManager.Ins.movePanel.refillBtn.SetActive(true);
+                UIManager.Ins.movePanel.refillPressed += (this as Feeder).Refill;
+            }
+            UIManager.Ins.movePanel.gameObject.SetActive(true);
+            UIManager.Ins.movePanel.SetPosition(Utils.WorldToScreenPoint(transform.position));
+        }
+    }
     public void OnBeginDrag(PointerEventData eventData)
     {
         if(!placed)
@@ -58,9 +96,9 @@ public class Item : MonoBehaviour,IBeginDragHandler,IDragHandler,IEndDragHandler
                 delta += Vector3.up * 0.5f;
             transform.position = GameManager.Ins.activeCage.RoundToGridCell(Utils.ScreenToWorldPoint(Input.mousePosition) - delta * GameManager.Ins.cellSize) + delta * GameManager.Ins.cellSize;
             if (GameManager.Ins.activeCage.CanPlace(placedSize, transform.position))
-                GetComponent<SpriteRenderer>().color = Color.green;
+                mat.SetColor("_TintColor",Color.green);
             else
-                GetComponent<SpriteRenderer>().color = Color.red;
+                mat.SetColor("_TintColor", Color.red);
         }
     }
     public void OnEndDrag(PointerEventData eventData)
@@ -73,10 +111,28 @@ public class Item : MonoBehaviour,IBeginDragHandler,IDragHandler,IEndDragHandler
             UIManager.Ins.setPanel.transform.position = Utils.WorldToScreenPoint(transform.position);
         }
     }
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        if (placed)
+            holding = true;
+    }
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        if (placed)
+            holding = false;
+    }
     public void Discard()
     {
         if(!placed)
             Destroy(gameObject);
+    }
+    public void EditPosition()
+    {
+        placed = false;
+        mat.shader = tint;
+        mat.SetColor("_TintColor",Color.white);
+        UIManager.Ins.movePanel.gameObject.SetActive(false);
+        GameManager.Ins.activeCage.Leave(placedSize, walkingSize, transform.position);
     }
     public virtual void Place()
     {
@@ -89,6 +145,7 @@ public class Item : MonoBehaviour,IBeginDragHandler,IDragHandler,IEndDragHandler
         UIManager.Ins.setPanel.cancelPressed -= Discard;
         GameManager.Ins.activeCage.feeders.Add(this);
         transform.parent = GameManager.Ins.activeCage.transform;
+        mat.shader = normal;
     }
     private void OnDestroy()
     {

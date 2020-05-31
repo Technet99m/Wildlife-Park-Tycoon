@@ -118,6 +118,19 @@ public class Cage : MonoBehaviour
             for (int y = 0; y < walkingSize.y; y++)
                 walkingMap.SetValue(XS + x, YS + y, false);
     }
+    public void Leave(Vector2Int placedSize, Vector2Int walkingSize, Vector2 pos)
+    {
+        Vector2 offset = (placedSize - Vector2.one) * -0.5f;
+        placingMap.GetXY(pos + offset - Vector2.up * 0.1f, transform.position, out int XS, out int YS);
+        for (int x = 0; x < placedSize.x; x++)
+            for (int y = 0; y < placedSize.y; y++)
+                placingMap.SetValue(XS + x, YS + y, true);
+        offset = (walkingSize - Vector2.one) * -0.5f;
+        walkingMap.GetXY(pos + offset, transform.position, out XS, out YS);
+        for (int x = 0; x < walkingSize.x; x++)
+            for (int y = 0; y < walkingSize.y; y++)
+                walkingMap.SetValue(XS + x, YS + y, true);
+    }
     public Vector2 GetFreeTileInGrid()
     {
         int x, y;

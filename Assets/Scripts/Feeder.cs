@@ -16,20 +16,19 @@ public class Feeder : Item
 
     private int maxCapacity = 6;
 
+    private void Start()
+    {
+        capacity = maxCapacity;
+    }
     public override void Empty(Vector2 pos)
     {
         capacity--;
-        if (capacity > maxCapacity / 2)
-            sp.sprite = full;
-        else if (capacity > 0)
-            sp.sprite = half;
-        else
-            sp.sprite = empty;
+        CheckSprite();
         base.Empty(pos);
     }
     public override void Place()
     {
-        Refill();
+        CheckSprite();
         base.Place();
     }
     public void Refill()
@@ -47,4 +46,14 @@ public class Feeder : Item
         }
         return (capacity - busy) > 0;
     }
+    private void CheckSprite()
+    {
+        if (capacity > maxCapacity / 2)
+            sp.sprite = full;
+        else if (capacity > 0)
+            sp.sprite = half;
+        else
+            sp.sprite = empty;
+    }
+
 }
