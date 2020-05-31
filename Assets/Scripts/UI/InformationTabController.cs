@@ -27,6 +27,7 @@ public class InformationTabController : MonoBehaviour
         ignoreName = false;
         anim.Play("Hide");
         TickingMachine.EveryTick -= Refresh;
+        selected.GetComponent<AnimalAnimationController>().SetBase();
         selected = null;
     }
     public void StartChangingName()
@@ -53,7 +54,10 @@ public class InformationTabController : MonoBehaviour
                     {
                         Show();
                     }
+                    else
+                        selected.GetComponent<AnimalAnimationController>().SetBase();
                     selected = tmp;
+                    selected.GetComponent<AnimalAnimationController>().SetHighlight();
                     ignoreName = false;
                     Refresh();
                 }

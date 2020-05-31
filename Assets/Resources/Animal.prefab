@@ -792,6 +792,9 @@ MonoBehaviour:
   - {fileID: -6704000743581025313, guid: 549a5618f92a5c749b0bd089e5a9ce45, type: 3}
   - {fileID: -314262122811554439, guid: 549a5618f92a5c749b0bd089e5a9ce45, type: 3}
   foodSprite: {fileID: 2244213911343195385}
+  normal: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
+  highlighted: {fileID: -6465566751694194690, guid: 01c7aa3a2e0b2bc418559f856cc50c4d,
+    type: 3}
   body: {fileID: 4162523600250642597}
   face: {fileID: 4162523600549867860}
   eyes: {fileID: 4162523600104486622}

@@ -5,13 +5,14 @@ using UnityEngine;
 public class AnimalAnimationController : MonoBehaviour
 {
     public AnimalSprites sprites;
-    [SerializeField, Range(0,1)] float verticalThreshhold;
-    [SerializeField] Transform bodyTransform;
-    [SerializeField] Sprite[] foods;
-    [SerializeField] SpriteRenderer foodSprite;
-    Animator anim;
-    AnimalData data;
-    AnimalPack GenderPack
+    [SerializeField, Range(0,1)] private float verticalThreshhold;
+    [SerializeField] private Transform bodyTransform;
+    [SerializeField] private Sprite[] foods;
+    [SerializeField] private SpriteRenderer foodSprite;
+    [SerializeField] private Shader normal, highlighted;
+    private Animator anim;
+    private AnimalData data;
+    private AnimalPack GenderPack
     {
         get
         {
@@ -19,11 +20,31 @@ public class AnimalAnimationController : MonoBehaviour
             return data.male ? sprites.male : sprites.female;
         }
     }
+
+    private Material currentMat;
     void Start()
     {
         anim = GetComponentInChildren<Animator>();
         data = GetComponent<AnimalDataHolder>().data;
         Apply();
+        currentMat = new Material(normal);
+        body.material = currentMat;
+        face.material = currentMat;
+        eyes.material = currentMat;
+        right_leg.material = currentMat;
+        left_leg.material = currentMat;
+        right_hand.material = currentMat;
+        left_hand.material = currentMat;
+        tail.material = currentMat;
+    }
+    public void SetHighlight()
+    {
+        currentMat.shader = highlighted;
+
+    }
+    public void SetBase()
+    {
+        currentMat.shader = normal;
     }
     public void Apply()
     {
