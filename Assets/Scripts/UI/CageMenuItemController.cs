@@ -29,7 +29,7 @@ public class CageMenuItemController : MonoBehaviour
         animalIcon.sprite = Resources.Load<Sprite>($"Animals/{animal.stats.kind}/Icon");
         animalHappinessIcon.sprite = Translator.Happiness(animal.data.happiness);
         animalSex.sprite = Translator.Sex(animal.data.male);
-        if (animal.data.age > 1 && !animal.GetComponent<AnimalStatus>().pregnant)
+        if (animal.data.age > 1 && !animal.data.pregnant)
         {
             animalProgress.value = animal.data.sexualActivity;
             progressFill.sprite = sexFill;
@@ -43,7 +43,7 @@ public class CageMenuItemController : MonoBehaviour
         }
         else
         {
-            animalProgress.value = (animal.stats.TicksToBorn - animal.GetComponent<PregnancyController>().ticksToBorn) / (float)animal.stats.TicksToBorn;
+            animalProgress.value = animal.data.pregnancy;
             progressFill.sprite = pregnancyFill;
             progressIcon.sprite = pregnancyIcon;
         }
@@ -59,7 +59,7 @@ public class CageMenuItemController : MonoBehaviour
         animalIcon.sprite = Resources.Load<Sprite>($"Animals/{animal.stats.kind}/Icon");
         animalHappinessIcon.sprite = Translator.Happiness(animal.data.happiness);
         animalSex.sprite = Translator.Sex(animal.data.male);
-        if (animal.data.age > 1 && !animal.GetComponent<AnimalStatus>().pregnant)
+        if (animal.data.age >= 1 && !animal.data.pregnant)
         {
             animalProgress.value = animal.data.sexualActivity;
             progressFill.sprite = sexFill;
@@ -73,7 +73,7 @@ public class CageMenuItemController : MonoBehaviour
         }
         else
         {
-            animalProgress.value = (animal.stats.TicksToBorn - animal.GetComponent<PregnancyController>().ticksToBorn) / (float)animal.stats.TicksToBorn;
+            animalProgress.value = animal.data.pregnancy;
             progressFill.sprite = pregnancyFill;
             progressIcon.sprite = pregnancyIcon;
         }

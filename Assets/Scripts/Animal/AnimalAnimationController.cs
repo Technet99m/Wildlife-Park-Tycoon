@@ -104,7 +104,7 @@ public class AnimalAnimationController : MonoBehaviour
 			case Special.sleep:
 				SetUp(GenderPack.down);
 				anim.Play("Sleep");
-                return 5f;
+                return 6f;
             default:
                 return 0;
         }

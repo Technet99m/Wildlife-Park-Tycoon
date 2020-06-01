@@ -141,11 +141,15 @@ public class Item : MonoBehaviour,IBeginDragHandler,IDragHandler,IEndDragHandler
         float posZ = (transform.position.y + (placedSize.y - 1) * GameManager.Ins.cellSize * 0.5f);
         transform.position = new Vector3(transform.position.x, transform.position.y, posZ * 10);
         GameManager.Ins.activeCage.Place(placedSize, walkingSize, transform.position);
-        UIManager.Ins.setPanel.okPressed -= Place;
-        UIManager.Ins.setPanel.cancelPressed -= Discard;
-        GameManager.Ins.activeCage.feeders.Add(this);
+        if (UIManager.Ins != null)
+        {
+            UIManager.Ins.setPanel.okPressed -= Place;
+            UIManager.Ins.setPanel.cancelPressed -= Discard;
+        }
+        GameManager.Ins.activeCage.items.Add(this);
         transform.parent = GameManager.Ins.activeCage.transform;
         mat.shader = normal;
+
     }
     private void OnDestroy()
     {

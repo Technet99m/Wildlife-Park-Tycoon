@@ -9,7 +9,7 @@ public class Cage : MonoBehaviour
     [SerializeField] private Image background;
     [SerializeField] private Image fence;
 
-    public List<Item> feeders;
+    public List<Item> items;
     public List<Animal> animals;
     public string Name;
     public string KindInCage { get => animals[0].GetComponent<AnimalDataHolder>().stats.kind; }
@@ -30,11 +30,7 @@ public class Cage : MonoBehaviour
     private SpriteRenderer[] gridTiles;
     private Biome biome;
 
-    private void Start()
-    {
-        GridInit();
-    }
-    private void GridInit()
+    public void GridInit()
     {
         walkingMap = new Technet99m.Grid<bool>(20, 9, GameManager.Ins.cellSize);
         placingMap = new Technet99m.Grid<bool>(20, 9, GameManager.Ins.cellSize);
@@ -59,14 +55,14 @@ public class Cage : MonoBehaviour
     }
     public Feeder GetProperFeeder(Food type)
     {
-        var f = feeders.Find((x) => x is Feeder && (x as Feeder).type == type) as Feeder;
+        var f = items.Find((x) => x is Feeder && (x as Feeder).type == type) as Feeder;
         if (f!=null && f.HasEnough())
             return f;
         return null;
     }
     public SpecialItem GetProperSpecial(Special type)
     {
-        return feeders.Find((x) => x is SpecialItem && (x as SpecialItem).type == type) as SpecialItem;
+        return items.Find((x) => x is SpecialItem && (x as SpecialItem).type == type) as SpecialItem;
     }
     public Animal GetProperMate()
     {

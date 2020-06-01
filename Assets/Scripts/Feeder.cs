@@ -12,12 +12,13 @@ public class Feeder : Item
 
     public Food type;
 
-    public int capacity;
+    public int capacity = -1;
 
     private int maxCapacity = 6;
 
     private void Start()
     {
+        if(capacity == -1)
         capacity = maxCapacity;
     }
     public override void Empty(Vector2 pos)

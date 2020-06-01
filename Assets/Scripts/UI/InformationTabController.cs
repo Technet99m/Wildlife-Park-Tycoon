@@ -78,7 +78,7 @@ public class InformationTabController : MonoBehaviour
         Happiness.color = Translator.HappinessColor(selected.data.happiness);
         HappinessIcon.sprite = Translator.Happiness(selected.data.happiness);
         SexIcon.sprite = Translator.Sex(selected.data.male);
-        if (selected.data.age > 1 && !selected.GetComponent<AnimalStatus>().pregnant)
+        if (selected.data.age > 1 && !selected.data.pregnant)
         {
             progress.value = selected.data.sexualActivity;
             progressFill.sprite = sexFill;
@@ -92,7 +92,7 @@ public class InformationTabController : MonoBehaviour
         }
         else
         {
-            progress.value = (selected.stats.TicksToBorn - selected.GetComponent<PregnancyController>().ticksToBorn)/(float)selected.stats.TicksToBorn;
+            progress.value = selected.data.pregnancy;
             progressFill.sprite = pregnancyFill;
             progressIcon.sprite = pregnancyIcon;
         }

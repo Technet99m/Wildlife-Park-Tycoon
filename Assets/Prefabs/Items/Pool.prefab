@@ -552,7 +552,7 @@ MonoBehaviour:
   placedSize: {x: 5, y: 5}
   walkingSize: {x: 3, y: 3}
   placed: 0
-  type: 3
+  type: 2
 --- !u!61 &8140780728207469973
 BoxCollider2D:
   m_ObjectHideFlags: 0

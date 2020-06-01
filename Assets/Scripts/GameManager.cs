@@ -5,14 +5,15 @@ using UnityEngine.UI;
 
 public class GameManager : Technet99m.Singleton<GameManager>
 {
-    [SerializeField] private Transform cageIcons;
+    [SerializeField] private LoadManager loadManager;
+    
     [SerializeField] private Vector3 offset;
     [SerializeField] private float speed;
 
     [SerializeField] private Text cageName;
     [SerializeField] private Text cageCapacity;
 
-
+    public Transform cageIcons;
     public Transform cam;
     public List<Cage> cages;
     public int currentCageIndex;
@@ -24,8 +25,18 @@ public class GameManager : Technet99m.Singleton<GameManager>
     private Coroutine move;
     protected new void Awake()
     {
-        BuyNewCage("Forest");
         base.Awake();
+        //PlayerPrefs.DeleteAll();
+        if (PlayerPrefs.HasKey("save"))
+        {
+            loadManager.LoadGame();
+            ToCage(0);
+        }
+        else
+        {
+            BuyNewCage("Forest");
+        }
+        RefreshUI();
     }
     private void OnEnable()
     {
@@ -34,6 +45,10 @@ public class GameManager : Technet99m.Singleton<GameManager>
     private void OnDisable()
     {
         Technet99m.TickingMachine.EveryTick -= RefreshUI;
+    }
+    private void OnApplicationQuit()
+    {
+        loadManager.SaveGame();
     }
     public void RefreshUI()
     {
@@ -44,8 +59,6 @@ public class GameManager : Technet99m.Singleton<GameManager>
     {
         Cage cage = CageFactory.GetNewCage(biome, cages.Count);
         cages.Add(cage);
-        cageIcons.GetChild(cages.Count - 1).gameObject.SetActive(true);
-        cageIcons.GetChild(cages.Count - 1).GetComponent<Image>().sprite = cage.Biome.icon;
         ToCage(cages.Count - 1);
         RefreshUI();
     }

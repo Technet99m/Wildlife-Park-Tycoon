@@ -7,7 +7,6 @@ public class AnimalStatus : MonoBehaviour
     [SerializeField] SpriteRenderer mood;
     [SerializeField] Transform body;
 
-    public bool pregnant;
 
     private AnimalData data;
     private AnimalStats stats;
@@ -50,8 +49,7 @@ public class AnimalStatus : MonoBehaviour
 
     private void Pregnant()
     {
-        pregnant = true;
-        GetComponent<PregnancyController>().ticksToBorn = stats.TicksToBorn;
+        data.pregnant = true;
     }
     private void OnTick()
     {
@@ -81,18 +79,43 @@ public class AnimalStatus : MonoBehaviour
                     data.happiness -= 0.1f;
                     break;
             }
-        if (data.happiness >= 0.51 && !pregnant)
+        if (data.happiness >= 0.51)
         {
             if (data.age > 1)
                 data.sexualActivity += (data.happiness - 0.5f) * 2f / stats.TicksToFullMate;
-            else
+            else if(!data.pregnant)
                 data.age += (data.happiness - 0.5f) * 2f / stats.TicksToFullMate;
+            else
+                data.pregnancy += (data.happiness - 0.5f) * 2f / stats.TicksToBorn;
         }
+        if (data.pregnant && data.pregnancy > 1)
+            Born();
         if (data.age > 1 && body.localScale.x < 1f)
             StartCoroutine(Adult());
         if (data.sexualActivity > 1 && needs.Find((x) => x.type == NeedType.Sex) == null)
             needs.Add(new Need() { type = NeedType.Sex });
         mood.sprite = Translator.Happiness(data.happiness);
+    }
+    private void Born()
+    {
+        for (int i = 0, tmp = Random.Range(stats.minChildren, stats.maxChildren + 1); i < tmp; i++)
+        {
+            if (transform.parent.GetComponent<Cage>().animals.Count == 15)
+            {
+                DataManager.AddMoney(stats.price);
+                break;
+            }
+            AnimalDataHolder child = AnimalFactory.NewAnimalOfKind(stats.kind, transform.parent).GetComponent<AnimalDataHolder>();
+            child.transform.position = transform.position;
+            child.data.male = Random.value > 0.5f;
+            child.data.age = 0;
+            for (int j = 0; j < child.data.foods.Length; j++)
+                child.data.foods[j] = 0.5f;
+            for (int j = 0; j < child.data.specials.Length; j++)
+                child.data.specials[j] = 1f;
+        }
+        data.pregnant = false;
+        data.pregnancy = 0;
     }
     private IEnumerator Adult()
     {

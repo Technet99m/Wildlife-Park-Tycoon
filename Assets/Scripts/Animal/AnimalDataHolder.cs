@@ -13,6 +13,8 @@ public class AnimalData
 {
     public string name;
     public bool male;
+    public bool pregnant;
+    public float pregnancy;
     public float sexualActivity;
     public float age;
     public float happiness;
