@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 188b53a32bd9e6045bea9165bc8c25ee, type: 3}
   m_Name: Stats
   m_EditorClassIdentifier: 
-  kind: Rabbit
-  price: 13
-  TicksToFullMate: 20
-  TicksToBorn: 42
+  kind: White Bear
+  price: 20
+  TicksToFullMate: 10
+  TicksToBorn: 10
   minChildren: 1
-  maxChildren: 2
-  foods: 00000000
-  specials: 0500000004000000
+  maxChildren: 1
+  foods: 0000000001000000
+  specials: 0300000001000000

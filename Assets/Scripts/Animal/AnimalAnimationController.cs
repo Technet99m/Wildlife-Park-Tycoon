@@ -105,6 +105,14 @@ public class AnimalAnimationController : MonoBehaviour
 				SetUp(GenderPack.down);
 				anim.Play("Sleep");
                 return 6f;
+			case Special.scratch:
+				SetUp(GenderPack.side);
+				anim.Play("Scratch");
+                return 1.20f;
+			case Special.mud:
+				SetUp(GenderPack.side);
+				anim.Play("Mud");
+                return 5f;
             default:
                 return 0;
         }
