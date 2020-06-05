@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 188b53a32bd9e6045bea9165bc8c25ee, type: 3}
+  m_Name: Stats
+  m_EditorClassIdentifier: 
+  kind: Chimpanzee
+  price: 20
+  TicksToFullMate: 20
+  TicksToBorn: 20
+  minChildren: 1
+  maxChildren: 1
+  foods: 0000000005000000
+  specials: 0000000005000000
