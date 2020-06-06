@@ -12,7 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceed841f162deb84599e583826e7337c, type: 3}
   m_Name: Jungle
   m_EditorClassIdentifier: 
-  kinds: []
+  kinds:
+  - Chimpanzee
+  - Koala
+  - Tiger
+  - Panda
   Name: Jungle
   background: {fileID: 21300000, guid: 00b604d781975c143a18ff1db1718560, type: 3}
   fence: {fileID: 21300000, guid: 11aa4c6a1055af846b5fb5acc69dd1a0, type: 3}

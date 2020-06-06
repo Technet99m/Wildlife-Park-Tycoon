@@ -14,6 +14,7 @@ public class AnimalData
     public string name;
     public bool male;
     public bool pregnant;
+    public bool adult;
     public float pregnancy;
     public float sexualActivity;
     public float age;

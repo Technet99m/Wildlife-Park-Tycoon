@@ -119,6 +119,7 @@ public class LoadManager : MonoBehaviour
             {
                 Animal a = AnimalFactory.NewAnimalOfKind(animal.kind, tmp.transform, true);
                 a.data.name = animal.data.name;
+                a.data.adult = animal.data.adult;
                 a.data.age = animal.data.age;
                 a.data.male = animal.data.male;
                 a.data.pregnant = animal.data.pregnant;

@@ -15,6 +15,9 @@ public class BuyAnimalController : MonoBehaviour
     }
     private Animal BuyAnimal()
     {
-        return AnimalFactory.NewAnimalOfKind(GameManager.Ins.activeCage.KindInCage, GameManager.Ins.activeCage.transform);
+        if (DataManager.TryAndBuyForMoney(Resources.Load<AnimalStats>("Animals/" + GameManager.Ins.activeCage.KindInCage + "/Stats").price))
+            return AnimalFactory.NewAnimalOfKind(GameManager.Ins.activeCage.KindInCage, GameManager.Ins.activeCage.transform);
+        else
+            return null;
     }
 }

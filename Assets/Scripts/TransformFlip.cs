@@ -23,12 +23,11 @@ public class TransformFlip : MonoBehaviour
 
     private IEnumerator FlipTo(Vector3 destination, int frameLength)
     {
-        float speed = frameLength / 60f;
-        speed = Vector3.Distance(target.localScale, destination) / speed;
-
+        Vector3 start = target.localScale;
         while(target.localScale!=destination)
         {
-            target.localScale = Vector3.MoveTowards(target.localScale, destination, speed * Time.deltaTime);
+            target.localScale = Vector3.MoveTowards(target.localScale, destination, Vector3.Distance(start, destination)/frameLength);
+            Debug.Log("flip");
             yield return null;
         }
     }

@@ -15,6 +15,8 @@ MonoBehaviour:
   kinds:
   - SeaCow
   - Reindeer
+  - Emperor Penguin
+  - White Bear
   Name: Arctic
   background: {fileID: 21300000, guid: cb30444ec57b3784b852b994259b64c6, type: 3}
   fence: {fileID: 21300000, guid: 47453f811355dc143abae86725857395, type: 3}

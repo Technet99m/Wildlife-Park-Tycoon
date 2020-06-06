@@ -90,7 +90,7 @@ public class AnimalStatus : MonoBehaviour
         }
         if (data.pregnant && data.pregnancy > 1)
             Born();
-        if (data.age > 1 && body.localScale.x < 1f)
+        if (data.age > 1 && !data.adult)
             StartCoroutine(Adult());
         if (data.sexualActivity > 1 && needs.Find((x) => x.type == NeedType.Sex) == null)
             needs.Add(new Need() { type = NeedType.Sex });
@@ -109,6 +109,7 @@ public class AnimalStatus : MonoBehaviour
             child.transform.position = transform.position;
             child.data.male = Random.value > 0.5f;
             child.data.age = 0;
+            child.data.adult = false;
             for (int j = 0; j < child.data.foods.Length; j++)
                 child.data.foods[j] = 0.5f;
             for (int j = 0; j < child.data.specials.Length; j++)
@@ -119,11 +120,12 @@ public class AnimalStatus : MonoBehaviour
     }
     private IEnumerator Adult()
     {
-            while(body.localScale!=Vector3.one)
-            {
-                body.localScale = Vector3.MoveTowards(body.localScale, Vector3.one, Time.deltaTime);
-                yield return null;
-            }
+        data.adult = true;
+        while (body.localScale != Vector3.one)
+        {
+            body.localScale = Vector3.MoveTowards(body.localScale, Vector3.one, Time.deltaTime);
+            yield return null;
+        }
     }
     
 }

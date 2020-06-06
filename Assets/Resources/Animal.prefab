@@ -824,6 +824,7 @@ MonoBehaviour:
     name: 
     male: 0
     pregnant: 0
+    adult: 0
     pregnancy: 0
     sexualActivity: 0
     age: 0
@@ -864,6 +865,7 @@ MonoBehaviour:
     name: 
     male: 1
     pregnant: 0
+    adult: 1
     pregnancy: 0
     sexualActivity: 0
     age: 1
