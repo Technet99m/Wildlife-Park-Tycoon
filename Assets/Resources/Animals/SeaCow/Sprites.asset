@@ -14,57 +14,87 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   male:
     down:
-      body: {fileID: 0}
-      face: {fileID: 0}
-      eyes: {fileID: 0}
-      right_leg: {fileID: 0}
-      left_leg: {fileID: 0}
+      body: {fileID: 2660076790241490345, guid: a64b43dab46ac3443999f9b73dd51114,
+        type: 3}
+      face: {fileID: 5771914441545317030, guid: a64b43dab46ac3443999f9b73dd51114,
+        type: 3}
+      eyes: {fileID: -917376291918358368, guid: a64b43dab46ac3443999f9b73dd51114,
+        type: 3}
+      right_leg: {fileID: -805031063151817431, guid: a64b43dab46ac3443999f9b73dd51114,
+        type: 3}
+      left_leg: {fileID: 8065951295670963680, guid: a64b43dab46ac3443999f9b73dd51114,
+        type: 3}
       right_hand: {fileID: 0}
       left_hand: {fileID: 0}
-      tail: {fileID: 0}
+      tail: {fileID: -2353999149891663862, guid: a64b43dab46ac3443999f9b73dd51114,
+        type: 3}
     up:
-      body: {fileID: 0}
+      body: {fileID: -2569899254014845823, guid: bd4b938544fd59047b3bcad645750ffc,
+        type: 3}
       face: {fileID: 0}
       eyes: {fileID: 0}
-      right_leg: {fileID: 0}
-      left_leg: {fileID: 0}
+      right_leg: {fileID: -1316367748087872521, guid: bd4b938544fd59047b3bcad645750ffc,
+        type: 3}
+      left_leg: {fileID: -8576007287065537691, guid: bd4b938544fd59047b3bcad645750ffc,
+        type: 3}
       right_hand: {fileID: 0}
       left_hand: {fileID: 0}
-      tail: {fileID: 0}
+      tail: {fileID: -1498017575108370862, guid: bd4b938544fd59047b3bcad645750ffc,
+        type: 3}
     side:
-      body: {fileID: 0}
+      body: {fileID: 4243299045109557989, guid: 4fa7248f8db02754da24b8b8ead4181b,
+        type: 3}
       face: {fileID: 0}
-      eyes: {fileID: 0}
-      right_leg: {fileID: 0}
-      left_leg: {fileID: 0}
+      eyes: {fileID: 6988866980803849872, guid: 4fa7248f8db02754da24b8b8ead4181b,
+        type: 3}
+      right_leg: {fileID: 6735905779177746850, guid: 4fa7248f8db02754da24b8b8ead4181b,
+        type: 3}
+      left_leg: {fileID: -8859254188638156616, guid: 4fa7248f8db02754da24b8b8ead4181b,
+        type: 3}
       right_hand: {fileID: 0}
       left_hand: {fileID: 0}
-      tail: {fileID: 0}
+      tail: {fileID: 1196930125387380600, guid: 4fa7248f8db02754da24b8b8ead4181b,
+        type: 3}
   female:
     down:
-      body: {fileID: 0}
-      face: {fileID: 0}
-      eyes: {fileID: 0}
-      right_leg: {fileID: 0}
-      left_leg: {fileID: 0}
+      body: {fileID: 2660076790241490345, guid: a64b43dab46ac3443999f9b73dd51114,
+        type: 3}
+      face: {fileID: 5771914441545317030, guid: a64b43dab46ac3443999f9b73dd51114,
+        type: 3}
+      eyes: {fileID: -917376291918358368, guid: a64b43dab46ac3443999f9b73dd51114,
+        type: 3}
+      right_leg: {fileID: 8065951295670963680, guid: a64b43dab46ac3443999f9b73dd51114,
+        type: 3}
+      left_leg: {fileID: -805031063151817431, guid: a64b43dab46ac3443999f9b73dd51114,
+        type: 3}
       right_hand: {fileID: 0}
       left_hand: {fileID: 0}
-      tail: {fileID: 0}
+      tail: {fileID: -2353999149891663862, guid: a64b43dab46ac3443999f9b73dd51114,
+        type: 3}
     up:
-      body: {fileID: 0}
+      body: {fileID: -2569899254014845823, guid: bd4b938544fd59047b3bcad645750ffc,
+        type: 3}
       face: {fileID: 0}
       eyes: {fileID: 0}
-      right_leg: {fileID: 0}
-      left_leg: {fileID: 0}
+      right_leg: {fileID: -1316367748087872521, guid: bd4b938544fd59047b3bcad645750ffc,
+        type: 3}
+      left_leg: {fileID: -8576007287065537691, guid: bd4b938544fd59047b3bcad645750ffc,
+        type: 3}
       right_hand: {fileID: 0}
       left_hand: {fileID: 0}
-      tail: {fileID: 0}
+      tail: {fileID: -1498017575108370862, guid: bd4b938544fd59047b3bcad645750ffc,
+        type: 3}
     side:
-      body: {fileID: 0}
+      body: {fileID: 4243299045109557989, guid: 4fa7248f8db02754da24b8b8ead4181b,
+        type: 3}
       face: {fileID: 0}
-      eyes: {fileID: 0}
-      right_leg: {fileID: 0}
-      left_leg: {fileID: 0}
+      eyes: {fileID: 6988866980803849872, guid: 4fa7248f8db02754da24b8b8ead4181b,
+        type: 3}
+      right_leg: {fileID: 6735905779177746850, guid: 4fa7248f8db02754da24b8b8ead4181b,
+        type: 3}
+      left_leg: {fileID: -8859254188638156616, guid: 4fa7248f8db02754da24b8b8ead4181b,
+        type: 3}
       right_hand: {fileID: 0}
       left_hand: {fileID: 0}
-      tail: {fileID: 0}
+      tail: {fileID: 1196930125387380600, guid: 4fa7248f8db02754da24b8b8ead4181b,
+        type: 3}

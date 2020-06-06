@@ -108,7 +108,7 @@ public class AnimalAnimationController : MonoBehaviour
 			case Special.scratch:
 				SetUp(GenderPack.side);
 				anim.Play("Scratch");
-                return 1.20f;
+                return 1.30f;
 			case Special.mud:
 				SetUp(GenderPack.side);
 				anim.Play("Mud");
