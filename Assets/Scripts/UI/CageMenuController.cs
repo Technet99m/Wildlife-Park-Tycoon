@@ -90,6 +90,8 @@ public class CageMenuController : MonoBehaviour
     }
     public void BuyNewKind(string kind)
     {
+        if (!DataManager.TryAndBuyForMoney(Translator.KindToPrice(kind)))
+            return;
         Animal animal = AnimalFactory.NewAnimalOfKind(kind, activeCage.transform);
         animal.data.male = false;
         animal.transform.position = activeCage.GetFreeTileInGrid();

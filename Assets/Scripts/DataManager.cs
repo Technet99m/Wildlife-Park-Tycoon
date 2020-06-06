@@ -8,12 +8,12 @@ public class DataManager
     public static event Action<int> moneyChanged;
     public static event Action<int> gemsChanged;
 
-    private static int Money { get => money; set
+    public static int Money { get => money; set
         {
             money = value;
             moneyChanged?.Invoke(value);
         } }
-    private static int Gems
+    public static int Gems
     {
         get => gems; set
         {

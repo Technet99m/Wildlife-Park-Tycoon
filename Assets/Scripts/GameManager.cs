@@ -12,6 +12,7 @@ public class GameManager : Technet99m.Singleton<GameManager>
 
     [SerializeField] private Text cageName;
     [SerializeField] private Text cageCapacity;
+    [SerializeField] private Text[] cageCosts;
 
     public Transform cageIcons;
     public Transform cam;
@@ -20,13 +21,11 @@ public class GameManager : Technet99m.Singleton<GameManager>
     public float cellSize;
     public CatalogController catalog;
     public Cage activeCage { get => cages[currentCageIndex]; }
-
-
+    public int CagePrice { get => cages.Count * 1000; }
     private Coroutine move;
     protected new void Awake()
     {
         base.Awake();
-        //PlayerPrefs.DeleteAll();
         if (PlayerPrefs.HasKey("save"))
         {
             loadManager.LoadGame();
@@ -34,6 +33,7 @@ public class GameManager : Technet99m.Singleton<GameManager>
         }
         else
         {
+            DataManager.Money = 1000;
             BuyNewCage("Forest");
         }
         RefreshUI();
@@ -54,9 +54,13 @@ public class GameManager : Technet99m.Singleton<GameManager>
     {
         cageCapacity.text = $"{activeCage.animals.Count}/{15}";
         cageName.text = activeCage.Name;
+        foreach (var text in cageCosts)
+            text.text = Translator.CurrencyToString(CagePrice);
     }
     public void BuyNewCage(string biome)
     {
+        if (!DataManager.TryAndBuyForMoney(CagePrice))
+            return;
         Cage cage = CageFactory.GetNewCage(biome, cages.Count);
         cages.Add(cage);
         ToCage(cages.Count - 1);

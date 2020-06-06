@@ -40,6 +40,30 @@ public class Translator : Technet99m.Singleton<Translator>
         if (happiness > 0.49f) return Ins.normalC;
         return Ins.badC;
     }
+    public static string CurrencyToString(int amount)
+    {
+        if (amount < 1000)
+            return amount.ToString();
+        if (amount < 1000000)
+        {
+            var thousands = amount / 1000;
+            if (amount % 1000 == 0)
+                return $"{thousands}K";
+            else
+                return $"{thousands},{(amount % 1000).ToString("D3")}";
+        }
+        if (amount % 1000000 == 0)
+            return $"{amount / 1000000}M";
+        else
+        {
+            var thousands = amount%1000000 / 1000;
+                return $"{amount/1000000},{thousands.ToString("D3")}K";
+        }
+    }
+    public static int KindToPrice(string kind)
+    {
+        return Resources.Load<AnimalStats>("Animals/" + kind + "/Stats").price;
+    }
     public static string Needs2Text(List<Need> needs)
     {
         var text = "";

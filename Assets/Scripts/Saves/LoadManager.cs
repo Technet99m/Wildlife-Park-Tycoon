@@ -85,14 +85,11 @@ public class LoadManager : MonoBehaviour
     private Feeder[] feeders;
     [SerializeField]
     private SpecialItem[] specials;
-    private void Awake()
-    {
-
-    }
 
     public void LoadGame()
     {
         List<CageSaveData> cages = JsonConvert.DeserializeObject<List<CageSaveData>>(PlayerPrefs.GetString("save"));
+        DataManager.Money = (PlayerPrefs.GetInt("money", 0));
         for (int i = 0; i < cages.Count; i++)
         {
             Cage tmp = CageFactory.GetNewCage(cages[i].biome, i, true);
@@ -144,6 +141,12 @@ public class LoadManager : MonoBehaviour
         foreach (var cage in GameManager.Ins.cages)
             cages.Add(new CageSaveData(cage));
         PlayerPrefs.SetString("save", JsonConvert.SerializeObject(cages));
+        PlayerPrefs.SetInt("money", DataManager.Money);
     }
-
+    
+    public void ResetGame()
+    {
+        PlayerPrefs.DeleteAll();
+        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+    }
 }
