@@ -67,7 +67,10 @@ public class GameManager : Technet99m.Singleton<GameManager>
     public void BuyAnimalToggle()
     {
         if (activeCage.animals.Count > 0)
+        {
             buyToggle.SetTrigger("toggle");
+            buyToggle.GetComponentInChildren<Text>().text = Translator.CurrencyToString(activeCage.animals[0].stats.price);
+        }
         else
             cageMenu.SetUp();
     }

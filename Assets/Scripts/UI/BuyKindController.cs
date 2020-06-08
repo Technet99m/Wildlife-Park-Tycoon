@@ -21,7 +21,7 @@ public class BuyKindController : MonoBehaviour
     {
         this.kind.text = kind;
         preview.sprite = Resources.Load<Sprite>($"Animals/{kind}/Picture");
-        price.text = Resources.Load<AnimalStats>($"Animals/{kind}/Stats").price.ToString();
+        price.text = Translator.CurrencyToString(Translator.KindToPrice(kind));
         gameObject.SetActive(true);
     }
 }
