@@ -14,14 +14,18 @@ public class GameManager : Technet99m.Singleton<GameManager>
     [SerializeField] private Text cageCapacity;
     [SerializeField] private Text[] cageCosts;
 
+    [SerializeField] private Animator buyToggle;
+
     public Transform cageIcons;
     public Transform cam;
     public List<Cage> cages;
     public int currentCageIndex;
     public float cellSize;
     public CatalogController catalog;
+    public CageMenuController cageMenu;
     public Cage activeCage { get => cages[currentCageIndex]; }
     public int CagePrice { get => cages.Count * 1000; }
+
     private Coroutine move;
     protected new void Awake()
     {
@@ -59,6 +63,13 @@ public class GameManager : Technet99m.Singleton<GameManager>
     {
         if (pause)
             loadManager.SaveGame();
+    }
+    public void BuyAnimalToggle()
+    {
+        if (activeCage.animals.Count > 0)
+            buyToggle.SetTrigger("toggle");
+        else
+            cageMenu.SetUp();
     }
     public void RefreshUI()
     {

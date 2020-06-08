@@ -7,8 +7,8 @@ public class CageMenuController : MonoBehaviour
 {
     [SerializeField] private InputField cageName;
     [SerializeField] private Text cageCapacity;
+    [SerializeField] private Text sellCost;
     [SerializeField] private CageMenuItemController[] items;
-    [SerializeField] private GameObject itemRef;
     [SerializeField] private Transform cageIcons;
 
     [SerializeField] private GameObject buySegment;
@@ -43,6 +43,7 @@ public class CageMenuController : MonoBehaviour
         {
             items[i].SetUp(activeCage.animals[i]);
         }
+        sellCost.text = "+0";
     }
     public void Refresh()
     {
@@ -57,10 +58,14 @@ public class CageMenuController : MonoBehaviour
         buySegment.SetActive(false);
         cageCapacity.text = $"{activeCage.animals.Count}/{15}";
         HideAll();
+        int totalPrice = 0;
         for(int i = 0;i< activeCage.animals.Count; i++)
         {
             items[i].Refresh(activeCage.animals[i]);
+            if (items[i].Selected)
+                totalPrice += activeCage.animals[i].finalCost;
         }
+        sellCost.text = "+" + Translator.CurrencyToString(totalPrice);
     }
     public void Sell()
     {
@@ -81,12 +86,14 @@ public class CageMenuController : MonoBehaviour
         foreach (var item in items)
             if (item.gameObject.activeSelf)
                 item.Selected = true;
-
+        Refresh();
     }
     public void SelectChildren()
     {
         for (int i = 0; i < activeCage.animals.Count; i++)
-            ;
+            if (activeCage.animals[i].data.age < 1)
+                items[i].Selected = true;
+        Refresh();
     }
     public void BuyNewKind(string kind)
     {

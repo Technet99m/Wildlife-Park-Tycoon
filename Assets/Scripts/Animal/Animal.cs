@@ -20,6 +20,7 @@ public class Animal : MonoBehaviour
     public event System.Action<Animal> Free;
     public event System.Action ReachedMatePos;
     public int Followers { get { return Free==null? 0 : Free.GetInvocationList().Length; } }
+    public int finalCost { get => Mathf.CeilToInt(data.happiness * stats.price); }
     
     private void OnEnable()
     {
@@ -75,7 +76,7 @@ public class Animal : MonoBehaviour
     }
     public void Sell()
     {
-        DataManager.AddMoney(Mathf.CeilToInt(stats.price * data.happiness));
+        DataManager.AddMoney(finalCost);
         cage.animals.Remove(this);
         target?.Empty(transform.position);
         Destroy(gameObject);
