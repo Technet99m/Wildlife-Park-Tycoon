@@ -85,7 +85,10 @@ public class LoadManager : MonoBehaviour
     private Feeder[] feeders;
     [SerializeField]
     private SpecialItem[] specials;
-
+    private void Awake()
+    {
+        Technet99m.TickingMachine.TenthTick += SaveGame;
+    }
     public void LoadGame()
     {
         List<CageSaveData> cages = JsonConvert.DeserializeObject<List<CageSaveData>>(PlayerPrefs.GetString("save"));

@@ -33,7 +33,7 @@ public class GameManager : Technet99m.Singleton<GameManager>
         }
         else
         {
-            DataManager.Money = 5000;
+            DataManager.Money = 1000;
             BuyNewCage("Forest");
         }
         RefreshUI();
@@ -84,6 +84,10 @@ public class GameManager : Technet99m.Singleton<GameManager>
         if (move != null)
             StopCoroutine(move);
         move = StartCoroutine(MoveCameraTo(activeCage.transform.position + offset));
+    }
+    public void PlusOneK()
+    {
+        DataManager.AddMoney(1000);
     }
     private IEnumerator MoveCameraTo(Vector3 pos)
     {
