@@ -14,12 +14,12 @@ public class Feeder : Item
 
     public int capacity = -1;
 
-    private int maxCapacity = 6;
+    private int maxCapacity = 20;
 
     private void Start()
     {
         if(capacity == -1)
-        capacity = maxCapacity;
+            capacity = maxCapacity;
     }
     public override void Empty(Vector2 pos)
     {
@@ -34,6 +34,8 @@ public class Feeder : Item
     }
     public void Refill()
     {
+        if (!DataManager.TryAndBuyForMoney(price))
+            return;
         capacity = maxCapacity;
         sp.sprite = full;
     }

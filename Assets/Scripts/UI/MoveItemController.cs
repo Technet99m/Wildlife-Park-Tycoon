@@ -12,6 +12,7 @@ public class MoveItemController : MonoBehaviour
     public UnityAction movePressed;
     public UnityAction removePressed;
     public UnityAction refillPressed;
+    public Text refillCost;
     
     public void SetPosition(Vector3 pos)
     {
@@ -28,6 +29,9 @@ public class MoveItemController : MonoBehaviour
         move.onClick.RemoveAllListeners();
         remove.onClick.RemoveAllListeners();
         refill.onClick.RemoveAllListeners();
+        movePressed = null;
+        removePressed = null;
+        refillPressed = null;
         refillBtn.SetActive(false);
     }
 }

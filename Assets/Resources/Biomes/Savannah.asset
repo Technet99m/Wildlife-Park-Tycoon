@@ -18,6 +18,7 @@ MonoBehaviour:
   - Elephant
   - Hippo
   - Cheetah
+  - Leopard
   Name: Savannah
   background: {fileID: 21300000, guid: 1c90e47bc0614474eabf777445ef04fc, type: 3}
   fence: {fileID: 21300000, guid: 66e09d14780bda9439475eaed6c26e52, type: 3}

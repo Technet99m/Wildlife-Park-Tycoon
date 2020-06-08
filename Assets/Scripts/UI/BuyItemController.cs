@@ -8,6 +8,8 @@ public class BuyItemController : MonoBehaviour
 
     public void BuyItem(int index)
     {
-        Instantiate(items[index], (Vector2)GameManager.Ins.cam.position, Quaternion.identity);
+        if (DataManager.TryAndBuyForMoney(items[index].GetComponent<Item>().price))
+            Instantiate(items[index], (Vector2)GameManager.Ins.cam.position, Quaternion.identity);
+
     }
 }

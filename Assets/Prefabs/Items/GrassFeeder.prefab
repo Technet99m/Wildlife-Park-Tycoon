@@ -137,6 +137,7 @@ MonoBehaviour:
   areBusy: 
   normal: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
   tint: {fileID: -6465566751694194690, guid: 01c7aa3a2e0b2bc418559f856cc50c4d, type: 3}
+  price: 100
   placedSize: {x: 3, y: 5}
   walkingSize: {x: 1, y: 3}
   placed: 0
@@ -145,7 +146,7 @@ MonoBehaviour:
   empty: {fileID: 1699750696656883366, guid: d6a7d8c5931bf884c8b3399d19f96e95, type: 3}
   sp: {fileID: 279140899271335025}
   type: 2
-  capacity: 0
+  capacity: -1
 --- !u!61 &1844825425034540028
 BoxCollider2D:
   m_ObjectHideFlags: 0

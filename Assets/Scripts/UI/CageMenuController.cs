@@ -117,5 +117,6 @@ public class CageMenuController : MonoBehaviour
         {
             sellContent.GetChild(i).GetComponent<BuyKindController>().SetUp(GameManager.Ins.activeCage.Biome.kinds[i]);
         }
+        GameManager.Ins.cageIcons.GetChild(GameManager.Ins.currentCageIndex).GetComponent<Image>().sprite = GameManager.Ins.activeCage.Biome.icon;
     }
 }

@@ -27,6 +27,6 @@ public class CatalogItemController : MonoBehaviour
         Price.text = stats.price.ToString();
         preg.text = Translator.TicksToTime(stats.TicksToBorn);
         grow.text = Translator.TicksToTime(stats.TicksToFullMate);
-        children.text = $"{stats.minChildren}-{stats.maxChildren}";
+        children.text = stats.minChildren == stats.maxChildren ? $"{stats.minChildren}" : $"{stats.minChildren}-{stats.maxChildren}";
     }
 }

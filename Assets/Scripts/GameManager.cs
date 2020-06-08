@@ -33,7 +33,7 @@ public class GameManager : Technet99m.Singleton<GameManager>
         }
         else
         {
-            DataManager.Money = 1000;
+            DataManager.Money = 5000;
             BuyNewCage("Forest");
         }
         RefreshUI();
@@ -42,13 +42,23 @@ public class GameManager : Technet99m.Singleton<GameManager>
     {
         Technet99m.TickingMachine.EveryTick += RefreshUI;
     }
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            loadManager.SaveGame();
+            Application.Quit();
+        }
+    }
     private void OnDisable()
     {
         Technet99m.TickingMachine.EveryTick -= RefreshUI;
     }
-    private void OnApplicationQuit()
+   
+    private void OnApplicationPause(bool pause)
     {
-        loadManager.SaveGame();
+        if (pause)
+            loadManager.SaveGame();
     }
     public void RefreshUI()
     {

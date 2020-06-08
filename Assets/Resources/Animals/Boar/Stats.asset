@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Stats
   m_EditorClassIdentifier: 
   kind: Boar
-  price: 15
-  TicksToFullMate: 19
-  TicksToBorn: 25
-  minChildren: 0
-  maxChildren: 2
-  foods: 0000000002000000
-  specials: 0300000001000000
+  price: 600
+  TicksToFullMate: 90
+  TicksToBorn: 120
+  minChildren: 1
+  maxChildren: 1
+  foods: 000000000200000004000000
+  specials: 0300000004000000

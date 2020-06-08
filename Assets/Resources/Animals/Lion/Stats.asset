@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Stats
   m_EditorClassIdentifier: 
   kind: Lion
-  price: 100
-  TicksToFullMate: 30
-  TicksToBorn: 10000
-  minChildren: 2
-  maxChildren: 4
+  price: 5000
+  TicksToFullMate: 180
+  TicksToBorn: 270
+  minChildren: 1
+  maxChildren: 2
   foods: 0000000001000000
-  specials: 000000000300000004000000
+  specials: 010000000300000005000000

@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Stats
   m_EditorClassIdentifier: 
   kind: Fox
-  price: 25
-  TicksToFullMate: 39
-  TicksToBorn: 56
+  price: 500
+  TicksToFullMate: 60
+  TicksToBorn: 90
   minChildren: 1
   maxChildren: 2
   foods: 0000000001000000

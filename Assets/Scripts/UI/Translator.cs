@@ -104,7 +104,16 @@ public class Translator : Technet99m.Singleton<Translator>
                             text += "Where I can run?\n";
                             break;
                         case Special.swim:
-                            text += "It's time to stop\n";
+                            text += "Cam you get me a pool?\n";
+                            break;
+                        case Special.mud:
+                            text += "I'm too clean to be happy\n";
+                            break;
+                        case Special.scratch:
+                            text += "My back is itchy\n";
+                            break;
+                        case Special.sleep:
+                            text += "I'm tired of this\n";
                             break;
                     }
                     break;

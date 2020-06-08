@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Stats
   m_EditorClassIdentifier: 
   kind: Elephant
-  price: 100
-  TicksToFullMate: 45
-  TicksToBorn: 45
+  price: 2500
+  TicksToFullMate: 170
+  TicksToBorn: 240
   minChildren: 1
   maxChildren: 1
   foods: 0000000002000000
-  specials: 
+  specials: 0400000002000000

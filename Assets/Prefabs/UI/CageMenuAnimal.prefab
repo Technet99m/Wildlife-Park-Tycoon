@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6980816466328389357}
   - component: {fileID: 8096535613389183285}
   - component: {fileID: 6766286420071668761}
+  - component: {fileID: 1117678008429252775}
   m_Layer: 5
   m_Name: Price
   m_TagString: Untagged
@@ -25,17 +26,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 98123471598973040}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 3622467246195464046}
   m_Father: {fileID: 6463826568709968730}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 93.7, y: 41}
-  m_SizeDelta: {x: 111.10724, y: 63.928223}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -21.3, y: -1}
+  m_SizeDelta: {x: 0, y: 63.928223}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8096535613389183285
 CanvasRenderer:
@@ -66,18 +68,32 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 132c277c368226049a420fe45b160b18, type: 3}
-    m_FontSize: 52
+    m_FontSize: 42
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 57
-    m_Alignment: 3
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 100
+  m_Text: 7
+--- !u!114 &1117678008429252775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 98123471598973040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalFit: 2
+  m_VerticalFit: 0
 --- !u!1 &785053470112765372
 GameObject:
   m_ObjectHideFlags: 0
@@ -644,7 +660,6 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 3622467246195464046}
   - {fileID: 6980816466328389357}
   m_Father: {fileID: 1011573639478492841}
   m_RootOrder: 5
@@ -832,12 +847,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 6463826568709968730}
+  m_Father: {fileID: 6980816466328389357}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 149.8, y: 41}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: 22.3, y: 0}
   m_SizeDelta: {x: 44, y: 48}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1970828155235529625

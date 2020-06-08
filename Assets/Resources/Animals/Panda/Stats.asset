@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Stats
   m_EditorClassIdentifier: 
   kind: Panda
-  price: 20
-  TicksToFullMate: 20
-  TicksToBorn: 20
+  price: 15000
+  TicksToFullMate: 180
+  TicksToBorn: 300
   minChildren: 1
   maxChildren: 1
   foods: 0000000002000000
-  specials: 0500000004000000
+  specials: 0500000003000000

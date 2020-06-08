@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Stats
   m_EditorClassIdentifier: 
   kind: White Bear
-  price: 20
-  TicksToFullMate: 10
-  TicksToBorn: 10
+  price: 1000
+  TicksToFullMate: 120
+  TicksToBorn: 180
   minChildren: 1
   maxChildren: 1
-  foods: 0000000001000000
-  specials: 0300000001000000
+  foods: 000000000100000003000000
+  specials: 0300000005000000

@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Stats
   m_EditorClassIdentifier: 
   kind: SeaCow
-  price: 25
-  TicksToFullMate: 20
-  TicksToBorn: 20
+  price: 1000
+  TicksToFullMate: 120
+  TicksToBorn: 180
   minChildren: 1
   maxChildren: 1
   foods: 0300000000000000
-  specials: 0300000002000000
+  specials: 02000000

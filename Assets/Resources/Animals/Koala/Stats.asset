@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Stats
   m_EditorClassIdentifier: 
   kind: Koala
-  price: 20
-  TicksToFullMate: 20
-  TicksToBorn: 20
+  price: 1000
+  TicksToFullMate: 120
+  TicksToBorn: 180
   minChildren: 1
   maxChildren: 1
   foods: 0000000002000000
-  specials: 0300000005000000
+  specials: 03000000

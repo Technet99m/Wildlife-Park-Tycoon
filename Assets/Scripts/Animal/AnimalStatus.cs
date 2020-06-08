@@ -56,13 +56,13 @@ public class AnimalStatus : MonoBehaviour
         foreach (var food in stats.foods)
         {
             data.foods[(int)food] -= 0.01f;
-            if (data.foods[(int)food] < 0.3f && needs.Find((x) => x.type == NeedType.Food && x.food == food) == null)
+            if (data.foods[(int)food] < 0 && needs.Find((x) => x.type == NeedType.Food && x.food == food) == null)
                 needs.Add(new Need() { type = NeedType.Food, food = food });
         }
         foreach (var spec in stats.specials)
         {
             data.specials[(int)spec] -= 0.01f;
-            if (data.specials[(int)spec] < 0.3f && needs.Find((x) => x.type == NeedType.Special && x.special == spec) == null)
+            if (data.specials[(int)spec] < 0 && needs.Find((x) => x.type == NeedType.Special && x.special == spec) == null)
                 needs.Add(new Need() { type = NeedType.Special, special = spec });
         }
         data.happiness = 1;
@@ -81,7 +81,7 @@ public class AnimalStatus : MonoBehaviour
             }
         if (data.happiness >= 0.51)
         {
-            if (data.age > 1)
+            if (data.age > 1 && !data.pregnant)
                 data.sexualActivity += (data.happiness - 0.5f) * 2f / stats.TicksToFullMate;
             else if(!data.pregnant)
                 data.age += (data.happiness - 0.5f) * 2f / stats.TicksToFullMate;

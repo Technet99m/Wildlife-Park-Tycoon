@@ -869,22 +869,22 @@ MonoBehaviour:
     pregnancy: 0
     sexualActivity: 0
     age: 1
-    happiness: 0.75
+    happiness: 1
     foods:
-    - 0.5
-    - 0.5
-    - 0.5
-    - 0.5
-    - 0.5
-    - 0.5
+    - 0.1
+    - 0.1
+    - 0.1
+    - 0.1
+    - 0.1
+    - 0.1
     specials:
-    - 1
-    - 1
-    - 1
-    - 1
-    - 1
-    - 1
-    - 1
+    - 0.2
+    - 0.2
+    - 0.2
+    - 0.2
+    - 0.2
+    - 0.2
+    - 0.2
   stats: {fileID: 11400000, guid: 4e6b316cd50a6cd4185a7355fe1cebe9, type: 2}
 --- !u!114 &4162523600852682272
 MonoBehaviour:

@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Stats
   m_EditorClassIdentifier: 
   kind: Tiger
-  price: 20
-  TicksToFullMate: 20
-  TicksToBorn: 20
+  price: 1000
+  TicksToFullMate: 120
+  TicksToBorn: 180
   minChildren: 1
-  maxChildren: 1
+  maxChildren: 2
   foods: 0000000001000000
   specials: 0000000003000000

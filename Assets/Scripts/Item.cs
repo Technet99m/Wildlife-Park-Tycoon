@@ -11,6 +11,7 @@ public class Item : MonoBehaviour,IBeginDragHandler,IDragHandler,IEndDragHandler
     [SerializeField]  protected bool[] areBusy;
     [SerializeField] Shader normal, tint;
 
+    public int price;
     private Material mat;
     void Awake()
     {
@@ -58,6 +59,7 @@ public class Item : MonoBehaviour,IBeginDragHandler,IDragHandler,IEndDragHandler
     private bool holding;
     private float holdDelay = 1f;
     private float delay;
+    private Vector3 lastPosition;
     private void Update()
     {
         if (holding)
@@ -67,7 +69,9 @@ public class Item : MonoBehaviour,IBeginDragHandler,IDragHandler,IEndDragHandler
             delay = 0;
             UIManager.Ins.movePanel.movePressed += EditPosition;
             UIManager.Ins.movePanel.removePressed += ()=> 
-            { 
+            {
+                GameManager.Ins.activeCage.Leave(placedSize, walkingSize, transform.position);
+                GameManager.Ins.activeCage.items.Remove(this);
                 Destroy(gameObject);
                 UIManager.Ins.movePanel.gameObject.SetActive(false);
             };
@@ -75,6 +79,7 @@ public class Item : MonoBehaviour,IBeginDragHandler,IDragHandler,IEndDragHandler
             {
                 UIManager.Ins.movePanel.refillBtn.SetActive(true);
                 UIManager.Ins.movePanel.refillPressed += (this as Feeder).Refill;
+                UIManager.Ins.movePanel.refillCost.text = price.ToString();
             }
             UIManager.Ins.movePanel.gameObject.SetActive(true);
             UIManager.Ins.movePanel.SetPosition(Utils.WorldToScreenPoint(transform.position));
@@ -120,18 +125,30 @@ public class Item : MonoBehaviour,IBeginDragHandler,IDragHandler,IEndDragHandler
     {
         if (placed)
             holding = false;
+        delay = 0;
     }
     public void Discard()
     {
-        if(!placed)
+        if (transform.parent!=GameManager.Ins.activeCage.transform)
+        {
+            DataManager.AddMoney(price);
             Destroy(gameObject);
+        }
+        else
+        {
+            transform.position = lastPosition;
+            Place();
+        }
+
     }
     public void EditPosition()
     {
         placed = false;
         mat.shader = tint;
         mat.SetColor("_TintColor",Color.white);
+        lastPosition = transform.position;
         UIManager.Ins.movePanel.gameObject.SetActive(false);
+        GameManager.Ins.activeCage.items.Remove(this);
         GameManager.Ins.activeCage.Leave(placedSize, walkingSize, transform.position);
     }
     public virtual void Place()
