@@ -103,7 +103,7 @@ public class AnimalStatus : MonoBehaviour
             if (transform.parent.GetComponent<Cage>().animals.Count == 15)
             {
                 DataManager.AddMoney(stats.price);
-                break;
+                continue;
             }
             AnimalDataHolder child = AnimalFactory.NewAnimalOfKind(stats.kind, transform.parent).GetComponent<AnimalDataHolder>();
             child.transform.position = transform.position;
