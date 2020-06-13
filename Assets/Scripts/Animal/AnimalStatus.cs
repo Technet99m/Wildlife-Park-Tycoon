@@ -100,7 +100,7 @@ public class AnimalStatus : MonoBehaviour
     {
         for (int i = 0, tmp = Random.Range(stats.minChildren, stats.maxChildren + 1); i < tmp; i++)
         {
-            if (transform.parent.GetComponent<Cage>().animals.Count == 15)
+            if (!transform.parent.GetComponent<Cage>().hasSpace)
             {
                 DataManager.AddMoney(stats.price);
                 continue;

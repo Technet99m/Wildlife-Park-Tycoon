@@ -16,11 +16,13 @@ public class Feeder : Item
 
     private int maxCapacity = 20;
 
-    private void Start()
+    protected new void Start()
     {
         if(capacity == -1)
             capacity = maxCapacity;
+        base.Start();
     }
+
     public override void Empty(Vector2 pos)
     {
         capacity--;

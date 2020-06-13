@@ -15,7 +15,7 @@ public class BuyAnimalController : MonoBehaviour
     }
     private Animal BuyAnimal()
     {
-        if (DataManager.TryAndBuyForMoney(Translator.KindToPrice(GameManager.Ins.activeCage.KindInCage)))
+        if (DataManager.TryAndBuyForMoney(Translator.KindToPrice(GameManager.Ins.activeCage.KindInCage))&& GameManager.Ins.activeCage.hasSpace)
             return AnimalFactory.NewAnimalOfKind(GameManager.Ins.activeCage.KindInCage, GameManager.Ins.activeCage.transform);
         else
             return null;

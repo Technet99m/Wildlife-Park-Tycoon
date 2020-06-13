@@ -80,7 +80,6 @@ public class LoadManager : MonoBehaviour
         }
     }
 
-
     [SerializeField]
     private Feeder[] feeders;
     [SerializeField]

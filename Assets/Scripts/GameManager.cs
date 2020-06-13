@@ -48,7 +48,7 @@ public class GameManager : Technet99m.Singleton<GameManager>
     }
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
+         if(Input.GetKeyDown(KeyCode.Escape))
         {
             loadManager.SaveGame();
             Application.Quit();
@@ -69,6 +69,7 @@ public class GameManager : Technet99m.Singleton<GameManager>
         if (activeCage.animals.Count > 0)
         {
             buyToggle.SetTrigger("toggle");
+            buyToggle.SetBool("hide", false);
             buyToggle.GetComponentInChildren<Text>().text = Translator.CurrencyToString(activeCage.animals[0].stats.price);
         }
         else
@@ -92,6 +93,7 @@ public class GameManager : Technet99m.Singleton<GameManager>
     }
     public void ToCage(int index)
     {
+        buyToggle.SetBool("hide", true);
         cageIcons.GetChild(currentCageIndex).localScale = Vector3.one * 0.8f;
         currentCageIndex = index;
         cageIcons.GetChild(currentCageIndex).localScale = Vector3.one;

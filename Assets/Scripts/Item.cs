@@ -13,19 +13,30 @@ public class Item : MonoBehaviour,IBeginDragHandler,IDragHandler,IEndDragHandler
 
     public int price;
     private Material mat;
-    void Awake()
+
+    private void Awake()
     {
         areBusy = new bool[actionPoints.Length];
         mat = new Material(normal);
         GetComponent<SpriteRenderer>().material = mat;
-        for(int i = 0;i<transform.childCount;i++)
+        for (int i = 0; i < transform.childCount; i++)
         {
             var sp = transform.GetChild(i).GetComponent<SpriteRenderer>();
             if (sp != null)
                 sp.material = mat;
         }
+    }
+    protected void Start()
+    {
         if (!placed)
+        {
             mat.shader = tint;
+            if (GameManager.Ins.activeCage.CanPlace(placedSize, transform.position))
+                mat.SetColor("_TintColor", Color.green);
+            else
+                mat.SetColor("_TintColor", Color.red);
+            OnEndDrag(null);
+        }
     }
     public Transform GetFree()
     {
@@ -57,7 +68,7 @@ public class Item : MonoBehaviour,IBeginDragHandler,IDragHandler,IEndDragHandler
     
     public bool placed;
     private bool holding;
-    private float holdDelay = 1f;
+    private float holdDelay = 0.2f;
     private float delay;
     private Vector3 lastPosition;
     private void Update()
@@ -87,8 +98,12 @@ public class Item : MonoBehaviour,IBeginDragHandler,IDragHandler,IEndDragHandler
     }
     public void OnBeginDrag(PointerEventData eventData)
     {
-        if(!placed)
+        if (!placed)
+        {
             UIManager.Ins.setPanel.gameObject.SetActive(false);
+            UIManager.Ins.setPanel.okPressed -= Place;
+            UIManager.Ins.setPanel.cancelPressed -= Discard;
+        }
     }
     public void OnDrag(PointerEventData eventData)
     {
@@ -108,8 +123,14 @@ public class Item : MonoBehaviour,IBeginDragHandler,IDragHandler,IEndDragHandler
     }
     public void OnEndDrag(PointerEventData eventData)
     {
-        if (!placed && GameManager.Ins.activeCage.CanPlace(placedSize, transform.position))
+        if (!placed)
         {
+            if (GameManager.Ins.activeCage.CanPlace(placedSize, transform.position))
+            {
+                UIManager.Ins.setPanel.ok.gameObject.SetActive(true);
+            }
+            else
+                UIManager.Ins.setPanel.ok.gameObject.SetActive(false);
             UIManager.Ins.setPanel.okPressed += Place;
             UIManager.Ins.setPanel.cancelPressed += Discard;
             UIManager.Ins.setPanel.gameObject.SetActive(true);
