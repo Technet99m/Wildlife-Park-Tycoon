@@ -32,11 +32,13 @@ public class GameManager : Technet99m.Singleton<GameManager>
         base.Awake();
         if (PlayerPrefs.HasKey("save"))
         {
+            StateMachine.state = State.Loading;
             loadManager.LoadGame();
             ToCage(0);
         }
         else
         {
+            StateMachine.state = State.Game;
             DataManager.Money = 1000;
             BuyNewCage("Forest");
         }
@@ -77,6 +79,8 @@ public class GameManager : Technet99m.Singleton<GameManager>
     }
     public void RefreshUI()
     {
+        if (StateMachine.state == State.Loading)
+            return;
         cageCapacity.text = $"{activeCage.animals.Count}/{15}";
         cageName.text = activeCage.Name;
         foreach (var text in cageCosts)

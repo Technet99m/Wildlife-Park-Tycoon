@@ -14,7 +14,7 @@ public class Feeder : Item
 
     public int capacity = -1;
 
-    private int maxCapacity = 20;
+    private int maxCapacity = 200;
 
     protected new void Start()
     {

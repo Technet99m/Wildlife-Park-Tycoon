@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -128,6 +129,7 @@ public class LoadManager : MonoBehaviour
                 a.data.foods = animal.data.foods;
                 a.data.specials = animal.data.specials;
                 a.transform.position = tmp.GetFreeTileInGrid();
+                a.GetComponent<AnimalStatus>().Initialize();
             }
 
             if(tmp.animals.Count>0)
@@ -136,9 +138,11 @@ public class LoadManager : MonoBehaviour
             }
             
         }
+        StartCoroutine(CalculateTimeChanges());
     }
     public void SaveGame()
     {
+        PlayerPrefs.SetString("time", (Clock.delta + System.DateTime.Now.Ticks).ToString());
         List<CageSaveData> cages = new List<CageSaveData>();
         foreach (var cage in GameManager.Ins.cages)
             cages.Add(new CageSaveData(cage));
@@ -150,5 +154,25 @@ public class LoadManager : MonoBehaviour
     {
         PlayerPrefs.DeleteAll();
         UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+    }
+
+    private IEnumerator CalculateTimeChanges()
+    {
+        yield return Clock.GetTime();
+        long old = long.Parse(PlayerPrefs.GetString("time","0"));
+        if (old < 1000)
+            yield break;
+        long now = DateTime.Now.Ticks + Clock.delta;
+        int secondsElapsed = (int)((now - old) / 10000000);
+        secondsElapsed =60*120;
+        long start = DateTime.Now.Ticks / 10000;
+        Debug.Log("Time to calculate: "+ Translator.TicksToTime(secondsElapsed));
+
+        for (int i = 0;i<secondsElapsed;i++)
+        {
+            Technet99m.TickingMachine.OneMoreTick();
+        }
+        StateMachine.state = State.Game;
+        Debug.Log("Elapsed: "+ (DateTime.Now.Ticks / 10000 - start).ToString()+"ms");
     }
 }

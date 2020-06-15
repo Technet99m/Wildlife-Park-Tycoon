@@ -27,7 +27,6 @@ public class TransformFlip : MonoBehaviour
         while(target.localScale!=destination)
         {
             target.localScale = Vector3.MoveTowards(target.localScale, destination, Vector3.Distance(start, destination)/frameLength);
-            Debug.Log("flip");
             yield return null;
         }
     }

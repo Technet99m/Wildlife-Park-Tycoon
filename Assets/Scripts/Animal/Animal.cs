@@ -38,6 +38,7 @@ public class Animal : MonoBehaviour
         movement.TargetReached += OnTargetReached;
         data = GetComponent<AnimalDataHolder>().data;
         stats = GetComponent<AnimalDataHolder>().stats;
+        GetComponent<AnimalStatus>().Initialize();
         selected = null;
     }
     public void Mate()
@@ -52,20 +53,25 @@ public class Animal : MonoBehaviour
     {
         target = null;
         isBusy = false;
-        anim.Idle();
         GetComponent<AnimalStatus>().Done(selected);
+        if (StateMachine.state == State.Loading)
+            return;
         Free?.Invoke(this);
+        anim.Idle();
     }
     public void GoMate()
     {
         selected = needs.Find((x) => x.type == NeedType.Sex);
+        if (selected == null)
+            selected = new Need() { type = NeedType.Sex };
+        if (StateMachine.state == State.Loading)
+            return;
         movement.SetNewTarget(cage.GetPlaceToMate());
         Debug.Log("Going Mate");
         isBusy = true;
     }
     public void OnMateFree(Animal sender)
     {
-        mate = sender;
         mate.GoMate();
         mate.ReachedMatePos += OnMateReached;
     }
@@ -95,6 +101,13 @@ public class Animal : MonoBehaviour
                         target = cage.GetProperFeeder(needs[i].food);
                         if (target != null)
                         {
+                            if (StateMachine.state == State.Loading)
+                            {
+                                selected = needs[i];
+                                isBusy = true;
+                                FinishNeed();
+                                return;
+                            }
                             var tmp = target.GetFree();
                             if (tmp != null)
                             {
@@ -109,6 +122,13 @@ public class Animal : MonoBehaviour
                         target = cage.GetProperSpecial(needs[i].special);
                         if (target != null)
                         {
+                            if (StateMachine.state == State.Loading)
+                            {
+                                selected = needs[i];
+                                isBusy = true;
+                                FinishNeed();
+                                return;
+                            }
                             var tmp = target.GetFree();
                             if (tmp != null)
                             {
@@ -122,13 +142,23 @@ public class Animal : MonoBehaviour
                     case NeedType.Sex:
                         if (data.male)
                         {
-                            var mate = cage.GetProperMate();
+                            mate = cage.GetProperMate();
                             if (mate != null)
                             {
                                 selected = needs[i];
+                                isBusy = true;
+                                if (StateMachine.state == State.Loading)
+                                {
+
+                                    mate.GoMate();
+                                    mate.FinishNeed();
+                                    FinishNeed();
+                                    
+                                    return;
+                                }
                                 mate.Free += OnMateFree;
                                 movement.Stop();
-                                isBusy = true;
+                                
                                 dealed = true;
                                 if (!mate.isBusy)
                                     OnMateFree(mate);
@@ -141,6 +171,8 @@ public class Animal : MonoBehaviour
 
             }
         }
+        if (StateMachine.state == State.Loading)
+            return;
         if (!isBusy && !movement.isWalking)
             Technet99m.Utils.InvokeAfterDelay(() =>
             {

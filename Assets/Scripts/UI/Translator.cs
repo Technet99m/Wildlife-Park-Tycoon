@@ -57,7 +57,7 @@ public class Translator : Technet99m.Singleton<Translator>
         else
         {
             var thousands = amount%1000000 / 1000;
-                return $"{amount/1000000},{thousands.ToString("D3")}K";
+                return $"{amount/1000000}M {thousands.ToString("D3")}K";
         }
     }
     public static int KindToPrice(string kind)

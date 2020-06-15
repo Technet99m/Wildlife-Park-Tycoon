@@ -6,11 +6,16 @@ namespace Technet99m
 {
     public class FunctionsInvoker
     {
-        static GameObject globalGO;
-        static List<DelayAction> actionsWithDelay;
-        static List<UpdateAction> updateActions;
+        private static GameObject globalGO;
+        private static List<DelayAction> actionsWithDelay;
+        private static List<UpdateAction> updateActions;
+        private static List<TickAction> tickActions;
         private class GlobalTimer:MonoBehaviour
         {
+            private void Awake()
+            {
+                TickingMachine.EveryTick += CheckTickActions;
+            }
             private void Update()
             {
                 for(int i = 0;i< actionsWithDelay.Count;i++)
@@ -18,9 +23,19 @@ namespace Technet99m
                     actionsWithDelay[i].timer -= actionsWithDelay[i].useUnscaledTime ? Time.unscaledDeltaTime : Time.deltaTime;
                     if (actionsWithDelay[i].timer < 0)
                     {
-                        actionsWithDelay[i].action();
-                        actionsWithDelay.RemoveAt(i);
-                        i--;
+                        try
+                        {
+                            actionsWithDelay[i].action();
+                        }
+                        catch (System.Exception e)
+                        {
+                            Debug.LogError(e.Message);
+                        }
+                        finally
+                        {
+                            actionsWithDelay.RemoveAt(i);
+                            i--;
+                        }
                     }
                 }
                 for(int i = 0; i< updateActions.Count;i++)
@@ -29,6 +44,29 @@ namespace Technet99m
                     {
                         updateActions.RemoveAt(i);
                         i--;
+                    }
+                }
+            }
+            private void CheckTickActions()
+            {
+                for (int i = 0; i < tickActions.Count; i++)
+                {
+                    tickActions[i].ticks--;
+                    if (tickActions[i].ticks <= 0)
+                    {
+                        try
+                        {
+                            tickActions[i].action();
+                        }
+                        catch(System.Exception e)
+                        {
+                            Debug.LogError(e.Message);
+                        }
+                        finally
+                        {
+                            tickActions.RemoveAt(i);
+                            i--;
+                        }
                     }
                 }
             }
@@ -43,6 +81,11 @@ namespace Technet99m
         {
             public System.Func<bool> action;
         }
+        private class TickAction
+        {
+            public int ticks;
+            public System.Action action;
+        }
         static void InitIfNeed()
         {
             if (globalGO == null)
@@ -50,6 +93,7 @@ namespace Technet99m
                 globalGO = new GameObject("GlobalTimer", typeof(GlobalTimer));
                 actionsWithDelay = new List<DelayAction>();
                 updateActions = new List<UpdateAction>();
+                tickActions = new List<TickAction>();
             }
         }
         public static void AddActionWithDelay(System.Action action, float time, bool useUnscaledTime)
@@ -61,6 +105,11 @@ namespace Technet99m
         {
             InitIfNeed();
             updateActions.Add(new UpdateAction() { action = action });
+        }
+        public static void AddTickAction(System.Action action, int ticks)
+        {
+            InitIfNeed();
+            tickActions.Add(new TickAction() { ticks = ticks, action = action });
         }
     }
     

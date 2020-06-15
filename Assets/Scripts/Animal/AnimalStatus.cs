@@ -16,7 +16,12 @@ public class AnimalStatus : MonoBehaviour
     {
         Technet99m.TickingMachine.EveryTick += OnTick;
     }
-    private void Start()
+    
+    private void OnDisable()
+    {
+        Technet99m.TickingMachine.EveryTick -= OnTick;
+    }
+    public void Initialize()
     {
         data = GetComponent<AnimalDataHolder>().data;
         stats = GetComponent<AnimalDataHolder>().stats;
@@ -24,12 +29,21 @@ public class AnimalStatus : MonoBehaviour
 
         if (data.age < 1)
             body.localScale = new Vector3(0.7f, 0.7f, 1);
+        if(data.sexualActivity<-0.1f)
+        {
+            needs.Add(new Need() { type = NeedType.Sex });
+        }
+        foreach (var food in stats.foods)
+        {
+            if (data.foods[(int)food] < -1f)
+                needs.Add(new Need() { type = NeedType.Food, food = food });
+        }
+        foreach (var spec in stats.specials)
+        {
+            if (data.specials[(int)spec] < -1f)
+                needs.Add(new Need() { type = NeedType.Special, special = spec });
+        }
     }
-    private void OnDisable()
-    {
-        Technet99m.TickingMachine.EveryTick -= OnTick;
-    }
-
     public void Done(Need need)
     {
         needs.Remove(need);
@@ -42,6 +56,7 @@ public class AnimalStatus : MonoBehaviour
                 data.specials[(int)need.special] = 1;
                 break;
             case NeedType.Sex:
+                data.sexualActivity = 0;
                 if (!data.male) Pregnant();
                 break;
         }
@@ -53,17 +68,35 @@ public class AnimalStatus : MonoBehaviour
     }
     private void OnTick()
     {
+        if (StateMachine.state == State.Game)
+            RecalculateStatus();
+        else if (Technet99m.TickingMachine.ticks % 5 == 0)
+            RecalculateStatusLoading();
+    }
+
+    private void RecalculateStatus()
+    {
         foreach (var food in stats.foods)
         {
+            if (data.foods[(int)food] < -1f)
+                continue;
             data.foods[(int)food] -= 0.01f;
-            if (data.foods[(int)food] < 0 && needs.Find((x) => x.type == NeedType.Food && x.food == food) == null)
+            if (data.foods[(int)food] < 0)
+            {
                 needs.Add(new Need() { type = NeedType.Food, food = food });
+                data.foods[(int)food] = -1.1f;
+            }
         }
         foreach (var spec in stats.specials)
         {
+            if (data.specials[(int)spec] < -1f)
+                continue;
             data.specials[(int)spec] -= 0.01f;
-            if (data.specials[(int)spec] < 0 && needs.Find((x) => x.type == NeedType.Special && x.special == spec) == null)
+            if (data.specials[(int)spec] < 0)
+            {
                 needs.Add(new Need() { type = NeedType.Special, special = spec });
+                data.specials[(int)spec] = -1.1f;
+            }
         }
         data.happiness = 1;
         foreach (var need in needs)
@@ -81,9 +114,9 @@ public class AnimalStatus : MonoBehaviour
             }
         if (data.happiness >= 0.51)
         {
-            if (data.age > 1 && !data.pregnant)
+            if (data.age > 1 && !data.pregnant && data.sexualActivity > -0.1f)
                 data.sexualActivity += (data.happiness - 0.5f) * 2f / stats.TicksToFullMate;
-            else if(!data.pregnant)
+            else if (!data.pregnant)
                 data.age += (data.happiness - 0.5f) * 2f / stats.TicksToFullMate;
             else
                 data.pregnancy += (data.happiness - 0.5f) * 2f / stats.TicksToBorn;
@@ -91,10 +124,77 @@ public class AnimalStatus : MonoBehaviour
         if (data.pregnant && data.pregnancy > 1)
             Born();
         if (data.age > 1 && !data.adult)
+        {
+            data.adult = true;
             StartCoroutine(Adult());
-        if (data.sexualActivity > 1 && needs.Find((x) => x.type == NeedType.Sex) == null)
+        }
+        if (data.sexualActivity > 1)
+        {
             needs.Add(new Need() { type = NeedType.Sex });
+            data.sexualActivity = -1;
+        }
         mood.sprite = Translator.Happiness(data.happiness);
+    }
+
+    private void RecalculateStatusLoading()
+    {
+        foreach (var food in stats.foods)
+        {
+            if (data.foods[(int)food] < -1f)
+                continue;
+            data.foods[(int)food] -= 0.05f;
+            if (data.foods[(int)food] < 0)
+            {
+                needs.Add(new Need() { type = NeedType.Food, food = food });
+                data.foods[(int)food] = -1.1f;
+            }
+        }
+        foreach (var spec in stats.specials)
+        {
+            if (data.specials[(int)spec] < -1f)
+                continue;
+            data.specials[(int)spec] -= 0.05f;
+            if (data.specials[(int)spec] < 0)
+            {
+                needs.Add(new Need() { type = NeedType.Special, special = spec });
+                data.specials[(int)spec] = -1.1f;
+            }
+        }
+        data.happiness = 1;
+        foreach (var need in needs)
+            switch (need.type)
+            {
+                case NeedType.Food:
+                    data.happiness -= 0.5f / stats.foods.Length;
+                    break;
+                case NeedType.Special:
+                    data.happiness -= 0.4f / stats.specials.Length;
+                    break;
+                case NeedType.Sex:
+                    data.happiness -= 0.1f;
+                    break;
+            }
+        if (data.happiness >= 0.51)
+        {
+            if (data.age > 1 && !data.pregnant && data.sexualActivity > -0.1f)
+                data.sexualActivity += ((data.happiness - 0.5f) * 2f / stats.TicksToFullMate) * 5;
+            else if (!data.pregnant)
+                data.age += ((data.happiness - 0.5f) * 2f / stats.TicksToFullMate) *5;
+            else
+                data.pregnancy += ((data.happiness - 0.5f) * 2f / stats.TicksToBorn) * 5;
+        }
+        if (data.pregnant && data.pregnancy > 1)
+            Born();
+        if (data.age > 1 && !data.adult)
+        {
+            data.adult = true;
+            body.localScale=Vector3.one;
+        }
+        if (data.sexualActivity > 1)
+        {
+            needs.Add(new Need() { type = NeedType.Sex });
+            data.sexualActivity = -1;
+        }
     }
     private void Born()
     {
@@ -120,7 +220,6 @@ public class AnimalStatus : MonoBehaviour
     }
     private IEnumerator Adult()
     {
-        data.adult = true;
         while (body.localScale != Vector3.one)
         {
             body.localScale = Vector3.MoveTowards(body.localScale, Vector3.one, Time.deltaTime);

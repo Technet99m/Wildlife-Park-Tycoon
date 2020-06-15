@@ -7,15 +7,16 @@ namespace Technet99m
     public class TickingMachine : MonoBehaviour
     {
         public static ulong ticks;
-        [SerializeField] float tickTime;
         public static event System.Action EveryTick;
         public static event System.Action TenthTick;
-        float time;
-        void Start()
+
+        [SerializeField] float tickTime;
+        private float time;
+        private void Start()
         {
             time = 0;
         }
-        void Update()
+        private void Update()
         {
             time += Time.deltaTime;
             if(time>tickTime)
@@ -24,7 +25,7 @@ namespace Technet99m
                 OneMoreTick();
             }
         }
-        void OneMoreTick()
+        public static void OneMoreTick()
         {
             ticks++;
             EveryTick?.Invoke();

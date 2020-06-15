@@ -67,5 +67,14 @@ namespace Technet99m
         {
             FunctionsInvoker.AddUpdateAction(action);
         }
-}
+        /// <summary>
+        /// Performs action after ticks
+        /// </summary>
+        /// <param name="action">action to be performed</param>
+        /// <param name="ticks">delay in ticks</param>
+        public static void AddTickAction(System.Action action, int ticks)
+        {
+            FunctionsInvoker.AddTickAction(action,ticks);
+        }
+    }
 }
