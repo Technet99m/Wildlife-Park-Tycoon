@@ -1,73 +1,28 @@
 fileFormatVersion: 2
-guid: ff6c640aaf5f30d4aaa9c3df4f5ce0df
+guid: e46388b2117cc1b40a718c53a11b2571
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3232124859224418470
-    second: BackgroundBuyBtn
+      213: 3046715801716762913
+    second: LabUIsheet_0
   - first:
-      213: 4419181571386793453
-    second: BuyAnimalBtn
+      213: 137780292381880496
+    second: LabUIsheet_1
   - first:
-      213: 4852217849942138769
-    second: coin
+      213: -8311095327283065581
+    second: LabUIsheet_2
   - first:
-      213: 450534895616192810
-    second: Attention
+      213: 7402085044138638274
+    second: LabUIsheet_3
   - first:
-      213: -3158333572240660673
-    second: shop_btn
+      213: 6150577905741566881
+    second: LabUIsheet_4
   - first:
-      213: -2900678266541716242
-    second: Female
+      213: 7273923285922479281
+    second: LabUIsheet_5
   - first:
-      213: -285295674798340679
-    second: Male
-  - first:
-      213: -5955211622448156477
-    second: TaskBtn
-  - first:
-      213: 3827176170245565632
-    second: SettingsBtn
-  - first:
-      213: -8575781138456093692
-    second: CatalogBtn
-  - first:
-      213: 546807718010670201
-    second: BackgroundBuyBtn
-  - first:
-      213: -4000826335524466856
-    second: BuyAnimalBtn
-  - first:
-      213: -1712667472209853243
-    second: coin
-  - first:
-      213: -6620379848048902135
-    second: Attention
-  - first:
-      213: 2581638940911972751
-    second: shop_btn
-  - first:
-      213: -2814113032709495371
-    second: Female
-  - first:
-      213: 6903961862033262895
-    second: Male
-  - first:
-      213: 5532346216448250314
-    second: TaskBtn
-  - first:
-      213: 5235950713443814438
-    second: SettingsBtn
-  - first:
-      213: 6118686790584875977
-    second: CatalogBtn
-  - first:
-      213: 546807718010670201
-    second: LabBTN
-  - first:
-      213: -3232124859224418470
-    second: main_screen_btns_0
+      213: -5535047721083658337
+    second: LabUIsheet_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -165,13 +120,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: LabBTN
+      name: LabUIsheet_0
       rect:
         serializedVersion: 2
-        x: 146
-        y: 3
-        width: 152
-        height: 168
+        x: 23
+        y: 246
+        width: 165
+        height: 115
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,40 +134,61 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 97cc770f8b6a69700800000000000000
-      internalID: 546807718010670201
+      spriteID: 129a5e421eb184a20800000000000000
+      internalID: 3046715801716762913
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: shop_btn
+      name: LabUIsheet_1
       rect:
         serializedVersion: 2
-        x: 302
-        y: 89
+        x: 238
+        y: 283
+        width: 146
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 73, y: 0, z: 73, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b0b878227e79e100800000000000000
+      internalID: 137780292381880496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabUIsheet_2
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 278
+        width: 87
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31d42ea75de09ac80800000000000000
+      internalID: -8311095327283065581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabUIsheet_3
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 46
         width: 157
-        height: 192
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f81bf5b40f2d3d320800000000000000
-      internalID: 2581638940911972751
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BuyAnimalBtn
-      rect:
-        serializedVersion: 2
-        x: 262
-        y: 347
-        width: 149
         height: 167
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -221,20 +197,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 85f490725a53a78c0800000000000000
-      internalID: -4000826335524466856
+      spriteID: 2cb7d15312d79b660800000000000000
+      internalID: 7402085044138638274
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: coin
+      name: LabUIsheet_4
       rect:
         serializedVersion: 2
-        x: 289
-        y: 293
-        width: 37
-        height: 40
+        x: 230
+        y: 43
+        width: 157
+        height: 167
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -242,20 +218,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c4c09412026b38e0800000000000000
-      internalID: -1712667472209853243
+      spriteID: 1a39713a40e3b5550800000000000000
+      internalID: 6150577905741566881
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attention
+      name: LabUIsheet_5
       rect:
         serializedVersion: 2
-        x: 348
-        y: 290
-        width: 46
-        height: 49
+        x: 402
+        y: 151
+        width: 89
+        height: 102
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -263,20 +239,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 90004eeba9faf14a0800000000000000
-      internalID: -6620379848048902135
+      spriteID: 1bcf9dc80ba22f460800000000000000
+      internalID: 7273923285922479281
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Female
+      name: LabUIsheet_6
       rect:
         serializedVersion: 2
-        x: 413
-        y: 405
-        width: 83
-        height: 89
+        x: 417
+        y: 26
+        width: 69
+        height: 103
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -284,113 +260,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5b5ad874b1342f8d0800000000000000
-      internalID: -2814113032709495371
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Male
-      rect:
-        serializedVersion: 2
-        x: 412
-        y: 314
-        width: 85
-        height: 91
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f2946591cbccfcf50800000000000000
-      internalID: 6903961862033262895
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TaskBtn
-      rect:
-        serializedVersion: 2
-        x: 129
-        y: 185
-        width: 151
-        height: 162
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ac1dfdd7297d6cc40800000000000000
-      internalID: 5532346216448250314
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SettingsBtn
-      rect:
-        serializedVersion: 2
-        x: 13
-        y: 221
-        width: 113
-        height: 124
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 62c8540ce65d9a840800000000000000
-      internalID: 5235950713443814438
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CatalogBtn
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 23
-        width: 144
-        height: 165
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9cbbfa4c731f9e450800000000000000
-      internalID: 6118686790584875977
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: main_screen_btns_0
-      rect:
-        serializedVersion: 2
-        x: 17
-        y: 361
-        width: 237
-        height: 137
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a571838a09f2523d0800000000000000
-      internalID: -3232124859224418470
+      spriteID: f9f19f17c6f8f23b0800000000000000
+      internalID: -5535047721083658337
       vertices: []
       indices: 
       edges: []
