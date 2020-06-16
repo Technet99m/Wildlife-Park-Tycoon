@@ -77,6 +77,9 @@ TextureImporter:
   - first:
       213: 5295351050610842086
     second: cartalog_sheet_24
+  - first:
+      213: -3373285156941042384
+    second: cartalog_sheet_25
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -429,10 +432,10 @@ TextureImporter:
       name: run
       rect:
         serializedVersion: 2
-        x: 448
-        y: 283
-        width: 65
-        height: 64
+        x: 756
+        y: 267
+        width: 128
+        height: 92
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -450,10 +453,10 @@ TextureImporter:
       name: sleep
       rect:
         serializedVersion: 2
-        x: 537
-        y: 279
-        width: 65
-        height: 64
+        x: 589
+        y: 270
+        width: 128
+        height: 92
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -471,10 +474,10 @@ TextureImporter:
       name: jump
       rect:
         serializedVersion: 2
-        x: 618
-        y: 280
-        width: 65
-        height: 64
+        x: 449
+        y: 270
+        width: 128
+        height: 91
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -492,10 +495,10 @@ TextureImporter:
       name: wallowing in the mud
       rect:
         serializedVersion: 2
-        x: 876
+        x: 912
         y: 277
-        width: 65
-        height: 64
+        width: 128
+        height: 92
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -513,10 +516,10 @@ TextureImporter:
       name: swimming
       rect:
         serializedVersion: 2
-        x: 787
-        y: 276
-        width: 65
-        height: 64
+        x: 1246
+        y: 272
+        width: 128
+        height: 92
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -534,10 +537,10 @@ TextureImporter:
       name: scratch
       rect:
         serializedVersion: 2
-        x: 703
-        y: 277
-        width: 65
-        height: 64
+        x: 1073
+        y: 269
+        width: 128
+        height: 92
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -673,6 +676,27 @@ TextureImporter:
       bones: []
       spriteID: 8fff9705a8aa45a40800000000000000
       internalID: 5356093367882743800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cartalog_sheet_24
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 29
+        width: 335
+        height: 99
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e996ac79bddc7940800000000000000
+      internalID: 5295351050610842086
       vertices: []
       indices: 
       edges: []

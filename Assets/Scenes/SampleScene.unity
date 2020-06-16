@@ -12107,7 +12107,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &453284805
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14828,7 +14828,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 2.22, y: 0.1}
-  m_SizeDelta: {x: 0, y: 41.738342}
+  m_SizeDelta: {x: 11.25, y: 41.738342}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &553994154
 MonoBehaviour:
@@ -32018,7 +32018,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -16.6, y: -27.93}
-  m_SizeDelta: {x: 0, y: 33.179077}
+  m_SizeDelta: {x: 41.25, y: 33.179077}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1149034419
 MonoBehaviour:
@@ -44133,7 +44133,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 58, y: 0}
+  m_SizeDelta: {x: 100, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1534781795
 MonoBehaviour:
@@ -50576,7 +50576,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 2.300003, y: -0.77}
-  m_SizeDelta: {x: 0, y: 41.738342}
+  m_SizeDelta: {x: 17.25, y: 41.738342}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1772316767
 MonoBehaviour:
@@ -55609,7 +55609,7 @@ GameObject:
   - component: {fileID: 1957886093}
   - component: {fileID: 1957886092}
   m_Layer: 5
-  m_Name: ExitBtn
+  m_Name: CloseBtn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -55632,7 +55632,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -75, y: -75}
-  m_SizeDelta: {x: 90, y: 100}
+  m_SizeDelta: {x: 90, y: 98.014496}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1957886092
 Animator:
@@ -55726,7 +55726,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -5658097133974937704, guid: b3cd8d64486a2a5468af45ffc7918849,
+  m_Sprite: {fileID: 5246148015264437873, guid: 71edb2c733eba2c4d80f960f6c12f29e,
     type: 3}
   m_Type: 0
   m_PreserveAspect: 1
