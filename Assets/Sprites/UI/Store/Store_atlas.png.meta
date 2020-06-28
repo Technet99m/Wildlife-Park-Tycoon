@@ -107,6 +107,12 @@ TextureImporter:
   - first:
       213: 2820958504430172913
     second: Store_atlas_11
+  - first:
+      213: -3053385585899458297
+    second: Store_atlas_13
+  - first:
+      213: 4909144785337292260
+    second: Store_atlas_14
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -472,6 +478,48 @@ TextureImporter:
       bones: []
       spriteID: d469e46b5cbae2b50800000000000000
       internalID: 6570377772035642957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Store_atlas_13
+      rect:
+        serializedVersion: 2
+        x: 2009
+        y: 1188
+        width: 112
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7013a26bcf130a5d0800000000000000
+      internalID: -3053385585899458297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Store_atlas_14
+      rect:
+        serializedVersion: 2
+        x: 1888
+        y: 1185
+        width: 112
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e59df82c29c02440800000000000000
+      internalID: 4909144785337292260
       vertices: []
       indices: 
       edges: []
