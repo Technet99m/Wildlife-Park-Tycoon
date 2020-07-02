@@ -14,10 +14,12 @@ public class LoadManager : MonoBehaviour
         public string Name;
         public List<ItemSaveData> items;
         public string biome;
+        public int stage;
 
         public CageSaveData(Cage cage)
         {
             Name = cage.Name;
+            stage = cage.stage;
             biome = cage.Biome.Name;
             animals = new List<AnimalSaveData>();
             foreach (var animal in cage.animals)
@@ -97,6 +99,7 @@ public class LoadManager : MonoBehaviour
         {
             Cage tmp = CageFactory.GetNewCage(cages[i].biome, i, true);
             tmp.Name = cages[i].Name;
+            tmp.stage = cages[i].stage;
             GameManager.Ins.cages.Add(tmp);
             GameManager.Ins.ToCage(i);
             foreach (var item in cages[i].items)
@@ -166,13 +169,13 @@ public class LoadManager : MonoBehaviour
         int secondsElapsed = (int)((now - old) / 10000000);
         secondsElapsed =60*120;
         long start = DateTime.Now.Ticks / 10000;
-        Debug.Log("Time to calculate: "+ Translator.TicksToTime(secondsElapsed));
+        //Debug.Log("Time to calculate: "+ Translator.TicksToTime(secondsElapsed));
 
-        for (int i = 0;i<secondsElapsed;i++)
-        {
-            Technet99m.TickingMachine.OneMoreTick();
-        }
+        //for (int i = 0;i<secondsElapsed;i++)
+        //{
+        //    Technet99m.TickingMachine.OneMoreTick();
+        //}
         StateMachine.state = State.Game;
-        Debug.Log("Elapsed: "+ (DateTime.Now.Ticks / 10000 - start).ToString()+"ms");
+        //Debug.Log("Elapsed: "+ (DateTime.Now.Ticks / 10000 - start).ToString()+"ms");
     }
 }

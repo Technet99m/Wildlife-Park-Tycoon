@@ -81,7 +81,7 @@ public class GameManager : Technet99m.Singleton<GameManager>
     {
         if (StateMachine.state == State.Loading)
             return;
-        cageCapacity.text = $"{activeCage.animals.Count}/{15}";
+        cageCapacity.text = $"{activeCage.animals.Count}/{activeCage.Capacity}";
         cageName.text = activeCage.Name;
         foreach (var text in cageCosts)
             text.text = Translator.CurrencyToString(CagePrice);

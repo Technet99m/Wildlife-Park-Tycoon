@@ -15,6 +15,7 @@ public class CurrencyCounter : MonoBehaviour
             DataManager.gemsChanged += Refresh;
         else
             DataManager.moneyChanged += Refresh;
+        Refresh(gems ? DataManager.Gems : DataManager.Money);
     }
     private void OnDisable()
     {

@@ -12,6 +12,7 @@ public class CageMenuController : MonoBehaviour
     [SerializeField] private Transform cageIcons;
 
     [SerializeField] private GameObject buySegment;
+    [SerializeField] private GameObject upgradeSegment;
     [SerializeField] private GameObject sellSegment;
     [SerializeField] private Transform sellContent;
     private Cage activeCage;
@@ -39,6 +40,7 @@ public class CageMenuController : MonoBehaviour
         }
         sellSegment.SetActive(true);
         buySegment.SetActive(false);
+        upgradeSegment.SetActive(activeCage.stage < 2);
         for (int i = 0; i < activeCage.animals.Count; i++)
         {
             items[i].SetUp(activeCage.animals[i]);
@@ -87,6 +89,13 @@ public class CageMenuController : MonoBehaviour
             if (item.gameObject.activeSelf)
                 item.Selected = true;
         Refresh();
+    }
+    public void UpgradeCage()
+    {
+        if (!DataManager.TryAndBuyForMoney(1000))
+            return;
+        activeCage.stage++;
+        upgradeSegment.SetActive(activeCage.stage < 2);
     }
     public void SelectChildren()
     {
