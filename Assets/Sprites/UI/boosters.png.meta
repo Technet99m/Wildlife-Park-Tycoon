@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c34e75ab168b487468029940d49805f1
+guid: c9a8baf27788a0f4a83b856257d0140d
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -19,21 +19,6 @@ TextureImporter:
     second: boosters_4
   - first:
       213: -6400297106253491047
-    second: boosters_5
-  - first:
-      213: 7527428633340920291
-    second: boosters_0
-  - first:
-      213: 7391602203679053801
-    second: boosters_1
-  - first:
-      213: -6373689047284907347
-    second: boosters_2
-  - first:
-      213: -1213926683145836799
-    second: boosters_4
-  - first:
-      213: 6746191187798807771
     second: boosters_5
   - first:
       213: -3401925015371131270
@@ -56,6 +41,9 @@ TextureImporter:
   - first:
       213: 2261215772462781139
     second: boosters_12
+  - first:
+      213: -8224198243256154494
+    second: boosters_13
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -156,19 +144,19 @@ TextureImporter:
       name: boosters_0
       rect:
         serializedVersion: 2
-        x: 49
-        y: 302
-        width: 304
-        height: 240
+        x: 67
+        y: 384
+        width: 187
+        height: 59
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3e1c362c57cc67860800000000000000
-      internalID: 7527428633340920291
+      spriteID: 6bce864f64f570790800000000000000
+      internalID: -7563972290792592202
       vertices: []
       indices: 
       edges: []
@@ -177,19 +165,19 @@ TextureImporter:
       name: boosters_1
       rect:
         serializedVersion: 2
-        x: 354
-        y: 398
-        width: 4
-        height: 7
+        x: 307
+        y: 290
+        width: 146
+        height: 160
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e7d847ba0f349660800000000000000
-      internalID: 7391602203679053801
+      spriteID: 19ca861adeadc1000800000000000000
+      internalID: 8122013497994385
       vertices: []
       indices: 
       edges: []
@@ -198,40 +186,19 @@ TextureImporter:
       name: boosters_2
       rect:
         serializedVersion: 2
-        x: 403
-        y: 310
-        width: 226
-        height: 194
+        x: 10
+        y: 260
+        width: 110
+        height: 96
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: da209cba49b1c87a0800000000000000
-      internalID: -6373689047284907347
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: boosters_3
-      rect:
-        serializedVersion: 2
-        x: 676
-        y: 312
-        width: 226
-        height: 194
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b6552a5304c151260800000000000000
-      internalID: 7067586252331177323
+      spriteID: c8de004a8d32c1290800000000000000
+      internalID: -7918414631452742260
       vertices: []
       indices: 
       edges: []
@@ -240,19 +207,40 @@ TextureImporter:
       name: boosters_4
       rect:
         serializedVersion: 2
-        x: 933
-        y: 323
-        width: 226
-        height: 194
+        x: 230
+        y: 265
+        width: 65
+        height: 102
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 10769b30d14472fe0800000000000000
-      internalID: -1213926683145836799
+      spriteID: b626927461c8dee20800000000000000
+      internalID: 3381512922536174187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boosters_5
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 255
+        width: 43
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 994dccc21b39d27a0800000000000000
+      internalID: -6400297106253491047
       vertices: []
       indices: 
       edges: []
@@ -261,12 +249,12 @@ TextureImporter:
       name: boosters_6
       rect:
         serializedVersion: 2
-        x: 409
-        y: 40
-        width: 132
-        height: 210
+        x: 9
+        y: 154
+        width: 110
+        height: 96
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -279,15 +267,57 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
+      name: boosters_8
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 144
+        width: 65
+        height: 103
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44d3da02093f915b0800000000000000
+      internalID: -5397014878077764284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boosters_9
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 48
+        width: 110
+        height: 95
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef9917136f22f9610800000000000000
+      internalID: 1630060030918236670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
       name: boosters_10
       rect:
         serializedVersion: 2
-        x: 791
-        y: 15
-        width: 108
-        height: 271
+        x: 153
+        y: 138
+        width: 42
+        height: 109
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -300,36 +330,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: boosters_11
-      rect:
-        serializedVersion: 2
-        x: 944
-        y: 17
-        width: 108
-        height: 270
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dfa20323bda6e28c0800000000000000
-      internalID: -4022159927522874627
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: boosters_12
       rect:
         serializedVersion: 2
-        x: 1086
-        y: 24
-        width: 108
-        height: 270
+        x: 232
+        y: 22
+        width: 65
+        height: 103
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -342,43 +351,22 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: boosters_5
+      name: boosters_13
       rect:
         serializedVersion: 2
-        x: 228
-        y: 43
-        width: 131
-        height: 211
+        x: 152
+        y: 13
+        width: 43
+        height: 109
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bd45e9774294f9d50800000000000000
-      internalID: 6746191187798807771
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: boosters_7
-      rect:
-        serializedVersion: 2
-        x: 51
-        y: 44
-        width: 132
-        height: 210
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cd9086840094522a0800000000000000
-      internalID: -6762918999863326244
+      spriteID: 286435c7547cddd80800000000000000
+      internalID: -8224198243256154494
       vertices: []
       indices: 
       edges: []
