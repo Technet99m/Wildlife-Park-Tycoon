@@ -7,6 +7,7 @@ public class Translator : Technet99m.Singleton<Translator>
     public Sprite male, female;
     public Color badC, normalC, goodC;
     public Sprite bad, normal, good;
+    public Sprite Feromones, SpecialFood, Vitamins;
 
     public static string TicksToTime(int ticks)
     {
@@ -125,5 +126,19 @@ public class Translator : Technet99m.Singleton<Translator>
 
         }
         return text.TrimEnd();
+    }
+    public static Sprite Boost(BoostType type)
+    {
+        switch (type)
+        {
+            case BoostType.feromons:
+                return Ins.Feromones;
+            case BoostType.specialFood:
+                return Ins.SpecialFood;
+            case BoostType.vitamins:
+                return Ins.Vitamins;
+            default:
+                return null;
+        }
     }
 }

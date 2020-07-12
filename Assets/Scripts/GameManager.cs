@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class GameManager : Technet99m.Singleton<GameManager>
 {
     [SerializeField] private LoadManager loadManager;
+    [SerializeField] private GameObject loadingScreen;
     
     [SerializeField] private Vector3 offset;
     [SerializeField] private float speed;
@@ -33,11 +34,11 @@ public class GameManager : Technet99m.Singleton<GameManager>
         if (PlayerPrefs.HasKey("save"))
         {
             StateMachine.state = State.Loading;
-            loadManager.LoadGame();
-            ToCage(0);
+            Technet99m.Clock.firstDeltaActualized += loadManager.LoadGame;
         }
         else
         {
+            loadingScreen.SetActive(false);
             StateMachine.state = State.Game;
             DataManager.Money = 1000;
             BuyNewCage("Forest");
@@ -65,6 +66,10 @@ public class GameManager : Technet99m.Singleton<GameManager>
     {
         if (pause)
             loadManager.SaveGame();
+    }
+    public void FinishLoading()
+    {
+        loadingScreen.SetActive(false);
     }
     public void BuyAnimalToggle()
     {

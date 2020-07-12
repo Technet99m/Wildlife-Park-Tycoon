@@ -114,10 +114,12 @@ public class AnimalStatus : MonoBehaviour
             }
         if (data.happiness >= 0.51)
         {
+            Boost feromones = BoostController.boosts.Find(x => x.type == BoostType.feromons);
+            Boost vitamins = BoostController.boosts.Find(x => x.type == BoostType.vitamins);
             if (data.age > 1 && !data.pregnant && data.sexualActivity > -0.1f)
-                data.sexualActivity += (data.happiness - 0.5f) * 2f / stats.TicksToFullMate * (BoostController.boosts.Exists(x => x.type == BoostType.feromons) ? 2f : 1f);
+                data.sexualActivity += (data.happiness - 0.5f) * 2f / stats.TicksToFullMate * (feromones != null ? 2f * feromones.power : 1f);
             else if (!data.pregnant)
-                data.age += (data.happiness - 0.5f) * 2f / stats.TicksToFullMate * (BoostController.boosts.Exists(x => x.type == BoostType.vitamins) ? 2f : 1f);
+                data.age += (data.happiness - 0.5f) * 2f / stats.TicksToFullMate * (vitamins != null ? 2f * vitamins.power : 1f);
             else
                 data.pregnancy += (data.happiness - 0.5f) * 2f / stats.TicksToBorn;
         }
@@ -176,10 +178,12 @@ public class AnimalStatus : MonoBehaviour
             }
         if (data.happiness >= 0.51)
         {
+            Boost feromones = BoostController.boosts.Find(x => x.type == BoostType.feromons);
+            Boost vitamins = BoostController.boosts.Find(x => x.type == BoostType.vitamins);
             if (data.age > 1 && !data.pregnant && data.sexualActivity > -0.1f)
-                data.sexualActivity += ((data.happiness - 0.5f) * 2f / stats.TicksToFullMate) * 5 * (BoostController.boosts.Exists(x => x.type == BoostType.feromons) ? 2f : 1f);
+                data.sexualActivity += ((data.happiness - 0.5f) * 2f / stats.TicksToFullMate) * 5 * (feromones!=null? 2f*feromones.power : 1f);
             else if (!data.pregnant)
-                data.age += ((data.happiness - 0.5f) * 2f / stats.TicksToFullMate) * 5 * (BoostController.boosts.Exists(x => x.type == BoostType.vitamins) ? 2f : 1f);
+                data.age += ((data.happiness - 0.5f) * 2f / stats.TicksToFullMate) * 5 * (vitamins!=null ? 2f * vitamins.power : 1f);
             else
                 data.pregnancy += ((data.happiness - 0.5f) * 2f / stats.TicksToBorn) * 5;
         }
@@ -198,7 +202,8 @@ public class AnimalStatus : MonoBehaviour
     }
     private void Born()
     {
-        int tmp = Random.Range(stats.minChildren, stats.maxChildren + (BoostController.boosts.Exists(x => x.type == BoostType.specialFood) ? 2 : 1));
+        Boost special = BoostController.boosts.Find(x => x.type == BoostType.specialFood);
+        int tmp = Random.Range(stats.minChildren, stats.maxChildren + (special != null ?  2+special.power : 1));
         for (int i = 0; i < tmp; i++)
         {
             if (!transform.parent.GetComponent<Cage>().hasSpace)

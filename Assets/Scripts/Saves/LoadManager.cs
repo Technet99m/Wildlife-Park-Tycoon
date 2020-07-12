@@ -87,13 +87,10 @@ public class LoadManager : MonoBehaviour
     private Feeder[] feeders;
     [SerializeField]
     private SpecialItem[] specials;
-    private void Awake()
-    {
-        Technet99m.TickingMachine.TenthTick += SaveGame;
-    }
     public void LoadGame()
     {
         List<CageSaveData> cages = JsonConvert.DeserializeObject<List<CageSaveData>>(PlayerPrefs.GetString("save"));
+        BoostController.LoadBoosts(JsonConvert.DeserializeObject<List<Boost>>(PlayerPrefs.GetString("boosts")));
         DataManager.Money = (PlayerPrefs.GetInt("money", 0));
         for (int i = 0; i < cages.Count; i++)
         {
@@ -141,15 +138,18 @@ public class LoadManager : MonoBehaviour
             }
             
         }
+        Technet99m.Clock.deltaActualized += SaveGame;
+        GameManager.Ins.ToCage(0);
         StartCoroutine(CalculateTimeChanges());
     }
     public void SaveGame()
     {
-        PlayerPrefs.SetString("time", (Clock.delta + System.DateTime.Now.Ticks).ToString());
+        PlayerPrefs.SetString("time", (Technet99m.Clock.delta + DateTime.Now.Ticks).ToString());
         List<CageSaveData> cages = new List<CageSaveData>();
         foreach (var cage in GameManager.Ins.cages)
             cages.Add(new CageSaveData(cage));
         PlayerPrefs.SetString("save", JsonConvert.SerializeObject(cages));
+        PlayerPrefs.SetString("boosts", JsonConvert.SerializeObject(BoostController.boosts));
         PlayerPrefs.SetInt("money", DataManager.Money);
     }
     
@@ -161,11 +161,10 @@ public class LoadManager : MonoBehaviour
 
     private IEnumerator CalculateTimeChanges()
     {
-        yield return Clock.GetTime();
         long old = long.Parse(PlayerPrefs.GetString("time","0"));
         if (old < 1000)
             yield break;
-        long now = DateTime.Now.Ticks + Clock.delta;
+        long now = DateTime.Now.Ticks + Technet99m.Clock.delta;
         int secondsElapsed = (int)((now - old) / 10000000);
         secondsElapsed =60*120;
         long start = DateTime.Now.Ticks / 10000;
@@ -176,6 +175,7 @@ public class LoadManager : MonoBehaviour
         //    Technet99m.TickingMachine.OneMoreTick();
         //}
         StateMachine.state = State.Game;
+        GameManager.Ins.FinishLoading();
         //Debug.Log("Elapsed: "+ (DateTime.Now.Ticks / 10000 - start).ToString()+"ms");
     }
 }
