@@ -44,6 +44,54 @@ TextureImporter:
   - first:
       213: -8224198243256154494
     second: boosters_13
+  - first:
+      213: 7527428633340920291
+    second: boosters_0
+  - first:
+      213: 7391602203679053801
+    second: boosters_1
+  - first:
+      213: -6373689047284907347
+    second: boosters_2
+  - first:
+      213: -1213926683145836799
+    second: boosters_4
+  - first:
+      213: 6746191187798807771
+    second: boosters_5
+  - first:
+      213: -1593986789271560467
+    second: boosters_6
+  - first:
+      213: 8701532917719888353
+    second: boosters_8
+  - first:
+      213: 1157669184781264177
+    second: boosters_9
+  - first:
+      213: 3611505140264262908
+    second: boosters_10
+  - first:
+      213: 2866790225747913129
+    second: boosters_12
+  - first:
+      213: 4479030406013349386
+    second: boosters_13
+  - first:
+      213: 2950031066344019691
+    second: boosters_14
+  - first:
+      213: 8269145161571578181
+    second: boosters_3
+  - first:
+      213: -6952246089656819279
+    second: boosters_7
+  - first:
+      213: 4456404304215802235
+    second: boosters_11
+  - first:
+      213: -7011133961129665999
+    second: boosters_14
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -144,19 +192,19 @@ TextureImporter:
       name: boosters_0
       rect:
         serializedVersion: 2
-        x: 67
-        y: 384
-        width: 187
-        height: 59
+        x: 42
+        y: 559
+        width: 179
+        height: 112
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6bce864f64f570790800000000000000
-      internalID: -7563972290792592202
+      spriteID: 3e1c362c57cc67860800000000000000
+      internalID: 7527428633340920291
       vertices: []
       indices: 
       edges: []
@@ -165,19 +213,19 @@ TextureImporter:
       name: boosters_1
       rect:
         serializedVersion: 2
-        x: 307
-        y: 290
-        width: 146
-        height: 160
+        x: 242
+        y: 556
+        width: 179
+        height: 114
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 19ca861adeadc1000800000000000000
-      internalID: 8122013497994385
+      spriteID: 9e7d847ba0f349660800000000000000
+      internalID: 7391602203679053801
       vertices: []
       indices: 
       edges: []
@@ -186,19 +234,19 @@ TextureImporter:
       name: boosters_2
       rect:
         serializedVersion: 2
-        x: 10
-        y: 260
-        width: 110
-        height: 96
+        x: 441
+        y: 557
+        width: 179
+        height: 116
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c8de004a8d32c1290800000000000000
-      internalID: -7918414631452742260
+      spriteID: da209cba49b1c87a0800000000000000
+      internalID: -6373689047284907347
       vertices: []
       indices: 
       edges: []
@@ -207,19 +255,19 @@ TextureImporter:
       name: boosters_4
       rect:
         serializedVersion: 2
-        x: 230
-        y: 265
-        width: 65
-        height: 102
+        x: 49
+        y: 419
+        width: 179
+        height: 112
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b626927461c8dee20800000000000000
-      internalID: 3381512922536174187
+      spriteID: 10769b30d14472fe0800000000000000
+      internalID: -1213926683145836799
       vertices: []
       indices: 
       edges: []
@@ -228,19 +276,19 @@ TextureImporter:
       name: boosters_5
       rect:
         serializedVersion: 2
-        x: 153
-        y: 255
-        width: 43
-        height: 116
+        x: 319
+        y: 418
+        width: 179
+        height: 112
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 994dccc21b39d27a0800000000000000
-      internalID: -6400297106253491047
+      spriteID: bd45e9774294f9d50800000000000000
+      internalID: 6746191187798807771
       vertices: []
       indices: 
       edges: []
@@ -249,19 +297,19 @@ TextureImporter:
       name: boosters_6
       rect:
         serializedVersion: 2
-        x: 9
-        y: 154
-        width: 110
-        height: 96
+        x: 574
+        y: 414
+        width: 179
+        height: 112
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a76d942093fe9c0d0800000000000000
-      internalID: -3401925015371131270
+      spriteID: dee9dc0e57501e9e0800000000000000
+      internalID: -1593986789271560467
       vertices: []
       indices: 
       edges: []
@@ -270,19 +318,19 @@ TextureImporter:
       name: boosters_8
       rect:
         serializedVersion: 2
-        x: 233
-        y: 144
-        width: 65
-        height: 103
+        x: 248
+        y: 268
+        width: 179
+        height: 112
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 44d3da02093f915b0800000000000000
-      internalID: -5397014878077764284
+      spriteID: 1e1ff02061e02c870800000000000000
+      internalID: 8701532917719888353
       vertices: []
       indices: 
       edges: []
@@ -291,19 +339,19 @@ TextureImporter:
       name: boosters_9
       rect:
         serializedVersion: 2
-        x: 9
-        y: 48
-        width: 110
-        height: 95
+        x: 436
+        y: 271
+        width: 179
+        height: 112
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef9917136f22f9610800000000000000
-      internalID: 1630060030918236670
+      spriteID: 135ad4e6dfdd01010800000000000000
+      internalID: 1157669184781264177
       vertices: []
       indices: 
       edges: []
@@ -312,19 +360,19 @@ TextureImporter:
       name: boosters_10
       rect:
         serializedVersion: 2
-        x: 153
-        y: 138
-        width: 42
-        height: 109
+        x: 614
+        y: 272
+        width: 154
+        height: 112
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c6e746e591c717f0800000000000000
-      internalID: -641831572319246656
+      spriteID: cfcd2fd5ac4ae1230800000000000000
+      internalID: 3611505140264262908
       vertices: []
       indices: 
       edges: []
@@ -333,19 +381,19 @@ TextureImporter:
       name: boosters_12
       rect:
         serializedVersion: 2
-        x: 232
-        y: 22
-        width: 65
-        height: 103
+        x: 616
+        y: 140
+        width: 179
+        height: 112
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3d2972eb3c3716f10800000000000000
-      internalID: 2261215772462781139
+      spriteID: 9a9244b7582e8c720800000000000000
+      internalID: 2866790225747913129
       vertices: []
       indices: 
       edges: []
@@ -354,19 +402,103 @@ TextureImporter:
       name: boosters_13
       rect:
         serializedVersion: 2
-        x: 152
-        y: 13
-        width: 43
-        height: 109
+        x: 357
+        y: 6
+        width: 179
+        height: 112
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 286435c7547cddd80800000000000000
-      internalID: -8224198243256154494
+      spriteID: a0e69906c66b82e30800000000000000
+      internalID: 4479030406013349386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boosters_3
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 556
+        width: 176
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5413d9f66b7e1c270800000000000000
+      internalID: 8269145161571578181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boosters_7
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 271
+        width: 179
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b128ea1409a48f90800000000000000
+      internalID: -6952246089656819279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boosters_11
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 137
+        width: 187
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b710e488a1458dd30800000000000000
+      internalID: 4456404304215802235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boosters_14
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 2
+        width: 179
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13a50361fc273be90800000000000000
+      internalID: -7011133961129665999
       vertices: []
       indices: 
       edges: []
