@@ -163,19 +163,154 @@ public class LoadManager : MonoBehaviour
     {
         long old = long.Parse(PlayerPrefs.GetString("time","0"));
         if (old < 1000)
-            yield break;
+        yield break;
         long now = DateTime.Now.Ticks + Technet99m.Clock.delta;
         int secondsElapsed = (int)((now - old) / 10000000);
-        secondsElapsed =60*120;
-        long start = DateTime.Now.Ticks / 10000;
-        //Debug.Log("Time to calculate: "+ Translator.TicksToTime(secondsElapsed));
+        Debug.Log($"Elapsed: {Translator.TicksToTime(secondsElapsed)}");
+        foreach(var cage in GameManager.Ins.cages)
+        {
+            CalculateTimeForCage(cage, secondsElapsed);
+            yield return null;
+        }
 
-        //for (int i = 0;i<secondsElapsed;i++)
-        //{
-        //    Technet99m.TickingMachine.OneMoreTick();
-        //}
         StateMachine.state = State.Game;
         GameManager.Ins.FinishLoading();
-        //Debug.Log("Elapsed: "+ (DateTime.Now.Ticks / 10000 - start).ToString()+"ms");
+    }
+    private void CalculateTimeForCage(Cage cage,int secondsElapsed)
+    {
+        int delta = 0;
+        while (secondsElapsed > 0)
+        {
+            float generalHappiness = CalculateHappinessForCage(cage);
+            int elapsed = CalculateLinearTime(cage, generalHappiness);
+            if (elapsed < 0)
+                return;
+            delta += elapsed;
+            UpdateCage(cage, elapsed, generalHappiness);
+            if (delta >= 100)
+            {
+                UpdateFeeders(cage, delta);
+                delta = delta % 100;
+            }
+            secondsElapsed -= elapsed;
+        }
+    }
+    private float CalculateHappinessForCage(Cage cage)
+    {
+        var stats = cage.animals[0].stats;
+        float happiness = 1f;
+        foreach (var food in stats.foods)
+        {
+            if (cage.GetProperFeeder(food) == null)
+            {
+                happiness -= 0.5f / stats.foods.Length;
+                foreach (var animal in cage.animals)
+                    animal.data.foods[(int)food] = 0;
+            }
+        }
+        foreach (var spec in stats.specials)
+        {
+            if(cage.GetProperSpecial(spec)== null)
+            {
+                happiness -= 0.4f / stats.specials.Length;
+                foreach (var animal in cage.animals)
+                    animal.data.specials[(int)spec] = 0;
+            }
+        }
+        return happiness;
+    }
+    private int CalculateLinearTime(Cage cage, float happiness)
+    {
+        int minTime = -1;
+        foreach (var feeder in cage.items.FindAll(i => i is Feeder))
+        {
+            int time = (feeder as Feeder).capacity / cage.animals.Count * 100;
+            if ((time < minTime || minTime < 0) && time > 0)
+                minTime = time;
+        }
+        if (happiness < 0.51)
+            return minTime;
+        foreach (var animal in cage.animals)
+        {
+            int toAction = 0;
+            if (animal.data.adult)
+            {
+                if(animal.data.pregnant)
+                {
+                    toAction = Mathf.FloorToInt((animal.stats.TicksToBorn / ((happiness - 0.5f) * 2f)) * (1 - animal.data.pregnancy));
+                }
+                else
+                {
+                    toAction = Mathf.FloorToInt((animal.stats.TicksToFullMate / ((happiness - 0.5f) * 2f)) * (1 - animal.data.sexualActivity));
+                }
+            }
+            else
+            {
+                toAction = Mathf.FloorToInt((animal.stats.TicksToFullMate / ((happiness - 0.5f) * 2f)) * (1 - animal.data.age));
+            }
+            if ((toAction < minTime || minTime < 0) && toAction > 0)
+                minTime = toAction;
+        }
+        
+        return minTime;
+    }
+    private void UpdateCage(Cage cage,int elapsed,float happiness)
+    {
+        if (happiness < 0.5f)
+            return;
+        foreach (var animal in cage.animals)
+        {
+            if (animal.data.adult)
+            {
+                if (animal.data.pregnant)
+                {
+                    animal.data.pregnancy += (happiness - 0.5f) * 2f / animal.stats.TicksToBorn * elapsed;
+                }
+                else
+                {
+                    animal.data.sexualActivity += (happiness - 0.5f) * 2f / animal.stats.TicksToFullMate * elapsed;
+                }
+            }
+            else
+            {
+                animal.data.age += (happiness - 0.5f) * 2f / animal.stats.TicksToFullMate * elapsed;
+            }
+
+        }
+        var toBorn = new List<Animal>();
+        foreach (var animal in cage.animals)
+        {
+            if (animal.data.sexualActivity >= 0.999f)
+                animal.data.sexualActivity = -1;
+        }
+        foreach (var animal in cage.animals)
+        {
+            if (animal.data.sexualActivity < -0.1f && animal.data.male)
+            {
+                var mate = cage.GetProperMate();
+                if (mate == null)
+                    continue;
+                mate.GetComponent<AnimalStatus>().Pregnant();
+                mate.data.sexualActivity = 0;
+                animal.data.sexualActivity = 0;
+            }
+            else if (animal.data.pregnancy >= 0.999f)
+            {
+                toBorn.Add(animal);
+            }
+
+        }
+        foreach (var animal in toBorn)
+            animal.GetComponent<AnimalStatus>().Born();
+    }
+    private void UpdateFeeders(Cage cage,int elapsed)
+    {
+        foreach (var feeder in cage.items.FindAll(i => i is Feeder))
+        {
+            (feeder as Feeder).capacity -= cage.animals.Count * (elapsed / 100);
+            if ((feeder as Feeder).capacity < 0)
+                (feeder as Feeder).capacity = 0;
+            (feeder as Feeder).CheckSprite();
+        }
     }
 }

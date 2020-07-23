@@ -51,7 +51,7 @@ public class Feeder : Item
         }
         return (capacity - busy) > 0;
     }
-    private void CheckSprite()
+    public void CheckSprite()
     {
         if (capacity > maxCapacity / 2)
             sp.sprite = full;

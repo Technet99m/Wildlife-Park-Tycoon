@@ -27,22 +27,35 @@ public class AnimalStatus : MonoBehaviour
         stats = GetComponent<AnimalDataHolder>().stats;
         needs = GetComponent<Animal>().needs;
 
-        if (data.age < 1)
-            body.localScale = new Vector3(0.7f, 0.7f, 1);
-        if(data.sexualActivity<-0.1f)
+        OnTick();
+    }
+    public void Pregnant()
+    {
+        data.pregnant = true;
+    }
+    public void Born()
+    {
+        Boost special = BoostController.boosts.Find(x => x.type == BoostType.specialFood);
+        int tmp = Random.Range(stats.minChildren, stats.maxChildren + (special != null ? 2 + special.power : 1));
+        for (int i = 0; i < tmp; i++)
         {
-            needs.Add(new Need() { type = NeedType.Sex });
+            if (!transform.parent.GetComponent<Cage>().hasSpace)
+            {
+                DataManager.AddMoney(stats.price);
+                continue;
+            }
+            AnimalDataHolder child = AnimalFactory.NewAnimalOfKind(stats.kind, transform.parent).GetComponent<AnimalDataHolder>();
+            child.transform.position = transform.position;
+            child.data.male = Random.value > 0.5f;
+            child.data.age = 0;
+            child.data.adult = false;
+            for (int j = 0; j < child.data.foods.Length; j++)
+                child.data.foods[j] = 0.5f;
+            for (int j = 0; j < child.data.specials.Length; j++)
+                child.data.specials[j] = 1f;
         }
-        foreach (var food in stats.foods)
-        {
-            if (data.foods[(int)food] < -1f)
-                needs.Add(new Need() { type = NeedType.Food, food = food });
-        }
-        foreach (var spec in stats.specials)
-        {
-            if (data.specials[(int)spec] < -1f)
-                needs.Add(new Need() { type = NeedType.Special, special = spec });
-        }
+        data.pregnant = false;
+        data.pregnancy = 0;
     }
     public void Done(Need need)
     {
@@ -62,40 +75,31 @@ public class AnimalStatus : MonoBehaviour
         }
     }
 
-    private void Pregnant()
-    {
-        data.pregnant = true;
-    }
     private void OnTick()
     {
         if (StateMachine.state == State.Game)
             RecalculateStatus();
-        else if (Technet99m.TickingMachine.ticks % 5 == 0)
-            RecalculateStatusLoading();
     }
-
     private void RecalculateStatus()
     {
         foreach (var food in stats.foods)
         {
-            if (data.foods[(int)food] < -1f)
+            if (needs.Exists(x => x.type == NeedType.Food && x.food == food))
                 continue;
             data.foods[(int)food] -= 0.01f;
             if (data.foods[(int)food] < 0)
             {
                 needs.Add(new Need() { type = NeedType.Food, food = food });
-                data.foods[(int)food] = -1.1f;
             }
         }
         foreach (var spec in stats.specials)
         {
-            if (data.specials[(int)spec] < -1f)
+            if (needs.Exists(x => x.type == NeedType.Special && x.special == spec))
                 continue;
             data.specials[(int)spec] -= 0.01f;
             if (data.specials[(int)spec] < 0)
             {
                 needs.Add(new Need() { type = NeedType.Special, special = spec });
-                data.specials[(int)spec] = -1.1f;
             }
         }
         data.happiness = 1;
@@ -200,30 +204,7 @@ public class AnimalStatus : MonoBehaviour
             data.sexualActivity = -1;
         }
     }
-    private void Born()
-    {
-        Boost special = BoostController.boosts.Find(x => x.type == BoostType.specialFood);
-        int tmp = Random.Range(stats.minChildren, stats.maxChildren + (special != null ?  2+special.power : 1));
-        for (int i = 0; i < tmp; i++)
-        {
-            if (!transform.parent.GetComponent<Cage>().hasSpace)
-            {
-                DataManager.AddMoney(stats.price);
-                continue;
-            }
-            AnimalDataHolder child = AnimalFactory.NewAnimalOfKind(stats.kind, transform.parent).GetComponent<AnimalDataHolder>();
-            child.transform.position = transform.position;
-            child.data.male = Random.value > 0.5f;
-            child.data.age = 0;
-            child.data.adult = false;
-            for (int j = 0; j < child.data.foods.Length; j++)
-                child.data.foods[j] = 0.5f;
-            for (int j = 0; j < child.data.specials.Length; j++)
-                child.data.specials[j] = 1f;
-        }
-        data.pregnant = false;
-        data.pregnancy = 0;
-    }
+    
     private IEnumerator Adult()
     {
         while (body.localScale != Vector3.one)
