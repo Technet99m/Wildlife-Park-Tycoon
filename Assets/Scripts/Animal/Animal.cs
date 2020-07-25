@@ -7,21 +7,31 @@ public class Animal : MonoBehaviour
     [SerializeField] private AnimalAnimationController anim;
     [SerializeField] private Need selected;
     [SerializeField] private Transform matingPos;
+    [SerializeField] private SpriteRenderer mood;
+    [SerializeField] private Transform body;
+
+    
+    public AnimalData data;
+    public AnimalStatus status;
+    public List<Need> needs;
+    public bool isBusy;
+
+    [HideInInspector] 
+    public Cage cage;
+
+    [HideInInspector]
+    public AnimalStats stats;
+
+    public event System.Action<Animal> Free;
+    public event System.Action ReachedMatePos;
+
+    public int Followers { get { return Free==null? 0 : Free.GetInvocationList().Length; } }
+    public int finalCost { get => Mathf.CeilToInt(data.happiness * stats.price); }
 
     private MovementController movement;
     private Item target;
     private Animal mate;
 
-    public AnimalData data;
-    public AnimalStats stats;
-    public List<Need> needs;
-    public bool isBusy;
-    [HideInInspector] public Cage cage;
-    public event System.Action<Animal> Free;
-    public event System.Action ReachedMatePos;
-    public int Followers { get { return Free==null? 0 : Free.GetInvocationList().Length; } }
-    public int finalCost { get => Mathf.CeilToInt(data.happiness * stats.price); }
-    
     private void OnEnable()
     {
         Technet99m.TickingMachine.EveryTick += OnTick;
@@ -30,15 +40,16 @@ public class Animal : MonoBehaviour
     {
         Technet99m.TickingMachine.EveryTick -= OnTick;
     }
-    public void Initialize()
+
+    public void Initialize(AnimalStats stats)
     {
         cage = transform.parent.GetComponent<Cage>();
         cage.animals.Add(this);
         movement = GetComponent<MovementController>();
         movement.TargetReached += OnTargetReached;
-        data = GetComponent<AnimalDataHolder>().data;
-        stats = GetComponent<AnimalDataHolder>().stats;
-        GetComponent<AnimalStatus>().Initialize();
+        data = new AnimalData();
+        this.stats = stats;
+        status = new AnimalStatus(data, stats, needs,transform, mood, body);
         selected = null;
     }
     public void Mate()
@@ -53,7 +64,7 @@ public class Animal : MonoBehaviour
     {
         target = null;
         isBusy = false;
-        GetComponent<AnimalStatus>().Done(selected);
+        status.Done(selected);
         if (StateMachine.state == State.Loading)
             return;
         Free?.Invoke(this);

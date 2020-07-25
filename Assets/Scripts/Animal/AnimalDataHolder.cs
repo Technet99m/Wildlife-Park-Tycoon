@@ -3,11 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class AnimalDataHolder : MonoBehaviour
-{
-    public AnimalData data;
-    public AnimalStats stats;
-}
 [System.Serializable]
 public class AnimalData
 {

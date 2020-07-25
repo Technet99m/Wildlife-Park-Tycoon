@@ -10,10 +10,9 @@ public class AnimalFactory
     {
         if (AnimalRef == null)
             AnimalRef = Resources.Load<GameObject>("Animal");
-        Animal animal = GameObject.Instantiate(AnimalRef, parent).GetComponent<Animal>();
+        Animal animal = Object.Instantiate(AnimalRef, parent).GetComponent<Animal>();
         AnimalStats tmp = Resources.Load<AnimalStats>($"Animals/{kind}/Stats");
-        animal.GetComponent<AnimalDataHolder>().stats = tmp;
-        animal.Initialize();
+        animal.Initialize(tmp);
         animal.GetComponent<AnimalAnimationController>().sprites = Resources.Load<AnimalSprites>($"Animals/{kind}/Sprites");
         if (IgnoreName)
             return animal;

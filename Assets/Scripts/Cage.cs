@@ -13,7 +13,7 @@ public class Cage : MonoBehaviour
     public List<Animal> animals;
     public string Name;
     public int stage;
-    public string KindInCage { get => animals[0].GetComponent<AnimalDataHolder>().stats.kind; }
+    public string KindInCage { get => animals[0].GetComponent<Animal>().stats.kind; }
     public bool hasSpace { get => animals.Count < Capacity; }
 
     public int Capacity { get => (stage + 1) * 5; }

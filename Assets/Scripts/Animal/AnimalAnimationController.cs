@@ -5,27 +5,39 @@ using UnityEngine;
 public class AnimalAnimationController : MonoBehaviour
 {
     public AnimalSprites sprites;
-    [SerializeField, Range(0,1)] private float verticalThreshhold;
-    [SerializeField] private Transform bodyTransform;
-    [SerializeField] private Sprite[] foods;
-    [SerializeField] private SpriteRenderer foodSprite;
-    [SerializeField] private Shader normal, highlighted;
+
+    [SerializeField, Range(0,1)] 
+    private float verticalThreshhold;
+
+    [SerializeField] 
+    private Transform bodyTransform;
+
+    [SerializeField] 
+    private Sprite[] foods;
+
+    [SerializeField] 
+    private SpriteRenderer foodSprite;
+
+    [SerializeField] 
+    private Shader normal, highlighted;
+
     private Animator anim;
     private AnimalData data;
+
     private AnimalPack GenderPack
     {
         get
         {
-            if (data == null) data = GetComponent<AnimalDataHolder>().data;
+            if (data == null) data = GetComponent<Animal>().data;
             return data.male ? sprites.male : sprites.female;
         }
     }
 
     private Material currentMat;
-    void Start()
+    private void Start()
     {
         anim = GetComponentInChildren<Animator>();
-        data = GetComponent<AnimalDataHolder>().data;
+        data = GetComponent<Animal>().data;
         Apply();
         currentMat = new Material(normal);
         body.material = currentMat;
@@ -37,6 +49,7 @@ public class AnimalAnimationController : MonoBehaviour
         left_hand.material = currentMat;
         tail.material = currentMat;
     }
+
     public void SetHighlight()
     {
         currentMat.shader = highlighted;

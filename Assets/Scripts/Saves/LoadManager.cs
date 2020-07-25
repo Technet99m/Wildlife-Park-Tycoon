@@ -129,7 +129,7 @@ public class LoadManager : MonoBehaviour
                 a.data.foods = animal.data.foods;
                 a.data.specials = animal.data.specials;
                 a.transform.position = tmp.GetFreeTileInGrid();
-                a.GetComponent<AnimalStatus>().Initialize();
+                a.status.RecalculateHappiness();
             }
 
             if(tmp.animals.Count>0)
@@ -290,7 +290,7 @@ public class LoadManager : MonoBehaviour
                 var mate = cage.GetProperMate();
                 if (mate == null)
                     continue;
-                mate.GetComponent<AnimalStatus>().Pregnant();
+                mate.status.Pregnant();
                 mate.data.sexualActivity = 0;
                 animal.data.sexualActivity = 0;
             }
@@ -301,7 +301,7 @@ public class LoadManager : MonoBehaviour
 
         }
         foreach (var animal in toBorn)
-            animal.GetComponent<AnimalStatus>().Born();
+            animal.status.Born();
     }
     private void UpdateFeeders(Cage cage,int elapsed)
     {

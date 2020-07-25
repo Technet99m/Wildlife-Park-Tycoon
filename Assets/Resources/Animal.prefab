@@ -741,8 +741,6 @@ GameObject:
   - component: {fileID: 4162523600852682271}
   - component: {fileID: 4162523600852682274}
   - component: {fileID: 6921321988990399577}
-  - component: {fileID: 6969706064375971004}
-  - component: {fileID: 4162523600852682273}
   - component: {fileID: 4162523600852682272}
   - component: {fileID: 174864401007728109}
   m_Layer: 0
@@ -820,6 +818,8 @@ MonoBehaviour:
     food: 0
     special: 0
   matingPos: {fileID: 2901326196466386586}
+  mood: {fileID: 8507542142320148009}
+  body: {fileID: 4162523600250642596}
   data:
     name: 
     male: 0
@@ -831,61 +831,10 @@ MonoBehaviour:
     happiness: 0
     foods: []
     specials: []
-  stats: {fileID: 0}
   needs: []
   isBusy: 0
   cage: {fileID: 0}
---- !u!114 &6969706064375971004
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4162523600852682270}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b53d99b0f3fbeb428c7ea2b7105ecf6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mood: {fileID: 8507542142320148009}
-  body: {fileID: 4162523600250642596}
---- !u!114 &4162523600852682273
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4162523600852682270}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b034eff718617f4d8b92a3c0202f375, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  data:
-    name: 
-    male: 1
-    pregnant: 0
-    adult: 1
-    pregnancy: 0
-    sexualActivity: 0
-    age: 1
-    happiness: 1
-    foods:
-    - 0.1
-    - 0.1
-    - 0.1
-    - 0.1
-    - 0.1
-    - 0.1
-    specials:
-    - 0.2
-    - 0.2
-    - 0.2
-    - 0.2
-    - 0.2
-    - 0.2
-    - 0.2
-  stats: {fileID: 11400000, guid: 4e6b316cd50a6cd4185a7355fe1cebe9, type: 2}
+  stats: {fileID: 0}
 --- !u!114 &4162523600852682272
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -6,7 +6,8 @@ using UnityEngine.UI;
 
 public class MoveItemController : MonoBehaviour
 {
-    [SerializeField] Button move, remove, refill;
+    [SerializeField]
+    private Button move, remove, refill;
 
     public GameObject refillBtn;
     public UnityAction movePressed;
@@ -18,7 +19,7 @@ public class MoveItemController : MonoBehaviour
     {
         transform.GetChild(0).position = pos;
     }
-    void OnEnable()
+    private void OnEnable()
     {
         move.onClick.AddListener(movePressed);
         remove.onClick.AddListener(removePressed);

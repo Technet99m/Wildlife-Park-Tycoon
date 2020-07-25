@@ -2,33 +2,47 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AnimalStatus : MonoBehaviour
+public class AnimalStatus
 {
-    [SerializeField] SpriteRenderer mood;
-    [SerializeField] Transform body;
 
-
+    private SpriteRenderer mood;
+    private Transform body;
     private AnimalData data;
     private AnimalStats stats;
     private List<Need> needs;
-
-    private void OnEnable()
+    private Transform self;
+    
+    public AnimalStatus(AnimalData data, AnimalStats stats, List<Need> needs, Transform self, SpriteRenderer mood, Transform body)
     {
         Technet99m.TickingMachine.EveryTick += OnTick;
-    }
-    
-    private void OnDisable()
-    {
-        Technet99m.TickingMachine.EveryTick -= OnTick;
-    }
-    public void Initialize()
-    {
-        data = GetComponent<AnimalDataHolder>().data;
-        stats = GetComponent<AnimalDataHolder>().stats;
-        needs = GetComponent<Animal>().needs;
-
+        this.data = data;
+        this.stats = stats;
+        this.needs = needs;
+        this.self = self;
+        this.mood = mood;
+        this.body = body;
         OnTick();
     }
+
+    public void RecalculateHappiness()
+    {
+        data.happiness = 1;
+        foreach (var need in needs)
+            switch (need.type)
+            {
+                case NeedType.Food:
+                    data.happiness -= 0.5f / stats.foods.Length;
+                    break;
+                case NeedType.Special:
+                    data.happiness -= 0.4f / stats.specials.Length;
+                    break;
+                case NeedType.Sex:
+                    data.happiness -= 0.1f;
+                    break;
+            }
+        mood.sprite = Translator.Happiness(data.happiness);
+    }
+
     public void Pregnant()
     {
         data.pregnant = true;
@@ -39,13 +53,13 @@ public class AnimalStatus : MonoBehaviour
         int tmp = Random.Range(stats.minChildren, stats.maxChildren + (special != null ? 2 + special.power : 1));
         for (int i = 0; i < tmp; i++)
         {
-            if (!transform.parent.GetComponent<Cage>().hasSpace)
+            if (!self.parent.GetComponent<Cage>().hasSpace)
             {
                 DataManager.AddMoney(stats.price);
                 continue;
             }
-            AnimalDataHolder child = AnimalFactory.NewAnimalOfKind(stats.kind, transform.parent).GetComponent<AnimalDataHolder>();
-            child.transform.position = transform.position;
+            Animal child = AnimalFactory.NewAnimalOfKind(stats.kind, self.parent);
+            child.transform.position = self.position;
             child.data.male = Random.value > 0.5f;
             child.data.age = 0;
             child.data.adult = false;
@@ -102,20 +116,9 @@ public class AnimalStatus : MonoBehaviour
                 needs.Add(new Need() { type = NeedType.Special, special = spec });
             }
         }
-        data.happiness = 1;
-        foreach (var need in needs)
-            switch (need.type)
-            {
-                case NeedType.Food:
-                    data.happiness -= 0.5f / stats.foods.Length;
-                    break;
-                case NeedType.Special:
-                    data.happiness -= 0.4f / stats.specials.Length;
-                    break;
-                case NeedType.Sex:
-                    data.happiness -= 0.1f;
-                    break;
-            }
+
+        RecalculateHappiness();
+
         if (data.happiness >= 0.51)
         {
             Boost feromones = BoostController.boosts.Find(x => x.type == BoostType.feromons);
@@ -132,71 +135,7 @@ public class AnimalStatus : MonoBehaviour
         if (data.age > 1 && !data.adult)
         {
             data.adult = true;
-            StartCoroutine(Adult());
-        }
-        if (data.sexualActivity > 1)
-        {
-            needs.Add(new Need() { type = NeedType.Sex });
-            data.sexualActivity = -1;
-        }
-        mood.sprite = Translator.Happiness(data.happiness);
-    }
-
-    private void RecalculateStatusLoading()
-    {
-        foreach (var food in stats.foods)
-        {
-            if (data.foods[(int)food] < -1f)
-                continue;
-            data.foods[(int)food] -= 0.05f;
-            if (data.foods[(int)food] < 0)
-            {
-                needs.Add(new Need() { type = NeedType.Food, food = food });
-                data.foods[(int)food] = -1.1f;
-            }
-        }
-        foreach (var spec in stats.specials)
-        {
-            if (data.specials[(int)spec] < -1f)
-                continue;
-            data.specials[(int)spec] -= 0.05f;
-            if (data.specials[(int)spec] < 0)
-            {
-                needs.Add(new Need() { type = NeedType.Special, special = spec });
-                data.specials[(int)spec] = -1.1f;
-            }
-        }
-        data.happiness = 1;
-        foreach (var need in needs)
-            switch (need.type)
-            {
-                case NeedType.Food:
-                    data.happiness -= 0.5f / stats.foods.Length;
-                    break;
-                case NeedType.Special:
-                    data.happiness -= 0.4f / stats.specials.Length;
-                    break;
-                case NeedType.Sex:
-                    data.happiness -= 0.1f;
-                    break;
-            }
-        if (data.happiness >= 0.51)
-        {
-            Boost feromones = BoostController.boosts.Find(x => x.type == BoostType.feromons);
-            Boost vitamins = BoostController.boosts.Find(x => x.type == BoostType.vitamins);
-            if (data.age > 1 && !data.pregnant && data.sexualActivity > -0.1f)
-                data.sexualActivity += ((data.happiness - 0.5f) * 2f / stats.TicksToFullMate) * 5 * (feromones!=null? 2f*feromones.power : 1f);
-            else if (!data.pregnant)
-                data.age += ((data.happiness - 0.5f) * 2f / stats.TicksToFullMate) * 5 * (vitamins!=null ? 2f * vitamins.power : 1f);
-            else
-                data.pregnancy += ((data.happiness - 0.5f) * 2f / stats.TicksToBorn) * 5;
-        }
-        if (data.pregnant && data.pregnancy > 1)
-            Born();
-        if (data.age > 1 && !data.adult)
-        {
-            data.adult = true;
-            body.localScale=Vector3.one;
+            self.GetComponent<Animal>().StartCoroutine(Adult());
         }
         if (data.sexualActivity > 1)
         {
