@@ -68,6 +68,45 @@ TextureImporter:
   - first:
       213: -3232124859224418470
     second: main_screen_btns_0
+  - first:
+      213: -4000826335524466856
+    second: main_screen_btns_1
+  - first:
+      213: -6427170982028520820
+    second: main_screen_btns_0
+  - first:
+      213: -1712667472209853243
+    second: main_screen_btns_2
+  - first:
+      213: -6620379848048902135
+    second: main_screen_btns_3
+  - first:
+      213: 2581638940911972751
+    second: main_screen_btns_4
+  - first:
+      213: -2814113032709495371
+    second: main_screen_btns_5
+  - first:
+      213: 6903961862033262895
+    second: main_screen_btns_6
+  - first:
+      213: 5532346216448250314
+    second: main_screen_btns_7
+  - first:
+      213: 5235950713443814438
+    second: main_screen_btns_8
+  - first:
+      213: 6118686790584875977
+    second: main_screen_btns_9
+  - first:
+      213: 8787843810797834586
+    second: main_screen_btns_10
+  - first:
+      213: -5508191744644850407
+    second: main_screen_btns_11
+  - first:
+      213: 3768230017581817566
+    second: main_screen_btns_12
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -165,34 +204,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: LabBTN
+      name: main_screen_btns_4
       rect:
         serializedVersion: 2
-        x: 146
-        y: 3
-        width: 152
-        height: 168
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 97cc770f8b6a69700800000000000000
-      internalID: 546807718010670201
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: shop_btn
-      rect:
-        serializedVersion: 2
-        x: 302
-        y: 89
-        width: 157
-        height: 192
+        x: 412
+        y: 316
+        width: 86
+        height: 89
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -207,13 +225,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BuyAnimalBtn
+      name: main_screen_btns_1
       rect:
         serializedVersion: 2
-        x: 262
-        y: 347
-        width: 149
-        height: 167
+        x: 302
+        y: 91
+        width: 157
+        height: 190
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -228,7 +246,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: coin
+      name: main_screen_btns_2
       rect:
         serializedVersion: 2
         x: 289
@@ -249,12 +267,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attention
+      name: main_screen_btns_3
       rect:
         serializedVersion: 2
-        x: 348
+        x: 349
         y: 290
-        width: 46
+        width: 45
         height: 49
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -270,12 +288,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Female
+      name: main_screen_btns_5
       rect:
         serializedVersion: 2
         x: 413
         y: 405
-        width: 83
+        width: 86
         height: 89
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -291,13 +309,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Male
+      name: main_screen_btns_6
       rect:
         serializedVersion: 2
-        x: 412
-        y: 314
-        width: 85
-        height: 91
+        x: 260
+        y: 349
+        width: 151
+        height: 166
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -312,13 +330,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TaskBtn
+      name: main_screen_btns_7
       rect:
         serializedVersion: 2
-        x: 129
-        y: 185
-        width: 151
-        height: 162
+        x: 13
+        y: 218
+        width: 114
+        height: 134
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -333,13 +351,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SettingsBtn
+      name: main_screen_btns_8
       rect:
         serializedVersion: 2
-        x: 13
-        y: 221
-        width: 113
-        height: 124
+        x: 130
+        y: 188
+        width: 147
+        height: 165
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -354,13 +372,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CatalogBtn
+      name: main_screen_btns_9
       rect:
         serializedVersion: 2
         x: 0
-        y: 23
-        width: 144
-        height: 165
+        y: 17
+        width: 143
+        height: 181
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -383,14 +401,77 @@ TextureImporter:
         width: 237
         height: 137
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 118, y: 0, z: 118, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c82dd716b0a1ec6a0800000000000000
+      internalID: -6427170982028520820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_screen_btns_10
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 6
+        width: 143
+        height: 174
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a571838a09f2523d0800000000000000
-      internalID: -3232124859224418470
+      spriteID: a51583cc261b4f970800000000000000
+      internalID: 8787843810797834586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_screen_btns_11
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 0
+        width: 91
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91d54b9bac8fe83b0800000000000000
+      internalID: -5508191744644850407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_screen_btns_12
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 0
+        width: 91
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ede9ded6c317b4430800000000000000
+      internalID: 3768230017581817566
       vertices: []
       indices: 
       edges: []
