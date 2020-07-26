@@ -53,6 +53,9 @@ TextureImporter:
   - first:
       213: 1238743118928855884
     second: LabSheet_16
+  - first:
+      213: -4617462131544123510
+    second: LabSheet_17
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -216,7 +219,7 @@ TextureImporter:
       name: LabSheet_3
       rect:
         serializedVersion: 2
-        x: 1987
+        x: 1989
         y: 1542
         width: 80
         height: 89
@@ -426,10 +429,10 @@ TextureImporter:
       name: LabSheet_13
       rect:
         serializedVersion: 2
-        x: 1882
-        y: 358
+        x: 1893
+        y: 384
         width: 206
-        height: 243
+        height: 228
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -447,8 +450,8 @@ TextureImporter:
       name: LabSheet_14
       rect:
         serializedVersion: 2
-        x: 1887
-        y: 257
+        x: 1538
+        y: 1
         width: 193
         height: 68
       alignment: 0
@@ -494,7 +497,7 @@ TextureImporter:
         width: 233
         height: 234
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -502,6 +505,27 @@ TextureImporter:
       bones: []
       spriteID: c43c6b3bd46e03110800000000000000
       internalID: 1238743118928855884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSheet_17
+      rect:
+        serializedVersion: 2
+        x: 1886
+        y: 262
+        width: 220
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a879e7dd7aa7befb0800000000000000
+      internalID: -4617462131544123510
       vertices: []
       indices: 
       edges: []

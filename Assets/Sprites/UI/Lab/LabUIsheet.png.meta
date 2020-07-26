@@ -23,6 +23,9 @@ TextureImporter:
   - first:
       213: -5535047721083658337
     second: LabUIsheet_6
+  - first:
+      213: 3057201055227807545
+    second: LabUIsheet_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -123,8 +126,8 @@ TextureImporter:
       name: LabUIsheet_0
       rect:
         serializedVersion: 2
-        x: 23
-        y: 246
+        x: 21
+        y: 302
         width: 165
         height: 115
       alignment: 0
@@ -144,8 +147,8 @@ TextureImporter:
       name: LabUIsheet_1
       rect:
         serializedVersion: 2
-        x: 238
-        y: 283
+        x: 245
+        y: 388
         width: 146
         height: 59
       alignment: 0
@@ -165,8 +168,8 @@ TextureImporter:
       name: LabUIsheet_2
       rect:
         serializedVersion: 2
-        x: 406
-        y: 278
+        x: 403
+        y: 335
         width: 87
         height: 101
       alignment: 0
@@ -186,8 +189,8 @@ TextureImporter:
       name: LabUIsheet_3
       rect:
         serializedVersion: 2
-        x: 53
-        y: 46
+        x: 49
+        y: 103
         width: 157
         height: 167
       alignment: 0
@@ -207,8 +210,8 @@ TextureImporter:
       name: LabUIsheet_4
       rect:
         serializedVersion: 2
-        x: 230
-        y: 43
+        x: 226
+        y: 100
         width: 157
         height: 167
       alignment: 0
@@ -228,8 +231,8 @@ TextureImporter:
       name: LabUIsheet_5
       rect:
         serializedVersion: 2
-        x: 402
-        y: 151
+        x: 399
+        y: 209
         width: 89
         height: 102
       alignment: 0
@@ -249,8 +252,8 @@ TextureImporter:
       name: LabUIsheet_6
       rect:
         serializedVersion: 2
-        x: 417
-        y: 26
+        x: 414
+        y: 83
         width: 69
         height: 103
       alignment: 0
@@ -262,6 +265,27 @@ TextureImporter:
       bones: []
       spriteID: f9f19f17c6f8f23b0800000000000000
       internalID: -5535047721083658337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabUIsheet_7
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 278
+        width: 92
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9378dc7792c5d6a20800000000000000
+      internalID: 3057201055227807545
       vertices: []
       indices: 
       edges: []

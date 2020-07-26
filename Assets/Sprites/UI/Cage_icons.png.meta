@@ -147,8 +147,8 @@ TextureImporter:
       name: age_icons_1
       rect:
         serializedVersion: 2
-        x: 123
-        y: 72
+        x: 172
+        y: 144
         width: 31
         height: 32
       alignment: 0
@@ -168,8 +168,8 @@ TextureImporter:
       name: age_icons_2
       rect:
         serializedVersion: 2
-        x: 2
-        y: 10
+        x: 52
+        y: 81
         width: 49
         height: 55
       alignment: 0
@@ -189,8 +189,8 @@ TextureImporter:
       name: age_icons_3
       rect:
         serializedVersion: 2
-        x: 53
-        y: 10
+        x: 102
+        y: 81
         width: 49
         height: 55
       alignment: 0
@@ -210,8 +210,8 @@ TextureImporter:
       name: age_icons_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 69
+        x: 52
+        y: 141
         width: 114
         height: 41
       alignment: 0
