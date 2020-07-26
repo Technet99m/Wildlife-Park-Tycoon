@@ -101,6 +101,9 @@ TextureImporter:
   - first:
       213: -203243873879478681
     second: GrowingIconPassive
+  - first:
+      213: 2205223226242075400
+    second: progressbars_sheet_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -223,7 +226,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 10
-        y: 312
+        y: 214
         width: 376
         height: 51
       alignment: 0
@@ -244,7 +247,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 72
-        y: 251
+        y: 153
         width: 51
         height: 52
       alignment: 0
@@ -265,7 +268,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 210
-        y: 15
+        y: 16
         width: 88
         height: 91
       alignment: 0
@@ -286,7 +289,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 305
-        y: 12
+        y: 15
         width: 88
         height: 91
       alignment: 0
@@ -306,8 +309,8 @@ TextureImporter:
       name: SexFill
       rect:
         serializedVersion: 2
-        x: 10
-        y: 253
+        x: 9
+        y: 155
         width: 51
         height: 51
       alignment: 0
@@ -328,7 +331,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 132
-        y: 252
+        y: 154
         width: 51
         height: 51
       alignment: 0
@@ -348,8 +351,8 @@ TextureImporter:
       name: SexIconActive
       rect:
         serializedVersion: 2
-        x: 207
-        y: 208
+        x: 107
+        y: 43
         width: 90
         height: 91
       alignment: 0
@@ -369,8 +372,8 @@ TextureImporter:
       name: SexIconPassive
       rect:
         serializedVersion: 2
-        x: 304
-        y: 210
+        x: 13
+        y: 47
         width: 90
         height: 91
       alignment: 0
@@ -391,7 +394,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 209
-        y: 114
+        y: 109
         width: 90
         height: 92
       alignment: 0
@@ -424,6 +427,27 @@ TextureImporter:
       bones: []
       spriteID: cd401b2b7d7bfb1c0800000000000000
       internalID: -4485664566793927460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: progressbars_sheet_2
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 279
+        width: 380
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80b899a27d68a9e10800000000000000
+      internalID: 2205223226242075400
       vertices: []
       indices: 
       edges: []

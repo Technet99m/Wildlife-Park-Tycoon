@@ -207,8 +207,8 @@ TextureImporter:
       name: main_screen_btns_4
       rect:
         serializedVersion: 2
-        x: 412
-        y: 316
+        x: 419
+        y: 314
         width: 86
         height: 89
       alignment: 0
@@ -228,7 +228,7 @@ TextureImporter:
       name: main_screen_btns_1
       rect:
         serializedVersion: 2
-        x: 302
+        x: 307
         y: 91
         width: 157
         height: 190
@@ -249,8 +249,8 @@ TextureImporter:
       name: main_screen_btns_2
       rect:
         serializedVersion: 2
-        x: 289
-        y: 293
+        x: 295
+        y: 291
         width: 37
         height: 40
       alignment: 0
@@ -270,8 +270,8 @@ TextureImporter:
       name: main_screen_btns_3
       rect:
         serializedVersion: 2
-        x: 349
-        y: 290
+        x: 355
+        y: 288
         width: 45
         height: 49
       alignment: 0
@@ -291,8 +291,8 @@ TextureImporter:
       name: main_screen_btns_5
       rect:
         serializedVersion: 2
-        x: 413
-        y: 405
+        x: 419
+        y: 403
         width: 86
         height: 89
       alignment: 0
@@ -312,8 +312,8 @@ TextureImporter:
       name: main_screen_btns_6
       rect:
         serializedVersion: 2
-        x: 260
-        y: 349
+        x: 268
+        y: 346
         width: 151
         height: 166
       alignment: 0
@@ -333,8 +333,8 @@ TextureImporter:
       name: main_screen_btns_7
       rect:
         serializedVersion: 2
-        x: 13
-        y: 218
+        x: 17
+        y: 215
         width: 114
         height: 134
       alignment: 0
@@ -354,8 +354,8 @@ TextureImporter:
       name: main_screen_btns_8
       rect:
         serializedVersion: 2
-        x: 130
-        y: 188
+        x: 136
+        y: 182
         width: 147
         height: 165
       alignment: 0
@@ -375,8 +375,8 @@ TextureImporter:
       name: main_screen_btns_9
       rect:
         serializedVersion: 2
-        x: 0
-        y: 17
+        x: 6
+        y: 9
         width: 143
         height: 181
       alignment: 0
@@ -396,8 +396,8 @@ TextureImporter:
       name: main_screen_btns_0
       rect:
         serializedVersion: 2
-        x: 17
-        y: 361
+        x: 23
+        y: 359
         width: 237
         height: 137
       alignment: 0
@@ -417,8 +417,8 @@ TextureImporter:
       name: main_screen_btns_10
       rect:
         serializedVersion: 2
-        x: 152
-        y: 6
+        x: 158
+        y: 0
         width: 143
         height: 174
       alignment: 0
@@ -438,7 +438,7 @@ TextureImporter:
       name: main_screen_btns_11
       rect:
         serializedVersion: 2
-        x: 307
+        x: 313
         y: 0
         width: 91
         height: 91
@@ -459,7 +459,7 @@ TextureImporter:
       name: main_screen_btns_12
       rect:
         serializedVersion: 2
-        x: 400
+        x: 406
         y: 0
         width: 91
         height: 91

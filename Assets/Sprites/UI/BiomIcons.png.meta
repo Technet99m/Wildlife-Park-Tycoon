@@ -123,12 +123,12 @@ TextureImporter:
       name: Forest
       rect:
         serializedVersion: 2
-        x: 8
-        y: 106
+        x: 84
+        y: 131
         width: 78
         height: 86
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -144,12 +144,12 @@ TextureImporter:
       name: Savannah
       rect:
         serializedVersion: 2
-        x: 95
-        y: 106
+        x: 171
+        y: 131
         width: 78
         height: 86
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -165,12 +165,12 @@ TextureImporter:
       name: Arctic
       rect:
         serializedVersion: 2
-        x: 179
-        y: 106
+        x: 255
+        y: 131
         width: 78
         height: 86
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -186,12 +186,12 @@ TextureImporter:
       name: Jungle
       rect:
         serializedVersion: 2
-        x: 269
-        y: 106
+        x: 346
+        y: 131
         width: 78
         height: 86
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -207,12 +207,12 @@ TextureImporter:
       name: Prehistoric
       rect:
         serializedVersion: 2
-        x: 8
-        y: 12
+        x: 84
+        y: 37
         width: 78
         height: 86
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -228,12 +228,12 @@ TextureImporter:
       name: Space
       rect:
         serializedVersion: 2
-        x: 95
-        y: 13
+        x: 171
+        y: 38
         width: 78
         height: 86
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -249,12 +249,12 @@ TextureImporter:
       name: Fantasy
       rect:
         serializedVersion: 2
-        x: 179
-        y: 12
+        x: 255
+        y: 37
         width: 78
         height: 86
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
