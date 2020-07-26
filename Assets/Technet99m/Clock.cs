@@ -18,11 +18,11 @@ namespace Technet99m
         private static bool first = true;
         private void Start()
         {
-            GetTime();
-            TickingMachine.TenthTick += GetTime;
+            StartCoroutine(GetTime());
+            TickingMachine.TenthTick += () => StartCoroutine(GetTime());
         }
 
-        public static void GetTime()
+        public static IEnumerator GetTime()
         {
             //default Windows time server
             string[] ntpServers = { "0.pool.ntp.org" , "1.pool.ntp.org", "2.pool.ntp.org", "3.pool.ntp.org", "0.ua.pool.ntp.org", "1.ua.pool.ntp.org" };
@@ -63,7 +63,7 @@ namespace Technet99m
                         socket.Close();
                     }
                     if (isError)
-                        continue;
+                        yield return null;
                 }
                 noErrors = true;
                 //Offset to get to the "Transmit Timestamp" field (time at which the reply 
@@ -99,7 +99,7 @@ namespace Technet99m
                 {
                     first = false;
                     firstDeltaActualized?.Invoke();
-                    return;
+                    yield break;
                 }
                 deltaActualized?.Invoke();
             }

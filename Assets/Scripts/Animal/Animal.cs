@@ -49,7 +49,6 @@ public class Animal : MonoBehaviour
         cage.animalRemoved += OnAnimalRemoved;
         movement = GetComponent<MovementController>();
         movement.TargetReached += OnTargetReached;
-        data = new AnimalData();
         this.stats = stats;
         status = new AnimalStatus(data, stats, needs,transform, mood, body);
         selected = null;

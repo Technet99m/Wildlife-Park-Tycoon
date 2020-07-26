@@ -822,15 +822,29 @@ MonoBehaviour:
   body: {fileID: 4162523600250642596}
   data:
     name: 
-    male: 0
+    male: 1
     pregnant: 0
-    adult: 0
+    adult: 1
     pregnancy: 0
     sexualActivity: 0
-    age: 0
+    age: 1
     happiness: 0
-    foods: []
-    specials: []
+    foods:
+    - 0.5
+    - 0.5
+    - 0.5
+    - 0.5
+    - 0.5
+    - 0.5
+    specials:
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
   needs: []
   isBusy: 0
   cage: {fileID: 0}
