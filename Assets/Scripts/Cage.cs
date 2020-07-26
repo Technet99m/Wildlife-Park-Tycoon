@@ -31,6 +31,8 @@ public class Cage : MonoBehaviour
 
     public Technet99m.Grid<bool> placingMap;
 
+    public event System.Action<Animal> animalRemoved;
+
     private SpriteRenderer[] gridTiles;
     private Biome biome;
 
@@ -71,6 +73,11 @@ public class Cage : MonoBehaviour
     public Animal GetProperMate()
     {
         return animals.Find((x) => !x.data.male && x.data.sexualActivity < -0.1f && x.Followers == 0);
+    }
+    public void RemoveAnimal(Animal animal)
+    {
+        animalRemoved?.Invoke(animal);
+        animals.Remove(animal);
     }
     public void ShowGrid()
     {

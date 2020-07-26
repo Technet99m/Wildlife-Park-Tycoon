@@ -6,7 +6,8 @@ namespace Technet99m
 {
     public class ChildContentFitter : MonoBehaviour
     {
-        [SerializeField] RectTransform target;
+        [SerializeField] 
+        private RectTransform target;
         
         public FitMode Horizontal;
         [HideInInspector]public  float left, right;

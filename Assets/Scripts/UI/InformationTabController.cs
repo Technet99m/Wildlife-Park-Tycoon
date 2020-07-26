@@ -3,25 +3,56 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Technet99m;
+using DG.Tweening;
 
 public class InformationTabController : MonoBehaviour
 {
     [SerializeField] Animator anim;
 
-    [SerializeField] InputField Name;
-    [SerializeField] Text Happiness;
-    [SerializeField] Text Needs;
-    [SerializeField] Image HappinessIcon;
-    [SerializeField] Image SexIcon;
-    [SerializeField] Slider progress;
-    [SerializeField] Image progressFill;
-    [SerializeField] Image progressIcon;
+    [SerializeField]
+    private InputField Name;
 
-    [SerializeField] Sprite sexFill, ageFill, pregnancyFill;
-    [SerializeField] Sprite sexIcon, sexIconActive, ageIcon, pregnancyIcon;
+    [SerializeField]
+    private Text Happiness;
+
+    [SerializeField]
+    private Text Needs;
+
+    [SerializeField]
+    private Image HappinessIcon;
+
+    [SerializeField]
+    private Image SexIcon;
+
+    [SerializeField]
+    private Slider progress;
+
+    [SerializeField]
+    private Image progressFill;
+
+    [SerializeField]
+    private Image progressIcon;
+
+    [SerializeField]
+    private Sprite sexFill, ageFill, pregnancyFill;
+
+    [SerializeField]
+    private Sprite sexIcon, sexIconActive, ageIcon, pregnancyIcon;
+
+    [SerializeField]
+    private Image toLab;
+
+    [Header("Lab Button Shake"),SerializeField]
+    private float shakeStrength;
+    [SerializeField]
+    private float shakeDuration = 0.6f;
 
     private Animal selected;
+
     private bool ignoreName;
+
+    
+
     public void Hide()
     {
         ignoreName = false;
@@ -38,6 +69,17 @@ public class InformationTabController : MonoBehaviour
     {
         ignoreName = false;
         selected.data.name = Name.text;
+    }
+    public void TrySendToLab()
+    {
+        if (selected.MoveToLab())
+        {
+            Hide();
+        }
+        else
+        {
+            toLab.rectTransform.DOShakeAnchorPos(shakeDuration, shakeStrength);
+        }
     }
     private void Update()
     {

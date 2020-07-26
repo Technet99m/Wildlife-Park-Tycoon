@@ -45,6 +45,7 @@ public class Animal : MonoBehaviour
     {
         cage = transform.parent.GetComponent<Cage>();
         cage.animals.Add(this);
+        cage.animalRemoved += OnAnimalRemoved;
         movement = GetComponent<MovementController>();
         movement.TargetReached += OnTargetReached;
         data = new AnimalData();
@@ -70,20 +71,21 @@ public class Animal : MonoBehaviour
         Free?.Invoke(this);
         anim.Idle();
     }
-    public void GoMate()
+    public void GoMate(Animal animal)
     {
         selected = needs.Find((x) => x.type == NeedType.Sex);
         if (selected == null)
             selected = new Need() { type = NeedType.Sex };
         if (StateMachine.state == State.Loading)
             return;
+        mate = animal;
         movement.SetNewTarget(cage.GetPlaceToMate());
         Debug.Log("Going Mate");
         isBusy = true;
     }
     public void OnMateFree(Animal sender)
     {
-        mate.GoMate();
+        mate.GoMate(this);
         mate.ReachedMatePos += OnMateReached;
     }
     public void OnMateReached()
@@ -94,11 +96,29 @@ public class Animal : MonoBehaviour
     public void Sell()
     {
         DataManager.AddMoney(finalCost);
-        cage.animals.Remove(this);
+        cage.RemoveAnimal(this);
         target?.Empty(transform.position);
         Destroy(gameObject);
     }
-
+    public bool MoveToLab()
+    {
+        if (Lab.Ins.TryAddAnimal(stats.kind))
+        {
+            cage.RemoveAnimal(this);
+            target?.Empty(transform.position);
+            Destroy(gameObject);
+            return true;
+        }
+        return false;
+    }
+    private void OnAnimalRemoved(Animal animal)
+    {
+        if(animal == mate)
+        {
+            mate = null;
+            isBusy = false;
+        }
+    }
     private void OnTick()
     {
         if (needs.Count > 0 && !isBusy)
@@ -112,13 +132,6 @@ public class Animal : MonoBehaviour
                         target = cage.GetProperFeeder(needs[i].food);
                         if (target != null)
                         {
-                            if (StateMachine.state == State.Loading)
-                            {
-                                selected = needs[i];
-                                isBusy = true;
-                                FinishNeed();
-                                return;
-                            }
                             var tmp = target.GetFree();
                             if (tmp != null)
                             {
@@ -133,13 +146,6 @@ public class Animal : MonoBehaviour
                         target = cage.GetProperSpecial(needs[i].special);
                         if (target != null)
                         {
-                            if (StateMachine.state == State.Loading)
-                            {
-                                selected = needs[i];
-                                isBusy = true;
-                                FinishNeed();
-                                return;
-                            }
                             var tmp = target.GetFree();
                             if (tmp != null)
                             {
@@ -158,15 +164,6 @@ public class Animal : MonoBehaviour
                             {
                                 selected = needs[i];
                                 isBusy = true;
-                                if (StateMachine.state == State.Loading)
-                                {
-
-                                    mate.GoMate();
-                                    mate.FinishNeed();
-                                    FinishNeed();
-                                    
-                                    return;
-                                }
                                 mate.Free += OnMateFree;
                                 movement.Stop();
                                 
@@ -182,8 +179,6 @@ public class Animal : MonoBehaviour
 
             }
         }
-        if (StateMachine.state == State.Loading)
-            return;
         if (!isBusy && !movement.isWalking)
             Technet99m.Utils.InvokeAfterDelay(() =>
             {

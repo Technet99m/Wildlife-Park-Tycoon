@@ -10,6 +10,9 @@ public class AnimalStats : ScriptableObject
     public int TicksToBorn;
     public int minChildren;
     public int maxChildren;
+    public bool isOpen = true;
+    public int TicksInLab = 100;
+    public int PotionsPerResearch = 100;
     public Food[] foods;
     public Special[] specials;
 }

@@ -144,7 +144,7 @@ public class LoadManager : MonoBehaviour
     }
     public void SaveGame()
     {
-        PlayerPrefs.SetString("time", (Technet99m.Clock.delta + DateTime.Now.Ticks).ToString());
+        PlayerPrefs.SetString("time", Technet99m.Clock.ActualTime.ToString());
         List<CageSaveData> cages = new List<CageSaveData>();
         foreach (var cage in GameManager.Ins.cages)
             cages.Add(new CageSaveData(cage));
@@ -152,7 +152,6 @@ public class LoadManager : MonoBehaviour
         PlayerPrefs.SetString("boosts", JsonConvert.SerializeObject(BoostController.boosts));
         PlayerPrefs.SetInt("money", DataManager.Money);
     }
-    
     public void ResetGame()
     {
         PlayerPrefs.DeleteAll();
@@ -164,12 +163,13 @@ public class LoadManager : MonoBehaviour
         long old = long.Parse(PlayerPrefs.GetString("time","0"));
         if (old < 1000)
         yield break;
-        long now = DateTime.Now.Ticks + Technet99m.Clock.delta;
-        int secondsElapsed = (int)((now - old) / 10000000);
+        long now = Technet99m.Clock.ActualTime;
+        int secondsElapsed = (int)(new TimeSpan(now - old).TotalSeconds);
         Debug.Log($"Elapsed: {Translator.TicksToTime(secondsElapsed)}");
         foreach(var cage in GameManager.Ins.cages)
         {
-            CalculateTimeForCage(cage, secondsElapsed);
+            if (cage.animals.Count > 0)
+                CalculateTimeForCage(cage, secondsElapsed);
             yield return null;
         }
 

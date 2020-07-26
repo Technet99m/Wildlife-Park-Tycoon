@@ -16,7 +16,9 @@ MonoBehaviour:
   price: 800
   TicksToFullMate: 90
   TicksToBorn: 120
+  TicksInLab: 100
   minChildren: 1
-  maxChildren: 1
+  maxChildren: 3
+  isOpen: 1
   foods: 0300000000000000
   specials: 02000000

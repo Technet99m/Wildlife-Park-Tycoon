@@ -26,8 +26,10 @@ namespace Technet99m
                 myScript.bottom = EditorGUILayout.FloatField("Bottom Border", myScript.bottom);
                 myScript.minHeight = EditorGUILayout.FloatField("Min Height", myScript.minHeight);
             }
-            myScript.Fit();
             serializedObject.ApplyModifiedProperties();
+            if (serializedObject.FindProperty("target").objectReferenceValue != null)
+                myScript.Fit();
         }
     }
+
 }

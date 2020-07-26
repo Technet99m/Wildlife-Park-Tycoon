@@ -10,10 +10,11 @@ namespace Technet99m
 {
     public class Clock : MonoBehaviour
     {
-        public static long delta;
+        public static long ActualTime { get => delta + DateTime.Now.Ticks; }
         public static event Action deltaActualized;
         public static event Action firstDeltaActualized;
 
+        private static long delta;
         private static bool first = true;
         private void Start()
         {
@@ -44,10 +45,23 @@ namespace Technet99m
 
                 //Stops code hang if NTP is blocked
                 socket.ReceiveTimeout = 3000;
-
+                bool isError = false;
                 socket.Send(ntpData);
-                socket.Receive(ntpData);
-                socket.Close();
+                try
+                {
+                    socket.Receive(ntpData);
+                }
+                catch (Exception e)
+                {
+                    Debug.LogError(e.Message);
+                    isError = true;
+                }
+                finally
+                {
+                    socket.Close();
+                }
+                if (isError)
+                    yield break;
             }
 
             //Offset to get to the "Transmit Timestamp" field (time at which the reply 
@@ -68,7 +82,6 @@ namespace Technet99m
 
             //**UTC** time
             var networkDateTime = (new DateTime(1900, 1, 1, 0, 0, 0, DateTimeKind.Utc)).AddMilliseconds((long)milliseconds);
-            Debug.Log($"UTC Time: {networkDateTime.ToLongDateString()}");
             // stackoverflow.com/a/3294698/162671
             uint SwapEndianness(ulong x)
             {
