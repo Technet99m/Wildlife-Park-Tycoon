@@ -53,6 +53,10 @@ public class LabSlot : MonoBehaviour
     public void Refresh()
     {
         animal.gameObject.SetActive(isBusy);
+        if(isBusy && animal.sprite == null)
+        {
+            animal.sprite = Resources.Load<Sprite>($"Animals/{animalKind}/Picture");
+        }
         if (secondsRemain==0)
         {
             time.text = isBusy ? "Finished" : "Ready";
@@ -72,6 +76,7 @@ public class LabSlot : MonoBehaviour
                     {
                         DataManager.AddPotions(biome.Name, Resources.Load<AnimalStats>($"Animals/{animalKind}/Stats").PotionsPerResearch);
                         isBusy = false;
+                        animal.sprite = null;
                         Refresh();
                         return;
                     }
