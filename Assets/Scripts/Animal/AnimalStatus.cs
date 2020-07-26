@@ -24,6 +24,10 @@ public class AnimalStatus
         OnTick();
     }
 
+    public void Unsubscribe()
+    {
+        Technet99m.TickingMachine.EveryTick -= OnTick;
+    }
     public void RecalculateHappiness()
     {
         data.happiness = 1;

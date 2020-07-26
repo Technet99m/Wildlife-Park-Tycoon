@@ -45,15 +45,17 @@ public class LabSlot : MonoBehaviour
     {
         isBusy = true;
         animalKind = kind;
+        secondsRemain = Resources.Load<AnimalStats>($"Animals/{animalKind}/Stats").TicksInLab;
         animal.gameObject.SetActive(true);
         animal.sprite = null;
-        RefreshText();
+        Refresh();
     }
-    public void RefreshText()
+    public void Refresh()
     {
-        if(secondsRemain==0)
+        animal.gameObject.SetActive(isBusy);
+        if (secondsRemain==0)
         {
-            time.text = isBusy ? "Finished" : "Ready"; 
+            time.text = isBusy ? "Finished" : "Ready";
             return;
         }
         time.text = Translator.TicksToTime(secondsRemain);
@@ -69,6 +71,8 @@ public class LabSlot : MonoBehaviour
                     if(kind == animalKind)
                     {
                         DataManager.AddPotions(biome.Name, Resources.Load<AnimalStats>($"Animals/{animalKind}/Stats").PotionsPerResearch);
+                        isBusy = false;
+                        Refresh();
                         return;
                     }
                 }

@@ -39,6 +39,7 @@ public class Animal : MonoBehaviour
     private void OnDisable()
     {
         Technet99m.TickingMachine.EveryTick -= OnTick;
+        status.Unsubscribe();
     }
 
     public void Initialize(AnimalStats stats)

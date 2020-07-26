@@ -47,7 +47,7 @@ public class Lab : Singleton<Lab>
             if (slots[i].secondsRemain > 0)
             {
                 slots[i].secondsRemain--;
-                slots[i].RefreshText();
+                slots[i].Refresh();
             }
         }
     }
@@ -63,7 +63,7 @@ public class Lab : Singleton<Lab>
                 var slotData = JsonConvert.DeserializeObject<LabSlotData>(slotSave);
                 slots[i].Initialize(slotData, secondsPast);
             }
-            slots[i].RefreshText();
+            slots[i].Refresh();
         }
     }
     private void SaveData()
