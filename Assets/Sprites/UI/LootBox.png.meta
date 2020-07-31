@@ -1,0 +1,641 @@
+fileFormatVersion: 2
+guid: 11047aaaeb26858459e2e2a301b044bf
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5179681103683821926
+    second: LootBox_0
+  - first:
+      213: 1003286686203990910
+    second: LootBox_1
+  - first:
+      213: 3152554331312052392
+    second: LootBox_2
+  - first:
+      213: -7569389422896690754
+    second: LootBox_3
+  - first:
+      213: 4921085251411934821
+    second: LootBox_4
+  - first:
+      213: -5196288198185317634
+    second: LootBox_5
+  - first:
+      213: -7067279032372978509
+    second: LootBox_6
+  - first:
+      213: -4036010521517915979
+    second: LootBox_7
+  - first:
+      213: 9128029941957274983
+    second: LootBox_8
+  - first:
+      213: -4233487793844180444
+    second: LootBox_9
+  - first:
+      213: -9003817930843403363
+    second: LootBox_0
+  - first:
+      213: 5660576075872517169
+    second: LootBox_1
+  - first:
+      213: 5318715729226747708
+    second: LootBox_2
+  - first:
+      213: -8834359922329145722
+    second: LootBox_3
+  - first:
+      213: 4067194664217568878
+    second: LootBox_4
+  - first:
+      213: 3753174909374563258
+    second: LootBox_5
+  - first:
+      213: -8242412930484087018
+    second: LootBox_6
+  - first:
+      213: 475192012782052820
+    second: LootBox_7
+  - first:
+      213: -2557396926002462197
+    second: LootBox_8
+  - first:
+      213: 4509986830114375841
+    second: LootBox_9
+  - first:
+      213: -2496733275505511886
+    second: LootBox_10
+  - first:
+      213: 2994574550163661745
+    second: LootBox_11
+  - first:
+      213: -7810261545188860253
+    second: LootBox_12
+  - first:
+      213: -1251138166184872289
+    second: LootBox_13
+  - first:
+      213: 8099261390097487889
+    second: LootBox_14
+  - first:
+      213: -1676017780185656282
+    second: LootBox_10
+  - first:
+      213: -5032360284439609445
+    second: LootBox_11
+  - first:
+      213: 1184488653055381041
+    second: LootBox_12
+  - first:
+      213: 6668029999013028237
+    second: LootBox_13
+  - first:
+      213: -2984818431034487670
+    second: LootBox_14
+  - first:
+      213: 4368532345186707280
+    second: LootBox_15
+  - first:
+      213: -888035565955408926
+    second: LootBox_16
+  - first:
+      213: -574374189576016893
+    second: LootBox_17
+  - first:
+      213: -2013881736994721497
+    second: LootBox_18
+  - first:
+      213: -4314190118178199712
+    second: LootBox_19
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: LootBox_6
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 503
+        width: 204
+        height: 227
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 617d8622c111d9d80800000000000000
+      internalID: -8242412930484087018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LootBox_7
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 533
+        width: 204
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d52af13e98389600800000000000000
+      internalID: 475192012782052820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LootBox_8
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 533
+        width: 204
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0282f3ab0d428cd0800000000000000
+      internalID: -2557396926002462197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LootBox_9
+      rect:
+        serializedVersion: 2
+        x: 975
+        y: 513
+        width: 203
+        height: 215
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a848a68021b69e30800000000000000
+      internalID: 4509986830114375841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LootBox_0
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 738
+        width: 218
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 661a0ea458ce1e740800000000000000
+      internalID: 5179681103683821926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LootBox_1
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 745
+        width: 218
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e73511bece36ced00800000000000000
+      internalID: 1003286686203990910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LootBox_2
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 709
+        width: 204
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a859fc167f10cb20800000000000000
+      internalID: 3152554331312052392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LootBox_3
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 709
+        width: 204
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb9c4a99c6024f690800000000000000
+      internalID: -7569389422896690754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LootBox_4
+      rect:
+        serializedVersion: 2
+        x: 943
+        y: 736
+        width: 272
+        height: 139
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56e72df86f43b4440800000000000000
+      internalID: 4921085251411934821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LootBox_5
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 503
+        width: 204
+        height: 227
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efa0c943a6313e7b0800000000000000
+      internalID: -5196288198185317634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LootBox_10
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 240
+        width: 228
+        height: 213
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6249bc675b69db8e0800000000000000
+      internalID: -1676017780185656282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LootBox_11
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 257
+        width: 214
+        height: 196
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9f7130ebf6792ab0800000000000000
+      internalID: -5032360284439609445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LootBox_12
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 371
+        width: 218
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13ec8dd7726207010800000000000000
+      internalID: 1184488653055381041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LootBox_13
+      rect:
+        serializedVersion: 2
+        x: 760
+        y: 370
+        width: 218
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d81e1d294f9998c50800000000000000
+      internalID: 6668029999013028237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LootBox_14
+      rect:
+        serializedVersion: 2
+        x: 1055
+        y: 10
+        width: 102
+        height: 274
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8c8623837bc396d0800000000000000
+      internalID: -2984818431034487670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LootBox_15
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 116
+        width: 131
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05768a0c50520ac30800000000000000
+      internalID: 4368532345186707280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LootBox_16
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 107
+        width: 140
+        height: 136
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2eb90579b501da3f0800000000000000
+      internalID: -888035565955408926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LootBox_17
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 125
+        width: 204
+        height: 227
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30c2b2eb7b96708f0800000000000000
+      internalID: -574374189576016893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LootBox_18
+      rect:
+        serializedVersion: 2
+        x: 767
+        y: 122
+        width: 204
+        height: 227
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72178ceea314d04e0800000000000000
+      internalID: -2013881736994721497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LootBox_19
+      rect:
+        serializedVersion: 2
+        x: 1016
+        y: 316
+        width: 203
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 067ec70f1fae024c0800000000000000
+      internalID: -4314190118178199712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
