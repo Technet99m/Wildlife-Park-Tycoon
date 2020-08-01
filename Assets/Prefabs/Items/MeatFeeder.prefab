@@ -138,7 +138,7 @@ MonoBehaviour:
   normal: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
   tint: {fileID: -6465566751694194690, guid: 01c7aa3a2e0b2bc418559f856cc50c4d, type: 3}
   price: 100
-  placedSize: {x: 3, y: 5}
+  placedSize: {x: 3, y: 3}
   walkingSize: {x: 1, y: 3}
   placed: 0
   full: {fileID: -412279195522892683, guid: 921a90356bdd7e5439253237a758cafa, type: 3}

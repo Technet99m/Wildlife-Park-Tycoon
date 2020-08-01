@@ -32,6 +32,7 @@ public class Cage : MonoBehaviour
     public Technet99m.Grid<bool> placingMap;
 
     public event System.Action<Animal> animalRemoved;
+    public event System.Action itemsStateChanged;
 
     private SpriteRenderer[] gridTiles;
     private Biome biome;
@@ -124,6 +125,7 @@ public class Cage : MonoBehaviour
         for (int x = 0; x < walkingSize.x; x++)
             for (int y = 0; y < walkingSize.y; y++)
                 walkingMap.SetValue(XS + x, YS + y, false);
+        itemsStateChanged?.Invoke();
     }
     public void Leave(Vector2Int placedSize, Vector2Int walkingSize, Vector2 pos)
     {
@@ -137,6 +139,7 @@ public class Cage : MonoBehaviour
         for (int x = 0; x < walkingSize.x; x++)
             for (int y = 0; y < walkingSize.y; y++)
                 walkingMap.SetValue(XS + x, YS + y, true);
+        itemsStateChanged?.Invoke();
     }
     public Vector2 GetFreeTileInGrid()
     {

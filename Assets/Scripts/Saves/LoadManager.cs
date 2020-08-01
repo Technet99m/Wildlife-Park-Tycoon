@@ -90,7 +90,7 @@ public class LoadManager : MonoBehaviour
     public void LoadGame()
     {
         List<CageSaveData> cages = JsonConvert.DeserializeObject<List<CageSaveData>>(PlayerPrefs.GetString("save"));
-        BoostController.LoadBoosts(JsonConvert.DeserializeObject<List<Boost>>(PlayerPrefs.GetString("boosts")));
+        
         DataManager.Money = (PlayerPrefs.GetInt("money", 0));
         for (int i = 0; i < cages.Count; i++)
         {
@@ -173,20 +173,26 @@ public class LoadManager : MonoBehaviour
             yield return null;
         }
 
+        var boosts = JsonConvert.DeserializeObject<List<Boost>>(PlayerPrefs.GetString("boosts")).FindAll(x => x.ticksRemain > secondsElapsed);
+        foreach (var b in boosts)
+            b.ticksRemain -= secondsElapsed;
+        BoostController.LoadBoosts(boosts);
+
         StateMachine.state = State.Game;
         GameManager.Ins.FinishLoading();
     }
     private void CalculateTimeForCage(Cage cage,int secondsElapsed)
     {
         int delta = 0;
+        var boosts = JsonConvert.DeserializeObject<List<Boost>>(PlayerPrefs.GetString("boosts"));
         while (secondsElapsed > 0)
         {
             float generalHappiness = CalculateHappinessForCage(cage);
-            int elapsed = CalculateLinearTime(cage, generalHappiness);
+            int elapsed = CalculateLinearTime(cage, generalHappiness,boosts);
             if (elapsed < 0)
                 return;
             delta += elapsed;
-            UpdateCage(cage, elapsed, generalHappiness);
+            UpdateCage(cage, elapsed, generalHappiness,boosts);
             if (delta >= 100)
             {
                 UpdateFeeders(cage, delta);
@@ -219,7 +225,7 @@ public class LoadManager : MonoBehaviour
         }
         return happiness;
     }
-    private int CalculateLinearTime(Cage cage, float happiness)
+    private int CalculateLinearTime(Cage cage, float happiness, List<Boost> boosts)
     {
         int minTime = -1;
         foreach (var feeder in cage.items.FindAll(i => i is Feeder))
@@ -251,13 +257,19 @@ public class LoadManager : MonoBehaviour
             if ((toAction < minTime || minTime < 0) && toAction > 0)
                 minTime = toAction;
         }
-        
+        foreach(var b in boosts)
+        {
+            if (minTime > b.ticksRemain)
+                minTime = b.ticksRemain;
+        }
         return minTime;
     }
-    private void UpdateCage(Cage cage,int elapsed,float happiness)
+    private void UpdateCage(Cage cage,int elapsed,float happiness, List<Boost> boosts)
     {
         if (happiness < 0.5f)
             return;
+        Boost feromones = boosts.Find(x => x.type == BoostType.feromons);
+        Boost vitamins = boosts.Find(x => x.type == BoostType.vitamins);
         foreach (var animal in cage.animals)
         {
             if (animal.data.adult)
@@ -268,12 +280,12 @@ public class LoadManager : MonoBehaviour
                 }
                 else
                 {
-                    animal.data.sexualActivity += (happiness - 0.5f) * 2f / animal.stats.TicksToFullMate * elapsed;
+                    animal.data.sexualActivity += (happiness - 0.5f) * 2f / animal.stats.TicksToFullMate * elapsed * (feromones != null ? 2f * feromones.power : 1f);
                 }
             }
             else
             {
-                animal.data.age += (happiness - 0.5f) * 2f / animal.stats.TicksToFullMate * elapsed;
+                animal.data.age += (happiness - 0.5f) * 2f / animal.stats.TicksToFullMate * elapsed * (vitamins != null ? 2f * vitamins.power : 1f);
             }
 
         }
@@ -302,6 +314,9 @@ public class LoadManager : MonoBehaviour
         }
         foreach (var animal in toBorn)
             animal.status.Born();
+        foreach (var b in boosts)
+            b.ticksRemain -= elapsed;
+        boosts.RemoveAll(b => b.ticksRemain <= 0);
     }
     private void UpdateFeeders(Cage cage,int elapsed)
     {

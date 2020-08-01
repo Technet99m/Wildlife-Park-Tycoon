@@ -47,6 +47,7 @@ public class Animal : MonoBehaviour
         cage = transform.parent.GetComponent<Cage>();
         cage.animals.Add(this);
         cage.animalRemoved += OnAnimalRemoved;
+        cage.itemsStateChanged += RecalculatePath;
         movement = GetComponent<MovementController>();
         movement.TargetReached += OnTargetReached;
         this.stats = stats;
@@ -186,6 +187,10 @@ public class Animal : MonoBehaviour
                     movement.SetNewTarget(cage.GetFreeTileInGrid());
             }, 3f);
 
+    }
+    private void RecalculatePath()
+    {
+        movement.RecalculatePath();
     }
     private void OnTargetReached()
     {

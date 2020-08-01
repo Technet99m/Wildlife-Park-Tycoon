@@ -64,6 +64,10 @@ public class MovementController : MonoBehaviour
         this.target = pathfinding.Grid.GetWorldPos(path[0].x, path[0].y, cage.transform.position);
         anim.Walk(this.target - (Vector2)self.position);
     }
+    public void RecalculatePath()
+    {
+        SetNewTarget(pathfinding.Grid.GetWorldPos(path[path.Count - 1].x, path[path.Count - 1].y, cage.transform.position));
+    }
     public void Stop()
     {
         path = new List<PathNode>();
