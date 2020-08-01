@@ -267,8 +267,8 @@ TextureImporter:
       name: GrowingIconActive
       rect:
         serializedVersion: 2
-        x: 210
-        y: 16
+        x: 13
+        y: 47
         width: 88
         height: 91
       alignment: 0
@@ -288,8 +288,8 @@ TextureImporter:
       name: GrowingIconPassive
       rect:
         serializedVersion: 2
-        x: 305
-        y: 15
+        x: 108
+        y: 44
         width: 88
         height: 91
       alignment: 0
@@ -351,8 +351,8 @@ TextureImporter:
       name: SexIconActive
       rect:
         serializedVersion: 2
-        x: 107
-        y: 43
+        x: 207
+        y: 110
         width: 90
         height: 91
       alignment: 0
@@ -372,8 +372,8 @@ TextureImporter:
       name: SexIconPassive
       rect:
         serializedVersion: 2
-        x: 13
-        y: 47
+        x: 304
+        y: 112
         width: 90
         height: 91
       alignment: 0
@@ -394,7 +394,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 209
-        y: 109
+        y: 15
         width: 90
         height: 92
       alignment: 0
@@ -415,7 +415,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 305
-        y: 113
+        y: 15
         width: 88
         height: 91
       alignment: 0
@@ -440,7 +440,7 @@ TextureImporter:
         width: 380
         height: 55
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

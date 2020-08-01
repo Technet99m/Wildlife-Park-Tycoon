@@ -136,10 +136,12 @@ public class Animal : MonoBehaviour
                             var tmp = target.GetFree();
                             if (tmp != null)
                             {
-                                selected = needs[i];
-                                isBusy = true;
-                                movement.SetNewTarget(tmp.position);
-                                dealed = true;
+                                if (movement.SetNewTarget(tmp.position))
+                                {
+                                    selected = needs[i];
+                                    isBusy = true;
+                                    dealed = true;
+                                }
                             }
                         }
                         break;
@@ -150,10 +152,12 @@ public class Animal : MonoBehaviour
                             var tmp = target.GetFree();
                             if (tmp != null)
                             {
-                                selected = needs[i];
-                                isBusy = true;
-                                movement.SetNewTarget(tmp.position);
-                                dealed = true;
+                                if (movement.SetNewTarget(tmp.position))
+                                {
+                                    selected = needs[i];
+                                    isBusy = true;
+                                    dealed = true;
+                                }
                             }
                         }
                         break;
@@ -190,7 +194,19 @@ public class Animal : MonoBehaviour
     }
     private void RecalculatePath()
     {
-        movement.RecalculatePath();
+        if (!movement.RecalculatePath())
+        {
+            isBusy = false;
+            ReachedMatePos = null;
+            Free = null;
+            if (mate!=null)
+            {
+                mate.Free = null;
+                mate.ReachedMatePos = null;
+                mate = null;
+            }
+            movement.Stop();
+        }
     }
     private void OnTargetReached()
     {

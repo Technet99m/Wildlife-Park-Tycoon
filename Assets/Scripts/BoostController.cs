@@ -26,7 +26,7 @@ public class BoostController : MonoBehaviour
         boosts.Add(boost);
         var tmp = uiBoosts[boosts.Count - 1];
         tmp.gameObject.SetActive(true);
-        tmp.icon.sprite = Translator.Boost(boost.type);
+        tmp.icon.sprite = Translator.Boost(boost.type,boost.stage);
         tmp.time.text = Translator.TicksToTime(boost.ticksRemain);
     }
 
@@ -38,7 +38,7 @@ public class BoostController : MonoBehaviour
         {
             boosts[i].ticksRemain--;
             uiBoosts[i].gameObject.SetActive(true);
-            uiBoosts[i].icon.sprite = Translator.Boost(boosts[i].type);
+            uiBoosts[i].icon.sprite = Translator.Boost(boosts[i].type,boosts[i].stage);
             uiBoosts[i].time.text = Translator.TicksToTime(boosts[i].ticksRemain);
             if(boosts[i].ticksRemain==0)
             {
@@ -51,6 +51,7 @@ public class BoostController : MonoBehaviour
     public void BuyVitamins(int stage)
     {
         Boost vit = new Boost();
+        vit.stage = stage;
         vit.type = BoostType.vitamins;
         vit.ticksRemain = defaultTicks;
         if (stage == 1)
@@ -64,6 +65,7 @@ public class BoostController : MonoBehaviour
     public void BuySpecialFood(int stage)
     {
         Boost sp = new Boost();
+        sp.stage = stage;
         sp.type = BoostType.specialFood;
         sp.ticksRemain = defaultTicks;
         if (stage == 1)
@@ -77,6 +79,7 @@ public class BoostController : MonoBehaviour
     public void BuyFeromones(int stage)
     {
         Boost fer = new Boost();
+        fer.stage = stage;
         fer.type = BoostType.feromons;
         fer.ticksRemain = defaultTicks;
         if (stage == 1)
@@ -93,11 +96,13 @@ public class BoostController : MonoBehaviour
     }
 
 }
+[System.Serializable]
 public class Boost
 {
     public BoostType type;
     public int ticksRemain;
     public int power;
+    public int stage;
 }
 public enum BoostType
 {

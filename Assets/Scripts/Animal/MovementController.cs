@@ -52,21 +52,26 @@ public class MovementController : MonoBehaviour
             Debug.DrawLine(pathfinding.Grid.GetWorldPos(path[i - 1].x, path[i - 1].y, cage.transform.position), pathfinding.Grid.GetWorldPos(path[i].x, path[i].y, cage.transform.position), Color.green);
         }
     }
-    public void SetNewTarget(Vector2 target)
+    public bool SetNewTarget(Vector2 target)
     {
         isWalking = true;
         pathfinding = new Pathfinding(cage.walkingMap);
         pathfinding.Grid.GetXY(self.position, cage.transform.position, out int sX, out int sY);
         pathfinding.Grid.GetXY(target, cage.transform.position, out int eX, out int eY);
         path = pathfinding.FindPath(sX, sY, eX, eY);
+        if (path == null)
+            return false;
         if (path.Count > 1)
             path.RemoveAt(0);
         this.target = pathfinding.Grid.GetWorldPos(path[0].x, path[0].y, cage.transform.position);
         anim.Walk(this.target - (Vector2)self.position);
+        return true;
     }
-    public void RecalculatePath()
+    public bool RecalculatePath()
     {
-        SetNewTarget(pathfinding.Grid.GetWorldPos(path[path.Count - 1].x, path[path.Count - 1].y, cage.transform.position));
+        if (isWalking)
+            return SetNewTarget(pathfinding.Grid.GetWorldPos(path[path.Count - 1].x, path[path.Count - 1].y, cage.transform.position));
+        return true;
     }
     public void Stop()
     {

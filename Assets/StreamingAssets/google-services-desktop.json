@@ -1,0 +1,41 @@
+{
+  "project_info": {
+    "project_number": "272358252150",
+    "firebase_url": "https://wildlife-park-tycoon.firebaseio.com",
+    "project_id": "wildlife-park-tycoon",
+    "storage_bucket": "wildlife-park-tycoon.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:272358252150:android:eca059f0622c22c4788957",
+        "android_client_info": {
+          "package_name": "com.hareonfire.wildlifeparktycoon"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "272358252150-a9ho1js0f3roupbeqgivju4f3t7in31l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDgaakOjz_D9CkwyNO4LCAPOeq9NRUd5UU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "272358252150-a9ho1js0f3roupbeqgivju4f3t7in31l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      },
+      "admob_app_id": "ca-app-pub-4980153895660090~7255450245"
+    }
+  ],
+  "configuration_version": "1"
+}
