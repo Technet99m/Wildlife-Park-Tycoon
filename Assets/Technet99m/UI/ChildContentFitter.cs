@@ -6,8 +6,7 @@ namespace Technet99m
 {
     public class ChildContentFitter : MonoBehaviour
     {
-        [SerializeField] 
-        private RectTransform target;
+        [SerializeField] RectTransform target;
         
         public FitMode Horizontal;
         [HideInInspector]public  float left, right;
@@ -34,7 +33,7 @@ namespace Technet99m
             else if (Vertical == FitMode.WithOffsets)
             {
                 my.sizeDelta = new Vector2(my.sizeDelta.x, target.sizeDelta.y + top + bottom);
-                if (my.sizeDelta.x < minHeight)
+                if (my.sizeDelta.y < minHeight)
                     my.sizeDelta = new Vector2(my.sizeDelta.x, minHeight);
             }
         }
